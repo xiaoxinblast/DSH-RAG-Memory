@@ -1,0 +1,14 @@
+import { createRequire } from "node:module";
+import { join } from "node:path";
+const require = createRequire(join(process.env.DSH_DEV_MODULES ?? join(process.cwd(), "node_modules"), "__setup.cjs"));
+const { chromium } = require("@playwright/test");
+const url = process.argv[2]; if (new URL(url).hostname !== "127.0.0.1") throw new Error("仅允许打开本机隔离 Host");
+const context = await chromium.launchPersistentContext(".cache/setup-browser", { channel: "msedge", headless: false, viewport: null, args: ["--window-size=1360,980"] });
+const page = context.pages()[0]; await page.goto(url); await page.waitForTimeout(1500);
+const intro = page.getByRole("button", { name: "继续", exact: true }); if (await intro.isVisible()) await intro.click();
+await page.getByText("开始使用", { exact: true }).waitFor({ timeout: 5000 }).catch(() => {}); await page.keyboard.press("Escape");
+await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+await page.locator(".dsh-memory:visible").getByRole("button", { name: "连接设置", exact: true }).click();
+await page.getByRole("textbox", { name: "API Key", exact: true }).focus();
+console.log("本机隔离连接设置已打开；请在窗口中填写 API Key，保存连接并测试。密钥不会输出到终端。");
+await new Promise((resolve) => context.on("close", resolve));

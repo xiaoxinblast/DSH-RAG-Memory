@@ -1,0 +1,77 @@
+import { createRequire } from "node:module";
+import { join } from "node:path";
+import { mkdir, writeFile } from "node:fs/promises";
+import assert from "node:assert/strict";
+const require = createRequire(join(process.env.DSH_DEV_MODULES ?? join(process.cwd(), "node_modules"), "__ui.cjs"));
+const { chromium, expect } = require("@playwright/test");
+const url = process.argv[2]; if (!url || new URL(url).hostname !== "127.0.0.1") throw new Error("仅接受隔离 Host 的回环地址");
+await mkdir(".cache/screenshots", { recursive: true });
+const runId = String(Date.now()); const browser = await chromium.launch({ channel: "msedge", headless: true }), page = await browser.newPage({ viewport: { width: 1600, height: 1050 } }), errors = [], checks = [];
+page.on("pageerror", (e) => errors.push(e.message));
+const appearance = async (label) => { await page.getByRole("button", { name: /^(账号菜单|Account menu)$/ }).click(); await page.getByText(/^(设置|Settings)$/, { exact: true }).last().click(); await page.getByText("通用设置", { exact: true }).click(); await page.getByRole("button", { name: label, exact: true }).click(); await page.getByRole("button", { name: /^(关闭|Close)$/ }).last().click(); };
+try {
+  await page.goto(url); await page.waitForTimeout(2000);
+  const intro = page.getByRole("button", { name: "继续", exact: true }); if (await intro.isVisible()) await intro.click();
+  await page.getByText("开始使用", { exact: true }).waitFor({ timeout: 5000 }).catch(() => {});
+  await page.keyboard.press("Escape");
+  await appearance("浅色"); await expect(page.locator("body")).not.toHaveAttribute("data-ds-dark-theme", "");
+  await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+  const root = page.locator(".dsh-memory:visible");
+  await expect(root.getByRole("heading", { name: "值得记住的事" })).toBeVisible();
+  await expect(root.locator(".mm-card")).toHaveCount(9);
+  await page.screenshot({ path: ".cache/screenshots/host-library.png" });
+  const shot = async (name, width = 1180) => { await root.evaluate((el, width) => { el.style.width = `${width}px`; el.style.height = "850px"; el.style.flex = "none"; }, width); await page.waitForTimeout(150); assert.ok(await root.evaluate((el) => el.scrollWidth <= el.clientWidth)); await root.screenshot({ path: `.cache/screenshots/${name}.png` }); };
+  await shot("library-light");
+  await root.getByRole("textbox", { name: "搜索记忆", exact: true }).fill("必要文本"); await expect(root.locator(".mm-card")).toHaveCount(1);
+  await root.locator(".mm-card").click(); await expect(root.getByRole("heading", { name: "消息出处" })).toBeVisible(); await root.locator(".mm-source summary").first().click(); await shot("detail-source-light");
+  await root.getByRole("button", { name: "关闭详情" }).click(); await root.getByRole("textbox", { name: "搜索记忆", exact: true }).fill("");
+  await root.getByRole("combobox", { name: "记忆范围", exact: true }).selectOption("global"); await expect(root.locator(".mm-card")).toHaveCount(2); await root.getByRole("combobox", { name: "记忆范围", exact: true }).selectOption("");
+  checks.push("真实 Host 入口、内容搜索、全局筛选、展开来源");
+  await root.getByRole("button", { name: "＋ 添加记忆", exact: true }).click();
+  await root.getByRole("textbox", { name: "记忆内容", exact: true }).fill(`[界面验收 ${runId}] 项目将在周五发布。`);
+  await root.getByRole("textbox", { name: "来源工作区", exact: true }).fill("D:/Projects/记忆插件");
+  await root.getByRole("button", { name: "保存记忆", exact: true }).click(); await expect(root.locator(".mm-detail")).toContainText(`[界面验收 ${runId}] 项目将在周五发布。`);
+  await root.getByRole("button", { name: "纠正 / 确认", exact: true }).click(); await root.getByRole("textbox", { name: "记忆内容", exact: true }).fill(`[界面验收 ${runId}] 发布延期到下周一。`); await root.getByRole("button", { name: "保存记忆", exact: true }).click();
+  await expect(root.locator(".mm-detail")).toContainText(`[界面验收 ${runId}] 发布延期到下周一。`);
+  await expect(root.locator(".mm-source").filter({ hasText: "项目将在周五发布" }).first()).toBeAttached();
+  await shot("revisions-light");
+  await root.getByRole("button", { name: "遗忘", exact: true }).click(); await expect(root.getByRole("status").filter({ hasText: "已停止召回" })).toBeVisible();
+  await root.getByRole("combobox", { name: "记忆状态", exact: true }).selectOption("forgotten"); await expect(root.locator(".mm-card").filter({ hasText: runId })).toHaveCount(1); await root.getByRole("combobox", { name: "记忆状态", exact: true }).selectOption("active");
+  checks.push("真实界面新增、纠正、修订追溯、遗忘及状态筛选");
+  for (const width of [1180, 768, 390]) await shot(`library-light-${width}`, width);
+  await root.getByRole("button", { name: "连接设置", exact: true }).click();
+  const modelSelect = root.getByRole("combobox", { name: "提炼模型", exact: true });
+  await expect(modelSelect.locator("optgroup option").first()).toBeAttached();
+  const selectedModel = JSON.stringify(["deepseek-account", "deepseek-flash"]);
+  await modelSelect.selectOption(""); await root.getByRole("button", { name: "保存运行设置", exact: true }).click();
+  await root.getByRole("button", { name: "测试 DSH 提炼", exact: true }).click(); await expect(root.getByRole("alert")).toContainText("单独选择");
+  await root.getByRole("button", { name: "关闭错误", exact: true }).click();
+  await modelSelect.selectOption(selectedModel); await root.getByRole("button", { name: "保存运行设置", exact: true }).click();
+  await expect(root.getByRole("status").filter({ hasText: "设置已保存" })).toBeVisible(); await shot("settings-light", 1180);
+  checks.push("真实 DSH 已注册模型下拉列表、独立选择并保存、未选模型时阻止测试调用");
+  await root.getByRole("spinbutton", { name: "每月费用提醒", exact: true }).fill("12"); await root.getByRole("button", { name: "保存运行设置", exact: true }).click(); await expect(root.getByRole("status").filter({ hasText: "设置已保存" })).toBeVisible();
+  await root.getByRole("checkbox", { name: "暂停云端处理，保留本地功能", exact: true }).check(); await root.getByRole("button", { name: "保存运行设置", exact: true }).click();
+  await root.getByRole("button", { name: "测试连接", exact: true }).click(); await expect(root.getByRole("alert")).toContainText("请先配置");
+  await root.getByRole("button", { name: "关闭错误", exact: true }).click(); await shot("settings-light-390", 390);
+  await root.getByRole("button", { name: "处理队列", exact: false }).click(); await shot("queue-light", 1180);
+  await root.getByRole("button", { name: "用量与费用", exact: true }).click(); await shot("usage-light");
+  checks.push("设置保存、暂停云端、缺少凭据提示、任务队列与费用页");
+  // Use the actual Host's theme control so theme persistence and selectors match the product.
+  await appearance("深色"); await expect(page.locator("body")).toHaveAttribute("data-ds-dark-theme", "");
+  await root.getByRole("button", { name: /^记忆库/ }).click(); await shot("library-dark", 1180); await shot("library-dark-390", 390);
+  await root.getByRole("button", { name: "连接设置", exact: true }).click(); await shot("settings-dark-390", 390);
+  await page.emulateMedia({ reducedMotion: "reduce" }); await expect(root.getByRole("button", { name: "保存运行设置", exact: true })).toHaveCSS("transition-duration", "0s");
+  checks.push("1180/768/390 布局、真实 Host 深色模式、减少动态效果");
+  await page.reload(); await page.waitForTimeout(1500); await page.keyboard.press("Escape");
+  if (!await page.locator(".dsh-memory:visible").count()) await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+  await page.locator(".dsh-memory:visible").getByRole("button", { name: "连接设置", exact: true }).click();
+  await expect(page.getByRole("spinbutton", { name: "每月费用提醒", exact: true })).toHaveValue("12"); await expect(page.getByRole("checkbox", { name: "暂停云端处理，保留本地功能", exact: true })).toBeChecked();
+  await expect(page.getByRole("combobox", { name: "提炼模型", exact: true })).toHaveValue(selectedModel);
+  checks.push("页面重载后的设置持久化");
+  assert.deepEqual(errors, []);
+  await writeFile(".cache/ui-verification.json", JSON.stringify({ checks, errors, realQwen: false, syntheticDataOnly: true }, null, 2));
+  console.log(JSON.stringify({ checks, errors }, null, 2));
+} catch (e) { await page.screenshot({ path: ".cache/screenshots/failure.png" }).catch(() => {}); await writeFile(".cache/ui-failure.txt", `${e.stack}\n${await page.locator("body").innerText()}`); throw e; }
+finally { await browser.close(); }
+
+
