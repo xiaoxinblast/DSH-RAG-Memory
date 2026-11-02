@@ -13,7 +13,7 @@ const memories = db.prepare("SELECT count(*) AS n FROM memories").get().n;
 const browser = await chromium.launch({ channel: "msedge", headless: true }), page = await browser.newPage({ viewport: { width: 1600, height: 1050 } });
 try {
   await page.goto(url); await page.waitForTimeout(1500); await page.keyboard.press("Escape");
-  await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+  await page.getByRole("navigation").getByRole("button", { name: "DSH-RAG-Memory", exact: true }).click();
   const root = page.locator(".dsh-memory:visible");
   await root.getByRole("button", { name: "连接设置", exact: true }).click();
   await expect(root.getByRole("combobox", { name: "提炼模型", exact: true })).toHaveValue(JSON.stringify(["deepseek-account", "deepseek-flash"]));

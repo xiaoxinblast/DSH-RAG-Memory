@@ -1,10 +1,10 @@
-# DSH Memory
+# DSH-RAG-Memory
 
 本地优先的 DSH 独立记忆插件。个人偏好与全局规则共享，项目事实按工作区路径隔离。首版只接管启用后到达的新文本对话，不扫描历史聊天，不读取或迁移喵记忆数据库。
 
 ## 当前状态
 
-版本 `0.1.1`，适配 DSH `0.2.1-rc.5`、Node.js `>=24.2`。本地逻辑、DSH SDK 接入及隔离 Host 界面已有验收脚本。真实 Qwen 向量与精排已用固定 60 例完成验收；DSH 提炼的模型选择、独立输入、审计及恢复通过 51 项自动化测试；隔离 Host 已实际调用所选 DeepSeek 账号 Flash，设置页与模型选择器已截图验收。日用启用状态另见交付验收记录。本地关键词基线不等于云端语义验收。
+版本 `0.1.2`，适配 DSH `0.2.1-rc.5`、Node.js `>=24.2`。本地逻辑、DSH SDK 接入及隔离 Host 界面已有验收脚本。真实 Qwen 向量与精排已用固定 60 例完成验收；DSH 提炼的模型选择、独立输入、审计及恢复通过 51 项自动化测试；隔离 Host 已实际调用所选 DeepSeek 账号 Flash，设置页与模型选择器已截图验收。日用启用状态另见交付验收记录。本地关键词基线不等于云端语义验收。
 
 ## 使用方式
 
@@ -63,11 +63,13 @@ node scripts/evaluate.mjs --live --home "<隔离 DSH_HOME>"
 
 在真实语义验收通过前保持旧喵记忆日用配置。源码构建完成后运行 `npm pack --ignore-scripts` 得到本地包；包内不包含数据库、凭据、测试浏览器资料和 `.cache`。
 
+插件显示名称为 `DSH-RAG-Memory`，安装包名为 `dsh-rag-memory`。从旧包 `dsh-memory` 切换时，先停用旧包，再安装并启用新包，避免两份插件同时运行。原有 `$DSH_HOME/storages/dsh-memory/memory.sqlite`、`DSH_MEMORY_API_KEY` 凭据名称及 `dsh_memory_*` 工具接口继续沿用，无须搬移记忆数据。
+
 通过验收后，完全退出 DSH（包含托盘进程），备份日用 profile 的 `package.json`、`pnpm-lock.yaml`、`cordis.patch.yml` 和所有旧记忆库。SQLite 应使用一致性备份并检查完整性，不直接复制正在写入的主文件。
 
-使用 DSH 官方插件管理器安装本地包并先保持停用，随后停用 `meow-memory` 组合包、启用 `dsh-memory`，重启检查。两套插件不要同时自动记录和注入。不要卸载或删除旧插件及其数据。
+使用 DSH 官方插件管理器安装本地包并先保持停用，随后停用 `meow-memory` 组合包、启用 `dsh-rag-memory`，重启检查。两套插件不要同时自动记录和注入。不要卸载或删除旧插件及其数据。
 
-需要回退时退出 DSH，恢复 profile 备份或停用 `dsh-memory`、重新启用 `meow-memory`，然后重启。新记忆库保留在自己的存储目录，不覆盖旧库。
+需要回退时退出 DSH，恢复 profile 备份或停用 `dsh-rag-memory`、重新启用 `meow-memory`，然后重启。新记忆库保留在自己的存储目录，不覆盖旧库。
 
 ## 工具
 

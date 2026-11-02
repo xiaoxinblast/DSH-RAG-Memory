@@ -1,9 +1,9 @@
 import { TypertRemoteService, isRemoteJsonValue } from "@deepseek-ai/dsh-typert-protocol";
 import { listDshModels, requireDshModel } from "./extractor.mjs";
 
-export const jsonCodec = { mode: "strict", typeSymbol: "dsh-memory#Json", jsonSchema: {}, create: () => ({ parse(value) { if (!isRemoteJsonValue(value)) throw new Error("Expected JSON"); return value; } }) };
-export const descriptor = { id: "dsh-memory#memoryUi/invoke", service: "memoryUi", namespace: "memoryUi", method: "invoke", invocation: { kind: "direct" }, parameters: [{ name: "operation", wire: "operation", source: "json", codec: jsonCodec }], cancellation: { parameter: "signal" }, result: jsonCodec };
-export const TYPERT = { package: "dsh-memory", face: "host", schemas: [], invocations: [descriptor], model: { services: [], events: [], objects: [] } };
+export const jsonCodec = { mode: "strict", typeSymbol: "dsh-rag-memory#Json", jsonSchema: {}, create: () => ({ parse(value) { if (!isRemoteJsonValue(value)) throw new Error("Expected JSON"); return value; } }) };
+export const descriptor = { id: "dsh-rag-memory#memoryUi/invoke", service: "memoryUi", namespace: "memoryUi", method: "invoke", invocation: { kind: "direct" }, parameters: [{ name: "operation", wire: "operation", source: "json", codec: jsonCodec }], cancellation: { parameter: "signal" }, result: jsonCodec };
+export const TYPERT = { package: "dsh-rag-memory", face: "host", schemas: [], invocations: [descriptor], model: { services: [], events: [], objects: [] } };
 export class MemoryUiService extends TypertRemoteService {
   static inject = ["memoryWorkbench", "credentials", "llm"];
   constructor(ctx) { super(ctx, "memoryUi"); }

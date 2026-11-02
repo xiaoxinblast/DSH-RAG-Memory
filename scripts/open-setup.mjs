@@ -7,7 +7,7 @@ const context = await chromium.launchPersistentContext(".cache/setup-browser", {
 const page = context.pages()[0]; await page.goto(url); await page.waitForTimeout(1500);
 const intro = page.getByRole("button", { name: "继续", exact: true }); if (await intro.isVisible()) await intro.click();
 await page.getByText("开始使用", { exact: true }).waitFor({ timeout: 5000 }).catch(() => {}); await page.keyboard.press("Escape");
-await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+await page.getByRole("navigation").getByRole("button", { name: "DSH-RAG-Memory", exact: true }).click();
 await page.locator(".dsh-memory:visible").getByRole("button", { name: "连接设置", exact: true }).click();
 await page.getByRole("textbox", { name: "API Key", exact: true }).focus();
 console.log("本机隔离连接设置已打开；请在窗口中填写 API Key，保存连接并测试。密钥不会输出到终端。");

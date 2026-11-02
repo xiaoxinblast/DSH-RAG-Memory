@@ -15,7 +15,7 @@ try {
   await page.getByText("开始使用", { exact: true }).waitFor({ timeout: 5000 }).catch(() => {});
   await page.keyboard.press("Escape");
   await appearance("浅色"); await expect(page.locator("body")).not.toHaveAttribute("data-ds-dark-theme", "");
-  await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+  await page.getByRole("navigation").getByRole("button", { name: "DSH-RAG-Memory", exact: true }).click();
   const root = page.locator(".dsh-memory:visible");
   await expect(root.getByRole("heading", { name: "值得记住的事" })).toBeVisible();
   await expect(root.locator(".mm-card")).toHaveCount(9);
@@ -63,7 +63,7 @@ try {
   await page.emulateMedia({ reducedMotion: "reduce" }); await expect(root.getByRole("button", { name: "保存运行设置", exact: true })).toHaveCSS("transition-duration", "0s");
   checks.push("1180/768/390 布局、真实 Host 深色模式、减少动态效果");
   await page.reload(); await page.waitForTimeout(1500); await page.keyboard.press("Escape");
-  if (!await page.locator(".dsh-memory:visible").count()) await page.getByRole("navigation").getByRole("button", { name: /^(记忆|Memory)$/ }).click();
+  if (!await page.locator(".dsh-memory:visible").count()) await page.getByRole("navigation").getByRole("button", { name: "DSH-RAG-Memory", exact: true }).click();
   await page.locator(".dsh-memory:visible").getByRole("button", { name: "连接设置", exact: true }).click();
   await expect(page.getByRole("spinbutton", { name: "每月费用提醒", exact: true })).toHaveValue("12"); await expect(page.getByRole("checkbox", { name: "暂停云端处理，保留本地功能", exact: true })).toBeChecked();
   await expect(page.getByRole("combobox", { name: "提炼模型", exact: true })).toHaveValue(selectedModel);

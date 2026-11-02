@@ -24,6 +24,8 @@ try {
   await page.setContent('<html lang="zh-CN"><meta charset="UTF-8"><style>body{margin:0}#app{height:1100px}</style><div id="app"></div></html>');
   await page.addScriptTag({ content: bundle.outputFiles[0].text });
   const root = page.locator(".dsh-memory");
+  await expect(root.getByRole("heading", { name: "DSH-RAG-Memory", exact: true })).toBeVisible();
+  checks.push("界面标题显示仓库名称 DSH-RAG-Memory");
   await root.getByRole("button", { name: "连接设置", exact: true }).click();
   const runtime = root.locator(".mm-panel").filter({ has: page.getByRole("heading", { name: "提炼与运行方式", exact: true }) });
   const connection = root.locator(".mm-panel").filter({ has: page.getByRole("heading", { name: "Qwen · 北京地域", exact: true }) });
@@ -104,6 +106,8 @@ try {
     await connection.getByRole("alert").scrollIntoViewIfNeeded();
     assert.ok(await root.evaluate((element) => element.scrollWidth <= element.clientWidth));
     await connection.screenshot({ path: `${output}/connection-${theme}-${width}.png` });
+    await root.locator(".mm-main").evaluate((element) => { element.scrollTop = 0; });
+    await root.screenshot({ path: `${output}/branding-${theme}-${width}.png` });
   }
   checks.push("1180/768/390 像素宽度及明暗主题截图，无水平溢出");
   assert.deepEqual(errors, []);
