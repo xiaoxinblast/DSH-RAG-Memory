@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-版本 `0.1.0`，适配 DSH `0.2.1-rc.5`、Node.js `>=24.2`。本地逻辑、DSH SDK 接入及隔离 Host 界面已有验收脚本。真实 Qwen 向量与精排已用固定 60 例完成验收；DSH 提炼的模型选择、独立输入、审计及恢复通过 51 项自动化测试；隔离 Host 已实际调用所选 DeepSeek 账号 Flash，设置页与模型选择器已截图验收。日用启用状态另见交付验收记录。本地关键词基线不等于云端语义验收。
+版本 `0.1.1`，适配 DSH `0.2.1-rc.5`、Node.js `>=24.2`。本地逻辑、DSH SDK 接入及隔离 Host 界面已有验收脚本。真实 Qwen 向量与精排已用固定 60 例完成验收；DSH 提炼的模型选择、独立输入、审计及恢复通过 51 项自动化测试；隔离 Host 已实际调用所选 DeepSeek 账号 Flash，设置页与模型选择器已截图验收。日用启用状态另见交付验收记录。本地关键词基线不等于云端语义验收。
 
 ## 使用方式
 
@@ -19,7 +19,7 @@
 1. 打开 [阿里云百炼控制台](https://bailian.console.aliyun.com/)，选择华北 2（北京）。
 2. 按 [API Key 官方说明](https://help.aliyun.com/zh/model-studio/get-api-key)开通服务并创建 Key。
 3. 取得同一业务空间的 [Workspace ID](https://help.aliyun.cn/zh/model-studio/obtain-the-app-id-and-workspace-id)。
-4. 在插件“连接设置”填入 Workspace ID；凭据引用默认 `DSH_MEMORY_API_KEY`。Key 只填写到密码框，点击“保存连接”。随后点击“测试连接”（会产生少量模型费用）。
+4. 在插件“连接设置”填入 Workspace ID；“API Key 保存名称”保留默认 `DSH_MEMORY_API_KEY`。它是 DSH 保存和读取 Key 时使用的名称（凭据引用），只接受大写字母、数字和下划线，不能以数字开头；留空保存会恢复默认值，请勿填写网址。Key 只填写到密码框，点击“保存连接”。随后点击“测试连接”（会产生少量模型费用）；进行中、成功或失败的反馈显示在按钮下方。API Key 留空时沿用此名称下已有的 Key。
 
 提炼通过 DSH 原生 `ctx.llm.prepareCall/stream`，使用插件设置中单独选定的 DSH 提供商、模型与其凭据；独立发送受长度限制的新片段，不附带主聊天历史和工具。在“连接设置 → DSH 提炼模型”中选择并保存，不跟随聊天模型；未选择或模型不可用时保留队列，不自动回退到其他模型。默认向量 `text-embedding-v4`（1024 维）、精排 `qwen3-rerank`。Endpoint 由 Workspace ID 和固定北京地域域名拼接，禁止重定向凭据到其他主机。
 
@@ -39,11 +39,14 @@ Qwen 向量和精排的每月提醒目标默认 10 元（香港时区自然月�
 npm install
 npm run build
 npm test
+npm run test:ui
 npm run check
 npm run evaluate
 ```
 
-开发环境需要同版本的 DSH peer 包。可使用 DSH 源码/SDK的 `node_modules`；不要复制旧插件数据到测试目录。若复用已有开发依赖，设置 `DSH_DEV_MODULES` 为包含 `esbuild` 和 `@playwright/test` 的 `node_modules` 绝对路径。
+开发环境需要同版本的 DSH peer 包。可使用 DSH 源码/SDK的 `node_modules`；不要复制旧插件数据到测试目录。若复用已有开发依赖，设置 `DSH_DEV_MODULES` 为包含 `esbuild`、`@playwright/test`、`react` 和 `react-dom` 的 `node_modules` 绝对路径。
+
+`npm run test:ui` 使用无界面 Edge 渲染实际设置组件和内存数据库，验证独立保存、凭据名称校验、未保存配置提示、测试进行中及成功/失败反馈，并生成明暗主题和不同宽度的截图至 `.cache/settings-ui/`。它只使用合成凭据和模拟响应，不访问真实模型服务。
 
 `npm run evaluate` 执行固定的 60 例本地关键词基线。真实语义评估：
 

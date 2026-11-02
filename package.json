@@ -1,6 +1,6 @@
 {
   "name": "dsh-memory",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH 本地长期记忆：来源可追溯、项目隔离、Qwen 混合检索与增量整理",
   "type": "module",
   "license": "MIT",
@@ -8,10 +8,10 @@
   "engines": { "node": ">=24.2", "dsh": "0.2.1-rc.5" },
   "exports": { ".": "./dsh/index.mjs", "./client": "./dist/client.js", "./icon": "./icon.svg" },
   "files": ["dsh", "src", "dist", "icon.svg", "cordis.patch.yml", "README.md", "CHANGELOG.md", "LICENSE"],
-  "scripts": { "build": "node scripts/build.mjs", "test": "node --test tests/*.test.mjs", "evaluate": "node scripts/evaluate.mjs", "check": "node scripts/check.mjs" },
+  "scripts": { "build": "node scripts/build.mjs", "test": "node --test tests/*.test.mjs", "test:ui": "node scripts/verify-settings-ui.mjs", "evaluate": "node scripts/evaluate.mjs", "check": "node scripts/check.mjs" },
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-api-remotes", "@deepseek-ai/dsh-client-ui-layout", "@deepseek-ai/dsh-client-locale", "@deepseek-ai/dsh-client-ui-conversation"] } },
   "peerDependencies": { "@deepseek-ai/dsh-home-paths": "0.2.1-rc.5", "@deepseek-ai/dsh-tools": "0.2.1-rc.5", "@deepseek-ai/dsh-llm": "0.2.1-rc.5", "@deepseek-ai/dsh-credentials": "0.2.1-rc.5", "@deepseek-ai/dsh-typert-protocol": "0.2.1-rc.5" },
   "peerDependenciesMeta": { "@deepseek-ai/dsh-home-paths": { "optional": true }, "@deepseek-ai/dsh-tools": { "optional": true }, "@deepseek-ai/dsh-llm": { "optional": true }, "@deepseek-ai/dsh-credentials": { "optional": true }, "@deepseek-ai/dsh-typert-protocol": { "optional": true } },
-  "devDependencies": { "esbuild": "0.28.2", "@playwright/test": "1.64.1" }
+  "devDependencies": { "esbuild": "0.28.2", "@playwright/test": "1.64.1", "react": "19.3.1", "react-dom": "19.3.1" }
 }
 

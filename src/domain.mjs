@@ -37,7 +37,7 @@ export const DEFAULTS = Object.freeze({ enabled: true, cloudPaused: false, crede
 export function validateSettings(input) {
   const v = { ...DEFAULTS, ...input };
   if (typeof v.enabled !== "boolean" || typeof v.cloudPaused !== "boolean") throw new Error("开关必须是布尔值");
-  if (!/^[A-Z_][A-Z0-9_]*$/.test(v.credentialRef)) throw new Error("凭据引用必须使用大写环境变量格式");
+  if (!/^[A-Z_][A-Z0-9_]*$/.test(v.credentialRef)) throw new Error("API Key 保存名称只能使用大写字母、数字和下划线，且不能以数字开头。建议填写 DSH_MEMORY_API_KEY，请勿填写网址。");
   if (v.workspaceId && !/^[a-zA-Z0-9_-]+$/.test(v.workspaceId)) throw new Error("业务空间 ID 格式无效");
   if (!Number.isFinite(v.monthlyTarget) || v.monthlyTarget <= 0) throw new Error("提醒金额必须大于 0");
   if (!Array.isArray(v.excludedWorkspaces) || v.excludedWorkspaces.some((p) => typeof p !== "string" || !p.trim())) throw new Error("排除工作区必须是路径列表");
