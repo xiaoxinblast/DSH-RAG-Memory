@@ -1,6 +1,6 @@
 {
   "name": "dsh-rag-memory",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "DSH 本地长期记忆：v7 写入内核、DeepSeek Flash 提炼选型、来源审计与混合检索",
   "type": "module",
   "license": "MIT",

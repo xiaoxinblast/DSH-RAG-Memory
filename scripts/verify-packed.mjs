@@ -8,10 +8,11 @@ import { readPluginMeta } from "@deepseek-ai/dsh-app-boot";
 import { hash } from "../src/domain.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const manifest = JSON.parse(readFileSync(join(root, ".cache/final-v7/pack.json"), "utf8"))[0];
-assert.equal(manifest.filename, "dsh-rag-memory-0.1.4.tgz");
-const archivePath = join(root, "artifacts/final-v7", manifest.filename), bytes = readFileSync(archivePath), tar = gunzipSync(bytes);
-const destination = join(root, ".cache/final-v7/unpacked"), entries = [];
+const expected = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
+const manifest = JSON.parse(readFileSync(join(root, ".cache/conversation-maintenance/pack.json"), "utf8"))[0];
+assert.equal(manifest.filename, `${expected.name}-${expected.version}.tgz`);
+const archivePath = join(root, "artifacts/conversation-maintenance", manifest.filename), bytes = readFileSync(archivePath), tar = gunzipSync(bytes);
+const destination = join(root, ".cache/conversation-maintenance/unpacked"), entries = [];
 const field = (block, start, size) => block.subarray(start, start + size).toString("utf8").split("\0")[0];
 // This release uses ordinary regular-file npm tar entries. Refuse links and extended
 // entries rather than extracting unreviewed paths or falling back to another unpacker.
@@ -38,7 +39,7 @@ for (const entry of entries) {
 }
 for (const entry of entries) { mkdirSync(dirname(entry.path), { recursive: true }); writeFileSync(entry.path, entry.data); }
 const packageRoot = join(destination, "package"), pkg = JSON.parse(readFileSync(join(packageRoot, "package.json")));
-assert.equal(pkg.version, "0.1.4"); assert.equal(pkg.name, "dsh-rag-memory");
+assert.equal(pkg.version, expected.version); assert.equal(pkg.name, expected.name);
 const metadata = readPluginMeta(pkg.name, pathToFileURL(join(packageRoot, "package.json")).href);
 assert.equal(metadata.error, undefined); assert.equal(metadata.title.zh, "DSH-RAG-Memory");
 const entrypoint = await import(pathToFileURL(join(packageRoot, "dsh/index.mjs")));
@@ -71,6 +72,6 @@ try {
   assert.equal((await service.search("NDJSON", workspace, { cloud: false })).length, 0);
 } finally { await service.close(); }
 const report = { at: new Date().toISOString(), package: `${pkg.name}@${pkg.version}`, archive: relative(root, archivePath).replaceAll("\\", "/"), sha256: hash(bytes), bytes: bytes.length, entries: entries.length, files: Object.fromEntries(entries.map(e => [e.name, hash(e.data)])), packageBytesMatchWorkspace: true, metadataValid: true, serverAndBrowserEntryValid: true, protocol: PROTOCOL_VERSION, syntheticPhases: phases, syntheticWriteAndForgetPassed: true, realModelCalls: 0, dailyProfileReadOrChanged: false, note: "Package extracted inside workspace after path/type/allowlist verification. Provider ID is a synthetic test setting, not a change to a real profile." };
-writeFileSync(join(root, "artifacts/final-v7/package-verification.json"), JSON.stringify(report, null, 2));
-writeFileSync(join(root, "artifacts/final-v7/SHA256SUMS.txt"), `${report.sha256}  ${manifest.filename}\n`);
+writeFileSync(join(root, "artifacts/conversation-maintenance/package-verification.json"), JSON.stringify(report, null, 2));
+writeFileSync(join(root, "artifacts/conversation-maintenance/SHA256SUMS.txt"), `${report.sha256}  ${manifest.filename}\n`);
 console.log(JSON.stringify({ package: report.package, bytes: report.bytes, entries: report.entries, sha256: report.sha256, syntheticWriteAndForgetPassed: true }));
