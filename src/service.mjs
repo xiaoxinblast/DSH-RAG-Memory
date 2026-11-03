@@ -166,21 +166,22 @@ export class MemoryService {
     const task = this.runAgentOperation(action, input, context); this.toolRuns.add(task); task.then(() => this.toolRuns.delete(task), () => this.toolRuns.delete(task)); return task;
   }
   async runAgentOperation(action, input, context) {
-    const sources = this.latestUsers(context), target = input.id ? this.store.get(input.id) : null;
+    const resolution = action === "resolve" ? input.resolution : null;
+    const sources = resolution ? resolution.answerSourceIds.map(id => this.store.getSource(id)).filter(Boolean) : this.latestUsers(context), target = input.id ? this.store.get(input.id) : null;
     if (input.id && (!target || target.scope !== "global" && target.project_id !== projectId(context.workspace))) throw new Error("操作目标不属于当前可见范围");
     if (action === "forget" && target?.status === "forgotten") { const receipt = this.store.operations({ memoryId: target.id }).find((r) => r.action === "forget" && r.outcome === "applied"); return { id: target.id, status: target.status, version: target.version, outcome: "applied", operationId: receipt?.id, alreadyForgotten: true, reason: "该条目已遗忘，不再返回正文" }; }
     if (sources.some(s => this.legacySourceIds().has(s.id))) throw new Error("来源存在旧版本未完成任务，需要检查，未重新调用模型");
-    const toolRequest = { action, content: input.content ?? "", kind: input.kind ?? target?.kind ?? "fact", scope: input.scope ?? target?.scope ?? "project", targetId: target?.id ?? null, targetVersion: input.version ?? target?.version ?? null };
+    const toolRequest = { action, content: input.content ?? "", kind: input.kind ?? target?.kind ?? "fact", scope: input.scope ?? target?.scope ?? "project", targetId: target?.id ?? null, targetVersion: input.version ?? target?.version ?? null, ...(resolution ? { resolution } : {}) };
     const id = this.store.enqueue("tool-memory", hash(JSON.stringify({ version: PROTOCOL_VERSION, sources: sources.map(s => s.id), toolRequest })), { protocolVersion: PROTOCOL_VERSION, sourceIds: sources.map(s => s.id), projectId: context.workspace, toolRequest });
     const response = (r) => { const current = r?.after?.id ? this.store.get(r.after.id) : null, stale = current && current.version !== r.after.version, hidden = action === "forget" || current?.status === "forgotten" || stale; return { ...(hidden ? { id: current?.id, status: current?.status, version: current?.version } : r?.after ?? {}), outcome: action !== "forget" && current?.status === "forgotten" ? "blocked" : r?.outcome, operationId: r?.id, reason: stale ? "条目后续已变化，请重新核对；未重放旧操作或返回旧正文" : r?.reason, stale: !!stale, needsClarification: r?.outcome === "clarification" }; };
     const receipt = () => { const rows = this.store.operations({ jobId: id }); return rows.find(r => r.details?.operation) ?? rows[0]; };
     const previous = receipt(); if (previous) return response(previous);
-    const job = this.store.claim("tool-memory", id); if (!job) throw new Error("这条记忆操作正在处理或需要检查，请查看处理队列");
+    const job = this.store.claim("tool-memory", id); if (!job) { const error = new Error("这条记忆操作正在处理或需要检查，请查看处理队列"); if (resolution && ["pending", "running"].includes(this.store.db.prepare("SELECT status FROM jobs WHERE id=?").get(id)?.status)) error.code = "LOCAL_MEMORY_RETRY"; throw error; }
     const heartbeat = setInterval(() => this.store.renew(job), 30000); heartbeat.unref?.();
     try {
       await processOperations(this, job, sources);
       return response(receipt());
-    } catch (error) { if (error.code === "WAIT_DSH_MODEL" && this.store.owns(job)) this.store.db.prepare("UPDATE jobs SET status='pending',attempts=attempts-1,next_at=?,error=? WHERE id=? AND lease_token=?").run(this.store.now() + 30000, "等待已选提炼模型可用；未发送请求", job.id, job.lease_token); else this.store.stopJob(job, "工具记忆操作未完成，请检查阶段审计；未自动重发"); throw error; }
+    } catch (error) { if (error.code === "WAIT_DSH_MODEL" && this.store.owns(job)) this.store.db.prepare("UPDATE jobs SET status='pending',attempts=attempts-1,next_at=?,error=? WHERE id=? AND lease_token=?").run(this.store.now() + 30000, "等待已选提炼模型可用；未发送请求", job.id, job.lease_token); else if (resolution && !["CHECK_MODEL_RESULT", "BATCH_CONTRACT"].includes(error.code) && this.store.owns(job) && this.store.stage(job.id, "extraction")?.state === "done") { this.store.retry(job, "已保存模型回答，等待重放本地提交"); error.code = "LOCAL_MEMORY_RETRY"; } else this.store.stopJob(job, "工具记忆操作未完成，请检查阶段审计；未自动重发"); throw error; }
     finally { clearInterval(heartbeat); }
   }
   async invoke(op, context = {}) {
@@ -199,5 +200,5 @@ export class MemoryService {
       default: throw new Error("不支持的记忆操作");
     }
   }
-  async close() { if (this.closePromise) return this.closePromise; this.closed = true; clearInterval(this.timer); this.abort.abort(); this.closePromise = (async () => { await this.running; await Promise.allSettled([...this.toolRuns]); this.store.close(); })(); return this.closePromise; }
+  async close() { if (this.closePromise) return this.closePromise; this.closed = true; clearInterval(this.timer); this.abort.abort(); this.closePromise = (async () => { await this.running; await Promise.allSettled([...this.toolRuns, ...(this.maintenanceRuns?.values() ?? [])]); this.store.close(); })(); return this.closePromise; }
 }

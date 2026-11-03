@@ -24,7 +24,13 @@ export function decideOperation(operation, review, facts) {
   const credible = parts.every(p => p.some(f => ["user", "tool", "tool-error"].includes(f.source.role) && !!unquotedText(f.text).trim()));
   if (!credible || (!parts.every(p => p.some(f => f.direct)) && (["preference", "rule", "decision"].includes(o.kind) || o.scope === "global"))) return result("rejected", "缺少可确认此类记忆的直接来源");
   if (o.action !== "forget" && o.scope === "global" && !["preference", "rule"].includes(o.kind)) return result("rejected", "全局只允许个人偏好或通用规则");
-  if (facts.toolRequest && (["action", "scope", "targetId", "targetVersion"].some(k => o[k] !== facts.toolRequest[k]) || o.action !== "forget" && o.content !== facts.toolRequest.content)) return result("rejected", "提议超出工具请求的操作、正文、目标或范围");
+  const resolution = facts.toolRequest?.resolution;
+  if (resolution) {
+    if (!facts.resolutionValid || o.scope !== facts.candidate.scope || o.action !== "forget" && o.kind !== facts.candidate.kind) return result("rejected", "候选、问题或回答关联失效，未应用回答");
+    const allowed = o.action === "add" && o.targetId === null && o.targetVersion === null || o.action === "update" && resolution.targetId !== null && o.targetId === resolution.targetId && o.targetVersion === resolution.targetVersion || o.action === "forget" && o.targetId === facts.candidate.id && o.targetVersion === facts.candidate.version;
+    if (!allowed) return result("rejected", "回答只能处理已关联候选或其原替代目标");
+    if (![o, review].every(part => part?.evidence.some(e => resolution.answerSourceIds.includes(e.sourceId)) && part.authorizationEvidence?.some(e => resolution.answerSourceIds.includes(e.sourceId)))) return result("review-required", "两阶段均须直接引用本次用户回答，问题本身不能充当授权");
+  } else if (facts.toolRequest && (["action", "scope", "targetId", "targetVersion"].some(k => o[k] !== facts.toolRequest[k]) || o.action !== "forget" && o.content !== facts.toolRequest.content)) return result("rejected", "提议超出工具请求的操作、正文、目标或范围");
   if (o.action === "add" && (o.targetId !== null || o.targetVersion !== null)) return result("rejected", "新增不能携带覆盖目标");
   if (!review || !["approve", "reject", "uncertain"].includes(review.decision)) return result("review-required", "该项复核缺失或无效，需要检查；未写入记忆");
   if (review.decision === "reject" || [o.authorization, review.authorization].includes("none")) return result("rejected", review.reason);
@@ -45,9 +51,9 @@ export function decideOperation(operation, review, facts) {
   if (["update", "merge", "forget"].includes(o.action)) {
     const available = [...facts.existing, ...(facts.protected ?? [])];
     if (!available.some(r => r.id === o.targetId)) return result(o.action === "forget" ? "clarification" : "rejected", "目标不在提供的范围，不能猜测");
-    if (!target || !(o.action === "forget" ? ["active", "forgotten"] : ["active"]).includes(target.status)) return result(o.action === "forget" ? "clarification" : "rejected", "目标已失效或被遗忘");
+    if (!target || !(o.action === "forget" ? ["active", "forgotten", ...(resolution ? ["pending"] : [])] : ["active"]).includes(target.status)) return result(o.action === "forget" ? "clarification" : "rejected", "目标已失效或被遗忘");
     if (target.scope !== o.scope || target.project_id !== (o.scope === "global" ? null : projectId(facts.workspace))) return result("rejected", "目标与操作范围不一致");
-    if (o.action === "forget") {
+    if (o.action === "forget" && !resolution) {
       const text = identity([...fragments, ...authorization].filter(f => f.direct).map(f => unquotedText(f.text)).join("\n"));
       const named = available.filter(r => text.includes(identity(r.id)) || identity(r.content ?? "").length >= 4 && text.includes(identity(r.content)) || r.attributes?.subject && text.includes(identity(r.attributes.subject)) || r.match === "exact" && r.evidence.some(e => authorization.some(f => e.sourceId === f.source.id && e.anchorId === f.anchorId)));
       if (named.length !== 1 || named[0].id !== target.id) return result("clarification", "原文不能唯一指向遗忘目标，请明确名称或编号");

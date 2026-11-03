@@ -2,6 +2,7 @@ import { bounded, projectId, tokens, validityTime, hash, normalize } from "./dom
 import { decideOperation, operationFingerprint } from "./policy.mjs";
 import { OPERATIONS_PROMPT, operationsInput, parseOperations, parseReview, PROTOCOL_VERSION } from "./extraction.mjs";
 import { unionRanges, sameRange, overlaps } from "./evidence.mjs";
+import { resolutionFacts } from "./maintenance.mjs";
 
 export async function prepareOperations(service, sources, workspace, { cloud = true } = {}) {
   const store = service.store, first = sources[0];
@@ -59,17 +60,19 @@ function factsFor(store, prepared, operation, review, ambiguousRanges) {
     const ids = part.evidence.map(e => e.sourceId), opts = { ...options, ranges: part.evidence }, content = part.content ?? "", protection = store.protections(content, ids, opts);
     return { related: protection.related, blocked: store.blockedBy(protection, content, ids, opts), restoreBlocked: store.blockedBy(protection, content, ids, { ...opts, rerecordGrant }) };
   });
-  return { ...prepared, sources: prepared.sources.map(s => store.maskSource(s)), target: snapshot(store, store.get(o.targetId ?? "")), duplicate, conflicts, ambiguousRanges, relatedProtection: protections.flatMap(p => p.related), rerecordGrant, restoreBlocked: protections.some(p => p.restoreBlocked), blocked: protections.some(p => p.blocked) };
+  return { ...prepared, ...resolutionFacts(store, prepared), sources: prepared.sources.map(s => store.maskSource(s)), target: snapshot(store, store.get(o.targetId ?? "")), duplicate, conflicts, ambiguousRanges, relatedProtection: protections.flatMap(p => p.related), rerecordGrant, restoreBlocked: protections.some(p => p.restoreBlocked), blocked: protections.some(p => p.blocked) };
 }
 function commitOperation(store, job, operation, review, decision, facts) {
   const o = operation, target = facts.target, before = snapshot(store, target), active = ["applied", "merged"].includes(decision.outcome), status = active ? "active" : "pending";
   const ranges = decision.evidence, evidence = ranges.map(e => ({ sourceId: e.sourceId, quote: facts.sources.find(s => s.id === e.sourceId).text.slice(e.start, e.end) }));
   let result = null;
-  if (decision.outcome === "applied" && o.action === "forget") { result = store.forget(target.id, { expectedVersion: o.targetVersion }); store.protectControl(ranges); }
+  if (decision.outcome === "applied" && o.action === "forget" && facts.toolRequest?.resolution) result = store.dismissCandidate(facts.candidate.id, facts.candidate.version);
+  else if (decision.outcome === "applied" && o.action === "forget") { result = store.forget(target.id, { expectedVersion: o.targetVersion }); store.protectControl(ranges); }
   else if (active && o.action === "merge") { store.mergeEvidence(target.id, evidence, ranges); result = target; }
-  else if (active || decision.outcome === "pending") result = store.save({ kind: o.kind, scope: o.scope, projectId: facts.workspace, content: o.content, status, evidence, ranges, attributes: { ...o.attributes, legacy: false, core: o.scope === "global" && status === "active", confirmedAt: status === "active" ? store.now() : null } }, { reason: `automatic-v${PROTOCOL_VERSION}`, supersedes: target?.id ?? null, expectedTargetVersion: o.targetVersion, rerecordGrant: decision.rerecordGrant, operationHash: operationFingerprint(o) });
+  else if (decision.outcome === "pending" && facts.toolRequest?.resolution) result = facts.candidate;
+  else if (active || decision.outcome === "pending") result = store.save({ ...(facts.toolRequest?.resolution ? { id: facts.candidate.id } : {}), kind: o.kind, scope: o.scope, projectId: facts.workspace, content: o.content, status, evidence, ranges, attributes: { ...o.attributes, legacy: false, core: o.scope === "global" && status === "active", confirmedAt: status === "active" ? store.now() : null } }, { reason: `automatic-v${PROTOCOL_VERSION}`, supersedes: target?.id ?? null, expectedTargetVersion: o.targetVersion, rerecordGrant: decision.rerecordGrant, operationHash: operationFingerprint(o), ...(facts.toolRequest?.resolution ? { resolveCandidate: facts.candidate.version } : {}) });
   if (result?.blocked) throw new Error("事务内遗忘状态发生变化，拒绝提交");
-  store.receipt({ key: `${job.id}:${o.id}`, jobId: job.id, memoryId: result?.id ?? target?.id ?? null, action: o.action, outcome: decision.outcome, reason: decision.reason, evidence: ranges, before, after: result?.id ? snapshot(store, store.get(result.id)) : null, details: { protocolVersion: PROTOCOL_VERSION, targetId: o.targetId, operation: o, verification: review, decision } });
+  store.receipt({ key: `${job.id}:${o.id}`, jobId: job.id, memoryId: result?.id ?? target?.id ?? null, action: facts.toolRequest?.resolution && o.action === "forget" ? "dismiss" : o.action, outcome: decision.outcome, reason: decision.reason, evidence: ranges, before, after: result?.id ? snapshot(store, store.get(result.id)) : null, details: { protocolVersion: PROTOCOL_VERSION, targetId: o.targetId, operation: o, verification: review, decision } });
 }
 export async function processOperations(service, job, sources) {
   const store = service.store;
@@ -80,6 +83,10 @@ export async function processOperations(service, job, sources) {
   if (!prepared) {
     prepared = await prepareOperations(service, sources, job.payload.projectId, { cloud: !job.payload.toolRequest });
     prepared.toolRequest = job.payload.toolRequest ?? null;
+    if (prepared.toolRequest?.resolution) {
+      const resolution = prepared.toolRequest.resolution;
+      if (resolution.targetId) { const target = store.get(resolution.targetId); if (target && (target.scope === "global" || target.project_id === projectId(prepared.workspace))) prepared.existing.push(snapshot(store, target)); }
+    }
     if (prepared.toolRequest?.targetId && !prepared.existing.some(r => r.id === prepared.toolRequest.targetId)) {
       const target = store.get(prepared.toolRequest.targetId);
       if (target && (target.scope === "global" || target.project_id === projectId(prepared.workspace))) prepared.existing.push(snapshot(store, target));
@@ -113,6 +120,7 @@ export async function processOperations(service, job, sources) {
   store.transaction(() => {
     store.assertLease(job);
     for (const [phaseName, errors] of [["extraction", draft.errors], ["verification", reviewed.errors]]) errors.forEach((error, index) => store.receipt({ key: `${job.id}:${phaseName}:error:${index}`, jobId: job.id, action: "skip", outcome: "review-required", reason: error.reason, details: { protocolVersion: PROTOCOL_VERSION, phase: phaseName, ...error } }));
+    if (prepared.toolRequest?.resolution && !draft.operations.length && !draft.errors.length) store.receipt({ key: `${job.id}:deferred`, jobId: job.id, memoryId: prepared.toolRequest.resolution.candidateId, action: "skip", outcome: "skipped", reason: "本次回答没有确定可执行的候选变化，保留现状，不重复追问" });
     const handled = new Set(reviewed.units.flatMap(u => u.members));
     const units = [...reviewed.units, ...draft.operations.filter(o => !handled.has(o.id)).map(operation => ({ operation, decision: null }))];
     for (const review of units) {

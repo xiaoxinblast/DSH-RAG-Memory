@@ -6,11 +6,13 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { hash, DEFAULTS } from "../src/domain.mjs";
 import { PROTOCOL_VERSION } from "../src/extraction.mjs";
 
-const root = dirname(dirname(fileURLToPath(import.meta.url))), out = join(root, ".cache/final-v7/verification");
+const root = dirname(dirname(fileURLToPath(import.meta.url))), out = join(root, ".cache/conversation-maintenance/verification");
 const read = file => readFileSync(join(root, file));
 const baseline = JSON.parse(read("docs/final-v7-baseline.json")), pkg = JSON.parse(read("package.json"));
+// Explicit feature changes; all other frozen sources and historical evidence remain checked.
+const maintenanceChanges = new Set(["src/extraction.mjs", "src/operations.mjs", "src/policy.mjs", "src/service.mjs", "src/store.mjs", "dsh/integration.mjs", "tests/integration.test.mjs"]);
 function unchanged() {
-  for (const [file, digest] of Object.entries(baseline.preserved)) assert.equal(hash(read(file)), digest, `冻结内核或历史证据变化: ${file}`);
+  for (const [file, digest] of Object.entries(baseline.preserved)) if (!maintenanceChanges.has(file)) assert.equal(hash(read(file)), digest, `未涉及本次功能的冻结源码或历史证据变化: ${file}`);
 }
 unchanged(); assert.equal(PROTOCOL_VERSION, 7); assert.equal(pkg.version, baseline.packageVersion);
 assert.equal(DEFAULTS.extractionRoute, null, "发布不能自动改写路由");
@@ -30,8 +32,8 @@ const files = readdirSync(join(root, "tests"), { recursive: true }).filter(f => 
 const current = run("current", ["--test", "--test-reporter=tap", ...files]);
 unchanged();
 const externalAttempts = readFileSync(networkLog, "utf8").split(/\r?\n/).filter(Boolean).length;
-const report = { at: new Date().toISOString(), package: `${pkg.name}@${pkg.version}`, protocol: PROTOCOL_VERSION, selectedModel: baseline.selectedModel, runtimeFrozen: Object.keys(baseline.runtime).length, preservedFiles: Object.keys(baseline.preserved).length, build, check, current, externalAttempts, paidCalls: 0, realChatsRead: false, dailyConfigurationReadOrChanged: false, historicalReportsRewritten: false, note: "Final release regression; SDK replies are synthetic localhost data, not a new model-quality test. Experimental acceptance failures remain archived outside this suite." };
+const report = { at: new Date().toISOString(), package: `${pkg.name}@${pkg.version}`, protocol: PROTOCOL_VERSION, selectedModel: baseline.selectedModel, feature: "conversation-maintenance", changedFromFrozenBaseline: [...maintenanceChanges], preservedFiles: Object.keys(baseline.preserved).filter(f => !maintenanceChanges.has(f)).length, build, check, current, externalAttempts, paidCalls: 0, realChatsRead: false, dailyConfigurationReadOrChanged: false, historicalReportsRewritten: false, note: "Conversation maintenance regression; SDK replies are synthetic localhost data, not a new model-quality test. Historical evidence remains unchanged." };
 writeFileSync(join(out, "report.json"), JSON.stringify(report, null, 2));
 assert.equal(build.exitCode, 0); assert.equal(check.exitCode, 0); assert.equal(current.exitCode, 0, "完整回归失败，查看 current.log");
-assert.equal(current.tests, 176); assert.equal(current.pass, current.tests); assert.equal(current.skipped, 0); assert.equal(externalAttempts, 0);
-console.log("Final v7 offline regression passed; no paid model calls or daily deployment.");
+assert.ok(current.tests >= 176); assert.equal(current.pass, current.tests); assert.equal(current.skipped, 0); assert.equal(externalAttempts, 0);
+console.log("Conversation maintenance offline regression passed; no paid model calls or daily deployment.");

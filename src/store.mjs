@@ -106,7 +106,7 @@ export class MemoryStore {
     for (const id of new Set(ranges.map(r => r.sourceId))) this.setMeta(`control:${id}`, unionRanges(this.getMeta(`control:${id}`, []), ranges.filter(r => r.sourceId === id)));
     this.setMeta("forgetEpoch", this.getMeta("forgetEpoch", 0) + 1);
   }
-  save(input, { reason = "manual", supersedes = null, expectedVersion, expectedTargetVersion, rerecordGrant = null, operationHash } = {}) {
+  save(input, { reason = "manual", supersedes = null, expectedVersion, expectedTargetVersion, rerecordGrant = null, operationHash, resolveCandidate } = {}) {
     const value = validateMemory(input), evidence = input.evidence ?? [];
     if (!evidence.length) throw new Error("记忆必须包含可核查的消息来源");
     for (const e of evidence) {
@@ -117,9 +117,10 @@ export class MemoryStore {
     if (this.blocked(value.content, evidence.map((e) => e.sourceId), { ranges: input.ranges, attributes: input.attributes, scope: value.scope, project: value.projectId, rerecordGrant, operationHash })) return { blocked: true };
     const digest = hash(normalize(value.content)), old = input.id ? this.get(input.id) : null;
     if (input.id && !old) throw new Error("记忆不存在");
+    if (resolveCandidate !== undefined && (old?.status !== "pending" || old.version !== resolveCandidate)) throw new Error("候选已变化，未应用过期回答");
     if (old?.status === "forgotten") throw new Error("已遗忘的记忆不能恢复");
     if (old && expectedVersion !== undefined && old.version !== expectedVersion) throw new Error("记忆已被其他操作修改，请重新读取");
-    const status = input.status ?? "active", confirming = old?.status === "pending" && status === "active" && old.supersedes;
+    const status = input.status ?? "active", confirming = old?.status === "pending" && status === "active" && old.supersedes && resolveCandidate === undefined;
     if (!["active", "pending"].includes(status)) throw new Error("无效的写入状态");
     if (confirming) supersedes = old.supersedes;
     const target = supersedes ? this.get(supersedes) : null;
@@ -128,7 +129,7 @@ export class MemoryStore {
     if (confirming && (!proposal || proposal.targetId !== target.id || proposal.version !== target.version)) throw new Error("旧记忆已变化，请重新生成替代候选后确认");
     if (old && old.content_hash === digest && old.status === (input.status ?? "active") && old.kind === value.kind && old.scope === value.scope && old.project_id === value.projectId) { this.mergeEvidence(old.id, evidence, input.ranges); return { ...old, duplicate: true }; }
     const duplicate = this.db.prepare("SELECT * FROM memories WHERE content_hash=? AND scope=? AND project_id IS ? AND status='active' AND id<>?").get(digest, value.scope, value.projectId, old?.id ?? "");
-    if (duplicate && status === "active") { if (confirming) throw new Error("相同内容已存在，请重新核对替代候选"); this.mergeEvidence(duplicate.id, evidence, input.ranges); return { ...duplicate, duplicate: true }; }
+    if (duplicate && status === "active") { if (confirming) throw new Error("相同内容已存在，请重新核对替代候选"); this.mergeEvidence(duplicate.id, evidence, input.ranges); if (resolveCandidate !== undefined) this.dismissCandidate(old.id, old.version); return { ...duplicate, duplicate: true }; }
     if (status === "pending") {
       const pending = this.db.prepare("SELECT * FROM memories WHERE content_hash=? AND scope=? AND project_id IS ? AND status='pending' AND supersedes IS ? AND id<>?").all(digest, value.scope, value.projectId, supersedes ?? old?.supersedes ?? null, old?.id ?? "").find((row) => !target || this.getMeta(`replacement:${row.id}`)?.version === (proposal?.version ?? expectedTargetVersion ?? target.version));
       if (pending) { this.mergeEvidence(pending.id, evidence, input.ranges); return { ...pending, duplicate: true }; }
@@ -137,9 +138,9 @@ export class MemoryStore {
     return this.transaction(() => {
       if (old) this.revision(old, reason);
       if (target && status === "active") { this.revision(target, "superseded"); this.db.prepare("UPDATE memories SET status='superseded',version=version+1,updated_at=? WHERE id=?").run(now, target.id); this.unindex(target.id); }
-      this.db.prepare(`INSERT INTO memories VALUES(?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET kind=excluded.kind,scope=excluded.scope,project_id=excluded.project_id,content=excluded.content,content_hash=excluded.content_hash,status=excluded.status,updated_at=excluded.updated_at,version=excluded.version,supersedes=excluded.supersedes`).run(id, value.kind, value.scope, value.projectId, value.content, digest, status, old?.created_at ?? now, now, (old?.version ?? 0) + 1, supersedes ?? old?.supersedes ?? null);
+      this.db.prepare(`INSERT INTO memories VALUES(?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET kind=excluded.kind,scope=excluded.scope,project_id=excluded.project_id,content=excluded.content,content_hash=excluded.content_hash,status=excluded.status,updated_at=excluded.updated_at,version=excluded.version,supersedes=excluded.supersedes`).run(id, value.kind, value.scope, value.projectId, value.content, digest, status, old?.created_at ?? now, now, (old?.version ?? 0) + 1, resolveCandidate !== undefined ? supersedes : supersedes ?? old?.supersedes ?? null);
       if (target && status === "pending" && !proposal) this.setMeta(`replacement:${id}`, { targetId: target.id, version: expectedTargetVersion ?? target.version });
-      if (confirming) this.db.prepare("DELETE FROM meta WHERE key=?").run(`replacement:${id}`);
+      if (confirming || resolveCandidate !== undefined) this.db.prepare("DELETE FROM meta WHERE key=?").run(`replacement:${id}`);
       for (const e of evidence) this.db.prepare("INSERT INTO evidence VALUES(?,?,?) ON CONFLICT(memory_id,source_id) DO UPDATE SET quote=excluded.quote").run(id, e.sourceId, e.quote);
       this.mergeEvidence(id, [], input.ranges);
       this.setAttributes(id, input.attributes ?? (old ? this.attributes(id) : {}), { invalidate: false });
@@ -189,6 +190,14 @@ export class MemoryStore {
     });
   }
   revision(row, reason) { this.db.prepare("INSERT INTO revisions(memory_id,snapshot,reason,created_at) VALUES(?,?,?,?)").run(row.id, JSON.stringify(row), reason, this.now()); }
+  dismissCandidate(id, version) {
+    const row = this.get(id);
+    if (row?.status !== "pending" || row.version !== version) throw new Error("候选已变化，未取消其他版本");
+    this.revision(row, "dismissed");
+    this.db.prepare("UPDATE memories SET status='dismissed',version=version+1,updated_at=? WHERE id=?").run(this.now(), id);
+    this.unindex(id); this.invalidate();
+    return this.get(id);
+  }
   unindex(id) { this.db.prepare("DELETE FROM memories_fts WHERE id=?").run(id); this.db.prepare("DELETE FROM embeddings WHERE memory_id=?").run(id); }
   get(id) { return this.db.prepare("SELECT * FROM memories WHERE id=?").get(id) ?? null; }
   detail(id) { const memory = this.get(id); if (!memory) throw new Error("记忆不存在"); return { ...memory, attributes: this.attributes(id), operations: this.operations({ memoryId: id }), ranges: this.db.prepare("SELECT * FROM evidence_ranges WHERE memory_id=?").all(id), evidence: this.db.prepare("SELECT s.*,e.quote FROM evidence e JOIN sources s ON s.id=e.source_id WHERE memory_id=?").all(id), revisions: this.db.prepare("SELECT * FROM revisions WHERE memory_id=? ORDER BY id DESC").all(id).map((r) => ({ ...r, snapshot: JSON.parse(r.snapshot) })) }; }
