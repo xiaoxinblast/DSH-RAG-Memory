@@ -1,0 +1,302 @@
+{
+  "frozenAt": "2026-11-03T11:48:25.218Z",
+  "archiveHash": "8843d62c6f729fdfb8a831981b8181c8bea2f3bb545f328b1666365de3ee9b03",
+  "fingerprints": {
+    "src/domain.mjs": "0d0facd32998b80643c363dfd1f56f6ae0830f874a73f0b3298e5dbfb184bf1b",
+    "src/evidence.mjs": "8f5cd46121d485080bdaafca4ea30a00ff2736184dbc406d03d35f8bd40ca0b6",
+    "src/extraction.mjs": "bca7e7f2ea6889db3439fb2cbdfe27b3a02f31dcf7ff7e9b7dd1446495c8e992",
+    "src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    "src/operations.mjs": "d7dcf956515486b70b043b33a4fafd84a2e8302a6f60ee7ddad546c0de15c8ce",
+    "src/policy.mjs": "9ce66b68bb0139cf90bb286954b5bc17ad985d7f3c22b9adf0890db2d708156c",
+    "src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    "src/service.mjs": "caccb62bfec94731be4985c6faeced9c70ef9dedb9af6b074e626d68d9ea8605",
+    "src/store.mjs": "f9a3afb3cef26c7dbc09644d13f27c7688b98536863a2206418e8e0185358d01",
+    "dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    "dsh/extractor.mjs": "c7dc68280e5e286c927fce2aea3d5f510fc7f53221ac41d07875831d57710f78",
+    "dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    "dsh/integration.mjs": "ec6d9e2aa18a59f71d45fb5ad14e7a7d61697839f476f421621af1b0c6a1f488",
+    "tests/core.test.mjs": "cff4b6b5c4cf6821d85b55853eb83718821f8df7d304e053a8df200f258be98b",
+    "tests/integration.test.mjs": "c02749c1ea2f1a7bbab7a3b00c69910131e99b896f250ca92b72bf1793f2a422",
+    "tests/kernel-adapter.test.mjs": "2b51ae4fbfe094fc21b4e9dd22c5379c47a65a2d1d7076b1c7ada12e3d6d07d3",
+    "tests/kernel-contracts.test.mjs": "aa77b55da9fa5e29f19d2bf376b2717559791a482574dbebaa438aa1fffaa0e0",
+    "tests/kernel-invariants.test.mjs": "d11fa88789ade6f13895bbe87deaa3f40fd600c0e0fb6595b23619267a36d0e2",
+    "tests/kernel-policy.test.mjs": "92a31eb1ec7994a114a97b024fdc5c1a77b5edc6578693f2be6463e62a5ebb9f",
+    "tests/kernel-protocol.test.mjs": "e4f0b382d01f4c18d5e2e546b15a71eaecf39929c200c1a723a0b3cba9a97530",
+    "tests/kernel-retained.test.mjs": "39cd0035d9023e1c280c17600e2f289313f37278670b82aa45d391434271b626",
+    "tests/kernel-runtime.test.mjs": "c43e96fdb4cd8ff995514a490ecf4a48c7523d321b80cf7848e6ba6d2e260211",
+    "tests/kernel-sdk.test.mjs": "1f4a4243a1b6ea94242be2aed80a94fce6e3549e6ed12cfc8c88623693ef42a7",
+    "tests/package.test.mjs": "29342f795fc680b25bcc1a5e39d8b66143d716ee0e575a9feea51e013dcd57dc",
+    "tests/scenarios.mjs": "0a111c2433cbd0b8eeb203fae433b9dca8f8a93cd4ffdb52f522b7b343c8ec9d",
+    "tests/ui-recall.test.mjs": "70c5c24452eee3d0af0a7cec6d8e68ea36ad6168b20753e934b5d8e2f26577d3",
+    "tests/evaluation/kernel-evaluation.test.mjs": "b12e25e0e240c16d075fe0f03ec25807b30acb24326eedef69968190b5dd7b94",
+    "tests/fixtures/extraction-cases-v2.mjs": "81118f71d96ccaa7bdf9a4d4d68724f47a6af6fbef07de9016101062e69e5339",
+    "tests/fixtures/extraction-cases-v3.mjs": "181554a45e378c4139777144347165e260473efd354cafd599c61687ca74d2b4",
+    "tests/fixtures/extraction-cases-v4.mjs": "71416431c4d4036ed8721ab3322e11429c0df99cd831459aa0b62a8a2628e8d1",
+    "tests/fixtures/extraction-cases-v5.mjs": "113afaf0a960f9fa9e2e719e8958b41e52c63e29c725d733546c39b845563449",
+    "tests/fixtures/extraction-cases-v6.mjs": "4c0762de2ca2b8bad9c9fc35e1812b287f2801637d5ce4a33f81519f84a42457",
+    "tests/fixtures/extraction-cases.mjs": "ef1e8a363dd81cda92db9ea33bc19d381b24640631b65eaecb20d99d81cbc525",
+    "tests/fixtures/kernel-v6-baseline.json.gz": "b9c7434d3ad09aa3f728598238c11dcac4adfcf77805f511409697d02ee4da7a",
+    "tests/fixtures/kernel-v6-history-deps.json.gz": "b0712425dadc4ef3ff0e35be0497e13518636e81bae8b998d87a720d34e9e00f",
+    "tests/fixtures/kernel-v6-manifest.json": "64c99ae2fdccc744def4f47c819e2095b778b22cb2a6c11c4a49a5d6d73de0b0",
+    "tests/helpers/kernel.mjs": "4cbdb7759253823fee99ef47773c941e5025a880e60bb69c0db16ec380db5aaf",
+    "tests/helpers/offline.mjs": "7164d8046411448ff43b4be8aeb1ba9479e690c921288f0f8d16afb87448e8b7",
+    "scripts/build.mjs": "fe333c5715b6598f0d2fd9b0ef583c87fd4116194b80c2593d720dbec2e93614",
+    "scripts/check.mjs": "87d356870056dc1fcdc77e43ba5998db7bdf92d5e6238b636254e55ee3d3e72e",
+    "scripts/evaluate-kernel.mjs": "bd3f3007db9f45891b698d09efda89a8a231d1403c438032e07e09922974b880",
+    "scripts/evaluate.mjs": "28019c756bb5ddac6492483c7e26cb88b2d2440068265aaeb273c28d79ea4b76",
+    "scripts/kernel-evaluation-budget.mjs": "02fc333fbd2c957678a950e16fce1e3c5ec7204540193bed8e7592ba6ed2c889",
+    "scripts/kernel-evaluation-score.mjs": "d88d631949c42f8e7d4c627328161f226848c63059ef0c1350b6d4eb0e82b848",
+    "scripts/kernel-evaluation.mjs": "8ec3e6e1c37e5b0a08c704b825327fea4df8a709ddb60244bfa48e45e6a83343",
+    "scripts/open-setup.mjs": "339ecccb18190991d6ad6bde9bda6ebf205f7443470620d8ec725a49aba0308d",
+    "scripts/seed-demo.mjs": "00776556fa1678d35f5fda20f9ca723554d7de5906d4ef08db18b40db632be70",
+    "scripts/verify-candidates-ui.mjs": "19404d0004345890212e22ea9251dda9afc093386296496bdb2089e7cc272daf",
+    "scripts/verify-dsh-live.mjs": "f6dcbeeaabca971737e179c6d04a76036f214a5a7106f4b4483887a73f273e40",
+    "scripts/verify-kernel-sdk.mjs": "e05c4cab62a470ab44063257795a29f343bc0f5f6fb1dfb7f6b66f001b2e3fbf",
+    "scripts/verify-kernel-structure.mjs": "ee78798163d16a6845efe63d66afcf9dfbe98b976968efd3919236ea790f7c2d",
+    "scripts/verify-kernel.mjs": "9b1ede7432716b7efe35a39ccb7c404d4bf01a826020432d3ee5d1fa76fc257a",
+    "scripts/verify-library-ui.mjs": "1a1f9d3b41916e7b09e20ffd913026f88d6c5253ea0eade0f23cb0bf345bb380",
+    "scripts/verify-settings-ui.mjs": "1c1298e88b0c22d528321a26f66e8123cb00eb7598d34ba8ab55a8a2502e272b",
+    "scripts/verify-ui.mjs": "71db214c97e2cedddf91be564b036bfa7e4013bf3ea5cbf57a5cfaedae2b4925",
+    "docs/extraction-kernel-v7-results.json": "e9b928eedf53652bf51afb781d9a636a7e8af956420fb05aa14494e3b9d57df0",
+    "docs/extraction-kernel-v7-results.md": "5c4e6a0a489d00076a70e47d10a75a20a73be1511c1be6575ea1eba49a350df2",
+    "docs/extraction-model-pilot-results.json": "ae86781795e5a7620a5e9d4d94a42a7dd1caade3bff9235793c475f7a7dc89d2",
+    "docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613",
+    "docs/extraction-model-results.json": "258bb0c765be228223c3a2b7d605475ff55cdf387655843e586b434ad2350cad",
+    "docs/extraction-model-results.md": "20e8e81b3e6d4c2a678a2b48aa727a6444b6fcb3363d8a783217644d07d087e0",
+    "docs/extraction-model-selection.md": "ee716ea2b03308666e69243b48d8ba5e0167a1fd0a78a497e086fdeba242f307",
+    "docs/extraction-model-v3-results.json": "e023c24d1d3c82f6b84dfbefa4fbdde3c9418af456595f55a8e4743da763c14e",
+    "docs/extraction-model-v3-results.md": "66d24972a9dc012d3b3593c7ead0c1f6768763bf6317bf45746569d93f987059",
+    "docs/extraction-model-v4-results.json": "0330840803f160755b9d1de22cc3ea046c0cdf2a7813d7df147381af05dec11c",
+    "docs/extraction-model-v4-results.md": "ad78b3b02ef01466191ef51c61114f548bcb0bd2a892f42c963ea4f61af7149c",
+    "docs/extraction-model-v5-results.json": "8f8987ac831375f2790d676d942ae4e167cc5709913564e34779612568c5c249",
+    "docs/extraction-model-v5-results.md": "70e311b7cfbc65ed9a192b0c83026890c552433a151766ef6e5f39d9cac28696",
+    "docs/extraction-model-v6-results.json": "0694548b347f71d9308e817f67675913b5dd400856649b21eb8bb4b234d0f5fe",
+    "docs/extraction-model-v6-results.md": "649fe3da0d3c0d02553dd2dbcd16bbe3b8564ae29422f07a3df59569f1403ed0",
+    "docs/extraction-refinement-safety.json": "fa935f4e1859b83ff13d17b07289a5baa953062bc2266367290a84209d74ebd3",
+    "docs/extraction-refinement-safety.md": "a297f9aead19b169aab8cede7e3cd8d20bda63bb63ea80a83ce1a890b7edd508",
+    "docs/kernel-legacy-references.json": "684449bbb3c67b705f94a39178f1b84cd7b118e6cc20f5131ad00b030795cb5d",
+    "docs/kernel-release-manifest.json": "8323c1308b0a0a24ac6d36316a8d4f788bbd5f280d86943dd1c16b0e09ac2703",
+    "docs/kernel-test-map.json": "590d1835ac45f12e21b43698fa1f5469dcc856512f26d67eb66441a12beb6222",
+    "docs/kernel-verification.json": "27e8b9da6843099be9d2e285d9800bd6d4a65459ba309d90283857dda7a0ee17",
+    "docs/memory-kernel-v7.md": "5a242823aa0f57d8eb3113d1b282fa2b98634eb4d9716b2684d7e7d84486d27f",
+    "docs/memory-logic-v3.json": "95589e22a105b0a35db0642c9456900acd89bfadb92af87261f7772dde558d0d",
+    "docs/memory-logic-v3.md": "4ade5d02af641a19d3a018ae7cba66b6963e0156fcb1725490adb153ee7cd762",
+    "docs/memory-logic-v4.md": "6881cd080c4d8f4663d2ddf95d50d73efdcd00f2cf4194b2e5ed390e63641290",
+    "docs/memory-logic-v5.md": "aa886ee2a1db290d1427d634c24ccc5a41aa8ed37f5d695d777ebc016b79684a",
+    "docs/memory-logic-v6.md": "0f4d05c2df45913b524b49ad5cf32eccc8309b042f949e77a79efc02476d3774",
+    "ui/plugin.jsx": "85c423888eca27afe275725af3ec35ac8f003e4086a642b8d326bb9af3dd585d",
+    "ui/recall.css": "bce1b67f63c82f4f07d9d20e16b420006c9392f74bf895955d20852f4e2f5daf",
+    "ui/styles.css": "d9f83b585343f6023bda8445de8bc078567d9848c789344ec15533f4e6cd949a",
+    "dist/client.js": "931d4c00eefe778b0d123c0884ca59a225a253af671e2b41f81e3e7177fbc118",
+    ".cache/extraction-evaluation/kernel-v7/analysis.json": "8fadc05dbd9ac511376804e778c1400f45b4f06b488a6f2ff7b864b513dfacd8",
+    ".cache/extraction-evaluation/kernel-v7/continuation-first-stop.json": "26c1ad14d1d0f32ceb54598d2e6b0d147b92c18b47f6680ea4eca953c9335e49",
+    ".cache/extraction-evaluation/kernel-v7/continuation.json": "06a2934715a333ef4ea80753096d9c3967561f8d0418d20ffca49c5468398bf9",
+    ".cache/extraction-evaluation/kernel-v7/coverage-unions.json": "693efc751bb5a0820c54d2e529e453813893b216b7fc490d42376d08e8a49298",
+    ".cache/extraction-evaluation/kernel-v7/failures.json": "d01a60b51751873a2e6ad163089811b3d39f749e3fa2229f854d0e8ebc292db9",
+    ".cache/extraction-evaluation/kernel-v7/final-verification.json": "4236b18c98ee7c91ba216b28e3656c5d8338dfdeb52864569a295af1cca3ed5d",
+    ".cache/extraction-evaluation/kernel-v7/history-audit.json": "7533cc0960b11e675b7dc80a106ab188c4f7a4e0efdeda37edf43fec1b00f3d6",
+    ".cache/extraction-evaluation/kernel-v7/pass1-provisional.json": "b8ea41a2e8a25e35c0ebe9abdfa8748d6490c319811bf96f2cf16676ab9eb133",
+    ".cache/extraction-evaluation/kernel-v7/plan.json": "d1472466e1225638cc3b86c6ea4af76bb33bbc6119207a12ca6b6b6dbaf78826",
+    ".cache/extraction-evaluation/kernel-v7/protocol-diagnostics.json": "683beccea5c403708a7cbda57c79189b5c4ab4bbae6db53fde0ce9bcc926af79",
+    ".cache/extraction-evaluation/kernel-v7/review-pack-progress.json": "5f52bd05836c4ebdfa4d8cfbd0067a3be92dde66cae03c26856251837757fcdc",
+    ".cache/extraction-evaluation/kernel-v7/reviews.json": "ff26e0e065fbd671ce9463f43f6aabde90e158ccc9b53f2ebccf0bb758458d74",
+    ".cache/extraction-evaluation/kernel-v7/scored-strict.json": "7d13d4a6ba9567a731b54be87d4280ba7d2e4ba40fa531a38cea70623292f61f",
+    ".cache/extraction-evaluation/kernel-v7/scored.json": "542ad63479981c224dc33aa50b238a7900e8afd054e7de1c8235b6748a512b9b",
+    ".cache/extraction-evaluation/kernel-v7/live/completion-first-stop.json": "145fd731b15d1dbea9ad817aed4b383b1d3360e1db1144be03d459e0dbfdc80c",
+    ".cache/extraction-evaluation/kernel-v7/live/completion-second-stop.json": "3570093acb396b575bcaafe5390a05a5c4676f50883f3c76ee8c8c847e7abdc3",
+    ".cache/extraction-evaluation/kernel-v7/live/completion.json": "cdcc234f40c4d932288373e58b2056886284a0fed3ec2de6d495c630ca572df9",
+    ".cache/extraction-evaluation/kernel-v7/live/isolation.json": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+    ".cache/extraction-evaluation/kernel-v7/live/journal.jsonl": "d3586b2d4d01a23ec0561368bd24d2a1d4e6be478233f412e4357239e0c6e000",
+    ".cache/extraction-evaluation/kernel-v7/live/responses.jsonl": "5c1ecce6afa541dbae808589159172351338d43729c5bab814536fe8a8327b26"
+  },
+  "structure": {
+    "files": 13,
+    "total": 802,
+    "perFile": {
+      "src/domain.mjs": {
+        "IfStatement": 21,
+        "ConditionalExpression": 7,
+        "LogicalExpression": 19,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 5,
+        "total": 52
+      },
+      "src/evidence.mjs": {
+        "IfStatement": 3,
+        "ConditionalExpression": 2,
+        "LogicalExpression": 15,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 1,
+        "total": 21
+      },
+      "src/extraction.mjs": {
+        "IfStatement": 8,
+        "ConditionalExpression": 2,
+        "LogicalExpression": 42,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 2,
+        "total": 55
+      },
+      "src/migrations.mjs": {
+        "IfStatement": 3,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 0,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 1,
+        "total": 5
+      },
+      "src/operations.mjs": {
+        "IfStatement": 30,
+        "ConditionalExpression": 7,
+        "LogicalExpression": 34,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 5,
+        "total": 78
+      },
+      "src/policy.mjs": {
+        "IfStatement": 24,
+        "ConditionalExpression": 5,
+        "LogicalExpression": 64,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 0,
+        "total": 94
+      },
+      "src/qwen.mjs": {
+        "IfStatement": 13,
+        "ConditionalExpression": 5,
+        "LogicalExpression": 24,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 0,
+        "total": 43
+      },
+      "src/service.mjs": {
+        "IfStatement": 55,
+        "ConditionalExpression": 25,
+        "LogicalExpression": 73,
+        "SwitchCase": 11,
+        "CatchClause": 3,
+        "loops": 5,
+        "total": 172
+      },
+      "src/store.mjs": {
+        "IfStatement": 49,
+        "ConditionalExpression": 29,
+        "LogicalExpression": 124,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 9,
+        "total": 213
+      },
+      "dsh/bridge.mjs": {
+        "IfStatement": 6,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 5,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 0,
+        "total": 11
+      },
+      "dsh/extractor.mjs": {
+        "IfStatement": 7,
+        "ConditionalExpression": 6,
+        "LogicalExpression": 7,
+        "SwitchCase": 0,
+        "CatchClause": 3,
+        "loops": 1,
+        "total": 24
+      },
+      "dsh/index.mjs": {
+        "IfStatement": 0,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 1,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 0,
+        "total": 1
+      },
+      "dsh/integration.mjs": {
+        "IfStatement": 12,
+        "ConditionalExpression": 1,
+        "LogicalExpression": 17,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 1,
+        "total": 33
+      }
+    },
+    "imports": {
+      "src/domain.mjs": [
+        "node:crypto",
+        "node:path"
+      ],
+      "src/evidence.mjs": [
+        "./qwen.mjs"
+      ],
+      "src/extraction.mjs": [
+        "./domain.mjs",
+        "./qwen.mjs",
+        "./evidence.mjs"
+      ],
+      "src/migrations.mjs": [],
+      "src/operations.mjs": [
+        "./domain.mjs",
+        "./policy.mjs",
+        "./extraction.mjs"
+      ],
+      "src/policy.mjs": [
+        "./domain.mjs",
+        "./qwen.mjs",
+        "./evidence.mjs"
+      ],
+      "src/qwen.mjs": [
+        "./domain.mjs"
+      ],
+      "src/service.mjs": [
+        "node:crypto",
+        "./store.mjs",
+        "./qwen.mjs",
+        "./extraction.mjs",
+        "./operations.mjs",
+        "./domain.mjs"
+      ],
+      "src/store.mjs": [
+        "node:sqlite",
+        "node:fs",
+        "node:path",
+        "node:crypto",
+        "./domain.mjs",
+        "./migrations.mjs"
+      ],
+      "dsh/bridge.mjs": [
+        "@deepseek-ai/dsh-typert-protocol",
+        "./extractor.mjs"
+      ],
+      "dsh/extractor.mjs": [
+        "node:crypto",
+        "@deepseek-ai/dsh-llm",
+        "../src/extraction.mjs",
+        "../src/domain.mjs"
+      ],
+      "dsh/index.mjs": [
+        "node:path",
+        "@deepseek-ai/dsh-home-paths",
+        "../src/service.mjs",
+        "./bridge.mjs",
+        "./integration.mjs",
+        "./extractor.mjs"
+      ],
+      "dsh/integration.mjs": [
+        "@deepseek-ai/dsh-llm",
+        "@deepseek-ai/dsh-tools",
+        "../src/domain.mjs"
+      ]
+    }
+  }
+}

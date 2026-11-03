@@ -1,0 +1,539 @@
+{
+  "archive": "tests/fixtures/kernel-v6-baseline.json.gz",
+  "references": [
+    {
+      "file": "src/content-policy.mjs",
+      "line": 26,
+      "symbol": "contentPolicy"
+    },
+    {
+      "file": "src/evidence.mjs",
+      "line": 24,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 3,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 27,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 39,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 42,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 45,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 52,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 54,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "src/extraction.mjs",
+      "line": 57,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 2,
+      "symbol": "assessOperation"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 2,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 2,
+      "symbol": "validateReview"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 66,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 66,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 69,
+      "symbol": "assessOperation"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 73,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 75,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 75,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 76,
+      "symbol": "validateReview"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 76,
+      "symbol": "validateReview"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 76,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "src/operations.mjs",
+      "line": 92,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 3,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 4,
+      "symbol": "contentPolicy"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 8,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 18,
+      "symbol": "validateReview"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 51,
+      "symbol": "assessOperation"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 59,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 65,
+      "symbol": "contentPolicy"
+    },
+    {
+      "file": "src/policy.mjs",
+      "line": 108,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "src/service.mjs",
+      "line": 4,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "src/service.mjs",
+      "line": 51,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "src/service.mjs",
+      "line": 86,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "src/service.mjs",
+      "line": 89,
+      "symbol": "extractor("
+    },
+    {
+      "file": "src/service.mjs",
+      "line": 222,
+      "symbol": "extractor("
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 3,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 3,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 3,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 34,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 34,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 48,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "dsh/extractor.mjs",
+      "line": 75,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/continue-extraction-v5-2.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/continue-extraction-v5-2.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/continue-extraction-v5.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/continue-extraction-v5.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 7,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 7,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 7,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 101,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 104,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 108,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 151,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "scripts/extraction-evaluation.mjs",
+      "line": 240,
+      "symbol": "EXTRACTION_PROMPT"
+    },
+    {
+      "file": "scripts/replay-extraction-baseline.mjs",
+      "line": 3,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "scripts/replay-extraction-baseline.mjs",
+      "line": 22,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "scripts/report-extraction-v3.mjs",
+      "line": 65,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v3.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v3.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v4.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v4.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v5.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v5.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v6.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/run-extraction-v6.mjs",
+      "line": 97,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "scripts/score-extraction-v3.mjs",
+      "line": 4,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "scripts/score-extraction-v3.mjs",
+      "line": 36,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "scripts/verify-logic-v3-ui.mjs",
+      "line": 18,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "line": 8,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "line": 8,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "line": 48,
+      "symbol": "extractionInput"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "line": 48,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "line": 48,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 7,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 25,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 25,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 26,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 28,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "line": 29,
+      "symbol": "parseExtraction"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "line": 49,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 18,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 70,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 79,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 79,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 147,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 148,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 162,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 228,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 229,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 265,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 278,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 315,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "line": 327,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "line": 5,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "line": 16,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "line": 52,
+      "symbol": "candidateOnly"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "line": 16,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "line": 5,
+      "symbol": "validateOperations"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "line": 19,
+      "symbol": "verifyOperations"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "line": 87,
+      "symbol": "validateOperations"
+    }
+  ],
+  "archivedScripts": [
+    "scripts/benchmark-logic-v3.mjs",
+    "scripts/continue-extraction-v5-2.mjs",
+    "scripts/continue-extraction-v5.mjs",
+    "scripts/extraction-evaluation-v3.mjs",
+    "scripts/extraction-evaluation-v4.mjs",
+    "scripts/extraction-evaluation-v5.mjs",
+    "scripts/extraction-evaluation-v6.mjs",
+    "scripts/extraction-evaluation.mjs",
+    "scripts/inspect-extraction-adapter.mjs",
+    "scripts/replay-extraction-baseline.mjs",
+    "scripts/report-extraction-v3.mjs",
+    "scripts/report-extraction-v4.mjs",
+    "scripts/report-extraction-v5.mjs",
+    "scripts/report-extraction-v6.mjs",
+    "scripts/run-extraction-evaluation.mjs",
+    "scripts/run-extraction-v3.mjs",
+    "scripts/run-extraction-v4.mjs",
+    "scripts/run-extraction-v5.mjs",
+    "scripts/run-extraction-v6.mjs",
+    "scripts/score-extraction-v3.mjs",
+    "scripts/score-extraction-v4.mjs",
+    "scripts/score-extraction-v5.mjs",
+    "scripts/score-extraction-v6.mjs",
+    "scripts/verify-logic-v3-migration.mjs",
+    "scripts/verify-logic-v3-sdk.mjs",
+    "scripts/verify-logic-v3-ui.mjs"
+  ],
+  "note": "References captured from frozen original sources. Archived scripts execute only with frozen dependencies; paid collectors are not part of the offline runner."
+}

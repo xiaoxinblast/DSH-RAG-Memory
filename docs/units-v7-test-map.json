@@ -1,0 +1,829 @@
+{
+  "baseline": 158,
+  "current": 176,
+  "retained": 158,
+  "removed": 0,
+  "added": 18,
+  "items": [
+    {
+      "title": "项目身份按 Windows 路径归一化",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "本地中文短词、路径和精确标识符均能检索",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "全局偏好共享，项目事实不跨项目",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "项目事实不能提升到全局",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "缺失来源和伪造引句被拒绝",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "来源不能跨项目绑定",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "重复内容不制造第二条记忆",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "纠正保留修订并使旧向量失效",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "并发旧版本更新不能覆盖新修正",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "明确替代将旧记忆退出检索",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "待确认冲突不替代有效记忆",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "遗忘清除向量，旧任务和相同来源不能复活记忆",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "后台任务持久化、去重并在重启后恢复",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "捕获忽略历史事件、插件消息和子代理",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "四轮对话排队，重复消息只存一次",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "排除工作区阻止新记录与手动写入",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "助手自述不得形成有效事实，拒绝凭证完成后推进检查点",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "伪造来源项冻结并记录，检查点仅在错误凭证提交后推进",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "新会话首轮召回与同消息缓存，不随工具步骤重复调用",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "云端断网自动回退本地检索",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "忽略取消的云端也不能阻塞超过两秒",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "注入有保守上限且最多五条",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "未配置凭据不发请求，配置不接受任意主机",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "向量 API 契约、query/document、用量和凭据遮蔽",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "精排候选封顶八条，费用含重复查询",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "达到费用提醒仅通知一次，继续调用",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "API 错误与重定向不泄漏响应正文或密钥",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "保守文本裁剪按完整字符且不超过预算",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "坏项不回滚合法项，事务基础设施失败仍整体回滚",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "模型附带任意 id 的项冻结，既有记忆保留",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "待确认条目批准后会重新排入语义索引任务",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "未改变内容不重复向量化",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "同义语义召回能返回无共同关键词的当前项目记忆",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "香港自然月边界正确，历史月份费用不混入",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "失败工具结果不能成为已验证来源",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "Agent 记忆工具引用真实用户原文，不把工具参数冒充用户消息",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "空闲触发以最新会话活动计算，不在活跃长回合中提前整理",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "historical budget uses official upper bound, retains all 18 unknown reservations",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "unknown usage remains fully reserved; pending requests cannot exceed ten yuan",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "settlement never loses charged usage exceeding a reservation",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "zero placeholder and interrupted responses cannot be priced as free",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "wire guard refuses thinking, wrong model, tool payload and unexpected limits",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "journals reject repeat requests and identify unresolved phases without replay",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "all synthetic fixtures seed in isolated memory and preserve existing forgotten status",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "真实 DSH SDK 工具注册及首轮独立快照，不改写用户消息",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "成功压缩后重注入，失败压缩不增加代次",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "子代理不自动注入记忆",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：两阶段使用同一传输、路由、限额、用量与原始回答审计",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：未选择保留任务，不重试、不更换路由",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：提供商移除保留任务，不重试、不更换路由",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：模型移除保留任务，不重试、不更换路由",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：暂停、输入上限在发送前阻止调用；最低推理档不冒充关闭思考",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：失败用量保留，缺失用量不编造费用",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "adapter：模型选择器只返回安全标识；完整配置可清空",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "语义契约 1：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 2：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 3：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 4：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 5：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 6：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 7：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 8：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约 9：成对表述使用独立模拟判断，不是模型准确率",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约：当前事实与未决未来分开；另一主体的完成不证明当前主体完成",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "语义契约：原句无持续价值由阶段判断，引用完整但丢条件仍可被独立复核拒绝",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "硬约束：候选重复有效正文不得把未确认来源合入有效记忆",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "硬约束：完全重复补充证据不重复索引；近义合并须双阶段明确复核",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "硬约束：明确更正事务替代、清向量、回退版本校验；后续修改拒绝过期回退",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "硬约束：全局同意才共享；候选不共享；项目目标及旧元数据不能强行覆盖",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "硬约束：新来源明确重记建立新条目，旧来源与同主体属性改写受墓碑保护",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "硬约束：模糊或被否定的遗忘不执行；引用不能充当直接用户授权",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "硬约束：遗忘遮蔽输入及相邻上下文，凭据和引用锚点不泄漏",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "硬约束：主体召回旧记忆，辅助上下文不能单独支撑写入或重复推进",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "恢复：复核超时与已收坏 JSON 不重发，既有事实与检查点保留",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "恢复：一项坏复核的添加或排序不改变合法项结果，错误记录保留",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "工具：不能顺带执行多提议，遗忘幂等不返回旧正文，不推进原消息",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "工具：暂不可用后复用请求；暂停时普通写入也不得绕过统一复核",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "兼容：未来数据库版本拒绝；旧阶段版本不匹配不重发、不重置检查点",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "采集：保留分片顺序、未覆盖范围与检查点，不把局部整理当全文完成",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "兼容：来源已被处理的旧任务也不能伪装完成；已保存路由重启保持",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "工具：遗忘后重复保存请求不返回旧正文，关联缓存失效",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "人工：候选确认检查自身和被替代版本；Agent 不可代为激活旧候选",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "恢复：关闭等待工具复核退出，未知结果先持久化再关闭数据库",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 裁决：已确定未来计划与事件完成分离；只存候选不得被批准提升",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 裁决：无价值与拒绝不入库；坏复核需要检查，不冒充候选",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 硬约束：伪造、越界、遮蔽、跨项目和上下文来源不能靠批准绕过",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 来源：工具失败可以证明失败，不能充当个人偏好或全局授权",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 授权：全局及更正必须双阶段明确授权，版本变化保留旧条目",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 裁决优先级：坏复核不得借版本冲突变成候选，拒绝不会变成待确认",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 遗忘：目标不唯一须澄清，新来源双授权才能重新记住",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 语义契约：同义、倒装、否定位置与主体词不参与宿主状态猜测",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 时间：相同日期截止的等价合并按自然日末比较，不误降候选",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "等价优化：一次新增只收集两次保护数据，包含提交时的新检查",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "等价优化：扫描不把整批墓碑与遗忘记录载入 JS 数组",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "等价优化：保护分类、作用域、遮蔽、候选顺序和引用与冻结版逐项一致",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "等价优化：合法重记及过期、跨范围、控制来源许可与冻结版一致",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "等价优化：候选来源对象相互独立，复用特征不能引入可变引用共享",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "等价优化：裁决后新增墓碑仍在保存前拦截，不复用过期保护快照",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 协议：坏项隔离保留稳定编号，不修补非法字段",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 协议：复核乱序、缺项、重复与未知编号只冻结相应项",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 协议：坏 JSON、旧版本、超限和模型自造宿主字段不接受",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 协议：复核不能修改正文、范围或目标，引用须属于冻结来源",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "v3 回归：明确过期的条目不参与正常召回，历史读取保留",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "v3 回归：已注入快照在遗忘后失效，同一消息下一步不再注入",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "v3 租约令牌、续租和过期调用阻止另一个执行者重复发送与提交",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "v3 核心层不吞掉相关项目记忆，总预算和整条内容受约束",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "v3 历史搜索可见已替代条目，永不返回已遗忘内容；跨项目查询核对用户原话",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "v3 数据升级保留旧内容，重复打开幂等；错误迁移回滚新增列",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "v3 Agent 读取工具拒绝已遗忘正文，管理界面仍可查看本地审计",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "v3 插件产生的助手消息不重新捕获为新来源",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 运行：普通新增统一两阶段，空批与 skip 不复核",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 运行：提炼与复核坏项独立隔离，合法项保存且原始回答可恢复",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 恢复：已收坏 JSON/截断与未知请求区分，不自动重发",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 恢复：事务失败只重放已保存回答，不重发也不重复凭证",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 恢复：失去租约不能提交，下一执行者复用已完成阶段",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 更正：并发修改保留新版本，待确认不覆盖；可按版本回退",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 遗忘：同批忘 A 保留 B，已遗忘原条目不复活",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 遗忘：提炼期间的遗忘使旧批次失效，复核不再发送",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 兼容：旧任务停止，来源不重新排入新版本付费处理",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 工具：真实用户来源，同一两阶段，严格限制请求边界并幂等",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "kernel 人工：直接编辑不调用模型，版本和遗忘保护仍有效",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "kernel 调度：版本写入任务，来源检查点只在处理凭证提交后推进",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "真实 SDK 本机两阶段回环 {}，无外网与真实凭据",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "真实 SDK 本机两阶段回环 {\"invalidFirst\":true}，无外网与真实凭据",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "真实 SDK 本机两阶段回环 {\"invalidReview\":true}，无外网与真实凭据",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "稀疏保护：未命中扫描不构造带字段名的数据库结果对象",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "稀疏保护：完整行字段、null 原型、顺序和重记授权与紧邻冻结版一致",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "稀疏保护：跨调用读取最新正文、目标版本和墓碑，不缓存结果",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "统一契约：skip 的说明与解析一致，额外字段不能静默丢弃",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "统一契约：完整正文允许复核补齐来源，补证实际进入来源范围",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "统一契约：补证不能借其他用户片段扩大操作授权",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "完整单位：任一阶段发现拆散限定均不入记忆表，独立项不受影响",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "完整单位：完整跨句限定一条保存，召回不拆开",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "遗忘：旧正文包装成新规则也受本地保护，不依赖可选主体属性",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘：控制不能伪装为普通规则；重复保护只记凭证并遮蔽控制来源",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘：布尔重记许可不能绕过任意墓碑",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "协议：坏完整性字段与伪造复核引用只冻结相应项",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "契约：单一声明的字段、版本、枚举和上限进入提示词及解析",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "证据：辅助上下文可补全正文，但不得单独授权全局写入",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "补证：明确适用时间可由复核补齐，不能用补证掩盖无来源日期",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "控制：同一不可分锚点同时提议遗忘和事实时双方挂起，不先遗忘再丢弃事实",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "控制：原失败表述在模拟控制识别后只要求澄清，不另存持续规则",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘候选：缺少主体属性仍从本地关键词找到候选，近义不成为唯一授权",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘：原失败表述即使两阶段误批为规则，已命中的近义保护仍挂起",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘：共享数据库名称但不同主体的新事实不因关键词一起阻断",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "遗忘：改成全局规则不能绕过当前项目保护，全局保护也覆盖项目副本",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "控制：同源其他范围继续可用；控制来源改写或旧任务重放不能写回",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "重记：许可绑定事实、版本、范围、新来源和正文；不能解除第二个保护",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "恢复：控制凭证失败回滚保护与遗忘；重放复用两阶段回答",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "召回：预算不足时完整单位整条排除，未截取无条件前半句",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "控制：全局遗忘不依赖内容分类，不把控制操作当全局事实拦截",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "人工：明确重记只解除唯一事实的保护，旧记录仍不可恢复",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "隔离：受保护候选不能跨项目，协议 5 已收结果不得重新解释或发送",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "控制：同批两个独立遗忘凭证互不因先遮蔽而失败",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "改名后的包可由 DSH 读取中英文显示名称、图标及入口",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "改名后的浏览器构建与宿主使用同一包标识及远程协议，侧栏显示仓库名称",
+      "status": "retained",
+      "mapping": "原不变量保留；涉及模型响应的夹具改用 v7 units/members，遗忘夹具只生成最小操作。阶段投影替代混合提示断言。"
+    },
+    {
+      "title": "对话卡片只认领本插件的记忆快照，不影响其他上下文或用户消息",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    },
+    {
+      "title": "记忆卡片保留位置、内容和稳定身份，可从持久会话记录重建",
+      "status": "retained",
+      "mapping": "原行为断言保留；共用夹具升级 v7，未放宽范围、状态、恢复断言。"
+    }
+  ],
+  "newTests": [
+    "真实 SDK 最小遗忘与最终记忆单元 forget",
+    "真实 SDK 最小遗忘与最终记忆单元 group",
+    "v7 契约：两阶段提示各自投影，不再展示另一阶段的输出字段",
+    "v7 契约：遗忘只需目标与授权，空元数据一致归一化",
+    "v7 证据：事实和明确授权可以来自不同原文锚点",
+    "v7 最终单元：端口与必要限制合为一条，独立事实单独写入",
+    "v7 遗忘：最小操作执行原事务，另一条事实仍可写入",
+    "v7 契约：投影生成的例子经同一解析器验证，旧包装与旧协议不猜测恢复",
+    "v7 授权：独立授权来源确实可生效，复核单方补授权不能生效",
+    "v7 遗忘授权：分离的授权锚点也遮蔽，邻接的独立事实保留",
+    "v7 授权边界：控制授权与事实不可分时同时挂起，跨项目授权拒绝",
+    "v7 单元隔离：乱序不改正文顺序，重复或未知成员冻结整组，独立组继续",
+    "v7 单元边界：状态、作用域、属性冲突与超长整组挂起，不回退成半条",
+    "v7 单元保护：拼接不能冲淡成员墓碑、助手来源或仅上下文证据",
+    "v7 单元授权：一项缺授权不能借同组另一项的授权升为全局",
+    "v7 恢复：合并单元与遗忘同一事务，凭证失败回滚，重放不再请求模型",
+    "v7 兼容：协议6已付费结果原样保留，不解释、不重发、不推进",
+    "v7 已知语义边界：双方误把依赖拆成独立组时，宿主不会用词表猜出依赖"
+  ],
+  "knownLimitationTests": [
+    "v7 已知语义边界：双方误把依赖拆成独立组时，宿主不会用词表猜出依赖"
+  ],
+  "protocolChanges": [
+    "review.decisions/id replaced by units/members",
+    "forget fields derived from target snapshot; obsolete content/kind/scope/unit fields rejected",
+    "attributes omitted or null normalize to {}",
+    "authorizationEvidence need not be subset of fact evidence; independently validate scope and direct-user authority"
+  ],
+  "notModelAccuracy": true
+}

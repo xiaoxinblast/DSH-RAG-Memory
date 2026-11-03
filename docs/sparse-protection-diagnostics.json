@@ -1,0 +1,101 @@
+{
+  "verifiedAt": "2026-11-03T13:02:44.431Z",
+  "beforeProfile": ".cache/sparse-protection/profiles/before-arrays.json",
+  "profileCalls": 80,
+  "scopeRows": 9300,
+  "stages": [
+    {
+      "name": "SQL legacy matches: iterate",
+      "p50Ms": 0.2282999999997628,
+      "p95Ms": 0.23979999999937718
+    },
+    {
+      "name": "SQL legacy matches: all (diagnostic only)",
+      "p50Ms": 0.22860000000036962,
+      "p95Ms": 0.2415999999993801
+    },
+    {
+      "name": "SQL legacy matches: array iterate (diagnostic only)",
+      "p50Ms": 0.23800000000028376,
+      "p95Ms": 0.2525000000005093
+    },
+    {
+      "name": "SQL full forgotten rows: iterate",
+      "p50Ms": 27.15980000000036,
+      "p95Ms": 34.229200000000674
+    },
+    {
+      "name": "SQL full forgotten rows: all (diagnostic only)",
+      "p50Ms": 14.944800000000214,
+      "p95Ms": 19.434700000000703
+    },
+    {
+      "name": "SQL full forgotten rows: array iterate (diagnostic only)",
+      "p50Ms": 14.73620000000028,
+      "p95Ms": 16.455699999999524
+    },
+    {
+      "name": "JSON parse empty-range overlap",
+      "p50Ms": 3.507400000000416,
+      "p95Ms": 4.23739999999998
+    },
+    {
+      "name": "Identity body + id exact checks",
+      "p50Ms": 9.728499999999258,
+      "p95Ms": 11.803499999999985
+    },
+    {
+      "name": "Terms + score, all rows (upper bound, not additive)",
+      "p50Ms": 12.690999999999804,
+      "p95Ms": 13.404700000000048
+    }
+  ],
+  "queryPlanUnchanged": true,
+  "beforeSql": "SELECT f.*,m.version,m.content FROM forgotten_facts f JOIN memories m ON m.id=f.memory_id WHERE f.scope='global' OR f.project_id IS ? OR f.project_id IN (SELECT s.project_id FROM sources s JOIN json_each(?) j ON s.id=j.value)",
+  "afterSql": "SELECT f.memory_id,f.content_hash,f.scope,f.project_id,f.subject,f.facet,f.ranges,f.created_at,f.source_watermark,m.version,m.content FROM forgotten_facts f JOIN memories m ON m.id=f.memory_id WHERE f.scope='global' OR f.project_id IS ? OR f.project_id IN (SELECT s.project_id FROM sources s JOIN json_each(?) j ON s.id=j.value)",
+  "plan": [
+    {
+      "id": 4,
+      "parent": 0,
+      "notused": 216,
+      "detail": "SCAN f"
+    },
+    {
+      "id": 13,
+      "parent": 0,
+      "notused": 0,
+      "detail": "LIST SUBQUERY 1"
+    },
+    {
+      "id": 18,
+      "parent": 13,
+      "notused": 0,
+      "detail": "SCAN j VIRTUAL TABLE INDEX 1:"
+    },
+    {
+      "id": 23,
+      "parent": 13,
+      "notused": 46,
+      "detail": "SEARCH s USING INDEX sqlite_autoindex_sources_1 (id=?)"
+    },
+    {
+      "id": 33,
+      "parent": 13,
+      "notused": 0,
+      "detail": "CREATE BLOOM FILTER"
+    },
+    {
+      "id": 42,
+      "parent": 0,
+      "notused": 46,
+      "detail": "SEARCH m USING INDEX sqlite_autoindex_memories_1 (id=?)"
+    }
+  ],
+  "compatibility": {
+    "declaredNodeMinimum": "24.2",
+    "executedNode": "v25.9.0",
+    "minimumRuntimeExecuted": false,
+    "officialSource": "https://github.com/nodejs/node/blob/v24.2.0/src/node_sqlite.cc",
+    "note": "Versioned source registers setReturnArrays; v24.2.0 API documentation omits the entry. No runtime dependency or engine requirement was changed."
+  }
+}

@@ -1,0 +1,534 @@
+{
+  "date": "2026-11-03",
+  "phase": "v3-live-synthetic-extraction-and-verification",
+  "manifestId": "ce429281c7b1c5d8d4ef62c3495c499e6d7a7fd5c233945129a4411f4b1d8542",
+  "conclusion": "NO_CANDIDATE_QUALIFIED; KEEP_DAILY_CONFIGURATION; REPAIR_PROTOCOL_AND_AUTHORIZATION_BEFORE_RETEST",
+  "startedAt": "2026-11-02T20:24:03.057Z",
+  "finishedAt": "2026-11-02T20:29:30.099Z",
+  "syntheticCases": 80,
+  "developmentCases": 40,
+  "holdoutCases": 32,
+  "extensionCases": 8,
+  "passes": 2,
+  "tasks": 480,
+  "paidRequests": 523,
+  "extractionRequests": 480,
+  "verificationRequests": 43,
+  "allHttp200": true,
+  "allFinishStop": true,
+  "allOffPeak": true,
+  "allWireParametersVerified": true,
+  "unknownUsageRequests": 0,
+  "retries": 0,
+  "automaticModelFallbacks": 0,
+  "realConversationDataRead": false,
+  "realConversationsSent": false,
+  "dailyConfigurationUnchanged": true,
+  "dailyDatabaseAccess": "read-only meta.settings row; no data migration",
+  "dailyInstallationChanged": false,
+  "productionAndPriorEvidenceUnchanged": true,
+  "liveCloudRetrieval": false,
+  "paidEmbeddingOrRerankRequests": 0,
+  "committed": false,
+  "pushed": false,
+  "thresholds": {
+    "precision": 0.98,
+    "memoryPrecision": 0.98,
+    "recall": 0.9,
+    "firstStructure": 0.99,
+    "criticalErrors": 0
+  },
+  "manualReview": {
+    "distinctCaseContents": 192,
+    "modelLabelsOmitted": true,
+    "method": "Codex source-and-gold manual semantic adjudication, model labels omitted; no candidate self-grading",
+    "externalHumanReview": false,
+    "scorerWrittenDuringCollection": true,
+    "goldAndThresholdsFrozenBeforePaidRequests": true,
+    "conditionRule": "critical access restrictions must remain in the same independently retrievable entry; separating ports from loopback-only restrictions is counted as qualifier loss",
+    "additionalFactsAllowed": true
+  },
+  "budget": {
+    "priorConservativeCny": 2.015691999999998,
+    "roundConservativeCny": 1.0595748000000031,
+    "cumulativeConservativeCny": 3.075266800000001,
+    "ceilingCny": 10,
+    "remainingConservativeCny": 6.924733199999999,
+    "referenceTotalCny": 0.31282255999999997,
+    "actualInvoiceVerified": false,
+    "method": "Before each phase, reserve UTF-8 wire bytes plus protocol allowance and full max output, at twice peak no-cache price; settle only known metered usage, failed/unknown charged full reserve."
+  },
+  "tests": {
+    "offlineRegression": 140,
+    "scoringGuards": 3,
+    "pass": 143,
+    "syntaxCheckPassed": true,
+    "note": "140-test full suite plus 3 added scoring tests; loopback tests rerun with local network access after sandbox connection failures"
+  },
+  "byCandidate": {
+    "qwen-flash": {
+      "tasks": 160,
+      "planned": 160,
+      "json": 160,
+      "strict": 109,
+      "done": 64,
+      "proposed": 127,
+      "supported": 112,
+      "validRanges": 78,
+      "active": 24,
+      "correctActive": 22,
+      "written": 30,
+      "required": 144,
+      "covered": 37,
+      "precision": 0.8818897637795275,
+      "memoryPrecision": 0.9166666666666666,
+      "recall": 0.2569444444444444,
+      "firstStructure": 0.68125,
+      "validRangeRate": 0.6141732283464567,
+      "exactCases": 43,
+      "criticalCases": 2,
+      "critical": [
+        "candidate-activated",
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 8,
+      "verificationCalls": 12,
+      "verificationValid": 12,
+      "httpFailures": 0,
+      "p50Ms": 1836,
+      "p95Ms": 3162,
+      "inputTokens": 70523,
+      "cachedInputTokens": 24320,
+      "cacheWriteTokens": 0,
+      "outputTokens": 34519,
+      "budgetAccountedCny": 0.09316760000000007,
+      "model": "qwen3.7-flash-2026-07-15",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.0426926,
+      "referenceNoCacheCny": 0.0465838,
+      "referencePeakCacheCny": 0.0426926,
+      "costPerCorrectNewActiveRowCny": 0.001940572727272727,
+      "costPerCoveredRequiredAtomCny": 0.001153854054054054,
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 80,
+          "strict": 57,
+          "active": 10,
+          "correctActive": 9,
+          "covered": 16,
+          "required": 72,
+          "criticalCases": 1
+        },
+        {
+          "pass": 2,
+          "tasks": 80,
+          "strict": 52,
+          "active": 14,
+          "correctActive": 13,
+          "covered": 21,
+          "required": 72,
+          "criticalCases": 1
+        }
+      ],
+      "behaviorAgreements": 54,
+      "behaviorPairs": 80,
+      "warnings": {
+        "v3 操作字段无效": 51,
+        "操作证据范围无效": 45
+      },
+      "outcomes": {
+        "applied": 24,
+        "rejected": 25,
+        "pending": 6,
+        "skipped": 3,
+        "clarification": 1
+      },
+      "splitResults": {
+        "development": {
+          "tasks": 80,
+          "covered": 23,
+          "required": 76,
+          "strict": 54,
+          "criticalCases": 0
+        },
+        "holdout": {
+          "tasks": 64,
+          "covered": 13,
+          "required": 58,
+          "strict": 44,
+          "criticalCases": 2
+        },
+        "v3-extension": {
+          "tasks": 16,
+          "covered": 1,
+          "required": 10,
+          "strict": 11,
+          "criticalCases": 0
+        }
+      },
+      "categoryResults": {
+        "negation": {
+          "covered": 13,
+          "required": 26,
+          "tasks": 18
+        },
+        "completion": {
+          "covered": 10,
+          "required": 40,
+          "tasks": 18
+        },
+        "roles": {
+          "covered": 0,
+          "required": 12,
+          "tasks": 18
+        },
+        "scope": {
+          "covered": 2,
+          "required": 14,
+          "tasks": 18
+        },
+        "correction": {
+          "covered": 6,
+          "required": 10,
+          "tasks": 18
+        },
+        "reference": {
+          "covered": 5,
+          "required": 22,
+          "tasks": 18
+        },
+        "forgetting": {
+          "covered": 0,
+          "required": 6,
+          "tasks": 18
+        },
+        "noise": {
+          "covered": 0,
+          "required": 4,
+          "tasks": 18
+        },
+        "actions": {
+          "covered": 1,
+          "required": 10,
+          "tasks": 16
+        }
+      },
+      "qualified": false
+    },
+    "qwen-27b": {
+      "tasks": 160,
+      "planned": 160,
+      "json": 160,
+      "strict": 117,
+      "done": 89,
+      "proposed": 125,
+      "supported": 118,
+      "validRanges": 93,
+      "active": 47,
+      "correctActive": 47,
+      "written": 50,
+      "required": 144,
+      "covered": 53,
+      "precision": 0.944,
+      "memoryPrecision": 1,
+      "recall": 0.3680555555555556,
+      "firstStructure": 0.73125,
+      "validRangeRate": 0.744,
+      "exactCases": 60,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 5,
+      "verificationCalls": 16,
+      "verificationValid": 16,
+      "httpFailures": 0,
+      "p50Ms": 2040,
+      "p95Ms": 7656,
+      "inputTokens": 96440,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 21052,
+      "budgetAccountedCny": 0.3178271999999999,
+      "model": "qwen3.5-27b",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.1589136,
+      "referenceNoCacheCny": 0.1589136,
+      "referencePeakCacheCny": 0.1589136,
+      "costPerCorrectNewActiveRowCny": 0.0033811404255319148,
+      "costPerCoveredRequiredAtomCny": 0.0029983698113207544,
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 80,
+          "strict": 58,
+          "active": 23,
+          "correctActive": 23,
+          "covered": 26,
+          "required": 72,
+          "criticalCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 80,
+          "strict": 59,
+          "active": 24,
+          "correctActive": 24,
+          "covered": 27,
+          "required": 72,
+          "criticalCases": 0
+        }
+      ],
+      "behaviorAgreements": 75,
+      "behaviorPairs": 80,
+      "warnings": {
+        "操作证据范围无效": 28,
+        "v3 操作字段无效": 43
+      },
+      "outcomes": {
+        "applied": 47,
+        "rejected": 32,
+        "skipped": 4,
+        "pending": 3,
+        "clarification": 3
+      },
+      "splitResults": {
+        "development": {
+          "tasks": 80,
+          "covered": 32,
+          "required": 76,
+          "strict": 62,
+          "criticalCases": 0
+        },
+        "holdout": {
+          "tasks": 64,
+          "covered": 19,
+          "required": 58,
+          "strict": 41,
+          "criticalCases": 0
+        },
+        "v3-extension": {
+          "tasks": 16,
+          "covered": 2,
+          "required": 10,
+          "strict": 14,
+          "criticalCases": 0
+        }
+      },
+      "categoryResults": {
+        "negation": {
+          "covered": 10,
+          "required": 26,
+          "tasks": 18
+        },
+        "completion": {
+          "covered": 12,
+          "required": 40,
+          "tasks": 18
+        },
+        "roles": {
+          "covered": 4,
+          "required": 12,
+          "tasks": 18
+        },
+        "scope": {
+          "covered": 8,
+          "required": 14,
+          "tasks": 18
+        },
+        "correction": {
+          "covered": 9,
+          "required": 10,
+          "tasks": 18
+        },
+        "reference": {
+          "covered": 6,
+          "required": 22,
+          "tasks": 18
+        },
+        "forgetting": {
+          "covered": 0,
+          "required": 6,
+          "tasks": 18
+        },
+        "noise": {
+          "covered": 2,
+          "required": 4,
+          "tasks": 18
+        },
+        "actions": {
+          "covered": 2,
+          "required": 10,
+          "tasks": 16
+        }
+      },
+      "qualified": false
+    },
+    "deepseek-baseline": {
+      "tasks": 160,
+      "planned": 160,
+      "json": 160,
+      "strict": 159,
+      "done": 107,
+      "proposed": 126,
+      "supported": 116,
+      "validRanges": 76,
+      "active": 47,
+      "correctActive": 45,
+      "written": 53,
+      "required": 144,
+      "covered": 52,
+      "precision": 0.9206349206349206,
+      "memoryPrecision": 0.9574468085106383,
+      "recall": 0.3611111111111111,
+      "firstStructure": 0.99375,
+      "validRangeRate": 0.6031746031746031,
+      "exactCases": 93,
+      "criticalCases": 2,
+      "critical": [
+        "candidate-activated",
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 5,
+      "verificationCalls": 15,
+      "verificationValid": 15,
+      "httpFailures": 0,
+      "p50Ms": 925,
+      "p95Ms": 1763,
+      "inputTokens": 45541,
+      "cachedInputTokens": 51968,
+      "cacheWriteTokens": 0,
+      "outputTokens": 16159,
+      "budgetAccountedCny": 0.6485799999999997,
+      "model": "deepseek-flash",
+      "provider": "deepseek-account",
+      "referenceCny": 0.11121636,
+      "referenceNoCacheCny": 0.32429,
+      "referencePeakCacheCny": 0.22243272,
+      "costPerCorrectNewActiveRowCny": 0.0024714746666666667,
+      "costPerCoveredRequiredAtomCny": 0.002138776153846154,
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 80,
+          "strict": 80,
+          "active": 23,
+          "correctActive": 22,
+          "covered": 26,
+          "required": 72,
+          "criticalCases": 1
+        },
+        {
+          "pass": 2,
+          "tasks": 80,
+          "strict": 79,
+          "active": 24,
+          "correctActive": 23,
+          "covered": 26,
+          "required": 72,
+          "criticalCases": 1
+        }
+      ],
+      "behaviorAgreements": 70,
+      "behaviorPairs": 80,
+      "warnings": {
+        "操作证据范围无效": 52,
+        "v3 操作字段无效": 1
+      },
+      "outcomes": {
+        "applied": 47,
+        "rejected": 19,
+        "pending": 6
+      },
+      "splitResults": {
+        "development": {
+          "tasks": 80,
+          "covered": 32,
+          "required": 76,
+          "strict": 80,
+          "criticalCases": 0
+        },
+        "holdout": {
+          "tasks": 64,
+          "covered": 16,
+          "required": 58,
+          "strict": 64,
+          "criticalCases": 2
+        },
+        "v3-extension": {
+          "tasks": 16,
+          "covered": 4,
+          "required": 10,
+          "strict": 15,
+          "criticalCases": 0
+        }
+      },
+      "categoryResults": {
+        "negation": {
+          "covered": 11,
+          "required": 26,
+          "tasks": 18
+        },
+        "completion": {
+          "covered": 3,
+          "required": 40,
+          "tasks": 18
+        },
+        "roles": {
+          "covered": 3,
+          "required": 12,
+          "tasks": 18
+        },
+        "scope": {
+          "covered": 4,
+          "required": 14,
+          "tasks": 18
+        },
+        "correction": {
+          "covered": 9,
+          "required": 10,
+          "tasks": 18
+        },
+        "reference": {
+          "covered": 12,
+          "required": 22,
+          "tasks": 18
+        },
+        "forgetting": {
+          "covered": 4,
+          "required": 6,
+          "tasks": 18
+        },
+        "noise": {
+          "covered": 2,
+          "required": 4,
+          "tasks": 18
+        },
+        "actions": {
+          "covered": 4,
+          "required": 10,
+          "tasks": 16
+        }
+      },
+      "qualified": false
+    }
+  },
+  "evidenceSha256": {
+    "plan.json": "503092744c2bb9280669ba8f542ea7f171a2971422215e35716adc68a60e3761",
+    "live/journal.jsonl": "0a60d4f0f23db0cd5bf576536e5f1b2144eaa0e24a9de63830e0b66be562eebb",
+    "live/responses.jsonl": "e8fbeb8e3630585fd12cae5c82a60bb6fbcfdefb8efd1cda01bd160ada73bafb",
+    "live/completion.json": "19132c6b060cec44dc2b4873cdf16944cc9bfe0b19626b2d12ca15c2587860bf",
+    "reviews.json": "fc9098bae2d5a87ae5803ea05ac6a39fa24bb552cf4104d9ef4496ed4748ddff",
+    "review-pack.json": "ce8e721afe42f8c98f5a48160d75f19cbf322b7d45589702ab61570f3c390e71",
+    "scored.json": "c03a7454e2ec59d06bf92fed208d58edf1aec7755618392c1d2963d4d958a1f2",
+    "scoring-protocol.json": "da856726f584ff9995fa9854f276254661d65d60755b8dd7178cf06a0fe0c5df"
+  },
+  "implementationSha256": {
+    "scripts/extraction-evaluation-v3.mjs": "0e157f2bf4449c57176ffc2784639038a6520043e571e9f7b06a74aca2027498",
+    "scripts/run-extraction-v3.mjs": "0a68573854f6c4b2ee0e1fa649bc03555d2df97234f9bbff99ab8d7be43cba8c",
+    "scripts/score-extraction-v3.mjs": "1fa6d37aaf939ae7dd0e50d2d4927d201d3c977e4f1e388375cb5491ebd7920b",
+    "scripts/report-extraction-v3.mjs": "36fa68a45fb5db8c39cbab958c4480070aea75aeaa199072a71188777d21fdeb",
+    "tests/fixtures/extraction-cases-v3.mjs": "181554a45e378c4139777144347165e260473efd354cafd599c61687ca74d2b4",
+    "tests/extraction-v3-live.test.mjs": "3504a2321f3d9ab8d0b9df04d492089d5b727795cd26b8fc0372421a13511fb7",
+    "tests/extraction-v3-scoring.test.mjs": "5ed44ba3c0e63598344ac7005bd14071d97841e4f0e54402514aa77d9aafc9a0"
+  }
+}

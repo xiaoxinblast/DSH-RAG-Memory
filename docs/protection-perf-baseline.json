@@ -1,0 +1,291 @@
+{
+  "frozenAt": "2026-11-03T12:33:30.353Z",
+  "protocolVersion": 6,
+  "databaseVersion": 3,
+  "archiveHash": "995c640753928c43c3681fc5bb59550487bdb6554fa92cdb2d7041f9e1be56ef",
+  "fingerprints": {
+    "src/domain.mjs": "0d0facd32998b80643c363dfd1f56f6ae0830f874a73f0b3298e5dbfb184bf1b",
+    "src/evidence.mjs": "683d8b34afa2ef699659c67d54a4b4767941993e0d3456363ad9dd549cd53b38",
+    "src/extraction.mjs": "4231024b57ed35f0e5e3fad5f26d42ea18c086b5079ac96b8f3ab790eb15dc8f",
+    "src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    "src/operations.mjs": "44ffdfe4f2072daf75de5489f9de023e7dfaf4174f32d9c259641179b6b55051",
+    "src/policy.mjs": "d46617279f836cb4bf32f84194acd7a9ffdeed3636767ceb051beb4c883002aa",
+    "src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    "src/service.mjs": "fedffe8fce300992a5a2b46b31029ffcbe074b4172b37f34c0d9ac61efcce0b2",
+    "src/store.mjs": "4031be0e0e7578245c101d546d922f2e276e673299a3964b7af8bf77f27b2490",
+    "dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    "dsh/extractor.mjs": "c7dc68280e5e286c927fce2aea3d5f510fc7f53221ac41d07875831d57710f78",
+    "dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    "dsh/integration.mjs": "ec6d9e2aa18a59f71d45fb5ad14e7a7d61697839f476f421621af1b0c6a1f488",
+    "tests/core.test.mjs": "cff4b6b5c4cf6821d85b55853eb83718821f8df7d304e053a8df200f258be98b",
+    "tests/integration.test.mjs": "c02749c1ea2f1a7bbab7a3b00c69910131e99b896f250ca92b72bf1793f2a422",
+    "tests/kernel-adapter.test.mjs": "2b51ae4fbfe094fc21b4e9dd22c5379c47a65a2d1d7076b1c7ada12e3d6d07d3",
+    "tests/kernel-contracts.test.mjs": "aa77b55da9fa5e29f19d2bf376b2717559791a482574dbebaa438aa1fffaa0e0",
+    "tests/kernel-invariants.test.mjs": "90fe325ea9270116a60a2402b8a1382e85dc7c203a08a43df20f23159748e49e",
+    "tests/kernel-policy.test.mjs": "eb035aadaefdd3017e417e34de4077a0a7696f98c83240c142bfd3b3b8732f15",
+    "tests/kernel-protocol.test.mjs": "d7869f0dd9cb7714c6df2c618525a3bae9e4c35830375bbdede2b59068fe0b98",
+    "tests/kernel-retained.test.mjs": "39cd0035d9023e1c280c17600e2f289313f37278670b82aa45d391434271b626",
+    "tests/kernel-runtime.test.mjs": "c43e96fdb4cd8ff995514a490ecf4a48c7523d321b80cf7848e6ba6d2e260211",
+    "tests/kernel-sdk.test.mjs": "1f4a4243a1b6ea94242be2aed80a94fce6e3549e6ed12cfc8c88623693ef42a7",
+    "tests/kernel-unified.test.mjs": "4fbdc4d1088b856eb850700dae146065297fa5d48d99d4b1335b99e78156def3",
+    "tests/package.test.mjs": "29342f795fc680b25bcc1a5e39d8b66143d716ee0e575a9feea51e013dcd57dc",
+    "tests/scenarios.mjs": "0a111c2433cbd0b8eeb203fae433b9dca8f8a93cd4ffdb52f522b7b343c8ec9d",
+    "tests/ui-recall.test.mjs": "70c5c24452eee3d0af0a7cec6d8e68ea36ad6168b20753e934b5d8e2f26577d3",
+    "tests/evaluation/kernel-evaluation.test.mjs": "b12e25e0e240c16d075fe0f03ec25807b30acb24326eedef69968190b5dd7b94",
+    "tests/helpers/kernel.mjs": "cab24bb14ef05f8d351a70d15b3f7f63307131977efe52621ab7d5df2156cd49",
+    "tests/helpers/offline.mjs": "7164d8046411448ff43b4be8aeb1ba9479e690c921288f0f8d16afb87448e8b7",
+    "scripts/build.mjs": "fe333c5715b6598f0d2fd9b0ef583c87fd4116194b80c2593d720dbec2e93614",
+    "scripts/check.mjs": "87d356870056dc1fcdc77e43ba5998db7bdf92d5e6238b636254e55ee3d3e72e",
+    "scripts/evaluate-kernel.mjs": "bd3f3007db9f45891b698d09efda89a8a231d1403c438032e07e09922974b880",
+    "scripts/evaluate.mjs": "28019c756bb5ddac6492483c7e26cb88b2d2440068265aaeb273c28d79ea4b76",
+    "scripts/kernel-evaluation-budget.mjs": "02fc333fbd2c957678a950e16fce1e3c5ec7204540193bed8e7592ba6ed2c889",
+    "scripts/kernel-evaluation-score.mjs": "d88d631949c42f8e7d4c627328161f226848c63059ef0c1350b6d4eb0e82b848",
+    "scripts/kernel-evaluation.mjs": "8ec3e6e1c37e5b0a08c704b825327fea4df8a709ddb60244bfa48e45e6a83343",
+    "scripts/measure-unified-memory.mjs": "ae9fc12e32abbdde331f19efc1e842abe0a9c2d09e13bdc79080a8c384e37222",
+    "scripts/open-setup.mjs": "339ecccb18190991d6ad6bde9bda6ebf205f7443470620d8ec725a49aba0308d",
+    "scripts/seed-demo.mjs": "00776556fa1678d35f5fda20f9ca723554d7de5906d4ef08db18b40db632be70",
+    "scripts/verify-candidates-ui.mjs": "19404d0004345890212e22ea9251dda9afc093386296496bdb2089e7cc272daf",
+    "scripts/verify-dsh-live.mjs": "f6dcbeeaabca971737e179c6d04a76036f214a5a7106f4b4483887a73f273e40",
+    "scripts/verify-kernel-sdk.mjs": "ba774a8bb4ead0a9926e3663edaa9c762cd8ac2920e18456f305e7e3711fe3aa",
+    "scripts/verify-kernel-structure.mjs": "ee78798163d16a6845efe63d66afcf9dfbe98b976968efd3919236ea790f7c2d",
+    "scripts/verify-kernel.mjs": "19b14169c2a0046064b759fd400e461d64ea887c36c2e3681203a8650b5f3f62",
+    "scripts/verify-library-ui.mjs": "1a1f9d3b41916e7b09e20ffd913026f88d6c5253ea0eade0f23cb0bf345bb380",
+    "scripts/verify-settings-ui.mjs": "1c1298e88b0c22d528321a26f66e8123cb00eb7598d34ba8ab55a8a2502e272b",
+    "scripts/verify-ui.mjs": "71db214c97e2cedddf91be564b036bfa7e4013bf3ea5cbf57a5cfaedae2b4925",
+    "docs/extraction-kernel-v7-results.json": "e9b928eedf53652bf51afb781d9a636a7e8af956420fb05aa14494e3b9d57df0",
+    "docs/extraction-kernel-v7-results.md": "5c4e6a0a489d00076a70e47d10a75a20a73be1511c1be6575ea1eba49a350df2",
+    "docs/extraction-model-pilot-results.json": "ae86781795e5a7620a5e9d4d94a42a7dd1caade3bff9235793c475f7a7dc89d2",
+    "docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613",
+    "docs/extraction-model-results.json": "258bb0c765be228223c3a2b7d605475ff55cdf387655843e586b434ad2350cad",
+    "docs/extraction-model-results.md": "20e8e81b3e6d4c2a678a2b48aa727a6444b6fcb3363d8a783217644d07d087e0",
+    "docs/extraction-model-selection.md": "ee716ea2b03308666e69243b48d8ba5e0167a1fd0a78a497e086fdeba242f307",
+    "docs/extraction-model-v3-results.json": "e023c24d1d3c82f6b84dfbefa4fbdde3c9418af456595f55a8e4743da763c14e",
+    "docs/extraction-model-v3-results.md": "66d24972a9dc012d3b3593c7ead0c1f6768763bf6317bf45746569d93f987059",
+    "docs/extraction-model-v4-results.json": "0330840803f160755b9d1de22cc3ea046c0cdf2a7813d7df147381af05dec11c",
+    "docs/extraction-model-v4-results.md": "ad78b3b02ef01466191ef51c61114f548bcb0bd2a892f42c963ea4f61af7149c",
+    "docs/extraction-model-v5-results.json": "8f8987ac831375f2790d676d942ae4e167cc5709913564e34779612568c5c249",
+    "docs/extraction-model-v5-results.md": "70e311b7cfbc65ed9a192b0c83026890c552433a151766ef6e5f39d9cac28696",
+    "docs/extraction-model-v6-results.json": "0694548b347f71d9308e817f67675913b5dd400856649b21eb8bb4b234d0f5fe",
+    "docs/extraction-model-v6-results.md": "649fe3da0d3c0d02553dd2dbcd16bbe3b8564ae29422f07a3df59569f1403ed0",
+    "docs/extraction-refinement-safety.json": "fa935f4e1859b83ff13d17b07289a5baa953062bc2266367290a84209d74ebd3",
+    "docs/extraction-refinement-safety.md": "a297f9aead19b169aab8cede7e3cd8d20bda63bb63ea80a83ce1a890b7edd508",
+    "docs/kernel-legacy-references.json": "684449bbb3c67b705f94a39178f1b84cd7b118e6cc20f5131ad00b030795cb5d",
+    "docs/kernel-release-manifest.json": "8323c1308b0a0a24ac6d36316a8d4f788bbd5f280d86943dd1c16b0e09ac2703",
+    "docs/kernel-test-map.json": "590d1835ac45f12e21b43698fa1f5469dcc856512f26d67eb66441a12beb6222",
+    "docs/kernel-verification.json": "27e8b9da6843099be9d2e285d9800bd6d4a65459ba309d90283857dda7a0ee17",
+    "docs/memory-kernel-v7.md": "5a242823aa0f57d8eb3113d1b282fa2b98634eb4d9716b2684d7e7d84486d27f",
+    "docs/memory-logic-v3.json": "95589e22a105b0a35db0642c9456900acd89bfadb92af87261f7772dde558d0d",
+    "docs/memory-logic-v3.md": "4ade5d02af641a19d3a018ae7cba66b6963e0156fcb1725490adb153ee7cd762",
+    "docs/memory-logic-v4.md": "6881cd080c4d8f4663d2ddf95d50d73efdcd00f2cf4194b2e5ed390e63641290",
+    "docs/memory-logic-v5.md": "aa886ee2a1db290d1427d634c24ccc5a41aa8ed37f5d695d777ebc016b79684a",
+    "docs/memory-logic-v6.md": "0f4d05c2df45913b524b49ad5cf32eccc8309b042f949e77a79efc02476d3774",
+    "docs/unified-v6-baseline.json": "e61e087c48e11a7607e7f6bf35734c6918b4ec48a07f2a056fda2b8ed2098ca5",
+    "docs/unified-v6-performance.json": "72f45862cb8f66d9c10c9c1a71c585e9dd996c27391140c8a50347c29aeaef04",
+    "docs/unified-v6-release.json": "614c825eeed7fc0e48ae66381e6df226b460c8ba71f7c626b886d4fdafca9435",
+    "docs/unified-v6-repair.md": "2b1049fbc65e7b261a512563ad7d4979f0fc0c802762f3db510b6b8882e904fe",
+    "docs/unified-v6-verification.json": "f3e5b7502d985b4646bd35961bae167edf73453efe55f630172c6f8848d99e7c",
+    "ui/plugin.jsx": "85c423888eca27afe275725af3ec35ac8f003e4086a642b8d326bb9af3dd585d",
+    "ui/recall.css": "bce1b67f63c82f4f07d9d20e16b420006c9392f74bf895955d20852f4e2f5daf",
+    "ui/recall.mjs": "6ef849567c14f1910aec1a7cc869f085ed02f771d52175fa50056f060f2123fd",
+    "ui/styles.css": "d9f83b585343f6023bda8445de8bc078567d9848c789344ec15533f4e6cd949a",
+    "dist/client.js": "931d4c00eefe778b0d123c0884ca59a225a253af671e2b41f81e3e7177fbc118",
+    "locale/en.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    "locale/zh.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    "package.json": "e8173fbee026e946ba9d5a06b80a2e7e943c09ddf68f0044b2802e4e14233ee5",
+    "icon.svg": "4c08b82dc48beb3fead7ae240e124be321966279e4b836c5833cb9be1d7bfd95",
+    "cordis.patch.yml": "b4381436f0a5eb899d8d4670e67ecea4bc219f0066713535ab42a12106d7f178"
+  },
+  "structure": {
+    "files": 13,
+    "total": 862,
+    "perFile": {
+      "src/domain.mjs": {
+        "IfStatement": 21,
+        "ConditionalExpression": 7,
+        "LogicalExpression": 19,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 5,
+        "total": 52
+      },
+      "src/evidence.mjs": {
+        "IfStatement": 3,
+        "ConditionalExpression": 2,
+        "LogicalExpression": 20,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 1,
+        "total": 26
+      },
+      "src/extraction.mjs": {
+        "IfStatement": 9,
+        "ConditionalExpression": 4,
+        "LogicalExpression": 39,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 2,
+        "total": 55
+      },
+      "src/migrations.mjs": {
+        "IfStatement": 3,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 0,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 1,
+        "total": 5
+      },
+      "src/operations.mjs": {
+        "IfStatement": 30,
+        "ConditionalExpression": 8,
+        "LogicalExpression": 30,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 5,
+        "total": 75
+      },
+      "src/policy.mjs": {
+        "IfStatement": 30,
+        "ConditionalExpression": 8,
+        "LogicalExpression": 77,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 0,
+        "total": 117
+      },
+      "src/qwen.mjs": {
+        "IfStatement": 13,
+        "ConditionalExpression": 5,
+        "LogicalExpression": 24,
+        "SwitchCase": 0,
+        "CatchClause": 1,
+        "loops": 0,
+        "total": 43
+      },
+      "src/service.mjs": {
+        "IfStatement": 55,
+        "ConditionalExpression": 29,
+        "LogicalExpression": 73,
+        "SwitchCase": 11,
+        "CatchClause": 3,
+        "loops": 5,
+        "total": 176
+      },
+      "src/store.mjs": {
+        "IfStatement": 50,
+        "ConditionalExpression": 32,
+        "LogicalExpression": 147,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 13,
+        "total": 244
+      },
+      "dsh/bridge.mjs": {
+        "IfStatement": 6,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 5,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 0,
+        "total": 11
+      },
+      "dsh/extractor.mjs": {
+        "IfStatement": 7,
+        "ConditionalExpression": 6,
+        "LogicalExpression": 7,
+        "SwitchCase": 0,
+        "CatchClause": 3,
+        "loops": 1,
+        "total": 24
+      },
+      "dsh/index.mjs": {
+        "IfStatement": 0,
+        "ConditionalExpression": 0,
+        "LogicalExpression": 1,
+        "SwitchCase": 0,
+        "CatchClause": 0,
+        "loops": 0,
+        "total": 1
+      },
+      "dsh/integration.mjs": {
+        "IfStatement": 12,
+        "ConditionalExpression": 1,
+        "LogicalExpression": 17,
+        "SwitchCase": 0,
+        "CatchClause": 2,
+        "loops": 1,
+        "total": 33
+      }
+    },
+    "imports": {
+      "src/domain.mjs": [
+        "node:crypto",
+        "node:path"
+      ],
+      "src/evidence.mjs": [
+        "./qwen.mjs",
+        "./domain.mjs"
+      ],
+      "src/extraction.mjs": [
+        "./domain.mjs",
+        "./qwen.mjs",
+        "./evidence.mjs"
+      ],
+      "src/migrations.mjs": [],
+      "src/operations.mjs": [
+        "./domain.mjs",
+        "./policy.mjs",
+        "./extraction.mjs",
+        "./evidence.mjs"
+      ],
+      "src/policy.mjs": [
+        "./domain.mjs",
+        "./qwen.mjs",
+        "./evidence.mjs"
+      ],
+      "src/qwen.mjs": [
+        "./domain.mjs"
+      ],
+      "src/service.mjs": [
+        "node:crypto",
+        "./store.mjs",
+        "./qwen.mjs",
+        "./extraction.mjs",
+        "./operations.mjs",
+        "./domain.mjs"
+      ],
+      "src/store.mjs": [
+        "node:sqlite",
+        "node:fs",
+        "node:path",
+        "node:crypto",
+        "./domain.mjs",
+        "./migrations.mjs",
+        "./evidence.mjs"
+      ],
+      "dsh/bridge.mjs": [
+        "@deepseek-ai/dsh-typert-protocol",
+        "./extractor.mjs"
+      ],
+      "dsh/extractor.mjs": [
+        "node:crypto",
+        "@deepseek-ai/dsh-llm",
+        "../src/extraction.mjs",
+        "../src/domain.mjs"
+      ],
+      "dsh/index.mjs": [
+        "node:path",
+        "@deepseek-ai/dsh-home-paths",
+        "../src/service.mjs",
+        "./bridge.mjs",
+        "./integration.mjs",
+        "./extractor.mjs"
+      ],
+      "dsh/integration.mjs": [
+        "@deepseek-ai/dsh-llm",
+        "@deepseek-ai/dsh-tools",
+        "../src/domain.mjs"
+      ]
+    }
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "verifiedAt": "2026-11-03T14:28:10.342Z",
+  "before": {
+    "exitCode": 0,
+    "tests": 158,
+    "pass": 158,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/units-v7/verified/before.tap"
+  },
+  "current": {
+    "exitCode": 0,
+    "tests": 176,
+    "pass": 176,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/units-v7/verified/current.tap"
+  },
+  "historical": {
+    "exitCode": 0,
+    "tests": 180,
+    "pass": 180,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/units-v7/verified/historical.tap"
+  },
+  "tooling": [
+    {
+      "name": "check",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    }
+  ],
+  "structure": {
+    "boundary": "all recursive src/**/*.mjs and dsh/**/*.mjs, including new helpers",
+    "definition": "IfStatement + ConditionalExpression + LogicalExpression (including ??) + non-default SwitchCase + CatchClause + loop nodes; identical AST parser before/after",
+    "before": {
+      "files": 13,
+      "total": 858,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 9,
+          "ConditionalExpression": 4,
+          "LogicalExpression": 39,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 73
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 77,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 117
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 52,
+          "ConditionalExpression": 30,
+          "LogicalExpression": 146,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 12,
+          "total": 242
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "after": {
+      "files": 13,
+      "total": 854,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 8,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 4,
+          "total": 49
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 73
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 9,
+          "LogicalExpression": 78,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 119
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 52,
+          "ConditionalExpression": 30,
+          "LogicalExpression": 146,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 12,
+          "total": 242
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "decrease": 4,
+    "decisionCallers": [
+      "src/operations.mjs"
+    ],
+    "productionProtocols": 1,
+    "transportImplementations": {
+      "before": 1,
+      "after": 1
+    }
+  },
+  "constraints": {
+    "before": {
+      "version": 6,
+      "fields": {
+        "operation": 15,
+        "review": 10,
+        "skip": 2
+      },
+      "enums": {
+        "action": 5,
+        "intent": 8,
+        "kind": 5,
+        "scope": 2,
+        "decision": 3,
+        "certainty": 2,
+        "authorization": 4,
+        "eventState": 6,
+        "unit": 3
+      },
+      "maxItems": 12,
+      "maxContent": 300,
+      "maxReason": 500,
+      "promptConservativeTokens": {
+        "extraction": 2807,
+        "review": 3638
+      }
+    },
+    "after": {
+      "version": 7,
+      "fields": {
+        "add": 15,
+        "update": 15,
+        "merge": 15,
+        "forget": 7,
+        "skip": 2,
+        "review": 10,
+        "reviewForget": 7
+      },
+      "enums": {
+        "action": 5,
+        "intent": 8,
+        "kind": 5,
+        "scope": 2,
+        "decision": 3,
+        "certainty": 2,
+        "authorization": 4,
+        "eventState": 6,
+        "unit": 2
+      },
+      "maxItems": 12,
+      "maxContent": 300,
+      "maxReason": 500,
+      "promptConservativeTokens": {
+        "extraction": 3197,
+        "review": 4428
+      }
+    },
+    "projections": {
+      "extraction": {
+        "version": 7,
+        "maxItems": 12,
+        "maxContent": 300,
+        "maxReason": 500,
+        "fields": {
+          "add": [
+            "action",
+            "intent",
+            "content",
+            "kind",
+            "scope",
+            "targetId",
+            "targetVersion",
+            "attributes",
+            "evidence",
+            "authorizationEvidence",
+            "certainty",
+            "authorization",
+            "restores",
+            "eventState",
+            "unit"
+          ],
+          "forget": [
+            "action",
+            "targetId",
+            "targetVersion",
+            "evidence",
+            "authorizationEvidence",
+            "certainty",
+            "authorization"
+          ],
+          "skip": [
+            "action",
+            "evidence"
+          ]
+        },
+        "enums": {
+          "action": [
+            "add",
+            "update",
+            "merge",
+            "forget",
+            "skip"
+          ],
+          "intent": [
+            "statement",
+            "remember",
+            "correct",
+            "forget",
+            "query",
+            "temporary",
+            "quoted",
+            "rerecord"
+          ],
+          "kind": [
+            "preference",
+            "rule",
+            "decision",
+            "fact",
+            "progress"
+          ],
+          "scope": [
+            "project",
+            "global"
+          ],
+          "certainty": [
+            "confirmed",
+            "unresolved"
+          ],
+          "authorization": [
+            "ordinary",
+            "explicit",
+            "candidate_only",
+            "none"
+          ],
+          "eventState": [
+            "not_applicable",
+            "planned",
+            "in_progress",
+            "completed",
+            "failed",
+            "cancelled"
+          ],
+          "unit": [
+            "self_contained",
+            "incomplete"
+          ]
+        },
+        "optional": [
+          "attributes"
+        ],
+        "nullable": [
+          "attributes",
+          "targetId",
+          "targetVersion",
+          "restores"
+        ]
+      },
+      "review": {
+        "version": 7,
+        "maxItems": 12,
+        "maxContent": 300,
+        "maxReason": 500,
+        "fields": {
+          "review": [
+            "members",
+            "decision",
+            "reason",
+            "evidence",
+            "authorizationEvidence",
+            "certainty",
+            "authorization",
+            "restores",
+            "eventState",
+            "unit"
+          ],
+          "reviewForget": [
+            "members",
+            "decision",
+            "reason",
+            "evidence",
+            "authorizationEvidence",
+            "certainty",
+            "authorization"
+          ]
+        },
+        "enums": {
+          "decision": [
+            "approve",
+            "reject",
+            "uncertain"
+          ],
+          "certainty": [
+            "confirmed",
+            "unresolved"
+          ],
+          "authorization": [
+            "ordinary",
+            "explicit",
+            "candidate_only",
+            "none"
+          ],
+          "eventState": [
+            "not_applicable",
+            "planned",
+            "in_progress",
+            "completed",
+            "failed",
+            "cancelled"
+          ],
+          "unit": [
+            "self_contained",
+            "incomplete"
+          ]
+        },
+        "optional": [],
+        "nullable": [
+          "restores"
+        ]
+      }
+    }
+  },
+  "preservedBefore": {
+    "preserved": 111,
+    "historicalEvidence": 175
+  },
+  "preservedAfter": {
+    "preserved": 111,
+    "historicalEvidence": 175
+  },
+  "externalNetworkAttempts": 0,
+  "paidCalls": 0,
+  "realChatsRead": false,
+  "dailyProfileLoaded": false,
+  "uiChanged": false,
+  "note": "Frozen historical code remains independent; synthetic grouping/review responses validate host contracts, not model accuracy. Known model partition failure is recorded as a limitation test, not semantic success."
+}

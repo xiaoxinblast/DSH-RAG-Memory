@@ -1,0 +1,1269 @@
+{
+  "verifiedAt": "2026-11-03T12:41:44.742Z",
+  "before": {
+    "exitCode": 0,
+    "tests": 142,
+    "pass": 142,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/protection-perf/verified/before.tap"
+  },
+  "current": {
+    "exitCode": 0,
+    "tests": 155,
+    "pass": 155,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/protection-perf/verified/current.tap"
+  },
+  "previous": {
+    "exitCode": 0,
+    "tests": 116,
+    "pass": 116,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/protection-perf/verified/previous.tap"
+  },
+  "historical": {
+    "exitCode": 0,
+    "tests": 180,
+    "pass": 180,
+    "fail": 0,
+    "skipped": 0,
+    "log": ".cache/protection-perf/verified/historical.tap"
+  },
+  "tooling": [
+    {
+      "name": "check",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    }
+  ],
+  "structure": {
+    "boundary": "all recursive src/**/*.mjs and dsh/**/*.mjs, including new helpers",
+    "definition": "IfStatement + ConditionalExpression + LogicalExpression (including ??) + non-default SwitchCase + CatchClause + loop nodes; identical AST parser before/after",
+    "before": {
+      "files": 13,
+      "total": 862,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 9,
+          "ConditionalExpression": 4,
+          "LogicalExpression": 39,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 30,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 75
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 77,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 117
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 50,
+          "ConditionalExpression": 32,
+          "LogicalExpression": 147,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 13,
+          "total": 244
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "after": {
+      "files": 13,
+      "total": 858,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 9,
+          "ConditionalExpression": 4,
+          "LogicalExpression": 39,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 73
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 77,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 117
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 52,
+          "ConditionalExpression": 30,
+          "LogicalExpression": 146,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 12,
+          "total": 242
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "decrease": 4,
+    "decisionCallers": [
+      "src/operations.mjs"
+    ],
+    "productionProtocols": 1,
+    "transportImplementations": {
+      "before": 1,
+      "after": 1
+    }
+  },
+  "previousUnifiedComparison": {
+    "boundary": "all recursive src/**/*.mjs and dsh/**/*.mjs, including new helpers",
+    "definition": "IfStatement + ConditionalExpression + LogicalExpression (including ??) + non-default SwitchCase + CatchClause + loop nodes; identical AST parser before/after",
+    "before": {
+      "files": 13,
+      "total": 802,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 15,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 21
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 8,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 42,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 34,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 78
+        },
+        "src/policy.mjs": {
+          "IfStatement": 24,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 64,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 94
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 25,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 172
+        },
+        "src/store.mjs": {
+          "IfStatement": 49,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 124,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 9,
+          "total": 213
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "after": {
+      "files": 13,
+      "total": 858,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 9,
+          "ConditionalExpression": 4,
+          "LogicalExpression": 39,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 73
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 77,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 117
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 52,
+          "ConditionalExpression": 30,
+          "LogicalExpression": 146,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 12,
+          "total": 242
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "decrease": -56,
+    "decisionCallers": [
+      "src/operations.mjs"
+    ],
+    "productionProtocols": 1,
+    "transportImplementations": {
+      "before": 1,
+      "after": 1
+    }
+  },
+  "previousRefactorComparison": {
+    "boundary": "all recursive src/**/*.mjs and dsh/**/*.mjs, including new helpers",
+    "definition": "IfStatement + ConditionalExpression + LogicalExpression (including ??) + non-default SwitchCase + CatchClause + loop nodes; identical AST parser before/after",
+    "before": {
+      "files": 14,
+      "total": 995,
+      "perFile": {
+        "src/content-policy.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 22,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 36
+        },
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 5,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 15,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 2,
+          "total": 22
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 10,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 37,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 39,
+          "ConditionalExpression": 16,
+          "LogicalExpression": 32,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 5,
+          "total": 93
+        },
+        "src/policy.mjs": {
+          "IfStatement": 40,
+          "ConditionalExpression": 10,
+          "LogicalExpression": 141,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 6,
+          "total": 197
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 65,
+          "ConditionalExpression": 35,
+          "LogicalExpression": 83,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 8,
+          "total": 205
+        },
+        "src/store.mjs": {
+          "IfStatement": 49,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 123,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 9,
+          "total": 212
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 11,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 4,
+          "loops": 2,
+          "total": 30
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/content-policy.mjs": [
+          "./evidence.mjs"
+        ],
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./policy.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs",
+          "./content-policy.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/extraction.mjs",
+          "../src/domain.mjs",
+          "../src/evidence.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "after": {
+      "files": 13,
+      "total": 858,
+      "perFile": {
+        "src/domain.mjs": {
+          "IfStatement": 21,
+          "ConditionalExpression": 7,
+          "LogicalExpression": 19,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 5,
+          "total": 52
+        },
+        "src/evidence.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 2,
+          "LogicalExpression": 20,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 1,
+          "total": 26
+        },
+        "src/extraction.mjs": {
+          "IfStatement": 9,
+          "ConditionalExpression": 4,
+          "LogicalExpression": 39,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 2,
+          "total": 55
+        },
+        "src/migrations.mjs": {
+          "IfStatement": 3,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 0,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 1,
+          "total": 5
+        },
+        "src/operations.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 28,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 5,
+          "total": 73
+        },
+        "src/policy.mjs": {
+          "IfStatement": 30,
+          "ConditionalExpression": 8,
+          "LogicalExpression": 77,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 0,
+          "total": 117
+        },
+        "src/qwen.mjs": {
+          "IfStatement": 13,
+          "ConditionalExpression": 5,
+          "LogicalExpression": 24,
+          "SwitchCase": 0,
+          "CatchClause": 1,
+          "loops": 0,
+          "total": 43
+        },
+        "src/service.mjs": {
+          "IfStatement": 55,
+          "ConditionalExpression": 29,
+          "LogicalExpression": 73,
+          "SwitchCase": 11,
+          "CatchClause": 3,
+          "loops": 5,
+          "total": 176
+        },
+        "src/store.mjs": {
+          "IfStatement": 52,
+          "ConditionalExpression": 30,
+          "LogicalExpression": 146,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 12,
+          "total": 242
+        },
+        "dsh/bridge.mjs": {
+          "IfStatement": 6,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 5,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 11
+        },
+        "dsh/extractor.mjs": {
+          "IfStatement": 7,
+          "ConditionalExpression": 6,
+          "LogicalExpression": 7,
+          "SwitchCase": 0,
+          "CatchClause": 3,
+          "loops": 1,
+          "total": 24
+        },
+        "dsh/index.mjs": {
+          "IfStatement": 0,
+          "ConditionalExpression": 0,
+          "LogicalExpression": 1,
+          "SwitchCase": 0,
+          "CatchClause": 0,
+          "loops": 0,
+          "total": 1
+        },
+        "dsh/integration.mjs": {
+          "IfStatement": 12,
+          "ConditionalExpression": 1,
+          "LogicalExpression": 17,
+          "SwitchCase": 0,
+          "CatchClause": 2,
+          "loops": 1,
+          "total": 33
+        }
+      },
+      "imports": {
+        "src/domain.mjs": [
+          "node:crypto",
+          "node:path"
+        ],
+        "src/evidence.mjs": [
+          "./qwen.mjs",
+          "./domain.mjs"
+        ],
+        "src/extraction.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/migrations.mjs": [],
+        "src/operations.mjs": [
+          "./domain.mjs",
+          "./policy.mjs",
+          "./extraction.mjs",
+          "./evidence.mjs"
+        ],
+        "src/policy.mjs": [
+          "./domain.mjs",
+          "./qwen.mjs",
+          "./evidence.mjs"
+        ],
+        "src/qwen.mjs": [
+          "./domain.mjs"
+        ],
+        "src/service.mjs": [
+          "node:crypto",
+          "./store.mjs",
+          "./qwen.mjs",
+          "./extraction.mjs",
+          "./operations.mjs",
+          "./domain.mjs"
+        ],
+        "src/store.mjs": [
+          "node:sqlite",
+          "node:fs",
+          "node:path",
+          "node:crypto",
+          "./domain.mjs",
+          "./migrations.mjs",
+          "./evidence.mjs"
+        ],
+        "dsh/bridge.mjs": [
+          "@deepseek-ai/dsh-typert-protocol",
+          "./extractor.mjs"
+        ],
+        "dsh/extractor.mjs": [
+          "node:crypto",
+          "@deepseek-ai/dsh-llm",
+          "../src/extraction.mjs",
+          "../src/domain.mjs"
+        ],
+        "dsh/index.mjs": [
+          "node:path",
+          "@deepseek-ai/dsh-home-paths",
+          "../src/service.mjs",
+          "./bridge.mjs",
+          "./integration.mjs",
+          "./extractor.mjs"
+        ],
+        "dsh/integration.mjs": [
+          "@deepseek-ai/dsh-llm",
+          "@deepseek-ai/dsh-tools",
+          "../src/domain.mjs"
+        ]
+      }
+    },
+    "decrease": 137,
+    "decisionCallers": [
+      "src/operations.mjs"
+    ],
+    "productionProtocols": 1,
+    "transportImplementations": {
+      "before": 2,
+      "after": 1
+    }
+  },
+  "preservedFingerprints": 60,
+  "optimizationPreservedFingerprints": 86,
+  "evidenceBefore": {
+    "expected": 124,
+    "verified": 124,
+    "absent": 0
+  },
+  "evidenceAfter": {
+    "expected": 124,
+    "verified": 124,
+    "absent": 0
+  },
+  "externalNetworkAttempts": 0,
+  "paidCalls": 0,
+  "realChatsRead": false,
+  "dailyProfileLoaded": false,
+  "note": "Historical suites use frozen dependencies. The immediate pre-optimization baseline has the same protocol and decisions. Differential tests compare full ordered protection results; synthetic tests are not model accuracy measurements."
+}

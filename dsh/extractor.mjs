@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { BlockAssembler, createSystemMessage, createUserMessage } from "@deepseek-ai/dsh-llm";
-import { EXTRACTION_PROMPT, extractionInput, parseExtraction } from "../src/extraction.mjs";
+import { OPERATIONS_PROMPT, VERIFICATION_PROMPT, PROTOCOL_VERSION } from "../src/extraction.mjs";
+import { tokens } from "../src/domain.mjs";
 
 export async function listDshModels(llm) {
   const providers = await Promise.all(llm.listProviders().map(async (p) => {
@@ -23,29 +24,24 @@ export async function requireDshModel(llm, route) {
 }
 
 export function createDshExtractor(ctx, store) {
-  return async (sources, existing, signal) => {
-    const sessionId = sources[0]?.session_id;
-    const route = store.settings().extractionRoute;
+  async function request(phase, payload, signal, meta = {}) {
+    const prompt = phase === "verification" ? VERIFICATION_PROMPT : OPERATIONS_PROMPT;
+    if (store.settings().cloudPaused) { const error = new Error("云端记忆处理已暂停，保留任务等待恢复"); error.code = "WAIT_DSH_MODEL"; throw error; }
+    const route = meta.route ?? store.settings().extractionRoute;
     await requireDshModel(ctx.llm, route);
-    const combined = AbortSignal.any([signal, AbortSignal.timeout(90000)]);
-    const messages = [createSystemMessage(EXTRACTION_PROMPT), createUserMessage({ source: { kind: "plugin:dsh-memory" }, content: [{ type: "text", text: extractionInput(sources, existing) }] })];
-    const prepared = await ctx.llm.prepareCall({ provider: route.provider, model: route.model, temperature: 0, maxTokens: 2048 }, combined, (controls, info) => {
-      const least = info.reasoning?.efforts?.[0]?.id;
-      return least === undefined ? controls : { ...controls, reasoningEffort: least };
-    });
-    const id = randomUUID(), assembler = new BlockAssembler();
-    // Keep the exact auxiliary request in the local memory audit log. No main-chat history or tools are sent.
-    store.db.prepare("INSERT INTO extraction_calls(id,session_id,provider,model,request,status,created_at) VALUES(?,?,?,?,?,'running',?)").run(id, sessionId, prepared.config.provider, prepared.config.model, JSON.stringify({ config: prepared.config, messages }), store.now());
+    if (JSON.stringify(route) !== JSON.stringify(store.settings().extractionRoute)) { const error = new Error("提炼路由已变化，保留批次等待核对"); error.code = "WAIT_DSH_MODEL"; throw error; }
+    if (tokens(prompt) + tokens(payload) > (phase === "verification" ? 16000 : 8000)) throw new Error("记忆阶段输入超过保守预算");
+    const combined = AbortSignal.any([signal, AbortSignal.timeout(90000)]), assembler = new BlockAssembler();
+    const messages = [createSystemMessage(prompt), createUserMessage({ source: { kind: "plugin:dsh-memory" }, content: [{ type: "text", text: payload }] })];
+    const prepared = await ctx.llm.prepareCall({ provider: route.provider, model: route.model, temperature: 0, maxTokens: 2048 }, combined, (controls, info) => { const least = info.reasoning?.efforts?.[0]?.id; return least === undefined ? controls : { ...controls, reasoningEffort: least }; });
+    const id = randomUUID();
+    store.db.prepare("INSERT INTO extraction_calls(id,session_id,provider,model,request,status,created_at) VALUES(?,?,?,?,?,'running',?)").run(id, meta.sessionId ?? "dsh-memory", route.provider, route.model, JSON.stringify({ version: PROTOCOL_VERSION, phase, jobId: meta.jobId ?? null, config: prepared.config, messages }), store.now());
     try {
-      for await (const chunk of prepared.stream({ ...prepared.config, messages, sessionId, purpose: "memory-extraction", signal: combined })) assembler.push(chunk);
-      if (assembler.finish.kind !== "stop") throw new Error(`DSH 提炼未完成：${assembler.finish.kind}`);
+      for await (const chunk of prepared.stream({ ...prepared.config, messages, sessionId: meta.sessionId, purpose: phase === "verification" ? "memory-verification" : "memory-extraction", signal: combined })) assembler.push(chunk);
       const text = assembler.blocks().filter((b) => b.type === "text").map((b) => b.text).join("");
-      const usage = assembler.usage;
-      store.db.prepare("UPDATE extraction_calls SET response=?,usage=?,status='done' WHERE id=?").run(text, usage ? JSON.stringify(usage) : null, id);
-      return parseExtraction(text);
-    } catch (error) {
-      store.db.prepare("UPDATE extraction_calls SET status='failed',usage=?,error=? WHERE id=?").run(assembler.usage ? JSON.stringify(assembler.usage) : null, "DSH 提炼请求未完成或返回格式无效", id);
-      throw error;
-    }
-  };
+      store.db.prepare("UPDATE extraction_calls SET response=?,usage=?,status='done' WHERE id=?").run(text, assembler.usage ? JSON.stringify(assembler.usage) : null, id);
+      return { text, usage: assembler.usage ?? null, finish: assembler.finish.kind };
+    } catch (error) { store.db.prepare("UPDATE extraction_calls SET status='failed',usage=?,error=? WHERE id=?").run(assembler.usage ? JSON.stringify(assembler.usage) : null, "记忆阶段未完成，需要核对审计记录", id); throw error; }
+  }
+  return { request, assertReady: route => requireDshModel(ctx.llm, route ?? store.settings().extractionRoute) };
 }

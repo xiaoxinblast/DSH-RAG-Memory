@@ -1,0 +1,1067 @@
+{
+  "at": "2026-11-03T15:00:40.086Z",
+  "planId": "1673dbbe6189d68aca28a2d1fa6f5f748830a62a2142e8b642c4094bb3123311",
+  "protocol": 7,
+  "cases": 48,
+  "tasks": 288,
+  "requests": 540,
+  "reviewedUniqueContents": 97,
+  "reviewMethod": "Source and frozen gold semantic adjudication by Codex, candidate labels omitted, no paid judge. Final independently usable memory units determine precision. Raw proposal precision is diagnostic only. Same case and content receive same label; qualifier loss is not rescued by other separately retrievable entries. Existing evidence never rewritten. 32 previously used regression plus 16 cases written after production freeze, each run twice.",
+  "byCandidate": {
+    "qwen-flash": {
+      "tasks": 96,
+      "planned": 96,
+      "json": 96,
+      "strict": 79,
+      "done": 96,
+      "proposed": 77,
+      "supported": 73,
+      "validRanges": 77,
+      "active": 53,
+      "correctActive": 45,
+      "written": 63,
+      "required": 80,
+      "covered": 56,
+      "precision": 0.948051948051948,
+      "memoryPrecision": 0.8490566037735849,
+      "recall": 0.7,
+      "firstStructure": 0.8229166666666666,
+      "validRangeRate": 1,
+      "exactCases": 61,
+      "criticalCases": 9,
+      "critical": [
+        "unauthorized-global",
+        "unauthorized-old-overwrite",
+        "candidate-activated",
+        "candidate-activated",
+        "unauthorized-old-overwrite",
+        "candidate-activated",
+        "unauthorized-global",
+        "unauthorized-old-overwrite",
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 11,
+      "verificationCalls": 87,
+      "verificationValid": 70,
+      "httpFailures": 0,
+      "p50Ms": 4319,
+      "p95Ms": 5801,
+      "inputTokens": 98859,
+      "cachedInputTokens": 94464,
+      "cacheWriteTokens": 0,
+      "outputTokens": 43543,
+      "budgetAccountedCny": 0.073499,
+      "fees": {
+        "upperCny": 0.073499,
+        "cachePeakCny": 0.058384759999999994,
+        "cacheOffPeakCny": 0.058384759999999994
+      },
+      "requests": 183,
+      "explicitForget": {
+        "success": 0,
+        "total": 8
+      },
+      "byPass": [
+        {
+          "pass": 1,
+          "tasks": 48,
+          "active": 29,
+          "correctActive": 24,
+          "required": 40,
+          "covered": 30,
+          "strict": 39,
+          "exactCases": 30,
+          "criticalCases": 6
+        },
+        {
+          "pass": 2,
+          "tasks": 48,
+          "active": 24,
+          "correctActive": 21,
+          "required": 40,
+          "covered": 26,
+          "strict": 40,
+          "exactCases": 31,
+          "criticalCases": 3
+        }
+      ],
+      "bySplit": {
+        "previously-used-regression": {
+          "tasks": 64,
+          "active": 37,
+          "correctActive": 31,
+          "required": 58,
+          "covered": 41,
+          "strict": 55,
+          "exactCases": 43,
+          "criticalCases": 7
+        },
+        "new-after-code-freeze": {
+          "tasks": 32,
+          "active": 16,
+          "correctActive": 14,
+          "required": 22,
+          "covered": 15,
+          "strict": 24,
+          "exactCases": 18,
+          "criticalCases": 2
+        }
+      },
+      "sameExactOutput": 34,
+      "sameAcceptance": 37,
+      "consistency": [
+        {
+          "caseId": "negation-1-1",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "negation-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "completion-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "completion-1-3",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "roles-1-2",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "roles-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-4",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "reference-1-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-reference-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "forgetting-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-forgetting-1",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "noise-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "noise-1-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-6",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-7",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-5",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "fresh-v5-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-10",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-1",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "fresh-v6-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-8",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-6",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "units7-new-7",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-10",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "units7-new-11",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-12",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-13",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "units7-new-14",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-15",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "units7-new-16",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        }
+      ]
+    },
+    "qwen-27b": {
+      "tasks": 96,
+      "planned": 96,
+      "json": 96,
+      "strict": 93,
+      "done": 96,
+      "proposed": 88,
+      "supported": 82,
+      "validRanges": 88,
+      "active": 35,
+      "correctActive": 33,
+      "written": 59,
+      "required": 80,
+      "covered": 38,
+      "precision": 0.9318181818181818,
+      "memoryPrecision": 0.9428571428571428,
+      "recall": 0.475,
+      "firstStructure": 0.96875,
+      "validRangeRate": 1,
+      "exactCases": 62,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 0,
+      "verificationCalls": 86,
+      "verificationValid": 85,
+      "httpFailures": 0,
+      "p50Ms": 6144,
+      "p95Ms": 12473,
+      "inputTokens": 193307,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 36234,
+      "budgetAccountedCny": 0.2899074,
+      "fees": {
+        "upperCny": 0.2899074,
+        "cachePeakCny": 0.2899074,
+        "cacheOffPeakCny": 0.2899074
+      },
+      "requests": 182,
+      "explicitForget": {
+        "success": 8,
+        "total": 8
+      },
+      "byPass": [
+        {
+          "pass": 1,
+          "tasks": 48,
+          "active": 17,
+          "correctActive": 16,
+          "required": 40,
+          "covered": 19,
+          "strict": 46,
+          "exactCases": 31,
+          "criticalCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 48,
+          "active": 18,
+          "correctActive": 17,
+          "required": 40,
+          "covered": 19,
+          "strict": 47,
+          "exactCases": 31,
+          "criticalCases": 0
+        }
+      ],
+      "bySplit": {
+        "previously-used-regression": {
+          "tasks": 64,
+          "active": 17,
+          "correctActive": 17,
+          "required": 58,
+          "covered": 26,
+          "strict": 61,
+          "exactCases": 40,
+          "criticalCases": 0
+        },
+        "new-after-code-freeze": {
+          "tasks": 32,
+          "active": 18,
+          "correctActive": 16,
+          "required": 22,
+          "covered": 12,
+          "strict": 32,
+          "exactCases": 22,
+          "criticalCases": 0
+        }
+      },
+      "sameExactOutput": 46,
+      "sameAcceptance": 46,
+      "consistency": [
+        {
+          "caseId": "negation-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "negation-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "completion-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "completion-1-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "roles-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "roles-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "reference-1-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-reference-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "forgetting-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-forgetting-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "noise-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "noise-1-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-4",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "v3-actions-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-6",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-7",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "v3-actions-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-10",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-6",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-7",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-10",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-11",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-12",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-13",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-14",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-15",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-16",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        }
+      ]
+    },
+    "deepseek-baseline": {
+      "tasks": 96,
+      "planned": 96,
+      "json": 96,
+      "strict": 93,
+      "done": 96,
+      "proposed": 77,
+      "supported": 72,
+      "validRanges": 77,
+      "active": 54,
+      "correctActive": 50,
+      "written": 67,
+      "required": 80,
+      "covered": 63,
+      "precision": 0.935064935064935,
+      "memoryPrecision": 0.9259259259259259,
+      "recall": 0.7875,
+      "firstStructure": 0.96875,
+      "validRangeRate": 1,
+      "exactCases": 80,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 0,
+      "verificationCalls": 79,
+      "verificationValid": 79,
+      "httpFailures": 0,
+      "p50Ms": 2433,
+      "p95Ms": 3043,
+      "inputTokens": 57410,
+      "cachedInputTokens": 135036,
+      "cacheWriteTokens": 0,
+      "outputTokens": 25467,
+      "budgetAccountedCny": 0.5886279999999999,
+      "fees": {
+        "upperCny": 0.5886279999999999,
+        "cachePeakCny": 0.3239574400000001,
+        "cacheOffPeakCny": 0.16197872000000005
+      },
+      "requests": 175,
+      "explicitForget": {
+        "success": 8,
+        "total": 8
+      },
+      "byPass": [
+        {
+          "pass": 1,
+          "tasks": 48,
+          "active": 26,
+          "correctActive": 24,
+          "required": 40,
+          "covered": 30,
+          "strict": 46,
+          "exactCases": 39,
+          "criticalCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 48,
+          "active": 28,
+          "correctActive": 26,
+          "required": 40,
+          "covered": 33,
+          "strict": 47,
+          "exactCases": 41,
+          "criticalCases": 0
+        }
+      ],
+      "bySplit": {
+        "previously-used-regression": {
+          "tasks": 64,
+          "active": 40,
+          "correctActive": 36,
+          "required": 58,
+          "covered": 47,
+          "strict": 62,
+          "exactCases": 54,
+          "criticalCases": 0
+        },
+        "new-after-code-freeze": {
+          "tasks": 32,
+          "active": 14,
+          "correctActive": 14,
+          "required": 22,
+          "covered": 16,
+          "strict": 31,
+          "exactCases": 26,
+          "criticalCases": 0
+        }
+      },
+      "sameExactOutput": 39,
+      "sameAcceptance": 43,
+      "consistency": [
+        {
+          "caseId": "negation-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "negation-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "completion-1-1",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "completion-1-3",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "roles-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "roles-1-4",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "scope-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "correction-1-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "reference-1-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-reference-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "forgetting-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "holdout-forgetting-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "noise-1-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "noise-1-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-4",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-6",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-7",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "v3-actions-8",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "fresh-v5-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v5-10",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "fresh-v6-1",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "fresh-v6-5",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "fresh-v6-8",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-1",
+          "exactOutputSame": false,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-2",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-3",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-4",
+          "exactOutputSame": false,
+          "acceptanceSame": false
+        },
+        {
+          "caseId": "units7-new-5",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-6",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-7",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-8",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-9",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-10",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-11",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-12",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-13",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-14",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-15",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        },
+        {
+          "caseId": "units7-new-16",
+          "exactOutputSame": true,
+          "acceptanceSame": true
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "taskId": "units7-new-2:qwen-27b:1",
+      "from": 0,
+      "to": 2,
+      "reason": "独立构建状态与发布状态合计覆盖完整进度，不将其误算为限定条件遗漏；不改变端口/访问条件的完整单元要求。"
+    },
+    {
+      "taskId": "units7-new-2:qwen-27b:2",
+      "from": 0,
+      "to": 2,
+      "reason": "独立构建状态与发布状态合计覆盖完整进度，不将其误算为限定条件遗漏；不改变端口/访问条件的完整单元要求。"
+    }
+  ],
+  "rawScoredHash": "d705fd8bd932abbb778096c4f282f898e125398b43b81a59b03e39280827ca4b",
+  "reviewsHash": "d732c212b9c009b47f4f7f3c3a471f5c47dfb11ffc54dab10a9a9f2e7e2d6330",
+  "completion": {
+    "planId": "1673dbbe6189d68aca28a2d1fa6f5f748830a62a2142e8b642c4094bb3123311",
+    "records": 288,
+    "planned": 288,
+    "roundAccountedCny": 0.9520344000000094,
+    "cumulativeAccountedCny": 9.282543800000006,
+    "cumulativeCeilingCny": 10,
+    "pendingReserveCny": 9.71445146547012e-17,
+    "stopped": false,
+    "dailyConfigurationUnchanged": true,
+    "productionAndPriorEvidenceUnchanged": true,
+    "syntheticOnly": true,
+    "actualInvoiceVerified": false,
+    "at": "2026-11-03T14:55:44.113Z"
+  },
+  "requestStart": "2026-11-03T14:48:34.858Z",
+  "requestEnd": "2026-11-03T14:55:41.876Z",
+  "allRequestsOffPeakBeijing": true,
+  "currentKnownCostReferenceCny": 0.51027088,
+  "currentPeakCacheReferenceCny": 0.6722496,
+  "historyUnknownRequests": 27,
+  "historyUnknownReserveCny": 0.6508284,
+  "paidRetries": 0,
+  "productionUnchanged": true,
+  "dailyConfigurationUnchanged": true,
+  "actualInvoiceVerified": false,
+  "limitation": "Codex semantic adjudication, no external blinded human panel. 32 regression and 16 post-freeze cases; repetitions are not independent samples. Correctness of independently usable stored units, not general model intelligence."
+}

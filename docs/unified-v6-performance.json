@@ -1,0 +1,38 @@
+{
+  "measuredAt": "2026-11-03T12:16:56.170Z",
+  "method": "fresh Node process per variant/size; in-memory SQLite; 12 exact protection checks; full local candidate scan once; process peak RSS includes Node and SQLite; no accuracy measurement",
+  "results": [
+    {
+      "variant": "before",
+      "count": 1000,
+      "exactProtectionP50Ms": 3.843500000000006,
+      "exactProtectionP95Ms": 6.106700000000004,
+      "protectedCandidateMs": null,
+      "processPeakRssMiB": 61.125
+    },
+    {
+      "variant": "before",
+      "count": 10000,
+      "exactProtectionP50Ms": 32.25329999999997,
+      "exactProtectionP95Ms": 38.62509999999999,
+      "protectedCandidateMs": null,
+      "processPeakRssMiB": 147.0859375
+    },
+    {
+      "variant": "after",
+      "count": 1000,
+      "exactProtectionP50Ms": 3.3299999999999983,
+      "exactProtectionP95Ms": 6.400199999999998,
+      "protectedCandidateMs": 3.289900000000003,
+      "processPeakRssMiB": 64.796875
+    },
+    {
+      "variant": "after",
+      "count": 10000,
+      "exactProtectionP50Ms": 35.264399999999966,
+      "exactProtectionP95Ms": 44.6232,
+      "protectedCandidateMs": 27.008000000000038,
+      "processPeakRssMiB": 213.25390625
+    }
+  ]
+}

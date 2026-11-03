@@ -1,0 +1,896 @@
+{
+  "at": "2026-11-03T16:11:15.329Z",
+  "readyForDailyReplacement": false,
+  "frozenFiles": 354,
+  "frozenUnchanged": true,
+  "productionProtocol": 7,
+  "paidModelCalls": 0,
+  "networkAttempts": 0,
+  "dailyProfileRead": false,
+  "commitOrPush": false,
+  "uiOrBuildChanged": false,
+  "tests": {
+    "original-red": {
+      "tests": 3,
+      "pass": 0,
+      "fail": 3,
+      "skipped": 0,
+      "failures": [
+        "source: 忘掉共享消息中的 A，独立事实 B 仍应可召回",
+        "source: 明确不保存的临时指令不能因原文直存重新召回",
+        "source: 遗忘后跨语言等义回放不应重新暴露具体事实"
+      ]
+    },
+    "contracts-red": {
+      "tests": 17,
+      "pass": 16,
+      "fail": 1,
+      "skipped": 0,
+      "failures": [
+        "已知跨语言来源关联继承撤销；另一个主体的独立事实不受牵连"
+      ]
+    },
+    "contracts": {
+      "tests": 19,
+      "pass": 19,
+      "fail": 0,
+      "skipped": 0,
+      "failures": []
+    },
+    "acceptance": {
+      "tests": 6,
+      "pass": 2,
+      "fail": 4,
+      "skipped": 0,
+      "failures": [
+        "原验收：忘掉共享消息中的 A，独立事实 B 仍应可召回",
+        "未决：v7 错批且未识别跨语言身份时，原文读取不能补出身份关系",
+        "未决：v7 给出不完整引用却认定完整时，读取层不能补造遗漏条件",
+        "未决：两阶段都错批明确不保存内容时，原文门禁不能重新理解意图"
+      ]
+    },
+    "production": {
+      "tests": 176,
+      "pass": 171,
+      "fail": 5,
+      "skipped": 0,
+      "failures": [
+        "真实 SDK 本机两阶段回环 {}，无外网与真实凭据",
+        "真实 SDK 本机两阶段回环 {\"invalidFirst\":true}，无外网与真实凭据",
+        "真实 SDK 本机两阶段回环 {\"invalidReview\":true}，无外网与真实凭据",
+        "真实 SDK 最小遗忘与最终记忆单元 forget",
+        "真实 SDK 最小遗忘与最终记忆单元 group"
+      ]
+    },
+    "sdk-loopback": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0,
+      "failures": []
+    }
+  },
+  "productionTestsCombinedPassed": 176,
+  "replay": {
+    "at": "2026-11-03T16:01:17.078Z",
+    "frozenFiles": 354,
+    "protocol": 7,
+    "replayed": 288,
+    "replayedPhases": 540,
+    "newModelCalls": 0,
+    "categories": {
+      "qualification": {
+        "probes": 54,
+        "nonempty": 43,
+        "required": 54,
+        "completeUnit": 37,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "role-context": {
+        "probes": 6,
+        "nonempty": 2,
+        "required": 6,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "project-isolation": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "index-expansion": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "noise": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "forget": {
+        "probes": 12,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "forget-and-retain": {
+        "probes": 12,
+        "nonempty": 11,
+        "required": 12,
+        "completeUnit": 11,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedB": 7
+      },
+      "do-not-save": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "global-preference": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "unresolved-context": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "forgotten-replay": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "different-subject": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "authorized-rerecord": {
+        "probes": 6,
+        "nonempty": 2,
+        "required": 6,
+        "completeUnit": 2,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      },
+      "redaction": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedB": 0
+      }
+    },
+    "total": {
+      "probes": 144,
+      "nonempty": 70,
+      "required": 108,
+      "completeUnit": 62,
+      "forbiddenProbes": 0,
+      "executedForgetProbes": 16,
+      "executedForgetLeaks": 0,
+      "retainedB": 7
+    },
+    "registered": 146,
+    "interpretation": "Unchanged v7 host replay. Raw evidence is gated by existing v7 receipts; absent boundaries/provenance are not supplied. Scores are literal retrieval contracts, not model accuracy."
+  },
+  "previousCategories": {
+    "v7": {
+      "qualification": {
+        "probes": 54,
+        "nonempty": 43,
+        "required": 54,
+        "completeUnit": 37,
+        "completeAcrossItems": 37,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 222.66666666666666
+      },
+      "role-context": {
+        "probes": 6,
+        "nonempty": 2,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 125.5
+      },
+      "project-isolation": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "index-expansion": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "noise": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "forget": {
+        "probes": 12,
+        "nonempty": 4,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 4,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 73.66666666666667
+      },
+      "forget-and-retain": {
+        "probes": 12,
+        "nonempty": 11,
+        "required": 12,
+        "completeUnit": 11,
+        "completeAcrossItems": 11,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 7,
+        "meanBytes": 205
+      },
+      "do-not-save": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "global-preference": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "completeAcrossItems": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 266
+      },
+      "unresolved-context": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "forgotten-replay": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "different-subject": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "authorized-rerecord": {
+        "probes": 6,
+        "nonempty": 2,
+        "required": 6,
+        "completeUnit": 2,
+        "completeAcrossItems": 2,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 74.33333333333333
+      },
+      "redaction": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "completeAcrossItems": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 227
+      }
+    },
+    "source": {
+      "qualification": {
+        "probes": 54,
+        "nonempty": 54,
+        "required": 54,
+        "completeUnit": 54,
+        "completeAcrossItems": 54,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 307.77777777777777
+      },
+      "role-context": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "completeAcrossItems": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 363
+      },
+      "project-isolation": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "index-expansion": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "noise": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 6,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 260
+      },
+      "forget": {
+        "probes": 12,
+        "nonempty": 4,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 4,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 125
+      },
+      "forget-and-retain": {
+        "probes": 12,
+        "nonempty": 4,
+        "required": 12,
+        "completeUnit": 4,
+        "completeAcrossItems": 4,
+        "forbiddenProbes": 4,
+        "executedForgetProbes": 8,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 102.33333333333333
+      },
+      "do-not-save": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 6,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 252
+      },
+      "global-preference": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "unresolved-context": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "completeAcrossItems": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 285
+      },
+      "forgotten-replay": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 0,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "different-subject": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "authorized-rerecord": {
+        "probes": 6,
+        "nonempty": 0,
+        "required": 6,
+        "completeUnit": 0,
+        "completeAcrossItems": 0,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 0
+      },
+      "redaction": {
+        "probes": 6,
+        "nonempty": 6,
+        "required": 6,
+        "completeUnit": 6,
+        "completeAcrossItems": 6,
+        "forbiddenProbes": 0,
+        "executedForgetProbes": 0,
+        "executedForgetLeaks": 0,
+        "retainedOtherFactAfterForget": 0,
+        "meanBytes": 384
+      }
+    }
+  },
+  "complexity": {
+    "definition": "If + ternary + logical (including ??) + nondefault case + catch + loop AST nodes",
+    "productionBefore": 854,
+    "productionAfter": 854,
+    "oldRuntime": 41,
+    "removedIndexBlock": 11,
+    "oldWithoutIndexBlock": 30,
+    "newRuntime": 32,
+    "allNewModules": {
+      "experiments/admitted-evidence/acceptance.mjs": 3,
+      "experiments/admitted-evidence/contracts.test.mjs": 10,
+      "experiments/admitted-evidence/evaluate.mjs": 15,
+      "experiments/admitted-evidence/performance.mjs": 11,
+      "experiments/admitted-evidence/report.mjs": 19,
+      "experiments/admitted-evidence/route.mjs": 32
+    },
+    "runtimeDependencies": [
+      "MemoryStore read/visibility/mask/protections/blockedBy",
+      "resolveEvidence",
+      "operationFingerprint",
+      "hash/lexicalScore/tokens/projectId"
+    ],
+    "note": "Runtime comparison excludes unchanged shared guards on both sides. Old experiment retained as frozen evidence. Subtracting the hint-generation block gives 30 vs new 32, not a branch reduction. Other inert index-score expressions are not removed from that 30. Capabilities differ; no equivalent full-product simplification claim."
+  },
+  "performance": {
+    "at": "2026-11-03T16:07:33.844Z",
+    "modelCalls": 0,
+    "method": "Same in-memory SQLite; full qualifying source ranges and synthetic successful receipts; one tombstone; alternating order; one warmup plus five samples; uncached v7 message IDs; counters enabled for all routes; no lightweight index. Max is not P95. Memory is combined, not per route.",
+    "output": [
+      {
+        "records": 1000,
+        "tombstones": 1,
+        "combinedBuildMs": 691.1234,
+        "combinedProcessMemory": {
+          "rss": 113291264,
+          "heapTotal": 34476032,
+          "heapUsed": 16865400,
+          "external": 3831406,
+          "arrayBuffers": 31859
+        },
+        "routes": {
+          "v7": {
+            "samplesMs": [
+              9.61850000000004,
+              5.536299999999983,
+              10.858499999999822,
+              11.376800000000003,
+              11.66359999999986
+            ],
+            "medianMs": 10.858499999999822,
+            "maxMs": 11.66359999999986,
+            "databaseReads": [
+              12,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          "source": {
+            "samplesMs": [
+              348.46669999999995,
+              362.481,
+              575.2964000000002,
+              791.6261000000004,
+              754.6447000000007
+            ],
+            "medianMs": 575.2964000000002,
+            "maxMs": 791.6261000000004,
+            "databaseReads": [
+              15988,
+              15988,
+              15988,
+              15988,
+              15988
+            ]
+          },
+          "admitted": {
+            "samplesMs": [
+              245.95710000000008,
+              237.36210000000028,
+              241.25900000000001,
+              501.97560000000067,
+              465.52829999999994
+            ],
+            "medianMs": 245.95710000000008,
+            "maxMs": 501.97560000000067,
+            "databaseReads": [
+              11991,
+              11991,
+              11991,
+              11991,
+              11991
+            ]
+          }
+        }
+      },
+      {
+        "records": 10000,
+        "tombstones": 1,
+        "combinedBuildMs": 31240.454499999996,
+        "combinedProcessMemory": {
+          "rss": 539631616,
+          "heapTotal": 178442240,
+          "heapUsed": 78463944,
+          "external": 3839638,
+          "arrayBuffers": 40051
+        },
+        "routes": {
+          "v7": {
+            "samplesMs": [
+              147.0237999999954,
+              126.6808999999921,
+              130.85949999999139,
+              111.8414000000048,
+              111.7793000000238
+            ],
+            "medianMs": 126.6808999999921,
+            "maxMs": 147.0237999999954,
+            "databaseReads": [
+              12,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          "source": {
+            "samplesMs": [
+              12150.818900000006,
+              12217.7258,
+              12043.773199999996,
+              11815.777499999997,
+              12091.251100000009
+            ],
+            "medianMs": 12091.251100000009,
+            "maxMs": 12217.7258,
+            "databaseReads": [
+              159988,
+              159988,
+              159988,
+              159988,
+              159988
+            ]
+          },
+          "admitted": {
+            "samplesMs": [
+              4972.563100000007,
+              5000.365000000005,
+              4989.026700000002,
+              4923.251900000003,
+              4926.590300000011
+            ],
+            "medianMs": 4972.563100000007,
+            "maxMs": 5000.365000000005,
+            "databaseReads": [
+              119991,
+              119991,
+              119991,
+              119991,
+              119991
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "firstPerformance": {
+    "at": "2026-11-03T16:03:58.998Z",
+    "modelCalls": 0,
+    "method": "Same in-memory SQLite; full qualifying source ranges and synthetic successful receipts; one tombstone; alternating order; one warmup plus five samples; uncached v7 message IDs; counters enabled for all routes; no lightweight index. Max is not P95. Memory is combined, not per route.",
+    "output": [
+      {
+        "records": 1000,
+        "tombstones": 1,
+        "combinedBuildMs": 746.6597,
+        "combinedProcessMemory": {
+          "rss": 112852992,
+          "heapTotal": 33689600,
+          "heapUsed": 13839832,
+          "external": 3831406,
+          "arrayBuffers": 31859
+        },
+        "routes": {
+          "v7": {
+            "samplesMs": [
+              5.641200000000026,
+              8.07320000000027,
+              18.797900000000027,
+              11.253600000000006,
+              19.6890999999996
+            ],
+            "medianMs": 11.253600000000006,
+            "maxMs": 19.6890999999996,
+            "databaseReads": [
+              12,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          "source": {
+            "samplesMs": [
+              345.65430000000015,
+              321.6277,
+              545.8741999999997,
+              695.2388999999998,
+              741.6491999999998
+            ],
+            "medianMs": 545.8741999999997,
+            "maxMs": 741.6491999999998,
+            "databaseReads": [
+              15988,
+              15988,
+              15988,
+              15988,
+              15988
+            ]
+          },
+          "admitted": {
+            "samplesMs": [
+              252.36490000000003,
+              218.7809000000002,
+              215.7532000000001,
+              510.1125000000002,
+              484.66460000000006
+            ],
+            "medianMs": 252.36490000000003,
+            "maxMs": 510.1125000000002,
+            "databaseReads": [
+              11991,
+              11991,
+              11991,
+              11991,
+              11991
+            ]
+          }
+        }
+      },
+      {
+        "records": 10000,
+        "tombstones": 1,
+        "combinedBuildMs": 31686.4549,
+        "combinedProcessMemory": {
+          "rss": 496353280,
+          "heapTotal": 201187328,
+          "heapUsed": 112657896,
+          "external": 3839638,
+          "arrayBuffers": 40051
+        },
+        "routes": {
+          "v7": {
+            "samplesMs": [
+              142.89359999999579,
+              157.1921000000002,
+              85.72349999999278,
+              52.19289999999455,
+              110.73080000000482
+            ],
+            "medianMs": 110.73080000000482,
+            "maxMs": 157.1921000000002,
+            "databaseReads": [
+              12,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          "source": {
+            "samplesMs": [
+              12042.316400000003,
+              12081.741600000008,
+              10804.098599999998,
+              6076.670000000013,
+              12024.056500000006
+            ],
+            "medianMs": 12024.056500000006,
+            "maxMs": 12081.741600000008,
+            "databaseReads": [
+              159988,
+              159988,
+              159988,
+              159988,
+              159988
+            ]
+          },
+          "admitted": {
+            "samplesMs": [
+              5268.626100000001,
+              4987.493199999997,
+              4931.886199999994,
+              2505.972800000003,
+              4060.008099999992
+            ],
+            "medianMs": 4931.886199999994,
+            "maxMs": 5268.626100000001,
+            "databaseReads": [
+              119991,
+              119991,
+              119991,
+              119991,
+              119991
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "blockers": [
+    "Unadmitted B is not auto-admitted",
+    "Unknown cross-language identity remains vulnerable to incorrect v7 approval",
+    "Incorrectly complete v7 references still omit conditions",
+    "Incorrect v7 approval of do-not-save is not repaired by the reader",
+    "Full corpus reads remain too costly; automatic provenance generation and durable integration are not implemented"
+  ],
+  "interpretation": "Mechanisms use synthetic semantic decisions or unchanged historical model responses. Literal probes and reference checks do not measure model accuracy. Historical seeds/manual receipts without complete v7 grants are withheld, not migrated or deleted. No physical erasure claim."
+}

@@ -1,0 +1,178 @@
+{
+  "at": "2026-11-03T16:30:32.499Z",
+  "localDate": "2026-11-04",
+  "timezone": "Asia/Hong_Kong",
+  "decision": "v7 + DeepSeek Flash",
+  "package": "dsh-rag-memory@0.1.4",
+  "archive": "artifacts/final-v7/dsh-rag-memory-0.1.4.tgz",
+  "sha256": "1668a33ce9dcd280c46e3ba1b34e0a4a5d09381d55476eeaf89781cf8cd25ce9",
+  "bytes": 63587,
+  "packageEntries": 23,
+  "protocol": 7,
+  "node": "v25.9.0",
+  "sdk": {
+    "dsh-llm": "0.2.1-rc.5",
+    "dsh-tools": "0.2.1-rc.5",
+    "dsh-home-paths": "0.2.1-rc.5"
+  },
+  "changedFiles": [
+    "CHANGELOG.md",
+    "README.md",
+    "dist/client.js",
+    "package-lock.json",
+    "package.json",
+    "scripts/verify-settings-ui.mjs",
+    "ui/plugin.jsx"
+  ],
+  "newSourceFiles": [
+    "scripts/verify-final.mjs",
+    "scripts/verify-packed.mjs",
+    "docs/release-v7.md",
+    "docs/final-v7-baseline.json"
+  ],
+  "kernelFilesUnchanged": 13,
+  "preservedFiles": 377,
+  "packageRuntimeMatchesWorkspace": true,
+  "regression": {
+    "at": "2026-11-03T16:29:01.178Z",
+    "package": "dsh-rag-memory@0.1.4",
+    "protocol": 7,
+    "selectedModel": "deepseek-flash",
+    "runtimeFrozen": 21,
+    "preservedFiles": 377,
+    "build": {
+      "exitCode": 0,
+      "error": null,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "log": ".cache/final-v7/verification/build.log"
+    },
+    "check": {
+      "exitCode": 0,
+      "error": null,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "log": ".cache/final-v7/verification/check.log"
+    },
+    "current": {
+      "exitCode": 0,
+      "error": null,
+      "tests": 176,
+      "pass": 176,
+      "fail": 0,
+      "skipped": 0,
+      "log": ".cache/final-v7/verification/current.log"
+    },
+    "externalAttempts": 0,
+    "paidCalls": 0,
+    "realChatsRead": false,
+    "dailyConfigurationReadOrChanged": false,
+    "historicalReportsRewritten": false,
+    "note": "Final release regression; SDK replies are synthetic localhost data, not a new model-quality test. Experimental acceptance failures remain archived outside this suite."
+  },
+  "ui": {
+    "settings": {
+      "checks": [
+        "界面标题显示仓库名称 DSH-RAG-Memory",
+        "Qwen 输入无效时仍可独立保存运行设置，反馈位于运行按钮旁",
+        "运行设置输入无效时仍可独立保存连接，API Key 使用合成值",
+        "将域名填入保存名称时就地说明正确格式，失败不修改已保存配置",
+        "未保存的连接修改会得到明确提示，不测试旧配置",
+        "空名称恢复默认值；测试立即显示进行中、禁用重复点击，并保留成功反馈",
+        "HTTP 失败就地展示，切换到记忆库不携带设置反馈",
+        "DSH 保存及测试结果位于运行设置内，与连接反馈分开",
+        "1180/768/390 像素宽度及明暗主题截图，无水平溢出"
+      ],
+      "errors": [],
+      "realQwen": false,
+      "realDsh": false,
+      "syntheticDataOnly": true
+    },
+    "library": {
+      "checks": [
+        "长列表底部打开详情，卡片列数及列表滚动位置保持不变，详情立即可见",
+        "详情正文独立滚动，不移动列表，关闭按钮持续可见",
+        "连续切换记忆会重置详情正文位置，Escape 关闭并将焦点还给原卡片",
+        "抽屉中纠正记忆并保存，仍显示详情并可正常关闭",
+        "抽屉中添加记忆、就地保存反馈及关闭后焦点返回均正常",
+        "1180/768/390 像素明暗主题截图，窄窗口全宽抽屉，开关详情不重排或跳动"
+      ],
+      "errors": [],
+      "realQwen": false,
+      "realDsh": false,
+      "syntheticDataOnly": true
+    },
+    "candidates": {
+      "replacementConfirmed": true,
+      "globalConfirmed": true,
+      "staleRejected": true,
+      "screenshots": 6,
+      "errors": [],
+      "syntheticOnly": true,
+      "externalModelCalls": 0,
+      "dailyProfileLoaded": false
+    }
+  },
+  "visualReviewed": [
+    "library-ui/drawer-light-1180.png",
+    "library-ui/drawer-dark-390.png",
+    "settings-ui/branding-dark-1180.png",
+    "settings-ui/runtime-success.png",
+    "candidates-ui/replacement-light-390.png",
+    "candidates-ui/replacement-dark-390.png"
+  ],
+  "screenshotCount": 30,
+  "packedSmoke": {
+    "phases": [
+      "extraction",
+      "verification"
+    ],
+    "writeAndForgetPassed": true,
+    "defaultRouteUnconfigured": true
+  },
+  "paidCalls": 0,
+  "externalModelCalls": 0,
+  "realChatsRead": false,
+  "dailyConfigurationReadOrChanged": false,
+  "installedOrDeployed": false,
+  "gitCommitOrPush": false,
+  "experimentalRoutesIncluded": false,
+  "semanticQualityRetested": false,
+  "limitations": [
+    "Offline regression and localhost SDK responses do not establish new model quality",
+    "Known qualifier omission, temporary instruction and unknown cross-language risks are unchanged",
+    "New package does not automatically select a model or change an existing route"
+  ],
+  "diagnostics": [
+    "Initial build could not locate development dependencies; reused installed matching modules via process-only DSH_DEV_MODULES",
+    "Initial restricted SDK localhost calls failed; final complete run passed with localhost access and external network guard",
+    "Settings UI fixture returned protocol 5; failure log and original fixture archived, mock updated to PROTOCOL_VERSION",
+    "Visual inspection found footer 0.1.3; only release label changed to 0.1.4 and bundle rebuilt"
+  ],
+  "evidence": {
+    "scripts/verify-final.mjs": "63231d933c0ddd44764e9840b9163cfd798d6dd73c53755ed4aeb6faea540ddd",
+    "scripts/verify-packed.mjs": "101ff1e79530ed9bcb4f6fc5f6a928609bd9f49f19d4f044ca7a05304f340f7b",
+    "docs/release-v7.md": "e9f4247d718fa99750c1fa107532d0d4a40396cc2ac66f87a44217225427955b",
+    "docs/final-v7-baseline.json": "a04f96468302a3927ceef04e928e72e07f9092d49fe2b3bb3b4c625d29441fea",
+    "CHANGELOG.md": "24db040f9b580e3221c265cbc63ed98b31f06a8dcd7bb3b192da15636929d319",
+    "README.md": "d528d817f132efdcffe35403f40098de932702678a3635ad55cc31dac7d8700f",
+    "dist/client.js": "2f681c89a4c2941fe0c1b10b73a3ab95fbcf1c9c277a37c1b8a3fb84e86141ab",
+    "package-lock.json": "dddba309e9ebedf260ff378eae811cfc226d84bbdaad28398b19c2ca3f0b63ed",
+    "package.json": "563f2733ebf4ac3b95ecc680139b247a29f2e385aae5fc275f48387ad93b2b8c",
+    "scripts/verify-settings-ui.mjs": "37f1bd7a9303fa98fc24def9194880ecd85a14bb56707884dc6365af45330813",
+    "ui/plugin.jsx": "de40555c24e4090c80aec77853ff1475753343fc42d67296d78e05913d82bbf9",
+    ".cache/final-v7/verification/report.json": "b1efda0361030b5689bee629f614cb5803b16572a1e6f57bf53d00b2a46f52ae",
+    "artifacts/final-v7/package-verification.json": "ba88a9c2f257d171c4861635f01a8dc48f5ea452d774130b65b8824bcc9b27a3",
+    "artifacts/final-v7/SHA256SUMS.txt": "73a7c8fc0c6f02828b6f1b8eddcc8ffca3bcc9eb3357cfd79c57fc4e24fd84d9",
+    ".cache/final-v7/library-ui/drawer-light-1180.png": "9df0b9c76e794f0aeab2f88d8e63caa49ec1d4dcb9abf0070f3b0d7fa07c0fcf",
+    ".cache/final-v7/library-ui/drawer-dark-390.png": "a6267e23a011fd0d995c2029b7c65ace5928a8b38f0f41bcffd77ee374107ed6",
+    ".cache/final-v7/settings-ui/branding-dark-1180.png": "738344142ad8a9adfdd24588a6c50e59de7a6f8178d6c9dbd6c61db783fc3363",
+    ".cache/final-v7/settings-ui/runtime-success.png": "27cf066e011892ff260ede6e4a1cc789d2f2b97dda8b49171c2f4ddb90d5e1ee",
+    ".cache/final-v7/candidates-ui/replacement-light-390.png": "00ff5051bdded40baac02105c7f7de15cc835a45da1f36c256775a06f143e7a0",
+    ".cache/final-v7/candidates-ui/replacement-dark-390.png": "de10cc389c30f8e39235effa98e5f01124dd3689a7a6d4c8c4a17542aa849e24"
+  }
+}

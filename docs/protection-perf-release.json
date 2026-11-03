@@ -1,0 +1,43 @@
+{
+  "frozenAt": "2026-11-03T12:46:03.951Z",
+  "protocolVersion": 6,
+  "databaseVersion": 3,
+  "paidCalls": 0,
+  "dailyConfigurationChanged": false,
+  "deployed": false,
+  "committed": false,
+  "pushed": false,
+  "changedExistingFiles": [
+    "scripts/verify-kernel.mjs",
+    "src/domain.mjs",
+    "src/operations.mjs",
+    "src/store.mjs"
+  ],
+  "files": {
+    "src/domain.mjs": "7b68edf9f2aff0483c75476d755daaf809cd46b1a42055d23d1ce39a8c73661c",
+    "src/evidence.mjs": "683d8b34afa2ef699659c67d54a4b4767941993e0d3456363ad9dd549cd53b38",
+    "src/extraction.mjs": "4231024b57ed35f0e5e3fad5f26d42ea18c086b5079ac96b8f3ab790eb15dc8f",
+    "src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    "src/operations.mjs": "e2c5797914c8d5a5452ed19a41d9ea036fbaa35fc04557494f6bcc8ccc7c9254",
+    "src/policy.mjs": "d46617279f836cb4bf32f84194acd7a9ffdeed3636767ceb051beb4c883002aa",
+    "src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    "src/service.mjs": "fedffe8fce300992a5a2b46b31029ffcbe074b4172b37f34c0d9ac61efcce0b2",
+    "src/store.mjs": "e4fafb12a82b38733488c103ffd5643e768cb50784212b04480fbfb281f5eb74",
+    "dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    "dsh/extractor.mjs": "c7dc68280e5e286c927fce2aea3d5f510fc7f53221ac41d07875831d57710f78",
+    "dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    "dsh/integration.mjs": "ec6d9e2aa18a59f71d45fb5ad14e7a7d61697839f476f421621af1b0c6a1f488",
+    "scripts/verify-kernel.mjs": "6ff8c84bd7515c6727e87d5ad6e99abeafcb5ab44b493de9398de5dfa4a93435",
+    "scripts/measure-protection-perf.mjs": "fac573f9556db10ec7ae3b98587ac7b29710e13871a1c47425dc222eeb63c2b4",
+    "tests/kernel-protection-perf.test.mjs": "1a19fc08d705d5189e1e72e0b9b8b5c12079a6098c0697a962a95b8f9cea24d6",
+    "tests/helpers/protection-perf.mjs": "82456a6e9c532d580e570c0f1d98713ab5505fcd4d8c628d0e847689c805e883",
+    "tests/fixtures/protection-perf-baseline.json.gz": "995c640753928c43c3681fc5bb59550487bdb6554fa92cdb2d7041f9e1be56ef",
+    "docs/protection-perf-baseline.json": "4ff772628b7223738e55421344652b943eabc891cd3ae96c3b89e556af9454ad",
+    "docs/protection-perf-verification.json": "960acc6b2aab553c83a602ca88e7c9959d308db9b5c9df9e8b3549e9517d6a7f",
+    "docs/protection-perf-performance.json": "914f4150e16dc97a44e0e3018ffdd2dcd6efad2520ba03dd48294123572c6fd7",
+    "docs/protection-perf-optimization.md": "b6348b8e1005dc52d2f658e0ee89fed1f368a1c82dabbc60da883d7426ecaa5d",
+    ".cache/protection-perf/before-targeted.tap": "2e0bc03de8f0a7ff4c6d69e0d0c0ef970b896690a3e590aa4032c04556dfb900",
+    ".cache/protection-perf/alias-regression.tap": "0dd58f847e28e2ebfc01f321b491326869764776a2f2be44c77160a1a35d6d43",
+    ".cache/protection-perf/after-targeted.tap": "1b9c0539be83bdccdf84d8a345a489f5c8e53c8ed5efa9778d16ef6ce514fcf8"
+  }
+}

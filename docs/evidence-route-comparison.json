@@ -1,0 +1,794 @@
+{
+  "at": "2026-11-03T15:34:15.939Z",
+  "frozenFiles": 333,
+  "protocol": 7,
+  "replayed": 288,
+  "replayedPhases": 540,
+  "replayStateMatches": true,
+  "newModelCalls": 0,
+  "embeddings": 0,
+  "dailyProfileRead": false,
+  "queryDefinitions": 24,
+  "registeredHints": 314,
+  "byRoute": {
+    "v7": {
+      "probes": 144,
+      "nonempty": 74,
+      "required": 108,
+      "completeUnit": 62,
+      "completeAcrossItems": 62,
+      "forbiddenProbes": 4,
+      "executedForgetProbes": 16,
+      "executedForgetLeaks": 0,
+      "retainedOtherFactAfterForget": 7,
+      "meanBytes": 135.59027777777777,
+      "categories": {
+        "qualification": {
+          "probes": 54,
+          "nonempty": 43,
+          "required": 54,
+          "completeUnit": 37,
+          "completeAcrossItems": 37,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 222.66666666666666
+        },
+        "role-context": {
+          "probes": 6,
+          "nonempty": 2,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 125.5
+        },
+        "project-isolation": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "index-expansion": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "noise": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "forget": {
+          "probes": 12,
+          "nonempty": 4,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 4,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 73.66666666666667
+        },
+        "forget-and-retain": {
+          "probes": 12,
+          "nonempty": 11,
+          "required": 12,
+          "completeUnit": 11,
+          "completeAcrossItems": 11,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 7,
+          "meanBytes": 205
+        },
+        "do-not-save": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "global-preference": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 266
+        },
+        "unresolved-context": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "forgotten-replay": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "different-subject": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "authorized-rerecord": {
+          "probes": 6,
+          "nonempty": 2,
+          "required": 6,
+          "completeUnit": 2,
+          "completeAcrossItems": 2,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 74.33333333333333
+        },
+        "redaction": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 227
+        }
+      }
+    },
+    "source": {
+      "probes": 144,
+      "nonempty": 92,
+      "required": 108,
+      "completeUnit": 76,
+      "completeAcrossItems": 76,
+      "forbiddenProbes": 20,
+      "executedForgetProbes": 16,
+      "executedForgetLeaks": 0,
+      "retainedOtherFactAfterForget": 0,
+      "meanBytes": 198.69444444444446,
+      "categories": {
+        "qualification": {
+          "probes": 54,
+          "nonempty": 54,
+          "required": 54,
+          "completeUnit": 54,
+          "completeAcrossItems": 54,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 307.77777777777777
+        },
+        "role-context": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 363
+        },
+        "project-isolation": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "index-expansion": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "noise": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 6,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 260
+        },
+        "forget": {
+          "probes": 12,
+          "nonempty": 4,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 4,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 125
+        },
+        "forget-and-retain": {
+          "probes": 12,
+          "nonempty": 4,
+          "required": 12,
+          "completeUnit": 4,
+          "completeAcrossItems": 4,
+          "forbiddenProbes": 4,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 102.33333333333333
+        },
+        "do-not-save": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 6,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 252
+        },
+        "global-preference": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "unresolved-context": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 285
+        },
+        "forgotten-replay": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "different-subject": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "authorized-rerecord": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "redaction": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 384
+        }
+      }
+    },
+    "source-index": {
+      "probes": 144,
+      "nonempty": 92,
+      "required": 108,
+      "completeUnit": 76,
+      "completeAcrossItems": 76,
+      "forbiddenProbes": 20,
+      "executedForgetProbes": 16,
+      "executedForgetLeaks": 0,
+      "retainedOtherFactAfterForget": 0,
+      "meanBytes": 198.69444444444446,
+      "categories": {
+        "qualification": {
+          "probes": 54,
+          "nonempty": 54,
+          "required": 54,
+          "completeUnit": 54,
+          "completeAcrossItems": 54,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 307.77777777777777
+        },
+        "role-context": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 363
+        },
+        "project-isolation": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "index-expansion": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "noise": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 6,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 260
+        },
+        "forget": {
+          "probes": 12,
+          "nonempty": 4,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 4,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 125
+        },
+        "forget-and-retain": {
+          "probes": 12,
+          "nonempty": 4,
+          "required": 12,
+          "completeUnit": 4,
+          "completeAcrossItems": 4,
+          "forbiddenProbes": 4,
+          "executedForgetProbes": 8,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 102.33333333333333
+        },
+        "do-not-save": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 6,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 252
+        },
+        "global-preference": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "unresolved-context": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 285
+        },
+        "forgotten-replay": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 0,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "different-subject": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "authorized-rerecord": {
+          "probes": 6,
+          "nonempty": 0,
+          "required": 6,
+          "completeUnit": 0,
+          "completeAcrossItems": 0,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 0
+        },
+        "redaction": {
+          "probes": 6,
+          "nonempty": 6,
+          "required": 6,
+          "completeUnit": 6,
+          "completeAcrossItems": 6,
+          "forbiddenProbes": 0,
+          "executedForgetProbes": 0,
+          "executedForgetLeaks": 0,
+          "retainedOtherFactAfterForget": 0,
+          "meanBytes": 384
+        }
+      }
+    }
+  },
+  "complexity": {
+    "definition": "If + ternary + logical (including ??) + nondefault case + catch + loop AST nodes",
+    "productionBefore": {
+      "src/domain.mjs": 52,
+      "src/evidence.mjs": 26,
+      "src/extraction.mjs": 49,
+      "src/migrations.mjs": 5,
+      "src/operations.mjs": 73,
+      "src/policy.mjs": 119,
+      "src/qwen.mjs": 43,
+      "src/service.mjs": 176,
+      "src/store.mjs": 242,
+      "dsh/bridge.mjs": 11,
+      "dsh/extractor.mjs": 24,
+      "dsh/index.mjs": 1,
+      "dsh/integration.mjs": 33
+    },
+    "productionAfter": {
+      "src/domain.mjs": 52,
+      "src/evidence.mjs": 26,
+      "src/extraction.mjs": 49,
+      "src/migrations.mjs": 5,
+      "src/operations.mjs": 73,
+      "src/policy.mjs": 119,
+      "src/qwen.mjs": 43,
+      "src/service.mjs": 176,
+      "src/store.mjs": 242,
+      "dsh/bridge.mjs": 11,
+      "dsh/extractor.mjs": 24,
+      "dsh/index.mjs": 1,
+      "dsh/integration.mjs": 33
+    },
+    "productionTotal": 854,
+    "v7ReadMethods": {
+      "search": 19,
+      "recall": 15
+    },
+    "experimentalRuntime": {
+      "experiments/evidence-routes/source-route.mjs": 41
+    },
+    "allExperimentFiles": {
+      "experiments/evidence-routes/acceptance.mjs": 2,
+      "experiments/evidence-routes/contracts.test.mjs": 3,
+      "experiments/evidence-routes/evaluate.mjs": 32,
+      "experiments/evidence-routes/performance.mjs": 11,
+      "experiments/evidence-routes/queries.mjs": 3,
+      "experiments/evidence-routes/source-route.mjs": 41
+    },
+    "sharedGuards": [
+      "MemoryStore.maskSource",
+      "MemoryStore.protections",
+      "MemoryStore.visible",
+      "sourceAnchors",
+      "resolveEvidence"
+    ],
+    "note": "Prototype is not a full replacement: it has no write authorization, consolidation, global core, vector/rerank or long-window splitting. Branch totals cannot prove complete product simplification."
+  },
+  "limitations": [
+    "Same completed v7 write decisions in paired retrieval; no claim of new extraction quality",
+    "Whole source windows withheld if masked or incomplete; measure collateral recall loss",
+    "No live vector/rerank comparison; local lexical channels only",
+    "Original evidence is historical data, not confirmed instructions"
+  ],
+  "interpretation": "Literal content/context probes, not new model accuracy. Paired routes reuse the same completed v7 mutation results; source-only variants do not demonstrate independent chat forget intent recognition.",
+  "verifiedAt": "2026-11-03T15:43:20.552Z",
+  "readyForDailyReplacement": false,
+  "tests": {
+    "initialPrototype": {
+      "tests": 20,
+      "pass": 3,
+      "fail": 17,
+      "skipped": 0
+    },
+    "mechanisms": {
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "skipped": 0
+    },
+    "productAcceptance": {
+      "tests": 6,
+      "pass": 0,
+      "fail": 6,
+      "skipped": 0
+    },
+    "productionSandbox": {
+      "tests": 176,
+      "pass": 171,
+      "fail": 5,
+      "skipped": 0
+    },
+    "sdkLoopback": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "productionTestsCombinedPassed": 176,
+  "externalNetworkAttempts": 0,
+  "paidCalls": 0,
+  "dailyConfigurationRead": false,
+  "productionAndPriorEvidenceUnchanged": true,
+  "gitCommitOrPush": false,
+  "uiChanged": false,
+  "syntaxChecks": {
+    "productionExit": 0,
+    "experimentModules": 6
+  },
+  "indexDiagnostics": {
+    "registeredHints": 314,
+    "queriesWithIndexHit": 74,
+    "indexOnlyResults": 0
+  },
+  "productBlockers": [
+    "whole-window masking loses independent B",
+    "explicit do-not-store/noise remains retrievable",
+    "cross-language equivalent replay escapes local fact-identity match"
+  ],
+  "performance": {
+    "at": "2026-11-03T15:37:02.597Z",
+    "method": "in-memory SQLite; same synthetic corpus; one tombstone; one warmup then five samples; alternate order; unique message IDs bypass v7 recall snapshot; cloud disabled; max is not P95",
+    "memoryNote": "Process memory includes all three routes together, not per-route attribution. No production performance claim.",
+    "modelCalls": 0,
+    "output": [
+      {
+        "records": 1000,
+        "tombstones": 1,
+        "combinedBuildMs": 497.9262,
+        "combinedProcessMemory": {
+          "rss": 121421824,
+          "heapTotal": 33427456,
+          "heapUsed": 21926592,
+          "external": 14110503,
+          "arrayBuffers": 10310956
+        },
+        "routes": {
+          "v7": {
+            "samples": 5,
+            "medianMs": 5.5770000000002256,
+            "maxMs": 9.19860000000017,
+            "valuesMs": [
+              5.135999999999967,
+              8.989900000000034,
+              9.19860000000017,
+              4.9913000000001375,
+              5.5770000000002256
+            ],
+            "lastQueryFound": true
+          },
+          "source": {
+            "samples": 5,
+            "medianMs": 274.26079999999956,
+            "maxMs": 275.1574999999998,
+            "valuesMs": [
+              274.74599999999987,
+              269.40459999999985,
+              274.26079999999956,
+              275.1574999999998,
+              273.4948999999997
+            ],
+            "lastQueryFound": true
+          },
+          "source-index": {
+            "samples": 5,
+            "medianMs": 328.06410000000005,
+            "maxMs": 341.3573000000001,
+            "valuesMs": [
+              341.3573000000001,
+              334.35210000000006,
+              324.3980999999999,
+              328.06410000000005,
+              325.92279999999937
+            ],
+            "lastQueryFound": true
+          }
+        }
+      },
+      {
+        "records": 10000,
+        "tombstones": 1,
+        "combinedBuildMs": 14128.3285,
+        "combinedProcessMemory": {
+          "rss": 512622592,
+          "heapTotal": 221048832,
+          "heapUsed": 131546048,
+          "external": 3839638,
+          "arrayBuffers": 40051
+        },
+        "routes": {
+          "v7": {
+            "samples": 5,
+            "medianMs": 52.60570000000007,
+            "maxMs": 87.98750000000291,
+            "valuesMs": [
+              52.60570000000007,
+              87.98750000000291,
+              79.32179999999789,
+              50.29320000000007,
+              49.9997999999905
+            ],
+            "lastQueryFound": true
+          },
+          "source": {
+            "samples": 5,
+            "medianMs": 5255.150699999998,
+            "maxMs": 5368.040099999998,
+            "valuesMs": [
+              5262.026300000005,
+              5368.040099999998,
+              5255.150699999998,
+              5242.137200000005,
+              5137.615399999995
+            ],
+            "lastQueryFound": true
+          },
+          "source-index": {
+            "samples": 5,
+            "medianMs": 5900.095800000003,
+            "maxMs": 6299.1133000000045,
+            "valuesMs": [
+              5737.912100000001,
+              5900.095800000003,
+              6299.1133000000045,
+              6075.314599999998,
+              5782.322199999995
+            ],
+            "lastQueryFound": true
+          }
+        }
+      }
+    ]
+  }
+}

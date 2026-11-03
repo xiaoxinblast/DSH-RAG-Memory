@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "at": "2026-11-03T15:08:05.770Z",
+  "planId": "1673dbbe6189d68aca28a2d1fa6f5f748830a62a2142e8b642c4094bb3123311",
+  "frozenFilesVerified": 318,
+  "productionAndHistoryUnchanged": true,
+  "currentTasks": 288,
+  "currentRequests": 540,
+  "postRunAdditionalPaidCalls": 0,
+  "rawScorePreserved": true,
+  "corrections": [
+    {
+      "taskId": "units7-new-2:qwen-27b:1",
+      "from": 0,
+      "to": 2,
+      "reason": "独立构建状态与发布状态合计覆盖完整进度，不将其误算为限定条件遗漏；不改变端口/访问条件的完整单元要求。"
+    },
+    {
+      "taskId": "units7-new-2:qwen-27b:2",
+      "from": 0,
+      "to": 2,
+      "reason": "独立构建状态与发布状态合计覆盖完整进度，不将其误算为限定条件遗漏；不改变端口/访问条件的完整单元要求。"
+    }
+  ],
+  "cumulativeBudgetCny": 9.282543800000006,
+  "budgetCeilingCny": 10,
+  "remainingConservativeCny": 0.7174561999999938,
+  "invoiceVerified": false,
+  "files": {
+    ".cache/extraction-evaluation/units-v7-live/plan.json": {
+      "sha256": "43e4837139d7f61a24f3245531133c316fbfe19fff4f944408f846956a773f8c",
+      "bytes": 150522
+    },
+    ".cache/extraction-evaluation/units-v7-live/history-audit.json": {
+      "sha256": "7d564289d1b028d226e2f3d741f9777dc757e2273b4a2a19884c302dd1e6f831",
+      "bytes": 4116
+    },
+    ".cache/extraction-evaluation/units-v7-live/preflight.json": {
+      "sha256": "e53fc2f4ac965355d7553237dfdbb8a5629d55f4d894748589ad2780be370cc9",
+      "bytes": 349
+    },
+    ".cache/extraction-evaluation/units-v7-live/live/journal.jsonl": {
+      "sha256": "f31eb8eb3828caa982ed20555df20480db0e2b0e3a9bf707d0a2e370dce2d618",
+      "bytes": 7643307
+    },
+    ".cache/extraction-evaluation/units-v7-live/live/responses.jsonl": {
+      "sha256": "ac34dd177022f6cd6c60bcb7f678de92f4f9970c204d725a7cd9fa88f47728dd",
+      "bytes": 6519798
+    },
+    ".cache/extraction-evaluation/units-v7-live/live/completion.json": {
+      "sha256": "a3bad9c5235bd5fd878f1d1c3ee61bb7a5b058d960148a39b972afcb31b34af6",
+      "bytes": 484
+    },
+    ".cache/extraction-evaluation/units-v7-live/live/isolation.json": {
+      "sha256": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+      "bytes": 381
+    },
+    ".cache/extraction-evaluation/units-v7-live/reviews.json": {
+      "sha256": "d732c212b9c009b47f4f7f3c3a471f5c47dfb11ffc54dab10a9a9f2e7e2d6330",
+      "bytes": 24159
+    },
+    ".cache/extraction-evaluation/units-v7-live/scored.json": {
+      "sha256": "d705fd8bd932abbb778096c4f282f898e125398b43b81a59b03e39280827ca4b",
+      "bytes": 192042
+    },
+    ".cache/extraction-evaluation/units-v7-live/audited-score.json": {
+      "sha256": "c67a91439512232eb386f6c91b5f3f581d118784b2d2d53847d29b4c971fb867",
+      "bytes": 214896
+    },
+    ".cache/extraction-evaluation/units-v7-live/failures.json": {
+      "sha256": "b7d698feae845ca26562c8422781c2bedf9791930827172d9d1564fe2bb803d2",
+      "bytes": 155134
+    },
+    ".cache/extraction-evaluation/units-v7-live/final-audit.json": {
+      "sha256": "ed0fef762fa3462161890a752955f93c9a0d9e398a9dbf40b75ba0fdbd114315",
+      "bytes": 27771
+    },
+    ".cache/extraction-evaluation/units-v7-live/review-work/finalize.mjs": {
+      "sha256": "dfe38d792b24b286806bfc3ee5e250734ae8437e2c6f365dd79355188c506b13",
+      "bytes": 7449
+    },
+    ".cache/extraction-evaluation/units-v7-live/harness/cases.mjs": {
+      "sha256": "aba8ddae0528f90d79fadde3c5fe906fa52da62c5a5ed458e9659ecf2501e0ec",
+      "bytes": 5329
+    },
+    ".cache/extraction-evaluation/units-v7-live/harness/evaluate-kernel.mjs": {
+      "sha256": "65598605389634f5170356780e14e3ad8b867764c69e53b52262ee9f1bda998d",
+      "bytes": 16328
+    },
+    ".cache/extraction-evaluation/units-v7-live/harness/kernel-evaluation.mjs": {
+      "sha256": "2f8abd653a172b24c6ce75074384efb94f3e7f80673ccc87a98da3f5fdf67335",
+      "bytes": 5390
+    },
+    ".cache/extraction-evaluation/units-v7-live/harness/kernel-evaluation-score.mjs": {
+      "sha256": "2eb2511fc2112a07fbcd4beb70c7d2654ba4e44f6eae9457a0f8c5c19ba119d7",
+      "bytes": 9494
+    },
+    ".cache/extraction-evaluation/units-v7-live/harness/preflight.mjs": {
+      "sha256": "221f7d29931cc751d4be9d10261a506b4cd1bad219350c528b6d0ad14b57a0d8",
+      "bytes": 2572
+    },
+    "docs/extraction-units-v7-results.md": {
+      "sha256": "d5edf73734fc9a4f24b20fd8e3202d1bfb71154baad3876db086393661546c3a",
+      "bytes": 14430
+    },
+    "docs/extraction-units-v7-results.json": {
+      "sha256": "ed0fef762fa3462161890a752955f93c9a0d9e398a9dbf40b75ba0fdbd114315",
+      "bytes": 27771
+    }
+  }
+}

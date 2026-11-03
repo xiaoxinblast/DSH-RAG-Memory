@@ -1,0 +1,1175 @@
+{
+  "at": "2026-11-03T07:41:22.996Z",
+  "files": {
+    "src/content-policy.mjs": "abd135b52d82006392f9b959bed5a46ade622497f494a0a6efcbd9eaf2bd2cfa",
+    "src/domain.mjs": "0d0facd32998b80643c363dfd1f56f6ae0830f874a73f0b3298e5dbfb184bf1b",
+    "src/evidence.mjs": "8a162a40c062844aef9847ab7c6653ca55af9ab76ee9cb634dda89feb5e69e47",
+    "src/extraction.mjs": "ae037e462c646b996e5d4429adb1317a385a72b65acfeb1aac4141976e9b9092",
+    "src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    "src/operations.mjs": "8f118810d698eb9218551ca40f6a1d66694e2193d85ee4932ce5855007231a8e",
+    "src/policy.mjs": "0ee5f288de5e78ee26b447a3f2dc21a964d1a653af4a5a2107d2399748c24720",
+    "src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    "src/service.mjs": "63953ab587be2779db850fae8dc395bad4640afc50dbd54189113bc80988f3ce",
+    "src/store.mjs": "2ceeca01b89fc6f89e7d5b21565342db01ca531b8d655540c33d46caf0c36183",
+    "dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    "dsh/extractor.mjs": "9b33d3254362ac68d7616bdc62bdc4c5b62a8882930a4131d763e82a4119a296",
+    "dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    "dsh/integration.mjs": "a42460fb5fd1c3be6133d848f68a814bc619c7b46053f50b6eb50bfd60981a43",
+    "scripts/benchmark-logic-v3.mjs": "064af369dc126ef2d19b7b08ea178c5ae8887017db7f9db4bc13e8152c9f3e41",
+    "scripts/build.mjs": "fe333c5715b6598f0d2fd9b0ef583c87fd4116194b80c2593d720dbec2e93614",
+    "scripts/check.mjs": "3c58e2cd6ec24912659e3dab0fa754758dd19ebcf0f1f8dc2852f8a5f04d6d7b",
+    "scripts/continue-extraction-v5-2.mjs": "cdc09921915d0aa1e34102b11143d11cdb03f29d9ea67778087fbf2d4a8ba035",
+    "scripts/continue-extraction-v5.mjs": "2dedfba6abec482c35d4ab9ddcdce476d523784616d38029133c0f4672af917d",
+    "scripts/evaluate.mjs": "28019c756bb5ddac6492483c7e26cb88b2d2440068265aaeb273c28d79ea4b76",
+    "scripts/extraction-evaluation-v3.mjs": "0e157f2bf4449c57176ffc2784639038a6520043e571e9f7b06a74aca2027498",
+    "scripts/extraction-evaluation-v4.mjs": "901280e1a04397805db3d2af4dafd36078f742e86ee14b2642bcec0163454399",
+    "scripts/extraction-evaluation-v5.mjs": "d0505129ce7bfae88ad76784b4233315ac58fe908f30ac9a68a1e61b3c1371b1",
+    "scripts/extraction-evaluation-v6.mjs": "e6dbe4ff148199874180fbbbd6dc543c7474ee48c9619afcb2b0af337c47a842",
+    "scripts/extraction-evaluation.mjs": "448b808077bcd6d3c3e5e3885e230a6fba693f54028c2a9be8adce79bcb722fc",
+    "scripts/inspect-extraction-adapter.mjs": "1f188ed124564e671abc6fb8066ebac4521f2c2a793d23d6c2d753c57a83a79e",
+    "scripts/open-setup.mjs": "339ecccb18190991d6ad6bde9bda6ebf205f7443470620d8ec725a49aba0308d",
+    "scripts/replay-extraction-baseline.mjs": "04d350d167cb5893d78b96750b6df986940cbecdea72c7e047b2a89b11141a2b",
+    "scripts/report-extraction-v3.mjs": "36fa68a45fb5db8c39cbab958c4480070aea75aeaa199072a71188777d21fdeb",
+    "scripts/report-extraction-v4.mjs": "d83f7bc862e070850650a9eb764b642d1ca1fc639ca64ccd57cfccda370a2d00",
+    "scripts/report-extraction-v5.mjs": "8d966e845ce685611a00a7eeea262e0f6e5d5e3ae95000838d89692b6e6572cf",
+    "scripts/report-extraction-v6.mjs": "fd9a864a32ad8fe3c5f1d24d2da93abe66671827dc206add408f37d4cb2a9fc1",
+    "scripts/run-extraction-evaluation.mjs": "222628f8540a2d06dc8dcaa0aade9b7f1f64f91f798531052e0b1e3b74845562",
+    "scripts/run-extraction-v3.mjs": "0a68573854f6c4b2ee0e1fa649bc03555d2df97234f9bbff99ab8d7be43cba8c",
+    "scripts/run-extraction-v4.mjs": "35144f8ac05ea5b74d95cf455ce850a831c29227246384a0f3d5f3e54b92824a",
+    "scripts/run-extraction-v5.mjs": "dec899daa94f6c754272585c33609af458c632902888149b9c67798a41a915b7",
+    "scripts/run-extraction-v6.mjs": "6914a3576aba38660a88bd12c77a9f489cb65699f42ae5df8418e3f021fadbaf",
+    "scripts/score-extraction-v3.mjs": "1fa6d37aaf939ae7dd0e50d2d4927d201d3c977e4f1e388375cb5491ebd7920b",
+    "scripts/score-extraction-v4.mjs": "23e844a2447c024fd39a1131755ea60ea465e3688472b32327d885378196a6d0",
+    "scripts/score-extraction-v5.mjs": "a58d93c6d91e67c0a6c508f3ef7a57f40d41259b57a870261d420816c73c5024",
+    "scripts/score-extraction-v6.mjs": "48e31726155ce9217d650f80b991fb393154bf3f772e9f0be9a2ba2823986697",
+    "scripts/seed-demo.mjs": "00776556fa1678d35f5fda20f9ca723554d7de5906d4ef08db18b40db632be70",
+    "scripts/verify-candidates-ui.mjs": "19404d0004345890212e22ea9251dda9afc093386296496bdb2089e7cc272daf",
+    "scripts/verify-dsh-live.mjs": "f6dcbeeaabca971737e179c6d04a76036f214a5a7106f4b4483887a73f273e40",
+    "scripts/verify-library-ui.mjs": "1a1f9d3b41916e7b09e20ffd913026f88d6c5253ea0eade0f23cb0bf345bb380",
+    "scripts/verify-logic-v3-migration.mjs": "9debe1c6a2acee1c3986f52b0750bb4dce49566b619e9c390d75388f622c0132",
+    "scripts/verify-logic-v3-sdk.mjs": "f17d43410055746eb3bf21e5b26b25830f0838271688f0891986a89f89c5abb1",
+    "scripts/verify-logic-v3-ui.mjs": "4ccb5d6060ac75209499e01c1bb71d8a4beedba02fbb1c5e642356e7486ab958",
+    "scripts/verify-settings-ui.mjs": "00b4a5eb74829e0b674354d04a38d781a42050ab3805f7464916539a608170eb",
+    "scripts/verify-ui.mjs": "71db214c97e2cedddf91be564b036bfa7e4013bf3ea5cbf57a5cfaedae2b4925",
+    "tests/core.test.mjs": "69e1c82ebe8c5b12a80a2bf9aca87854cb4eaddacdfa046a7037126b61567f8e",
+    "tests/dsh-extractor.test.mjs": "e839db38f826027bcae70422c65766146e126a8d52f6bf37d988b78b210ee123",
+    "tests/extraction-adapter.test.mjs": "f48dcc1277789de0490e13ecd3dcb4305d9737650f8d1aedb8887cf9c6340c1c",
+    "tests/extraction-evaluation.test.mjs": "6a5382904e785187443371652ac7002b11e6869e1688474f0a9a760d00596815",
+    "tests/extraction-live.test.mjs": "9a7e9854278ec7bd7bcfd9348cd01e9925be0d7cbaf7f2d2e17b8ce0bf19feaf",
+    "tests/extraction-safety.test.mjs": "a0dcea4ed34a33b211c3d8644c12b03e14de6b9eff22b46a9cebb96ce83d36b2",
+    "tests/extraction-v3-live.test.mjs": "14d7a873d8b64cc7bf00fed81f075de27d470d7bc07dd2becb3381f0c98ccaaf",
+    "tests/extraction-v3-scoring.test.mjs": "5ed44ba3c0e63598344ac7005bd14071d97841e4f0e54402514aa77d9aafc9a0",
+    "tests/extraction-v4-score.test.mjs": "c0bc0c0c553a989cc44f1e7950304db68b00bcdabb2c594eb883776fa2a0ee4a",
+    "tests/extraction-v5-live.test.mjs": "1a712ff989ffbdf3f96a59da2c4a1fc41836038c405bfb8e7a798619b1cddb81",
+    "tests/extraction-v6-live.test.mjs": "2bbbbf4d2f80dcbdbaff7c0b16b650073417fe4ed00f2d731868d8f594844e47",
+    "tests/extraction-v6-score.test.mjs": "04fc3ed11507007344942338493f31fee5973c2fc9e72d9ce77f064185b61abc",
+    "tests/fixtures/extraction-cases-v2.mjs": "81118f71d96ccaa7bdf9a4d4d68724f47a6af6fbef07de9016101062e69e5339",
+    "tests/fixtures/extraction-cases-v3.mjs": "181554a45e378c4139777144347165e260473efd354cafd599c61687ca74d2b4",
+    "tests/fixtures/extraction-cases-v4.mjs": "71416431c4d4036ed8721ab3322e11429c0df99cd831459aa0b62a8a2628e8d1",
+    "tests/fixtures/extraction-cases-v5.mjs": "113afaf0a960f9fa9e2e719e8958b41e52c63e29c725d733546c39b845563449",
+    "tests/fixtures/extraction-cases-v6.mjs": "4c0762de2ca2b8bad9c9fc35e1812b287f2801637d5ce4a33f81519f84a42457",
+    "tests/fixtures/extraction-cases.mjs": "ef1e8a363dd81cda92db9ea33bc19d381b24640631b65eaecb20d99d81cbc525",
+    "tests/integration.test.mjs": "c02749c1ea2f1a7bbab7a3b00c69910131e99b896f250ca92b72bf1793f2a422",
+    "tests/logic-v3-sdk.test.mjs": "3cd7485d1a50cab31f283cb050de4e08712a895996f57f0bf063569db5483482",
+    "tests/logic-v3.test.mjs": "bc90c27b2bbe82af64885892549df40b0eb17509018599b1238db6c47229ad33",
+    "tests/logic-v4.test.mjs": "11d5f469a14773efa125db651ee2832cbb99d651f028cedac87ea4ad45bb72a9",
+    "tests/logic-v5.test.mjs": "a794aba8cae88550e04ff1dd82fe19e92e80cb8045b89c461f38689327710796",
+    "tests/logic-v6.test.mjs": "2a5c96a1c64aa0ef837575c76a8ab4a32830336745df55499a677c9ce421a975",
+    "tests/package.test.mjs": "29342f795fc680b25bcc1a5e39d8b66143d716ee0e575a9feea51e013dcd57dc",
+    "tests/scenarios.mjs": "0a111c2433cbd0b8eeb203fae433b9dca8f8a93cd4ffdb52f522b7b343c8ec9d",
+    "tests/ui-recall.test.mjs": "70c5c24452eee3d0af0a7cec6d8e68ea36ad6168b20753e934b5d8e2f26577d3",
+    "docs/extraction-model-pilot-results.json": "ae86781795e5a7620a5e9d4d94a42a7dd1caade3bff9235793c475f7a7dc89d2",
+    "docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613",
+    "docs/extraction-model-results.json": "258bb0c765be228223c3a2b7d605475ff55cdf387655843e586b434ad2350cad",
+    "docs/extraction-model-results.md": "20e8e81b3e6d4c2a678a2b48aa727a6444b6fcb3363d8a783217644d07d087e0",
+    "docs/extraction-model-selection.md": "ee716ea2b03308666e69243b48d8ba5e0167a1fd0a78a497e086fdeba242f307",
+    "docs/extraction-model-v3-results.json": "e023c24d1d3c82f6b84dfbefa4fbdde3c9418af456595f55a8e4743da763c14e",
+    "docs/extraction-model-v3-results.md": "66d24972a9dc012d3b3593c7ead0c1f6768763bf6317bf45746569d93f987059",
+    "docs/extraction-model-v4-results.json": "0330840803f160755b9d1de22cc3ea046c0cdf2a7813d7df147381af05dec11c",
+    "docs/extraction-model-v4-results.md": "ad78b3b02ef01466191ef51c61114f548bcb0bd2a892f42c963ea4f61af7149c",
+    "docs/extraction-model-v5-results.json": "8f8987ac831375f2790d676d942ae4e167cc5709913564e34779612568c5c249",
+    "docs/extraction-model-v5-results.md": "70e311b7cfbc65ed9a192b0c83026890c552433a151766ef6e5f39d9cac28696",
+    "docs/extraction-model-v6-results.json": "0694548b347f71d9308e817f67675913b5dd400856649b21eb8bb4b234d0f5fe",
+    "docs/extraction-model-v6-results.md": "649fe3da0d3c0d02553dd2dbcd16bbe3b8564ae29422f07a3df59569f1403ed0",
+    "docs/extraction-refinement-safety.json": "fa935f4e1859b83ff13d17b07289a5baa953062bc2266367290a84209d74ebd3",
+    "docs/extraction-refinement-safety.md": "a297f9aead19b169aab8cede7e3cd8d20bda63bb63ea80a83ce1a890b7edd508",
+    "docs/memory-logic-v3.json": "95589e22a105b0a35db0642c9456900acd89bfadb92af87261f7772dde558d0d",
+    "docs/memory-logic-v3.md": "4ade5d02af641a19d3a018ae7cba66b6963e0156fcb1725490adb153ee7cd762",
+    "docs/memory-logic-v4.md": "6881cd080c4d8f4663d2ddf95d50d73efdcd00f2cf4194b2e5ed390e63641290",
+    "docs/memory-logic-v5.md": "aa886ee2a1db290d1427d634c24ccc5a41aa8ed37f5d695d777ebc016b79684a",
+    "docs/memory-logic-v6.md": "0f4d05c2df45913b524b49ad5cf32eccc8309b042f949e77a79efc02476d3774",
+    "ui/plugin.jsx": "85c423888eca27afe275725af3ec35ac8f003e4086a642b8d326bb9af3dd585d",
+    "ui/recall.css": "bce1b67f63c82f4f07d9d20e16b420006c9392f74bf895955d20852f4e2f5daf",
+    "ui/recall.mjs": "6ef849567c14f1910aec1a7cc869f085ed02f771d52175fa50056f060f2123fd",
+    "ui/styles.css": "d9f83b585343f6023bda8445de8bc078567d9848c789344ec15533f4e6cd949a",
+    "dist/client.js": "931d4c00eefe778b0d123c0884ca59a225a253af671e2b41f81e3e7177fbc118",
+    "locale/en.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    "locale/zh.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    "package.json": "3d01f5a8ebde9f35eb920dc835b7b4007f61ef9e33cad1677a44f8b89850c8fb",
+    "README.md": "984b17b0b62c3f136e6fab1ca0f827bad51944b060d8c12977f2850728c4e71f",
+    "CHANGELOG.md": "5e39c41cc0b3b367f4d37fc4675010b4ba63f9b9e68534e1ce6f65bee487b80f",
+    "cordis.patch.yml": "b4381436f0a5eb899d8d4670e67ecea4bc219f0066713535ab42a12106d7f178",
+    "icon.svg": "4c08b82dc48beb3fead7ae240e124be321966279e4b836c5833cb9be1d7bfd95"
+  },
+  "evidence": {
+    ".cache/extraction-evaluation/adapter/report.json": "5ece344a651a1b7e38e9ba65bbdee2d25474d8f2bbf71a2c8799582361540934",
+    ".cache/extraction-evaluation/baseline-code/evidence-hashes.json": "5f8b52a13a104a26fb5cac3d2312968610e0e4a91b6802f982adb7dcb6ca9196",
+    ".cache/extraction-evaluation/cli-check/report.json": "ea44dee785edff022509548115ceb3ddaf379639e589dd508d463c6cf9bc001f",
+    ".cache/extraction-evaluation/cli-check/report.md": "f40bac3ef66afe70bfab30ec1fc077b69532565aec30e224c41fd78e01d25bbf",
+    ".cache/extraction-evaluation/cli-check/results.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/cli-check/review-template.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/empty-responses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/live/completion.json": "369053754eab093f9094e03316a8fed3e025badb99dd388b65f98f9ac694693f",
+    ".cache/extraction-evaluation/live/isolation.json": "53987910069abee3c64c058ec855e7d310ff6a028056b3001b32b0972a43e70e",
+    ".cache/extraction-evaluation/live/journal.jsonl": "0fab50182cbcf760d02e6fd1d14560153a35d6d03baed5c7a347a472e2b31b7d",
+    ".cache/extraction-evaluation/live/responses.jsonl": "adf4b2b4a07333a6adc5f79e34ede1d3b4dd4369dab79acd3e3efdc0e7de226e",
+    ".cache/extraction-evaluation/prepare/report.json": "d2c2f5f56382c5cd039c99c8dcbd1a4cf4d1630f4a728fdf3d2b1bc941f08e60",
+    ".cache/extraction-evaluation/prepare/report.md": "f40bac3ef66afe70bfab30ec1fc077b69532565aec30e224c41fd78e01d25bbf",
+    ".cache/extraction-evaluation/prepare/requests.jsonl": "8676cb6c4825cecff789a1c08aca9f911be446f3823a71b19a868892c755a9c5",
+    ".cache/extraction-evaluation/prepare/results.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/prepare/review-template.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/prepare/suite.json": "ab92acfb9bb37de4784882895e19b785e7fdceede82bb48bcc5655660e6fe0f6",
+    ".cache/extraction-evaluation/scored/details.json": "53e18d49ea5e62eea04c3a7c18d08c0c4b34def5446e37a217123191e266f25d",
+    ".cache/extraction-evaluation/scored/report.json": "c73fb5177e1f78bb4f4a4321aa34fcccce42bd78d412eb76d4c6ee3837a538e5",
+    ".cache/extraction-evaluation/scored/report.md": "bad5b21a9a37d3ff8180ee8227e95885845105075924811fbb4098abf0e6dc1d",
+    ".cache/extraction-evaluation/scored/results.jsonl": "6215034064fddc21c7b5c5e16d72ca21ebf8fda8925b02b6bd8b854431f3fc31",
+    ".cache/extraction-evaluation/semantic/groups.json": "bbdf201bc2c3e5c6780625adbad068e781635fa1431cb37324f356fbe81f1864",
+    ".cache/extraction-evaluation/semantic/judgments.json": "21adb8afdde76e5849faee6a3d3cf349d5b2b07af80b9837acff89c8c46efc41",
+    ".cache/extraction-evaluation/semantic/reviews.jsonl": "a2f5972396b091cab01f3e99af25bf33034d438a49607dde4c0d237f157e7769",
+    ".cache/extraction-evaluation/semantic/templates.jsonl": "0517c487c7d86f26c3172a4315ec2b9ba35985c588133cbccea90e19b32827f4",
+    ".cache/extraction-evaluation/v2/baseline-replay/report.json": "6ffc9427fa0511285501f254fd29f482f557332f2d244bb5be09b501871c32d2",
+    ".cache/extraction-evaluation/v2/baseline-replay/results.jsonl": "5928b9bebe89eee2e8f5926a93542b0bbed9022e56fb03f1f1e4de9927a4be50",
+    ".cache/extraction-evaluation/v2/cli-check/report.json": "61214f5ed2d34b3b264975e1728ca022a37ddb9a6c906b4ab1958df5d43eef7f",
+    ".cache/extraction-evaluation/v2/cli-check/report.md": "4fe19cd6b6cb728825f157dc3bd838bf91cabd6e35dd098698786b07935cf445",
+    ".cache/extraction-evaluation/v2/cli-check/results.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/v2/cli-check/review-template.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/v2/empty.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/v2/live/completion.json": "86403e7c46c31ea5b46bd41f2e78cb6ba7890a7ee7c9b60363f9243ecc3288b5",
+    ".cache/extraction-evaluation/v2/live/isolation.json": "411c35f8b12ccaedcba20e4bdcb1dcf6fda927ab4bcec88636cb26055ff24c9b",
+    ".cache/extraction-evaluation/v2/live/journal.jsonl": "db0b61e7c5d626aa2dac218bdc28c5c036276db5225db318491f5b52ede6f331",
+    ".cache/extraction-evaluation/v2/live/pilot-plan.json": "ee16e1690a7094331e81678545dbcedf5bbb38613c8b897f69dc9486ba1f405d",
+    ".cache/extraction-evaluation/v2/live/responses.jsonl": "54e3f13ed42f28df37166fc44dc90e777034efd6ff06e1311da3350c41473a6c",
+    ".cache/extraction-evaluation/v2/pilot-review/decisions.json": "0eb5a479245d2fafb8046362b6149775ba9ce6aa143fcf673050aec838547fcf",
+    ".cache/extraction-evaluation/v2/pilot-review/full-suite-progress.json": "7311c648b9d8ef934bac15df1124512096976b5e21f4eec2fcf36dbe0125af9e",
+    ".cache/extraction-evaluation/v2/pilot-review/full-suite-progress.md": "970d39a3c57108ae511c8c15f8714d0eef3f9318b7be0d49dc3c6adfbdc4014f",
+    ".cache/extraction-evaluation/v2/pilot-review/groups.json": "a2fa207c7953d418548210ef1aa16a271939298b0b130bea0fef41b2f1295dd6",
+    ".cache/extraction-evaluation/v2/pilot-review/results.jsonl": "0528e37fefa8f3b81016f156e865581b14b60720e85d1508aa3ad04d4e0db6e4",
+    ".cache/extraction-evaluation/v2/pilot-review/reviews.jsonl": "a2c0debf4061b93ec3df4b3cff400377271e36ef5675faa021bc9051a8243487",
+    ".cache/extraction-evaluation/v2/pilot-review/screening-report.json": "6d18242c3882992ecb677ea7d0d47c078adcde53804b61fc3934cc242d153b70",
+    ".cache/extraction-evaluation/v2/pilot-review/templates.jsonl": "5a30ccfe6d8c502532934b08d654678fdb6d5d40cd7d75e3c220b8df636e2d3b",
+    ".cache/extraction-evaluation/v2/prepare/report.json": "1b16769f0d6f8cdca801ca1e2e57c038064a4c788d753d6854d558414ee5b04d",
+    ".cache/extraction-evaluation/v2/prepare/report.md": "4fe19cd6b6cb728825f157dc3bd838bf91cabd6e35dd098698786b07935cf445",
+    ".cache/extraction-evaluation/v2/prepare/requests.jsonl": "89531a2c35eecae25a8072b092eed523137ada6e0de35c8e646d08b888ce018c",
+    ".cache/extraction-evaluation/v2/prepare/results.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/v2/prepare/review-template.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/extraction-evaluation/v2/prepare/suite.json": "1ae85ea14476958971b34f85048709bcdac104fd8bf8ac4692e0a7e059ccac48",
+    ".cache/extraction-evaluation/v3/live/completion.json": "19132c6b060cec44dc2b4873cdf16944cc9bfe0b19626b2d12ca15c2587860bf",
+    ".cache/extraction-evaluation/v3/live/isolation.json": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+    ".cache/extraction-evaluation/v3/live/journal.jsonl": "0a60d4f0f23db0cd5bf576536e5f1b2144eaa0e24a9de63830e0b66be562eebb",
+    ".cache/extraction-evaluation/v3/live/responses.jsonl": "e8fbeb8e3630585fd12cae5c82a60bb6fbcfdefb8efd1cda01bd160ada73bafb",
+    ".cache/extraction-evaluation/v3/plan.json": "503092744c2bb9280669ba8f542ea7f171a2971422215e35716adc68a60e3761",
+    ".cache/extraction-evaluation/v3/review-pack-progress.json": "ce8e721afe42f8c98f5a48160d75f19cbf322b7d45589702ab61570f3c390e71",
+    ".cache/extraction-evaluation/v3/review-pack.json": "ce8e721afe42f8c98f5a48160d75f19cbf322b7d45589702ab61570f3c390e71",
+    ".cache/extraction-evaluation/v3/reviews.json": "fc9098bae2d5a87ae5803ea05ac6a39fa24bb552cf4104d9ef4496ed4748ddff",
+    ".cache/extraction-evaluation/v3/scored.json": "c03a7454e2ec59d06bf92fed208d58edf1aec7755618392c1d2963d4d958a1f2",
+    ".cache/extraction-evaluation/v3/scoring-protocol.json": "da856726f584ff9995fa9854f276254661d65d60755b8dd7178cf06a0fe0c5df",
+    ".cache/extraction-evaluation/v4/live/completion.json": "e4916b170bb3cab9fae7c13c922aaa1426ac81418c7e4c953b7b7af4162a2165",
+    ".cache/extraction-evaluation/v4/live/isolation.json": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+    ".cache/extraction-evaluation/v4/live/journal.jsonl": "9c6067aaf7725b0d4f4ae82681e119806228ba910588cab45c2fd24af91eb12f",
+    ".cache/extraction-evaluation/v4/live/responses.jsonl": "4fbd875d3f43b5414243639e76f395e4fec1085e4d184940309f295523c77250",
+    ".cache/extraction-evaluation/v4/plan.json": "a81b8cde8bd5aa09d40aa2e547dbe53903dfc4ac0bb986ddde34d37be6ea8bf5",
+    ".cache/extraction-evaluation/v4/review-pack-progress.json": "23526e1a522204197105ad10207447c7655883ba56b584bb3f405b0e5de6dac3",
+    ".cache/extraction-evaluation/v4/review-pack.json": "23526e1a522204197105ad10207447c7655883ba56b584bb3f405b0e5de6dac3",
+    ".cache/extraction-evaluation/v4/reviews.json": "7a6b7a30bfd3de125423a45e174662a33bfb6339bd9a885c5f7ef9cc19d32b2e",
+    ".cache/extraction-evaluation/v4/scored.json": "58c1fe24fbd3c18acffaeb29d2597690d9271b99bbfbfa31b09aa1ebc986265d",
+    ".cache/extraction-evaluation/v5/final-audit.json": "dff315bac5605677b1159e2dce22f3058a800de3122fda969db242a55db47549",
+    ".cache/extraction-evaluation/v5/live/completion.json": "6d68bf51edda717502223b77ca17323184d6ff49e5ef69c4c1c39fb4594cb19a",
+    ".cache/extraction-evaluation/v5/live/continuation-1.json": "29396c2b68e25d80bec7acb9e4826ff257bfa9acd11964c0d1df3371c78e93d3",
+    ".cache/extraction-evaluation/v5/live/continuation-2.json": "77f66e1cf484645c28de2bd773748c10628631f93b4d81e5341e956436de0d98",
+    ".cache/extraction-evaluation/v5/live/interruption-1.json": "419cfb21cef78b8f447aabe1ce91170fdb3f100ecf7708026379e61c7ec89269",
+    ".cache/extraction-evaluation/v5/live/interruption-2.json": "3f9ceeb4a6eed661d9953506f94dc76a116d8c250c341de02f9983f1884fd386",
+    ".cache/extraction-evaluation/v5/live/isolation.json": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+    ".cache/extraction-evaluation/v5/live/journal.jsonl": "5ca0bc15d2f9a8f1800b27d3249a3be703ed12587db9a1dc6e18f979fe6d4d3e",
+    ".cache/extraction-evaluation/v5/live/responses.jsonl": "b364d5db9b14a9633ff035d0c84526676cce10b292e3900a94dbef765b0649f6",
+    ".cache/extraction-evaluation/v5/plan.json": "11d054cdc8ff46332369ab65131cb14c0ad9f25392564b88a1587ca0a094701e",
+    ".cache/extraction-evaluation/v5/review-pack-progress.json": "1cb813946c3c63d8f19b675b05ff5375ad60b55d2fbb59cf529bb937c71a7134",
+    ".cache/extraction-evaluation/v5/review-pack.json": "1cb813946c3c63d8f19b675b05ff5375ad60b55d2fbb59cf529bb937c71a7134",
+    ".cache/extraction-evaluation/v5/reviews.json": "b1a5cd54e91e6051e31415f648a3d55fb3d673331c340cb91ef3667a97da9cd9",
+    ".cache/extraction-evaluation/v5/scored.json": "837909db995d3eb9dbe900c931761a87a49d12a5fdec27ab7d6295ba7051b1f4",
+    ".cache/extraction-evaluation/v5/scoring-protocol.json": "496edaf4ebfba51d46b6d2dbd1840bdba653323f836fdd418ce6ac08a2994840",
+    ".cache/extraction-evaluation/v6/adjudication-corrections.json": "c1848886dd6e33b80d0a4e9ba73fb0d7523d692038e809a39108def47c46ccc5",
+    ".cache/extraction-evaluation/v6/comparisons-harmonized.json": "59f6ea2864e057fb423e945c3fc9214f203826ffc565226828e5090675553000",
+    ".cache/extraction-evaluation/v6/live/completion.json": "cb5f6056ab247afd1222f508b3588b5820fcc6d1331844fd8cbd5e536024c175",
+    ".cache/extraction-evaluation/v6/live/isolation.json": "a8a0d48908e091caa69f820473485ac8776b5e1bec5c556e96a59a5603527daa",
+    ".cache/extraction-evaluation/v6/live/journal.jsonl": "9d7fd31f2f49cfbeeda2f7e57a81fb37919b96790d8aab2d0670321406edf646",
+    ".cache/extraction-evaluation/v6/live/responses.jsonl": "c040c869cd4af7c4123fd5375f14526605a80df74f3741e71bfe4aea4485c428",
+    ".cache/extraction-evaluation/v6/plan-before-import-fix.json": "b56a82bf4e2d673624ea012b33f7634c8540a79d44f9c7dee613ffd47ef41971",
+    ".cache/extraction-evaluation/v6/plan.json": "f304b8d6c1408da38851307e26847948f4286eb479d0373c49e6121b34a7b5f7",
+    ".cache/extraction-evaluation/v6/review-pack-progress.json": "fd38ebe2ae5c25cba5e9b7a814efc9a7186e2ddcd73c6a9bd6d7b343b11644f0",
+    ".cache/extraction-evaluation/v6/review-pack.json": "fd38ebe2ae5c25cba5e9b7a814efc9a7186e2ddcd73c6a9bd6d7b343b11644f0",
+    ".cache/extraction-evaluation/v6/reviews-before-causal-audit.json": "e251d9fd5151d39dddb94973843c2f4fdda27b5c52ca8d460559a1af1ca6e13b",
+    ".cache/extraction-evaluation/v6/reviews.json": "80eece38b5d1e05c125a57e4ea264d8f1fc2c2f348cbe883abb5439f36902c68",
+    ".cache/extraction-evaluation/v6/scored.json": "23835b90c747111353331d44c114afcffaaaa22c70f918d8455cade7ad4ac098",
+    ".cache/extraction-evaluation/v6/scoring-protocol.json": "1cfd013b86c49d0c71979f4bc82ec16f5b60d42a24ab8d1120a1a2b715ed2e01",
+    ".cache/logic-v6/baseline/CHANGELOG.md": "5e39c41cc0b3b367f4d37fc4675010b4ba63f9b9e68534e1ce6f65bee487b80f",
+    ".cache/logic-v6/baseline/docs/extraction-model-pilot-results.json": "ae86781795e5a7620a5e9d4d94a42a7dd1caade3bff9235793c475f7a7dc89d2",
+    ".cache/logic-v6/baseline/docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613",
+    ".cache/logic-v6/baseline/docs/extraction-model-results.json": "258bb0c765be228223c3a2b7d605475ff55cdf387655843e586b434ad2350cad",
+    ".cache/logic-v6/baseline/docs/extraction-model-results.md": "20e8e81b3e6d4c2a678a2b48aa727a6444b6fcb3363d8a783217644d07d087e0",
+    ".cache/logic-v6/baseline/docs/extraction-model-selection.md": "ee716ea2b03308666e69243b48d8ba5e0167a1fd0a78a497e086fdeba242f307",
+    ".cache/logic-v6/baseline/docs/extraction-model-v3-results.json": "e023c24d1d3c82f6b84dfbefa4fbdde3c9418af456595f55a8e4743da763c14e",
+    ".cache/logic-v6/baseline/docs/extraction-model-v3-results.md": "66d24972a9dc012d3b3593c7ead0c1f6768763bf6317bf45746569d93f987059",
+    ".cache/logic-v6/baseline/docs/extraction-model-v4-results.json": "0330840803f160755b9d1de22cc3ea046c0cdf2a7813d7df147381af05dec11c",
+    ".cache/logic-v6/baseline/docs/extraction-model-v4-results.md": "ad78b3b02ef01466191ef51c61114f548bcb0bd2a892f42c963ea4f61af7149c",
+    ".cache/logic-v6/baseline/docs/extraction-model-v5-results.json": "8f8987ac831375f2790d676d942ae4e167cc5709913564e34779612568c5c249",
+    ".cache/logic-v6/baseline/docs/extraction-model-v5-results.md": "70e311b7cfbc65ed9a192b0c83026890c552433a151766ef6e5f39d9cac28696",
+    ".cache/logic-v6/baseline/docs/extraction-refinement-safety.json": "fa935f4e1859b83ff13d17b07289a5baa953062bc2266367290a84209d74ebd3",
+    ".cache/logic-v6/baseline/docs/extraction-refinement-safety.md": "a297f9aead19b169aab8cede7e3cd8d20bda63bb63ea80a83ce1a890b7edd508",
+    ".cache/logic-v6/baseline/docs/memory-logic-v3.json": "95589e22a105b0a35db0642c9456900acd89bfadb92af87261f7772dde558d0d",
+    ".cache/logic-v6/baseline/docs/memory-logic-v3.md": "4ade5d02af641a19d3a018ae7cba66b6963e0156fcb1725490adb153ee7cd762",
+    ".cache/logic-v6/baseline/docs/memory-logic-v4.md": "6881cd080c4d8f4663d2ddf95d50d73efdcd00f2cf4194b2e5ed390e63641290",
+    ".cache/logic-v6/baseline/docs/memory-logic-v5.md": "aa886ee2a1db290d1427d634c24ccc5a41aa8ed37f5d695d777ebc016b79684a",
+    ".cache/logic-v6/baseline/locale/en.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    ".cache/logic-v6/baseline/locale/zh.json": "aa434a53e7a9db1aebd20848df9d837de76279cac9eca22d3cf7de81f954dcb4",
+    ".cache/logic-v6/baseline/package-lock.json": "ab5ab197ee00d99356125ea9cf0a0a2fd3bd893a8b4a826310c60b99a5fd497f",
+    ".cache/logic-v6/baseline/package.json": "3d01f5a8ebde9f35eb920dc835b7b4007f61ef9e33cad1677a44f8b89850c8fb",
+    ".cache/logic-v6/baseline/README.md": "984b17b0b62c3f136e6fab1ca0f827bad51944b060d8c12977f2850728c4e71f",
+    ".cache/logic-v6/baseline.json": "063564829fbf496e464c19283285c301c0a0f7c85612fede46c35d8b693e28c9",
+    ".cache/logic-v6/final-audit.json": "390811ad782b8278d86d18987c515a989b8bc8c6a85169434ed58d7d09912048"
+  },
+  "tests": [
+    {
+      "file": "tests/core.test.mjs",
+      "index": 0,
+      "title": "项目身份按 Windows 路径归一化"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 1,
+      "title": "本地中文短词、路径和精确标识符均能检索"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 2,
+      "title": "全局偏好共享，项目事实不跨项目"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 3,
+      "title": "项目事实不能提升到全局"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 4,
+      "title": "缺失来源和伪造引句被拒绝"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 5,
+      "title": "来源不能跨项目绑定"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 6,
+      "title": "重复内容不制造第二条记忆"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 7,
+      "title": "纠正保留修订并使旧向量失效"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 8,
+      "title": "并发旧版本更新不能覆盖新修正"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 9,
+      "title": "明确替代将旧记忆退出检索"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 10,
+      "title": "待确认冲突不替代有效记忆"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 11,
+      "title": "遗忘清除向量，旧任务和相同来源不能复活记忆"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 12,
+      "title": "后台任务持久化、去重并在重启后恢复"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 13,
+      "title": "捕获忽略历史事件、插件消息和子代理"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 14,
+      "title": "四轮对话排队，重复消息只存一次"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 15,
+      "title": "排除工作区阻止新记录与手动写入"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 16,
+      "title": "助手自述和不明确冲突保持待确认"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 17,
+      "title": "提炼伪造来源失败时不推进检查点"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 18,
+      "title": "新会话首轮召回与同消息缓存，不随工具步骤重复调用"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 19,
+      "title": "云端断网自动回退本地检索"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 20,
+      "title": "忽略取消的云端也不能阻塞超过两秒"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 21,
+      "title": "注入有保守上限且最多五条"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 22,
+      "title": "未配置凭据不发请求，配置不接受任意主机"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 23,
+      "title": "向量 API 契约、query/document、用量和凭据遮蔽"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 24,
+      "title": "精排候选封顶八条，费用含重复查询"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 25,
+      "title": "达到费用提醒仅通知一次，继续调用"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 26,
+      "title": "API 错误与重定向不泄漏响应正文或密钥"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 27,
+      "title": "保守文本裁剪按完整字符且不超过预算"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 28,
+      "title": "提炼批次原子落库，后一条无效时不留下前一条"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 29,
+      "title": "模型附带任意 id 不能覆盖既有记忆"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 30,
+      "title": "待确认条目批准后会重新排入语义索引任务"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 31,
+      "title": "未改变内容不重复向量化"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 32,
+      "title": "同义语义召回能返回无共同关键词的当前项目记忆"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 33,
+      "title": "香港自然月边界正确，历史月份费用不混入"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 34,
+      "title": "失败工具结果不能成为已验证来源"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 35,
+      "title": "Agent 记忆工具引用真实用户原文，不把工具参数冒充用户消息"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 36,
+      "title": "空闲触发以最新会话活动计算，不在活跃长回合中提前整理"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 0,
+      "title": "DSH 提炼固定使用插件选择，独立请求不带主聊天历史和工具"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 1,
+      "title": "DSH 提炼在 Qwen 未配置时仍能运行，证据由宿主读取原文"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 2,
+      "title": "DSH ${label}时保留队列，不消耗失败次数或自动切换"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 3,
+      "title": "已选提炼模型重启后持久化，缺少 usage 时不编造金额"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 4,
+      "title": "DSH 模型选择器返回多个已注册模型，只传递安全的 ID 和名称"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 5,
+      "title": "提炼选择必须完整，允许清空但不接受多余配置"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 6,
+      "title": "提炼输入有 8000 上限并拒绝无效结构"
+    },
+    {
+      "file": "tests/extraction-adapter.test.mjs",
+      "index": 0,
+      "title": "真实 DSH SDK 回环检查区分 off 控件与 Qwen 关闭思考发包，不访问模型供应商"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 0,
+      "title": "v2 包含 160 个开发和 32 个独立验收案例，三模型各两遍，不泄露金标"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 1,
+      "title": "192 例金标控制通过真实宿主事务、候选保护、隔离及遗忘回放"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 2,
+      "title": "外部项目及遗忘内容不进入准备的旧记忆上下文"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 3,
+      "title": "看似正确的关键词和 JSON 没有人工复核不能认定提炼准确"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 4,
+      "title": "丢失条件、错类型、错作用域或错误证据不能用语义复核绕过"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 5,
+      "title": "分类错误与事实错误分开统计，不能把正确正文算成幻觉"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 6,
+      "title": "原子事实可拆可合，局部遗漏按原子事实计算"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 7,
+      "title": "助手自述允许不记录，不强制产生待确认记忆以获得召回分"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 8,
+      "title": "临时事实虽有来源，仍单独标出不值得记忆，不混同事实造假"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 9,
+      "title": "兼容空数组与规范结构分别计量，格式和字段错误也分开"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 10,
+      "title": "旧版本竞态和明确纠正均只生成候选，旧条目保持有效"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 11,
+      "title": "遗忘探针覆盖重启、旧来源、内容、旧向量和检索"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 12,
+      "title": "伪造来源使整批回滚，不推进检查点"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 13,
+      "title": "项目规则被模型提升全局时，宿主拦为待确认且评分保留范围错误"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 14,
+      "title": "空内容、截断、超时和非法 JSON 均保留首次失败且仅尝试一次"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 15,
+      "title": "缺少用量与缺少账单不伪造费用；缓存与思考不重复相加"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 16,
+      "title": "重复记忆不会增加正确条目数或降低每条有效记忆成本"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 17,
+      "title": "复核必须完整且绑定当前输出，未知事实与过期复核被拒绝"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 18,
+      "title": "无回答报告保持未运行，不输出准确率、费用或推荐"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 19,
+      "title": "不完整轮次不能达标，缺少参数及人工复核不会获得推荐"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 20,
+      "title": "导入拒绝重复任务、清单变更和错误指纹"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 21,
+      "title": "完整控制组必须完成参数核验和账单复核，不能用参考价格自动推荐"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 0,
+      "title": "并发预算先预留，缺失用量计满预留费用，不越过十元"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 1,
+      "title": "筛选覆盖八类各五种开发模式、三模型两遍，不消耗独立验收案例"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 2,
+      "title": "请求费用预留包含 UTF-8 字节上界、输出额度与双倍余量"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 3,
+      "title": "失败时 SDK 的零占位用量不冒充供应商零扣费，恢复重新计入预留"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 4,
+      "title": "落盘日志识别中断请求，拒绝重复和错误清单，恢复不重试"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 0,
+      "title": "提炼空数组兼容，但坏 JSON、非空裸列表及多余字段不能自动猜修"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 1,
+      "title": "自动全局候选先待确认，项目新增记忆仍可自动使用"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 2,
+      "title": "自动纠正只生成有关联的候选，人工确认后才原子替代旧记录"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 3,
+      "title": "即使模型误报明确纠正，继续使用旧方案也不能自动停用旧记录"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 4,
+      "title": "确认前旧记录${change === \"edit\" ? \"已修改\" : \"已遗忘\"}，拒绝过期确认且不留下确认来源"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 5,
+      "title": "候选保存后修改自身版本，旧表单不能确认；Agent 也不能代为确认高影响候选"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 6,
+      "title": "提炼期间版本竞态也保存原快照版本，不能在确认时偷偷接受新版本"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 7,
+      "title": "候选关联在重启后保留，确认不能依赖内存状态"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 8,
+      "title": "已有相同有效内容时拒绝替代确认，不能绕过旧记录和候选状态检查"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 9,
+      "title": "后续无效候选回滚整个提炼批次，包括替代关联和来源检查点"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 10,
+      "title": "重复全局提议只保留一个待确认候选，替代候选按旧版本区分"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 0,
+      "title": "v3 实测预算同时计入历史、并发预留和未知结果，不接受错误零用量"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 1,
+      "title": "v3 实测拒绝模型、思考、工具、格式参数及对话数量漂移"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 2,
+      "title": "v3 中断日志不允许自动重发或重复阶段"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 3,
+      "title": "v3 案例与生产冻结证据可读取，候选授权及并发 gold 不混淆"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 4,
+      "title": "v3 实测宿主确实执行提炼与独立复核并写入凭证，不调用旧协议"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 0,
+      "title": "v3 评分：格式及关键词均不能替代语义复核"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 1,
+      "title": "v3 评分：候选正文正确不代表获得激活授权"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 2,
+      "title": "v3 评分：失败后不入库会保留遗漏，不能靠拦截一切获得满分"
+    },
+    {
+      "file": "tests/extraction-v4-score.test.mjs",
+      "index": 0,
+      "title": "v4 评分按宿主原文编号核查范围，不接受模型自行填写偏移或遮蔽片段"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 0,
+      "title": "v5 预算包含既往花费和并发预留，未知请求保守扣除"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 1,
+      "title": "v5 实际发包拒绝路由、参数、思考与工具漂移"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 2,
+      "title": "v5 冻结合成集均能由真实宿主准备，旧 96 例与新 16 例分开"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 0,
+      "title": "v6 预算包含既往花费和并发预留，未知请求保守扣除"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 1,
+      "title": "v6 实际发包拒绝路由、参数、思考与工具漂移"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 2,
+      "title": "v6 冻结合成集均能由真实宿主准备，旧 112 例与新 8 例分开"
+    },
+    {
+      "file": "tests/extraction-v6-score.test.mjs",
+      "index": 0,
+      "title": "v6 容错后的有效入库不掩盖首次格式失败，也不因无效空项崩溃"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 0,
+      "title": "真实 DSH SDK 工具注册及首轮独立快照，不改写用户消息"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 1,
+      "title": "成功压缩后重注入，失败压缩不增加代次"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 2,
+      "title": "子代理不自动注入记忆"
+    },
+    {
+      "file": "tests/logic-v3-sdk.test.mjs",
+      "index": 0,
+      "title": "真实 SDK：v3 提炼与独立复核同一路由、各一次、无历史工具，复核后自动生效"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 0,
+      "title": "v3 回归：遗忘意图不能被提炼成继续使用，即使复核器错误批准"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 1,
+      "title": "v3 回归：一次查询不能成为持续规则"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 2,
+      "title": "v3 回归：明确过期的条目不参与正常召回，历史读取保留"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 3,
+      "title": "v3 回归：已注入快照在遗忘后失效，同一消息下一步不再注入"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 4,
+      "title": "v3 协议拒绝未知字段、伪造范围及非法操作，不接受旧回答充当新结果"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 5,
+      "title": "v3 普通项目新增不调用复核；来源检查与整批检查点原子提交"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 6,
+      "title": "v3 明确纠正经一次独立复核自动替代，旧向量退出，并可人工按版本回退"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 7,
+      "title": "v3 明确全局长期偏好复核后自动共享；复核不确定保留候选"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 8,
+      "title": "v3 否定、引文、局部项目要求和助手自述不能靠复核批准提升全局"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 9,
+      "title": "v3 目标模糊的遗忘生成澄清，复核拒绝不写入有效记忆"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 10,
+      "title": "v3 混合消息分别绑定范围，忘掉 A 仍保留 B；新墓碑不阻断同来源其他事实"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 11,
+      "title": "v3 遗忘后同主体属性的改写被阻断，明确新来源重新记住创建新条目"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 12,
+      "title": "v3 完全重复补充证据而不建第二条记忆或重复向量任务"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 13,
+      "title": "v3 近义合并必须复核，合并后保留原文与新增证据"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 14,
+      "title": "v3 复核期间旧目标变化只留下过期候选，不能覆盖新版本"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 15,
+      "title": "v3 已保存的提炼和复核在本地提交失败后复用，不重复模型调用"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 16,
+      "title": "v3 复核超时停为检查状态，不重发、不推进来源检查点"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 17,
+      "title": "v3 租约令牌、续租和过期调用阻止另一个执行者重复发送与提交"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 18,
+      "title": "v3 分片保留原消息、覆盖范围、截断与上下文来源，不重复处理上下文"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 19,
+      "title": "v3 核心层不吞掉相关项目记忆，总预算和整条内容受约束"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 20,
+      "title": "v3 历史搜索可见已替代条目，永不返回已遗忘内容；跨项目查询核对用户原话"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 21,
+      "title": "v3 数据升级保留旧内容，重复打开幂等；错误迁移回滚新增列"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 22,
+      "title": "v3 原文范围不能裁掉否定、条件或查询上下文"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 23,
+      "title": "v3 进展更新保留历史，不把过去阶段判成错误；新冲突不能作为普通新增生效"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 24,
+      "title": "v3 工具与后台共用策略，明确遗忘也要复核，不能推进整条用户消息检查点"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 25,
+      "title": "v3 提炼旧记忆可由主体通道找到无共同正文关键词的目标，辅助上下文不重复处理"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 26,
+      "title": "v3 回退在新条目已编辑或遗忘后拒绝，未来版本数据库拒绝旧插件打开"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 27,
+      "title": "v3 模型猜中 ID 也不能让模糊遗忘越过宿主唯一性检查"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 28,
+      "title": "v3 遗忘来源不再作为新模型输入或相邻上下文重发，其他事实照常处理"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 29,
+      "title": "v3 提炼期间发生遗忘时，旧批次不再进入复核或写回"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 30,
+      "title": "v3 Agent 读取工具拒绝已遗忘正文，管理界面仍可查看本地审计"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 31,
+      "title": "v3 复核缺项、重复编号或伪造批准证据立即停为检查状态"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 32,
+      "title": "v3 整批来源无效时不留下半批写入，已保存回答不再次调用模型"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 33,
+      "title": "v3 适用时间必须有明确日期，不会因记录较老而自动淘汰事实"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 34,
+      "title": "v3 插件产生的助手消息不重新捕获为新来源"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 35,
+      "title": "v3 工具重复请求不能重放已遗忘条目的旧正文"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 36,
+      "title": "v3 日期有效期按香港自然日起止，不能凭日期捏造精确时间"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 37,
+      "title": "v3 关闭等待正在复核的工具请求退出，先记录中断再关闭数据库"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 38,
+      "title": "v3 提炼模型暂不可用时高影响工具请求保留队列，恢复后复用明确请求执行"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 39,
+      "title": "v3 暂停云端时普通工具新增仍可本地执行，高影响写入不绕过暂停"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 40,
+      "title": "v3 SDK 提炼入口直接调用也不能绕过云端暂停"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 0,
+      "title": "v4 复现：即使复核批准，仅候选授权不能被激活"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 1,
+      "title": "v4 复现：原文引用由宿主锚点解析，不要求模型数 UTF-16 字符"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 2,
+      "title": "v4 复现：唯一遗忘与独立新事实通过真实事务，清除旧向量"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 3,
+      "title": "v4 候选限制读取完整用户消息，不能靠裁掉授权句绕过"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 4,
+      "title": "v4 候选中的引文、助手指令及否定不冒充用户限制"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 5,
+      "title": "v4 锚点不拆引文，不暴露凭据或已遮蔽范围，也不接受数值偏移"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 6,
+      "title": "v4 否定和引用中的遗忘不能凭复核错误批准删除"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 7,
+      "title": "v4 删除功能验收是事实，不能被泛化的遗忘词匹配丢弃"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 8,
+      "title": "v4 简式 skip 不需要无关类型，遗忘仍要求真实目标与版本"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 0,
+      "title": "v5 复现：记忆操作和临时表达指令不单独成为长期事实"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 1,
+      "title": "v5 复现：跨消息访问限制必须复核，不允许半条事实直接入库"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 2,
+      "title": "v5 复现：遗漏关联来源不能靠复核批准绕过证据完整性"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 3,
+      "title": "v5 复现：尚未确定对象的计划即使复核批准也不能激活"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 4,
+      "title": "v5 复现：单纯保存候选不调用激活授权复核，避免被错误否决"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 5,
+      "title": "v5 有条件候选只审核内容，传递待确认状态且不得覆盖事实性拒绝"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 6,
+      "title": "v5 明确计划、具体保存期限与合并完整限定不被误伤"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 7,
+      "title": "v5 多项内容检查合并为一次复核，简单事实仍然直接入库"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 8,
+      "title": "v5 内容复核批准不能提升宿主因冲突而限制的状态"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 0,
+      "title": "v6 未决二选一与具体对象均不能靠复核批准激活"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 1,
+      "title": "v6 不能将对象未决的要求改写成当前已执行"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 2,
+      "title": "v6 已确认当前状态与未来明确计划不能被未决事项误伤"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 3,
+      "title": "v6 未证明因果不能变成因果预设或擅自补充导致"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 4,
+      "title": "v6 保留明确原因和正确的因果未证实陈述"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 5,
+      "title": "v6 授权、计划、失败和助手自述不能证明完成"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 6,
+      "title": "v6 有直接成功来源的完成状态正常保存"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 7,
+      "title": "v6 单项格式错误隔离，合法项和原序号保留并写入拒绝凭证"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 8,
+      "title": "v6 严格解析保留，隔离不猜测字段也不接受坏信封"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 9,
+      "title": "v6 真实 SDK 回环保留有效项及原序号，独立复核和审计完成"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 10,
+      "title": "v6 部分有效结果在事务失败后本地重放，不重发模型或重复拒绝凭证"
+    },
+    {
+      "file": "tests/package.test.mjs",
+      "index": 0,
+      "title": "改名后的包可由 DSH 读取中英文显示名称、图标及入口"
+    },
+    {
+      "file": "tests/package.test.mjs",
+      "index": 1,
+      "title": "改名后的浏览器构建与宿主使用同一包标识及远程协议，侧栏显示仓库名称"
+    },
+    {
+      "file": "tests/ui-recall.test.mjs",
+      "index": 0,
+      "title": "对话卡片只认领本插件的记忆快照，不影响其他上下文或用户消息"
+    },
+    {
+      "file": "tests/ui-recall.test.mjs",
+      "index": 1,
+      "title": "记忆卡片保留位置、内容和稳定身份，可从持久会话记录重建"
+    }
+  ],
+  "archiveHash": "b9c7434d3ad09aa3f728598238c11dcac4adfcf77805f511409697d02ee4da7a",
+  "historyDependenciesHash": "b0712425dadc4ef3ff0e35be0497e13518636e81bae8b998d87a720d34e9e00f",
+  "historyDependencies": {
+    ".cache/logic-v4/baseline.json": "ce2c8ac8100a30f8f475649caf893800d6f9ccc7b2ecaec0b4502e93f3ed9cd2",
+    ".cache/logic-v4/baseline/src/domain.mjs": "0d0facd32998b80643c363dfd1f56f6ae0830f874a73f0b3298e5dbfb184bf1b",
+    ".cache/logic-v4/baseline/src/extraction.mjs": "9117718c312535c7f7f2625dc3dbe01f40946d868312535dae3ceddef689e593",
+    ".cache/logic-v4/baseline/src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    ".cache/logic-v4/baseline/src/operations.mjs": "5dd9aba2c16cc399cb080e7e001c320d6f8265f387c8b33b61ac6301dec3e8e4",
+    ".cache/logic-v4/baseline/src/policy.mjs": "2145f1ffddb6d17d82e2ce3d42fadce503faf1761e56801a9d06129c462072bf",
+    ".cache/logic-v4/baseline/src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    ".cache/logic-v4/baseline/src/service.mjs": "63953ab587be2779db850fae8dc395bad4640afc50dbd54189113bc80988f3ce",
+    ".cache/logic-v4/baseline/src/store.mjs": "2ceeca01b89fc6f89e7d5b21565342db01ca531b8d655540c33d46caf0c36183",
+    ".cache/logic-v4/baseline/dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    ".cache/logic-v4/baseline/dsh/extractor.mjs": "c3ade1a434c99a70f8959d2585aa622c160731beea3f7dd1cfe3fe5c171f55aa",
+    ".cache/logic-v4/baseline/dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    ".cache/logic-v4/baseline/dsh/integration.mjs": "a42460fb5fd1c3be6133d848f68a814bc619c7b46053f50b6eb50bfd60981a43",
+    ".cache/logic-v4/baseline/scripts/benchmark-logic-v3.mjs": "064af369dc126ef2d19b7b08ea178c5ae8887017db7f9db4bc13e8152c9f3e41",
+    ".cache/logic-v4/baseline/scripts/extraction-evaluation-v3.mjs": "0e157f2bf4449c57176ffc2784639038a6520043e571e9f7b06a74aca2027498",
+    ".cache/logic-v4/baseline/scripts/extraction-evaluation.mjs": "448b808077bcd6d3c3e5e3885e230a6fba693f54028c2a9be8adce79bcb722fc",
+    ".cache/logic-v4/baseline/scripts/inspect-extraction-adapter.mjs": "1f188ed124564e671abc6fb8066ebac4521f2c2a793d23d6c2d753c57a83a79e",
+    ".cache/logic-v4/baseline/scripts/replay-extraction-baseline.mjs": "04d350d167cb5893d78b96750b6df986940cbecdea72c7e047b2a89b11141a2b",
+    ".cache/logic-v4/baseline/scripts/report-extraction-v3.mjs": "36fa68a45fb5db8c39cbab958c4480070aea75aeaa199072a71188777d21fdeb",
+    ".cache/logic-v4/baseline/scripts/run-extraction-evaluation.mjs": "222628f8540a2d06dc8dcaa0aade9b7f1f64f91f798531052e0b1e3b74845562",
+    ".cache/logic-v4/baseline/scripts/run-extraction-v3.mjs": "0a68573854f6c4b2ee0e1fa649bc03555d2df97234f9bbff99ab8d7be43cba8c",
+    ".cache/logic-v4/baseline/scripts/score-extraction-v3.mjs": "1fa6d37aaf939ae7dd0e50d2d4927d201d3c977e4f1e388375cb5491ebd7920b",
+    ".cache/logic-v4/baseline/scripts/verify-logic-v3-migration.mjs": "9debe1c6a2acee1c3986f52b0750bb4dce49566b619e9c390d75388f622c0132",
+    ".cache/logic-v4/baseline/scripts/verify-logic-v3-sdk.mjs": "fb6a8326097adb647f654a115055ba261a343bb43eacca09afef49d6b53f426f",
+    ".cache/logic-v4/baseline/scripts/verify-logic-v3-ui.mjs": "4ccb5d6060ac75209499e01c1bb71d8a4beedba02fbb1c5e642356e7486ab958",
+    ".cache/logic-v4/baseline/tests/extraction-adapter.test.mjs": "f48dcc1277789de0490e13ecd3dcb4305d9737650f8d1aedb8887cf9c6340c1c",
+    ".cache/logic-v4/baseline/tests/extraction-evaluation.test.mjs": "6a5382904e785187443371652ac7002b11e6869e1688474f0a9a760d00596815",
+    ".cache/logic-v4/baseline/tests/extraction-live.test.mjs": "9a7e9854278ec7bd7bcfd9348cd01e9925be0d7cbaf7f2d2e17b8ce0bf19feaf",
+    ".cache/logic-v4/baseline/tests/extraction-safety.test.mjs": "a0dcea4ed34a33b211c3d8644c12b03e14de6b9eff22b46a9cebb96ce83d36b2",
+    ".cache/logic-v4/baseline/tests/extraction-v3-live.test.mjs": "3504a2321f3d9ab8d0b9df04d492089d5b727795cd26b8fc0372421a13511fb7",
+    ".cache/logic-v4/baseline/tests/extraction-v3-scoring.test.mjs": "5ed44ba3c0e63598344ac7005bd14071d97841e4f0e54402514aa77d9aafc9a0",
+    ".cache/logic-v4/baseline/tests/logic-v3-sdk.test.mjs": "3cd7485d1a50cab31f283cb050de4e08712a895996f57f0bf063569db5483482",
+    ".cache/logic-v4/baseline/tests/logic-v3.test.mjs": "bc90c27b2bbe82af64885892549df40b0eb17509018599b1238db6c47229ad33",
+    ".cache/logic-v4/baseline/docs/extraction-model-pilot-results.json": "ae86781795e5a7620a5e9d4d94a42a7dd1caade3bff9235793c475f7a7dc89d2",
+    ".cache/logic-v4/baseline/docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613",
+    ".cache/logic-v4/baseline/docs/extraction-model-results.json": "258bb0c765be228223c3a2b7d605475ff55cdf387655843e586b434ad2350cad",
+    ".cache/logic-v4/baseline/docs/extraction-model-results.md": "20e8e81b3e6d4c2a678a2b48aa727a6444b6fcb3363d8a783217644d07d087e0",
+    ".cache/logic-v4/baseline/docs/extraction-model-selection.md": "ee716ea2b03308666e69243b48d8ba5e0167a1fd0a78a497e086fdeba242f307",
+    ".cache/logic-v4/baseline/docs/extraction-model-v3-results.json": "e023c24d1d3c82f6b84dfbefa4fbdde3c9418af456595f55a8e4743da763c14e",
+    ".cache/logic-v4/baseline/docs/extraction-model-v3-results.md": "66d24972a9dc012d3b3593c7ead0c1f6768763bf6317bf45746569d93f987059",
+    ".cache/logic-v4/baseline/docs/extraction-refinement-safety.json": "fa935f4e1859b83ff13d17b07289a5baa953062bc2266367290a84209d74ebd3",
+    ".cache/logic-v4/baseline/docs/extraction-refinement-safety.md": "a297f9aead19b169aab8cede7e3cd8d20bda63bb63ea80a83ce1a890b7edd508",
+    ".cache/logic-v4/baseline/docs/memory-logic-v3.json": "95589e22a105b0a35db0642c9456900acd89bfadb92af87261f7772dde558d0d",
+    ".cache/logic-v4/baseline/docs/memory-logic-v3.md": "4ade5d02af641a19d3a018ae7cba66b6963e0156fcb1725490adb153ee7cd762"
+  }
+}

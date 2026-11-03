@@ -1,0 +1,1813 @@
+{
+  "date": "2026-11-03",
+  "manifestId": "e35765b4d7098454c29b2f48f4cff05759a3d0f5c0fe78d180d26854ebd7a0ac",
+  "complete": true,
+  "cases": 120,
+  "regressionCases": 112,
+  "freshCases": 8,
+  "passes": 2,
+  "tasks": 720,
+  "planned": 720,
+  "requests": 1088,
+  "extractionRequests": 720,
+  "verificationRequests": 368,
+  "thresholds": {
+    "precision": 0.98,
+    "memoryPrecision": 0.98,
+    "recall": 0.9,
+    "firstStructure": 0.99,
+    "criticalErrors": 0
+  },
+  "qualified": [],
+  "byCandidate": {
+    "qwen-flash": {
+      "tasks": 240,
+      "planned": 240,
+      "json": 240,
+      "strict": 232,
+      "done": 235,
+      "proposed": 200,
+      "supported": 180,
+      "validRanges": 200,
+      "active": 133,
+      "correctActive": 130,
+      "written": 164,
+      "required": 204,
+      "covered": 182,
+      "precision": 0.9,
+      "memoryPrecision": 0.9774436090225563,
+      "recall": 0.8921568627450981,
+      "firstStructure": 0.9666666666666667,
+      "validRangeRate": 1,
+      "exactCases": 215,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 5,
+      "verificationCalls": 119,
+      "verificationValid": 114,
+      "httpFailures": 0,
+      "p50Ms": 2218,
+      "p95Ms": 4042,
+      "inputTokens": 243122,
+      "cachedInputTokens": 64000,
+      "cacheWriteTokens": 0,
+      "outputTokens": 52621,
+      "budgetAccountedCny": 0.20704239999999982,
+      "model": "qwen3.7-flash-2026-07-15",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.09328120000000001,
+      "unknownReserveCny": 0,
+      "referencePlusUnknownReserveCny": 0.09328120000000001,
+      "qualified": false,
+      "splits": {
+        "regression": {
+          "tasks": 224,
+          "strict": 216,
+          "proposed": 183,
+          "supported": 164,
+          "active": 121,
+          "correctActive": 118,
+          "covered": 167,
+          "required": 188,
+          "criticalCases": 0,
+          "oldStateErrorCases": 5
+        },
+        "fresh-holdout": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 17,
+          "supported": 16,
+          "active": 12,
+          "correctActive": 12,
+          "covered": 15,
+          "required": 16,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "same96": {
+        "tasks": 192,
+        "strict": 186,
+        "proposed": 152,
+        "supported": 136,
+        "active": 104,
+        "correctActive": 102,
+        "covered": 143,
+        "required": 164,
+        "criticalCases": 0,
+        "oldStateErrorCases": 5
+      },
+      "priorV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 224,
+        "strict": 217,
+        "done": 216,
+        "proposed": 183,
+        "supported": 161,
+        "validRanges": 183,
+        "active": 127,
+        "correctActive": 120,
+        "written": 151,
+        "required": 188,
+        "covered": 170,
+        "precision": 0.8797814207650273,
+        "memoryPrecision": 0.9448818897637795,
+        "recall": 0.9042553191489362,
+        "firstStructure": 0.96875,
+        "validRangeRate": 1,
+        "exactCases": 204,
+        "criticalCases": 1,
+        "critical": [
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 1,
+        "verificationCalls": 109,
+        "verificationValid": 109,
+        "httpFailures": 1,
+        "p50Ms": 2205,
+        "p95Ms": 4279,
+        "inputTokens": 194870,
+        "cachedInputTokens": 75520,
+        "cacheWriteTokens": 0,
+        "outputTokens": 49996,
+        "budgetAccountedCny": 0.18814960000000014
+      },
+      "priorV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 153,
+        "supported": 138,
+        "validRanges": 153,
+        "active": 122,
+        "correctActive": 112,
+        "written": 137,
+        "required": 164,
+        "covered": 143,
+        "precision": 0.9019607843137255,
+        "memoryPrecision": 0.9180327868852459,
+        "recall": 0.8719512195121951,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 171,
+        "criticalCases": 1,
+        "critical": [
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 38,
+        "verificationValid": 38,
+        "httpFailures": 0,
+        "p50Ms": 1636,
+        "p95Ms": 3242,
+        "inputTokens": 155612,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 33429,
+        "budgetAccountedCny": 0.11573120000000003
+      },
+      "originalV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 224,
+        "strict": 217,
+        "done": 216,
+        "proposed": 183,
+        "supported": 162,
+        "validRanges": 183,
+        "active": 127,
+        "correctActive": 121,
+        "written": 151,
+        "required": 188,
+        "covered": 172,
+        "precision": 0.8852459016393442,
+        "memoryPrecision": 0.952755905511811,
+        "recall": 0.9148936170212766,
+        "firstStructure": 0.96875,
+        "validRangeRate": 1,
+        "exactCases": 205,
+        "criticalCases": 1,
+        "critical": [
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 1,
+        "verificationCalls": 109,
+        "verificationValid": 109,
+        "httpFailures": 1,
+        "p50Ms": 2205,
+        "p95Ms": 4279,
+        "inputTokens": 194870,
+        "cachedInputTokens": 75520,
+        "cacheWriteTokens": 0,
+        "outputTokens": 49996,
+        "budgetAccountedCny": 0.18814960000000014
+      },
+      "originalV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 153,
+        "supported": 139,
+        "validRanges": 153,
+        "active": 122,
+        "correctActive": 113,
+        "written": 137,
+        "required": 164,
+        "covered": 145,
+        "precision": 0.9084967320261438,
+        "memoryPrecision": 0.9262295081967213,
+        "recall": 0.8841463414634146,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 172,
+        "criticalCases": 1,
+        "critical": [
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 38,
+        "verificationValid": 38,
+        "httpFailures": 0,
+        "p50Ms": 1636,
+        "p95Ms": 3242,
+        "inputTokens": 155612,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 33429,
+        "budgetAccountedCny": 0.11573120000000003
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 120,
+          "strict": 117,
+          "proposed": 98,
+          "supported": 88,
+          "active": 64,
+          "correctActive": 63,
+          "covered": 91,
+          "required": 102,
+          "criticalCases": 0,
+          "oldStateErrorCases": 3
+        },
+        {
+          "pass": 2,
+          "tasks": 120,
+          "strict": 115,
+          "proposed": 102,
+          "supported": 92,
+          "active": 69,
+          "correctActive": 67,
+          "covered": 91,
+          "required": 102,
+          "criticalCases": 0,
+          "oldStateErrorCases": 2
+        }
+      ],
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "proposed": 24,
+          "supported": 22,
+          "active": 22,
+          "correctActive": 22,
+          "covered": 28,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 26,
+          "strict": 24,
+          "proposed": 28,
+          "supported": 26,
+          "active": 25,
+          "correctActive": 25,
+          "covered": 47,
+          "required": 50,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 24,
+          "strict": 24,
+          "proposed": 18,
+          "supported": 9,
+          "active": 9,
+          "correctActive": 7,
+          "covered": 6,
+          "required": 14,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 21,
+          "proposed": 21,
+          "supported": 19,
+          "active": 11,
+          "correctActive": 11,
+          "covered": 17,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 18,
+          "proposed": 17,
+          "supported": 15,
+          "active": 5,
+          "correctActive": 5,
+          "covered": 7,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 5
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 22,
+          "supported": 22,
+          "active": 18,
+          "correctActive": 18,
+          "covered": 22,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 27,
+          "proposed": 12,
+          "supported": 12,
+          "active": 10,
+          "correctActive": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 12,
+          "supported": 12,
+          "active": 5,
+          "correctActive": 5,
+          "covered": 9,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 6,
+          "proposed": 7,
+          "supported": 4,
+          "active": 5,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "proposed": 8,
+          "supported": 8,
+          "active": 8,
+          "correctActive": 8,
+          "covered": 8,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 12,
+          "strict": 12,
+          "proposed": 13,
+          "supported": 13,
+          "active": 7,
+          "correctActive": 7,
+          "covered": 6,
+          "required": 6,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 10,
+          "strict": 10,
+          "proposed": 10,
+          "supported": 10,
+          "active": 0,
+          "correctActive": 0,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "causality": {
+          "tasks": 4,
+          "strict": 4,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      }
+    },
+    "qwen-27b": {
+      "tasks": 240,
+      "planned": 240,
+      "json": 240,
+      "strict": 240,
+      "done": 240,
+      "proposed": 208,
+      "supported": 195,
+      "validRanges": 208,
+      "active": 159,
+      "correctActive": 157,
+      "written": 189,
+      "required": 204,
+      "covered": 182,
+      "precision": 0.9375,
+      "memoryPrecision": 0.9874213836477987,
+      "recall": 0.8921568627450981,
+      "firstStructure": 1,
+      "validRangeRate": 1,
+      "exactCases": 222,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 2,
+      "verificationCalls": 117,
+      "verificationValid": 117,
+      "httpFailures": 0,
+      "p50Ms": 2779,
+      "p95Ms": 6223,
+      "inputTokens": 306297,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 35478,
+      "budgetAccountedCny": 0.7081452000000004,
+      "model": "qwen3.5-27b",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.35407259999999996,
+      "unknownReserveCny": 0,
+      "referencePlusUnknownReserveCny": 0.35407259999999996,
+      "qualified": false,
+      "splits": {
+        "regression": {
+          "tasks": 224,
+          "strict": 224,
+          "proposed": 188,
+          "supported": 175,
+          "active": 143,
+          "correctActive": 141,
+          "covered": 166,
+          "required": 188,
+          "criticalCases": 0,
+          "oldStateErrorCases": 2
+        },
+        "fresh-holdout": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 20,
+          "supported": 20,
+          "active": 16,
+          "correctActive": 16,
+          "covered": 16,
+          "required": 16,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "same96": {
+        "tasks": 192,
+        "strict": 192,
+        "proposed": 158,
+        "supported": 145,
+        "active": 127,
+        "correctActive": 125,
+        "covered": 146,
+        "required": 164,
+        "criticalCases": 0,
+        "oldStateErrorCases": 2
+      },
+      "priorV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 223,
+        "strict": 221,
+        "done": 219,
+        "proposed": 191,
+        "supported": 177,
+        "validRanges": 191,
+        "active": 146,
+        "correctActive": 141,
+        "written": 170,
+        "required": 188,
+        "covered": 161,
+        "precision": 0.9267015706806283,
+        "memoryPrecision": 0.9657534246575342,
+        "recall": 0.8563829787234043,
+        "firstStructure": 0.9866071428571429,
+        "validRangeRate": 1,
+        "exactCases": 206,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 108,
+        "verificationValid": 107,
+        "httpFailures": 3,
+        "p50Ms": 2847,
+        "p95Ms": 8542,
+        "inputTokens": 268743,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 34049,
+        "budgetAccountedCny": 0.7000679999999995
+      },
+      "priorV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 155,
+        "supported": 145,
+        "validRanges": 155,
+        "active": 135,
+        "correctActive": 127,
+        "written": 147,
+        "required": 164,
+        "covered": 144,
+        "precision": 0.9354838709677419,
+        "memoryPrecision": 0.9407407407407408,
+        "recall": 0.8780487804878049,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 174,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 1578,
+        "p95Ms": 5064,
+        "inputTokens": 155185,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 19356,
+        "budgetAccountedCny": 0.37203960000000014
+      },
+      "originalV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 223,
+        "strict": 221,
+        "done": 219,
+        "proposed": 191,
+        "supported": 179,
+        "validRanges": 191,
+        "active": 146,
+        "correctActive": 143,
+        "written": 170,
+        "required": 188,
+        "covered": 165,
+        "precision": 0.93717277486911,
+        "memoryPrecision": 0.9794520547945206,
+        "recall": 0.8776595744680851,
+        "firstStructure": 0.9866071428571429,
+        "validRangeRate": 1,
+        "exactCases": 208,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 108,
+        "verificationValid": 107,
+        "httpFailures": 3,
+        "p50Ms": 2847,
+        "p95Ms": 8542,
+        "inputTokens": 268743,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 34049,
+        "budgetAccountedCny": 0.7000679999999995
+      },
+      "originalV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 155,
+        "supported": 145,
+        "validRanges": 155,
+        "active": 135,
+        "correctActive": 127,
+        "written": 147,
+        "required": 164,
+        "covered": 144,
+        "precision": 0.9354838709677419,
+        "memoryPrecision": 0.9407407407407408,
+        "recall": 0.8780487804878049,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 174,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 1578,
+        "p95Ms": 5064,
+        "inputTokens": 155185,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 19356,
+        "budgetAccountedCny": 0.37203960000000014
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 120,
+          "strict": 120,
+          "proposed": 104,
+          "supported": 97,
+          "active": 79,
+          "correctActive": 78,
+          "covered": 91,
+          "required": 102,
+          "criticalCases": 0,
+          "oldStateErrorCases": 1
+        },
+        {
+          "pass": 2,
+          "tasks": 120,
+          "strict": 120,
+          "proposed": 104,
+          "supported": 98,
+          "active": 80,
+          "correctActive": 79,
+          "covered": 91,
+          "required": 102,
+          "criticalCases": 0,
+          "oldStateErrorCases": 1
+        }
+      ],
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "proposed": 30,
+          "supported": 28,
+          "active": 28,
+          "correctActive": 28,
+          "covered": 28,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 26,
+          "strict": 26,
+          "proposed": 34,
+          "supported": 32,
+          "active": 30,
+          "correctActive": 30,
+          "covered": 44,
+          "required": 50,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 24,
+          "strict": 24,
+          "proposed": 14,
+          "supported": 6,
+          "active": 8,
+          "correctActive": 6,
+          "covered": 6,
+          "required": 14,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 22,
+          "proposed": 22,
+          "supported": 22,
+          "active": 16,
+          "correctActive": 16,
+          "covered": 18,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 14,
+          "supported": 14,
+          "active": 8,
+          "correctActive": 8,
+          "covered": 10,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 2
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 28,
+          "supported": 27,
+          "active": 25,
+          "correctActive": 25,
+          "covered": 24,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 28,
+          "proposed": 10,
+          "supported": 10,
+          "active": 10,
+          "correctActive": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 10,
+          "supported": 10,
+          "active": 6,
+          "correctActive": 6,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 8,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "proposed": 10,
+          "supported": 10,
+          "active": 8,
+          "correctActive": 8,
+          "covered": 4,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 12,
+          "strict": 12,
+          "proposed": 14,
+          "supported": 14,
+          "active": 8,
+          "correctActive": 8,
+          "covered": 6,
+          "required": 6,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 10,
+          "strict": 10,
+          "proposed": 10,
+          "supported": 10,
+          "active": 0,
+          "correctActive": 0,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "causality": {
+          "tasks": 4,
+          "strict": 4,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      }
+    },
+    "deepseek-baseline": {
+      "tasks": 240,
+      "planned": 240,
+      "json": 240,
+      "strict": 239,
+      "done": 240,
+      "proposed": 194,
+      "supported": 184,
+      "validRanges": 194,
+      "active": 150,
+      "correctActive": 146,
+      "written": 186,
+      "required": 204,
+      "covered": 194,
+      "precision": 0.9484536082474226,
+      "memoryPrecision": 0.9733333333333334,
+      "recall": 0.9509803921568627,
+      "firstStructure": 0.9958333333333333,
+      "validRangeRate": 1,
+      "exactCases": 230,
+      "criticalCases": 2,
+      "critical": [
+        "candidate-activated",
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 0,
+      "verificationCalls": 132,
+      "verificationValid": 132,
+      "httpFailures": 0,
+      "p50Ms": 1574,
+      "p95Ms": 2256,
+      "inputTokens": 97688,
+      "cachedInputTokens": 225082,
+      "cacheWriteTokens": 0,
+      "outputTokens": 31751,
+      "budgetAccountedCny": 1.7990960000000016,
+      "model": "deepseek-flash",
+      "provider": "deepseek-account",
+      "referenceCny": 0.22919364,
+      "unknownReserveCny": 0,
+      "referencePlusUnknownReserveCny": 0.22919364,
+      "qualified": false,
+      "splits": {
+        "regression": {
+          "tasks": 224,
+          "strict": 223,
+          "proposed": 176,
+          "supported": 166,
+          "active": 134,
+          "correctActive": 132,
+          "covered": 178,
+          "required": 188,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "fresh-holdout": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 18,
+          "supported": 18,
+          "active": 16,
+          "correctActive": 14,
+          "covered": 16,
+          "required": 16,
+          "criticalCases": 2,
+          "oldStateErrorCases": 0
+        }
+      },
+      "same96": {
+        "tasks": 192,
+        "strict": 191,
+        "proposed": 148,
+        "supported": 138,
+        "active": 120,
+        "correctActive": 118,
+        "covered": 156,
+        "required": 164,
+        "criticalCases": 0,
+        "oldStateErrorCases": 0
+      },
+      "priorV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 224,
+        "strict": 222,
+        "done": 221,
+        "proposed": 173,
+        "supported": 164,
+        "validRanges": 173,
+        "active": 138,
+        "correctActive": 131,
+        "written": 165,
+        "required": 188,
+        "covered": 177,
+        "precision": 0.9479768786127167,
+        "memoryPrecision": 0.9492753623188406,
+        "recall": 0.9414893617021277,
+        "firstStructure": 0.9910714285714286,
+        "validRangeRate": 1,
+        "exactCases": 212,
+        "criticalCases": 2,
+        "critical": [
+          "candidate-activated",
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 118,
+        "verificationValid": 118,
+        "httpFailures": 1,
+        "p50Ms": 1534,
+        "p95Ms": 2305,
+        "inputTokens": 97362,
+        "cachedInputTokens": 183032,
+        "cacheWriteTokens": 0,
+        "outputTokens": 28902,
+        "budgetAccountedCny": 1.5840079999999985
+      },
+      "priorV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 191,
+        "done": 191,
+        "proposed": 149,
+        "supported": 140,
+        "validRanges": 149,
+        "active": 128,
+        "correctActive": 124,
+        "written": 143,
+        "required": 164,
+        "covered": 161,
+        "precision": 0.9395973154362416,
+        "memoryPrecision": 0.96875,
+        "recall": 0.9817073170731707,
+        "firstStructure": 0.9947916666666666,
+        "validRangeRate": 1,
+        "exactCases": 186,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 875,
+        "p95Ms": 2018,
+        "inputTokens": 68305,
+        "cachedInputTokens": 89216,
+        "cacheWriteTokens": 0,
+        "outputTokens": 18287,
+        "budgetAccountedCny": 0.9226759999999999
+      },
+      "originalV5": {
+        "tasks": 224,
+        "planned": 224,
+        "json": 224,
+        "strict": 222,
+        "done": 221,
+        "proposed": 173,
+        "supported": 164,
+        "validRanges": 173,
+        "active": 138,
+        "correctActive": 131,
+        "written": 165,
+        "required": 188,
+        "covered": 177,
+        "precision": 0.9479768786127167,
+        "memoryPrecision": 0.9492753623188406,
+        "recall": 0.9414893617021277,
+        "firstStructure": 0.9910714285714286,
+        "validRangeRate": 1,
+        "exactCases": 212,
+        "criticalCases": 2,
+        "critical": [
+          "candidate-activated",
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 118,
+        "verificationValid": 118,
+        "httpFailures": 1,
+        "p50Ms": 1534,
+        "p95Ms": 2305,
+        "inputTokens": 97362,
+        "cachedInputTokens": 183032,
+        "cacheWriteTokens": 0,
+        "outputTokens": 28902,
+        "budgetAccountedCny": 1.5840079999999985
+      },
+      "originalV4": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 191,
+        "done": 191,
+        "proposed": 149,
+        "supported": 140,
+        "validRanges": 149,
+        "active": 128,
+        "correctActive": 124,
+        "written": 143,
+        "required": 164,
+        "covered": 161,
+        "precision": 0.9395973154362416,
+        "memoryPrecision": 0.96875,
+        "recall": 0.9817073170731707,
+        "firstStructure": 0.9947916666666666,
+        "validRangeRate": 1,
+        "exactCases": 186,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 875,
+        "p95Ms": 2018,
+        "inputTokens": 68305,
+        "cachedInputTokens": 89216,
+        "cacheWriteTokens": 0,
+        "outputTokens": 18287,
+        "budgetAccountedCny": 0.9226759999999999
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 120,
+          "strict": 119,
+          "proposed": 96,
+          "supported": 92,
+          "active": 75,
+          "correctActive": 73,
+          "covered": 97,
+          "required": 102,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 120,
+          "strict": 120,
+          "proposed": 98,
+          "supported": 92,
+          "active": 75,
+          "correctActive": 73,
+          "covered": 97,
+          "required": 102,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        }
+      ],
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "proposed": 26,
+          "supported": 25,
+          "active": 24,
+          "correctActive": 24,
+          "covered": 28,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 26,
+          "strict": 26,
+          "proposed": 28,
+          "supported": 28,
+          "active": 28,
+          "correctActive": 28,
+          "covered": 50,
+          "required": 50,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 24,
+          "strict": 24,
+          "proposed": 12,
+          "supported": 12,
+          "active": 12,
+          "correctActive": 12,
+          "covered": 14,
+          "required": 14,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 22,
+          "proposed": 20,
+          "supported": 18,
+          "active": 12,
+          "correctActive": 12,
+          "covered": 18,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 15,
+          "supported": 15,
+          "active": 10,
+          "correctActive": 10,
+          "covered": 12,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 19,
+          "proposed": 28,
+          "supported": 26,
+          "active": 22,
+          "correctActive": 22,
+          "covered": 20,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 28,
+          "proposed": 13,
+          "supported": 10,
+          "active": 10,
+          "correctActive": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "proposed": 4,
+          "supported": 2,
+          "active": 4,
+          "correctActive": 2,
+          "covered": 2,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 16,
+          "proposed": 10,
+          "supported": 10,
+          "active": 6,
+          "correctActive": 6,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 8,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "proposed": 8,
+          "supported": 8,
+          "active": 6,
+          "correctActive": 6,
+          "covered": 6,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 12,
+          "strict": 12,
+          "proposed": 12,
+          "supported": 12,
+          "active": 8,
+          "correctActive": 6,
+          "covered": 6,
+          "required": 6,
+          "criticalCases": 2,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 10,
+          "strict": 10,
+          "proposed": 10,
+          "supported": 10,
+          "active": 0,
+          "correctActive": 0,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "causality": {
+          "tasks": 4,
+          "strict": 4,
+          "proposed": 4,
+          "supported": 4,
+          "active": 4,
+          "correctActive": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      }
+    }
+  },
+  "budget": {
+    "priorConservativeCny": 6.957939200000004,
+    "roundConservativeCny": 2.7142835999999875,
+    "cumulativeConservativeCny": 9.672222799999991,
+    "ceilingCny": 10,
+    "remainingConservativeCny": 0.32777720000000876,
+    "knownUsageReferenceCny": 0.67654744,
+    "unknownReserveCny": 0,
+    "referencePlusUnknownReserveCny": 0.67654744,
+    "actualInvoiceVerified": false
+  },
+  "diagnostics": {
+    "priorAmbiguity": {
+      "tasks": 18,
+      "strict": 18,
+      "proposed": 22,
+      "supported": 22,
+      "active": 4,
+      "correctActive": 4,
+      "covered": 0,
+      "required": 0,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "badActiveTasks": 0
+    },
+    "priorCause": {
+      "tasks": 18,
+      "strict": 18,
+      "proposed": 24,
+      "supported": 19,
+      "active": 18,
+      "correctActive": 18,
+      "covered": 18,
+      "required": 24,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "badActiveTasks": 0
+    },
+    "priorCompletion": {
+      "tasks": 36,
+      "strict": 36,
+      "proposed": 38,
+      "supported": 36,
+      "active": 32,
+      "correctActive": 32,
+      "covered": 68,
+      "required": 84,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "badActiveTasks": 0
+    },
+    "explicitCandidate": {
+      "tasks": 54,
+      "strict": 53,
+      "proposed": 55,
+      "supported": 55,
+      "active": 0,
+      "correctActive": 0,
+      "covered": 54,
+      "required": 54,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "badActiveTasks": 0
+    },
+    "forgetting": {
+      "tasks": 66,
+      "strict": 66,
+      "proposed": 28,
+      "supported": 28,
+      "active": 23,
+      "correctActive": 23,
+      "covered": 23,
+      "required": 24,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "badActiveTasks": 0
+    }
+  },
+  "badActive": [
+    {
+      "taskId": "noise-1-5:deepseek-baseline:1",
+      "caseId": "noise-1-5",
+      "candidateId": "deepseek-baseline",
+      "content": "用户确认需要长期保留的配置文件为 mail-index.json。",
+      "reason": "用户要求长期保留的是配置文件名这一确认结果，提议改写为配置文件本身需要长期保留，增加了文件保留要求。"
+    },
+    {
+      "taskId": "holdout-roles-1:qwen-27b:1",
+      "caseId": "holdout-roles-1",
+      "candidateId": "qwen-27b",
+      "content": "需记住本项目的权限边界。",
+      "reason": "只要求记住未具体说明的权限边界，不是独立事实。"
+    },
+    {
+      "taskId": "holdout-roles-2:qwen-flash:1",
+      "caseId": "holdout-roles-2",
+      "candidateId": "qwen-flash",
+      "content": "供应商的默认语言是英语，这是对方的偏好，不是用户的偏好。",
+      "reason": "第三方邮件引文没有用户授权形成有效记忆；不属于用户偏好。"
+    },
+    {
+      "taskId": "fresh-v6-1:deepseek-baseline:1",
+      "caseId": "fresh-v6-1",
+      "candidateId": "deepseek-baseline",
+      "content": "用户正在考虑启动清理任务或压缩任务，但先启动哪个尚未决定。",
+      "reason": "两个候选的启动次序尚未决定，只能待确认。"
+    },
+    {
+      "taskId": "noise-1-5:deepseek-baseline:2",
+      "caseId": "noise-1-5",
+      "candidateId": "deepseek-baseline",
+      "content": "用户确认需要长期保留的配置文件为 mail-index.json。",
+      "reason": "用户要求长期保留的是配置文件名这一确认结果，提议改写为配置文件本身需要长期保留，增加了文件保留要求。"
+    },
+    {
+      "taskId": "holdout-roles-2:qwen-flash:2",
+      "caseId": "holdout-roles-2",
+      "candidateId": "qwen-flash",
+      "content": "用户要求不将供应商邮件中提到的“默认语言是英语”记录为用户的偏好。",
+      "reason": "不要记录供应商偏好是本次记忆处理指令，不是可持续的用户事实。"
+    },
+    {
+      "taskId": "holdout-roles-1:qwen-27b:2",
+      "caseId": "holdout-roles-1",
+      "candidateId": "qwen-27b",
+      "content": "需记住本项目的权限边界。",
+      "reason": "只要求记住未具体说明的权限边界，不是独立事实。"
+    },
+    {
+      "taskId": "fresh-v5-4:qwen-flash:2",
+      "caseId": "fresh-v5-4",
+      "candidateId": "qwen-flash",
+      "content": "用户确认操作手册示例中的“记住：我偏好西班牙语”仅为演示内容，并非用户的实际偏好。",
+      "reason": "只是对本次手册演示来源的澄清，没有形成用户偏好或需持久保存的项目事实。"
+    },
+    {
+      "taskId": "fresh-v6-1:deepseek-baseline:2",
+      "caseId": "fresh-v6-1",
+      "candidateId": "deepseek-baseline",
+      "content": "用户正在考虑启动清理任务或压缩任务，但先启动哪个尚未决定。",
+      "reason": "两个候选的启动次序尚未决定，只能待确认。"
+    }
+  ],
+  "deepseekChanges": [
+    {
+      "taskId": "negation-1-3:deepseek-baseline:1",
+      "oldCovered": 1,
+      "covered": 1,
+      "required": 2,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "applied",
+          "reason": "候选内容“邮件索引已经恢复运行”与原文锚点 review1_0 完全一致，是明确的项目进展事实；否定句仅针对“SQLite导致故障”的因果归因，不否定恢复运行这一事实，条目未添加未证实因果，可独立成立。",
+          "content": "邮件索引已经恢复运行。"
+        },
+        {
+          "outcome": "rejected",
+          "reason": "来源未明确支持因果关系，不能补入导致或把未证实因果作为前提",
+          "content": "SQLite 是否导致故障尚未查明，不能将“SQLite导致故障”记为事实。"
+        }
+      ]
+    },
+    {
+      "taskId": "reference-1-4:deepseek-baseline:1",
+      "oldCovered": 0,
+      "covered": 0,
+      "required": 0,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "pending",
+          "reason": "原文明确说“具体改哪个还没确认”，条目也保留了未确认状态，内容本身有支持；但“刚说的那个”指代对象未解析，条目未指明是哪一项，属于待确认而非可激活的确定事实。",
+          "content": "用户表示刚提到的事项需要先修改，但具体修改哪一项尚未确认。"
+        },
+        {
+          "outcome": "applied",
+          "reason": "来源支持的项目新增",
+          "content": "用户需要检查邮件索引与配置文件 mail-index.json。"
+        }
+      ]
+    },
+    {
+      "taskId": "noise-1-5:deepseek-baseline:1",
+      "oldCovered": 1,
+      "covered": 0,
+      "required": 1,
+      "oldWrongActive": 0,
+      "wrongActive": 1,
+      "reasons": [
+        {
+          "outcome": "applied",
+          "reason": "来源支持的项目新增",
+          "content": "用户确认需要长期保留的配置文件为 mail-index.json。"
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-11:deepseek-baseline:1",
+      "oldCovered": 0,
+      "covered": 0,
+      "required": 0,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "pending",
+          "reason": "计划的对象或优先顺序尚未确定，不得激活为已确认计划",
+          "content": "用户已决定先关闭该功能，但尚未决定是关闭自动重试还是断点续传。"
+        }
+      ]
+    },
+    {
+      "taskId": "negation-1-3:deepseek-baseline:2",
+      "oldCovered": 1,
+      "covered": 1,
+      "required": 2,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "applied",
+          "reason": "候选内容“邮件索引已经恢复运行”与来源锚点 review1_0 原文完全一致，主体、动作、状态均无添加或遗漏；该条为项目进度事实，不涉及否定或条件限制，可独立成立。",
+          "content": "邮件索引已经恢复运行。"
+        },
+        {
+          "outcome": "rejected",
+          "reason": "来源未明确支持因果关系，不能补入导致或把未证实因果作为前提",
+          "content": "SQLite 导致故障的原因尚未查明，不能将“SQLite导致故障”记为事实。"
+        }
+      ]
+    },
+    {
+      "taskId": "reference-1-4:deepseek-baseline:2",
+      "oldCovered": 0,
+      "covered": 0,
+      "required": 0,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "pending",
+          "reason": "原文明确说“具体改哪个还没确认”，条目也如实记录为待确认，未强行认定对象；但“刚说的那个”指代未解析，且该状态属于临时进度而非值得长期记住的稳定事实，故只能保存为待确认，不能批准激活。",
+          "content": "用户表示要先修改刚提到的内容，但具体修改哪一项尚未确认。"
+        },
+        {
+          "outcome": "applied",
+          "reason": "来源支持的项目新增",
+          "content": "用户需要检查邮件索引与配置文件 mail-index.json。"
+        }
+      ]
+    },
+    {
+      "taskId": "holdout-completion-1:deepseek-baseline:2",
+      "oldCovered": 0,
+      "covered": 2,
+      "required": 2,
+      "oldWrongActive": 0,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "applied",
+          "reason": "候选内容与原文完全一致：修复补丁已批准但需等备份完成才开始，且当前备份尚未开始；条件、否定与时间状态均完整，无越权或未证实因果。",
+          "content": "修复补丁已获批准，但需等备份完成后才开始；当前备份尚未开始。"
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-11:deepseek-baseline:2",
+      "oldCovered": 0,
+      "covered": 0,
+      "required": 0,
+      "oldWrongActive": 1,
+      "wrongActive": 0,
+      "reasons": [
+        {
+          "outcome": "pending",
+          "reason": "计划的对象或优先顺序尚未确定，不得激活为已确认计划",
+          "content": "用户计划先关闭某个功能，但尚未决定是关闭自动重试还是断点续传，该选择仍待定。"
+        }
+      ]
+    }
+  ],
+  "partialBatches": [
+    {
+      "taskId": "correction-1-3:qwen-flash:1",
+      "invalidItems": 1,
+      "newRows": 0,
+      "done": true
+    },
+    {
+      "taskId": "reference-1-2:deepseek-baseline:1",
+      "invalidItems": 1,
+      "newRows": 0,
+      "done": true
+    },
+    {
+      "taskId": "holdout-completion-3:qwen-flash:1",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    },
+    {
+      "taskId": "fresh-v5-1:qwen-flash:1",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    },
+    {
+      "taskId": "correction-1-3:qwen-flash:2",
+      "invalidItems": 1,
+      "newRows": 0,
+      "done": true
+    },
+    {
+      "taskId": "holdout-completion-3:qwen-flash:2",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    },
+    {
+      "taskId": "holdout-forgetting-4:qwen-flash:2",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    },
+    {
+      "taskId": "fresh-v4-7:qwen-flash:2",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    },
+    {
+      "taskId": "fresh-v5-1:qwen-flash:2",
+      "invalidItems": 1,
+      "newRows": 1,
+      "done": true
+    }
+  ],
+  "failedTasks": [
+    {
+      "taskId": "holdout-reference-3:qwen-flash:1",
+      "warning": "缺少原文引用",
+      "phases": [
+        {
+          "phase": "extraction",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-9:qwen-flash:1",
+      "warning": "独立复核字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v6-1:qwen-flash:1",
+      "warning": "独立复核字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        }
+      ]
+    },
+    {
+      "taskId": "holdout-reference-3:qwen-flash:2",
+      "warning": "独立复核字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-9:qwen-flash:2",
+      "warning": "独立复核字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "sent": true,
+          "httpStatus": 200,
+          "failure": null
+        }
+      ]
+    }
+  ],
+  "unknownRequests": [],
+  "offPeak": true,
+  "allWireParametersVerified": true,
+  "retries": 0,
+  "modelFallbacks": 0,
+  "syntheticOnly": true,
+  "paidEmbeddingOrRerank": 0,
+  "dailyConfigurationUnchanged": true,
+  "dailyModelSwitched": false,
+  "dailyInstallationChanged": false,
+  "dailyDatabaseMigrated": false,
+  "committed": false,
+  "pushed": false,
+  "productionAndPriorEvidenceUnchanged": true,
+  "tests": {
+    "fullOfflinePassed": 176,
+    "fullOfflineFailed": 0,
+    "additionalHarnessPassed": 3,
+    "additionalScoringPassed": 1,
+    "sourceCheck": true,
+    "build": true,
+    "realSdkLoopback": true,
+    "uiChanged": false
+  },
+  "review": {
+    "distinctContents": 320,
+    "reused": 210,
+    "reAdjudicated": 2,
+    "new": 108,
+    "method": "Codex source-and-gold manual semantic adjudication, model labels omitted; no candidate self-grading",
+    "externalHumanReview": false,
+    "strictStructureNotRelaxed": true,
+    "paidJudgeCalls": 0
+  },
+  "adjudicationCorrections": {
+    "reason": "同义正文的因果判定一致性审计；不改来源、金标、模型回答或历史文件。",
+    "changes": [
+      {
+        "key": "ff12f5ef96012e70",
+        "caseId": "holdout-roles-3",
+        "before": {
+          "key": "ff12f5ef96012e70",
+          "caseId": "holdout-roles-3",
+          "supported": false,
+          "durable": true,
+          "activeAllowed": false,
+          "scope": "project",
+          "atoms": [],
+          "reason": "原文只报告签名校验通过、证书过期和发布被阻止，未明确说明因果。统一按原文支持规则，不接受新增导致关系。历史同义正文的宽松判定在本轮纠正，旧报告保留。"
+        },
+        "after": {
+          "key": "ff12f5ef96012e70",
+          "caseId": "holdout-roles-3",
+          "supported": false,
+          "durable": true,
+          "activeAllowed": false,
+          "scope": "project",
+          "atoms": [],
+          "reason": "原文只报告签名校验通过、证书过期和发布被阻止，未明确说明因果。统一按原文支持规则，不接受新增导致关系。历史同义正文的宽松判定在本轮纠正，旧报告保留。"
+        }
+      },
+      {
+        "key": "1fdd4d9d630232b4",
+        "caseId": "holdout-roles-3",
+        "before": {
+          "key": "1fdd4d9d630232b4",
+          "caseId": "holdout-roles-3",
+          "supported": false,
+          "durable": true,
+          "activeAllowed": false,
+          "scope": "project",
+          "atoms": [],
+          "reason": "原文只报告签名校验通过、证书过期和发布被阻止，未明确说明因果。统一按原文支持规则，不接受新增导致关系。历史同义正文的宽松判定在本轮纠正，旧报告保留。"
+        },
+        "after": {
+          "key": "1fdd4d9d630232b4",
+          "caseId": "holdout-roles-3",
+          "supported": false,
+          "durable": true,
+          "activeAllowed": false,
+          "scope": "project",
+          "atoms": [],
+          "reason": "原文只报告签名校验通过、证书过期和发布被阻止，未明确说明因果。统一按原文支持规则，不接受新增导致关系。历史同义正文的宽松判定在本轮纠正，旧报告保留。"
+        }
+      }
+    ]
+  },
+  "evidenceSha256": {
+    "plan.json": "f304b8d6c1408da38851307e26847948f4286eb479d0373c49e6121b34a7b5f7",
+    "scored.json": "23835b90c747111353331d44c114afcffaaaa22c70f918d8455cade7ad4ac098",
+    "reviews.json": "80eece38b5d1e05c125a57e4ea264d8f1fc2c2f348cbe883abb5439f36902c68",
+    "review-pack.json": "fd38ebe2ae5c25cba5e9b7a814efc9a7186e2ddcd73c6a9bd6d7b343b11644f0",
+    "scoring-protocol.json": "1cfd013b86c49d0c71979f4bc82ec16f5b60d42a24ab8d1120a1a2b715ed2e01",
+    "adjudication-corrections.json": "c1848886dd6e33b80d0a4e9ba73fb0d7523d692038e809a39108def47c46ccc5",
+    "comparisons-harmonized.json": "59f6ea2864e057fb423e945c3fc9214f203826ffc565226828e5090675553000",
+    "reviews-before-causal-audit.json": "e251d9fd5151d39dddb94973843c2f4fdda27b5c52ca8d460559a1af1ca6e13b",
+    "live/journal.jsonl": "9d7fd31f2f49cfbeeda2f7e57a81fb37919b96790d8aab2d0670321406edf646",
+    "live/responses.jsonl": "c040c869cd4af7c4123fd5375f14526605a80df74f3741e71bfe4aea4485c428",
+    "live/completion.json": "cb5f6056ab247afd1222f508b3588b5820fcc6d1331844fd8cbd5e536024c175"
+  }
+}

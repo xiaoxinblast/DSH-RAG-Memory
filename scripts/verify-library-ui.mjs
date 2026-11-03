@@ -6,7 +6,7 @@ import { MemoryService } from "../src/service.mjs";
 
 const require = createRequire(join(process.env.DSH_DEV_MODULES ?? join(process.cwd(), "node_modules"), "__library-ui.cjs"));
 const { build } = require("esbuild"), { chromium, expect } = require("@playwright/test");
-const output = ".cache/library-ui", workspace = "D:/memory-library-ui/synthetic";
+const output = process.env.DSH_UI_OUTPUT ?? ".cache/library-ui", workspace = "D:/memory-library-ui/synthetic";
 await mkdir(output, { recursive: true });
 const bundle = await build({ stdin: { contents: 'import React from "react"; import { createRoot } from "react-dom/client"; import { App } from "./ui/plugin.jsx"; createRoot(document.getElementById("app")).render(React.createElement(App, { call: window.memoryCall }));', resolveDir: process.cwd(), loader: "jsx" }, bundle: true, format: "iife", platform: "browser", write: false, loader: { ".css": "text" }, nodePaths: [dirname(dirname(require.resolve("react/package.json")))], define: { "process.env.NODE_ENV": '"production"' } });
 let seedTime = Date.now();
@@ -37,7 +37,7 @@ try {
   const openedScroll = await scrollTop();
   assert.ok(Math.abs(openedScroll - initialScroll) <= 1, `打开底部记忆不能改变列表滚动位置：${initialScroll} -> ${openedScroll}`);
   await expect(drawer.getByRole("button", { name: "关闭详情", exact: true })).toBeInViewport();
-  await root.screenshot({ path: `${output}/bottom-detail-desktop.png` });
+  await root.screenshot({ animations: "disabled", path: `${output}/bottom-detail-desktop.png` });
   checks.push("长列表底部打开详情，卡片列数及列表滚动位置保持不变，详情立即可见");
 
   const body = drawer.locator(".mm-detail-body");
@@ -51,7 +51,7 @@ try {
   const nextCard = root.locator(".mm-card").nth(36);
   const nextContent = await nextCard.locator("p").textContent();
   await nextCard.click({ position: { x: 20, y: 20 } });
-  await expect(drawer.locator(".mm-content")).toHaveText(nextContent);
+  await expect(drawer.locator(".mm-detail-body > .mm-content")).toHaveText(nextContent);
   assert.equal(await body.evaluate((element) => element.scrollTop), 0);
   await page.keyboard.press("Escape");
   await expect(drawer).toHaveCount(0);
@@ -63,7 +63,7 @@ try {
   await drawer.getByRole("button", { name: "纠正 / 确认", exact: true }).click();
   await drawer.getByRole("textbox", { name: "记忆内容", exact: true }).fill("[界面纠正验收] 修改仅作用于合成记忆。");
   await drawer.getByRole("button", { name: "保存记忆", exact: true }).click();
-  await expect(drawer.locator(".mm-content")).toHaveText("[界面纠正验收] 修改仅作用于合成记忆。");
+  await expect(drawer.locator(".mm-detail-body > .mm-content")).toHaveText("[界面纠正验收] 修改仅作用于合成记忆。");
   await drawer.getByRole("button", { name: "关闭详情", exact: true }).click();
   await expect(drawer).toHaveCount(0);
   checks.push("抽屉中纠正记忆并保存，仍显示详情并可正常关闭");
@@ -71,7 +71,7 @@ try {
   await root.getByRole("button", { name: "＋ 添加记忆", exact: true }).click();
   await drawer.getByRole("textbox", { name: "记忆内容", exact: true }).fill("[界面新增验收] 这是抽屉中添加的合成记忆。");
   await drawer.getByRole("button", { name: "保存记忆", exact: true }).click();
-  await expect(drawer.locator(".mm-content")).toHaveText("[界面新增验收] 这是抽屉中添加的合成记忆。");
+  await expect(drawer.locator(".mm-detail-body > .mm-content")).toHaveText("[界面新增验收] 这是抽屉中添加的合成记忆。");
   await expect(drawer.getByRole("status")).toContainText("记忆已保存");
   await drawer.getByRole("button", { name: "关闭详情", exact: true }).click();
   await expect(root.getByRole("button", { name: "＋ 添加记忆", exact: true })).toBeFocused();
@@ -91,7 +91,7 @@ try {
     assert.ok(Math.abs(await scrollTop() - beforeScroll) <= 1);
     assert.ok(await root.evaluate((element) => element.scrollWidth <= element.clientWidth));
     if (width === 390) assert.ok(Math.abs((await drawer.boundingBox()).width - width) <= 1);
-    await root.screenshot({ path: `${output}/drawer-${theme}-${width}.png` });
+    await root.screenshot({ animations: "disabled", path: `${output}/drawer-${theme}-${width}.png` });
     await drawer.getByRole("button", { name: "关闭详情", exact: true }).click();
     await expect(card).toBeFocused();
     assert.ok(Math.abs(await scrollTop() - beforeScroll) <= 1);

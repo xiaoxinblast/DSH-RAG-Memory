@@ -1,0 +1,33 @@
+{
+  "frozenAt": "2026-11-03T12:21:42.119Z",
+  "protocolVersion": 6,
+  "databaseVersion": 3,
+  "paidCalls": 0,
+  "deployed": false,
+  "files": {
+    "src/domain.mjs": "0d0facd32998b80643c363dfd1f56f6ae0830f874a73f0b3298e5dbfb184bf1b",
+    "src/evidence.mjs": "683d8b34afa2ef699659c67d54a4b4767941993e0d3456363ad9dd549cd53b38",
+    "src/extraction.mjs": "4231024b57ed35f0e5e3fad5f26d42ea18c086b5079ac96b8f3ab790eb15dc8f",
+    "src/migrations.mjs": "2f1d395f90033f2fa83886ba8a97adfe7d6d250fe9f53ae87c3c81dfa0471657",
+    "src/operations.mjs": "44ffdfe4f2072daf75de5489f9de023e7dfaf4174f32d9c259641179b6b55051",
+    "src/policy.mjs": "d46617279f836cb4bf32f84194acd7a9ffdeed3636767ceb051beb4c883002aa",
+    "src/qwen.mjs": "552555323c36403bb122c4357a6efada06a2573d971360e193c4ac52a3fcb783",
+    "src/service.mjs": "fedffe8fce300992a5a2b46b31029ffcbe074b4172b37f34c0d9ac61efcce0b2",
+    "src/store.mjs": "4031be0e0e7578245c101d546d922f2e276e673299a3964b7af8bf77f27b2490",
+    "dsh/bridge.mjs": "bd53e1b8d650d2de4defc9b0690559f6e3cfa03f356026a0f4f725fa50ce7a25",
+    "dsh/extractor.mjs": "c7dc68280e5e286c927fce2aea3d5f510fc7f53221ac41d07875831d57710f78",
+    "dsh/index.mjs": "bf4bcd0e78dc638532c7de84eb36087485e3712128f0158f5e3669835605342d",
+    "dsh/integration.mjs": "ec6d9e2aa18a59f71d45fb5ad14e7a7d61697839f476f421621af1b0c6a1f488",
+    "package.json": "e8173fbee026e946ba9d5a06b80a2e7e943c09ddf68f0044b2802e4e14233ee5",
+    "ui/plugin.jsx": "85c423888eca27afe275725af3ec35ac8f003e4086a642b8d326bb9af3dd585d",
+    "ui/styles.css": "d9f83b585343f6023bda8445de8bc078567d9848c789344ec15533f4e6cd949a",
+    "ui/recall.mjs": "6ef849567c14f1910aec1a7cc869f085ed02f771d52175fa50056f060f2123fd",
+    "dist/client.js": "931d4c00eefe778b0d123c0884ca59a225a253af671e2b41f81e3e7177fbc118",
+    "docs/unified-v6-repair.md": "2b1049fbc65e7b261a512563ad7d4979f0fc0c802762f3db510b6b8882e904fe",
+    "docs/unified-v6-verification.json": "f3e5b7502d985b4646bd35961bae167edf73453efe55f630172c6f8848d99e7c",
+    "docs/unified-v6-performance.json": "72f45862cb8f66d9c10c9c1a71c585e9dd996c27391140c8a50347c29aeaef04",
+    "tests/kernel-unified.test.mjs": "4fbdc4d1088b856eb850700dae146065297fa5d48d99d4b1335b99e78156def3",
+    "scripts/verify-kernel.mjs": "19b14169c2a0046064b759fd400e461d64ea887c36c2e3681203a8650b5f3f62",
+    "scripts/measure-unified-memory.mjs": "ae9fc12e32abbdde331f19efc1e842abe0a9c2d09e13bdc79080a8c384e37222"
+  }
+}

@@ -1,0 +1,1424 @@
+{
+  "baseline": "kernel-v6-baseline.json.gz",
+  "declarations": 177,
+  "expandedBaselineTests": 180,
+  "note": "映射在移除旧生产测试入口前生成；归档包含所有原始测试与依赖，默认离线入口同时运行当前和历史套件。",
+  "tests": [
+    {
+      "file": "tests/core.test.mjs",
+      "index": 0,
+      "title": "项目身份按 Windows 路径归一化",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 1,
+      "title": "本地中文短词、路径和精确标识符均能检索",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 2,
+      "title": "全局偏好共享，项目事实不跨项目",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 3,
+      "title": "项目事实不能提升到全局",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 4,
+      "title": "缺失来源和伪造引句被拒绝",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 5,
+      "title": "来源不能跨项目绑定",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 6,
+      "title": "重复内容不制造第二条记忆",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 7,
+      "title": "纠正保留修订并使旧向量失效",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 8,
+      "title": "并发旧版本更新不能覆盖新修正",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 9,
+      "title": "明确替代将旧记忆退出检索",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 10,
+      "title": "待确认冲突不替代有效记忆",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 11,
+      "title": "遗忘清除向量，旧任务和相同来源不能复活记忆",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 12,
+      "title": "后台任务持久化、去重并在重启后恢复",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 13,
+      "title": "捕获忽略历史事件、插件消息和子代理",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 14,
+      "title": "四轮对话排队，重复消息只存一次",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 15,
+      "title": "排除工作区阻止新记录与手动写入",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 16,
+      "title": "助手自述和不明确冲突保持待确认",
+      "disposition": "replace-current-contract",
+      "target": "tests/core.test.mjs",
+      "reason": "单项错误隔离、统一复核替代旧整批失败或直接写入；旧断言仍在冻结历史套件运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 17,
+      "title": "提炼伪造来源失败时不推进检查点",
+      "disposition": "replace-current-contract",
+      "target": "tests/core.test.mjs",
+      "reason": "单项错误隔离、统一复核替代旧整批失败或直接写入；旧断言仍在冻结历史套件运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 18,
+      "title": "新会话首轮召回与同消息缓存，不随工具步骤重复调用",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 19,
+      "title": "云端断网自动回退本地检索",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 20,
+      "title": "忽略取消的云端也不能阻塞超过两秒",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 21,
+      "title": "注入有保守上限且最多五条",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 22,
+      "title": "未配置凭据不发请求，配置不接受任意主机",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 23,
+      "title": "向量 API 契约、query/document、用量和凭据遮蔽",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 24,
+      "title": "精排候选封顶八条，费用含重复查询",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 25,
+      "title": "达到费用提醒仅通知一次，继续调用",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 26,
+      "title": "API 错误与重定向不泄漏响应正文或密钥",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 27,
+      "title": "保守文本裁剪按完整字符且不超过预算",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 28,
+      "title": "提炼批次原子落库，后一条无效时不留下前一条",
+      "disposition": "replace-current-contract",
+      "target": "tests/core.test.mjs",
+      "reason": "单项错误隔离、统一复核替代旧整批失败或直接写入；旧断言仍在冻结历史套件运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 29,
+      "title": "模型附带任意 id 不能覆盖既有记忆",
+      "disposition": "replace-current-contract",
+      "target": "tests/core.test.mjs",
+      "reason": "单项错误隔离、统一复核替代旧整批失败或直接写入；旧断言仍在冻结历史套件运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 30,
+      "title": "待确认条目批准后会重新排入语义索引任务",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 31,
+      "title": "未改变内容不重复向量化",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 32,
+      "title": "同义语义召回能返回无共同关键词的当前项目记忆",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 33,
+      "title": "香港自然月边界正确，历史月份费用不混入",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 34,
+      "title": "失败工具结果不能成为已验证来源",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 35,
+      "title": "Agent 记忆工具引用真实用户原文，不把工具参数冒充用户消息",
+      "disposition": "replace-current-contract",
+      "target": "tests/core.test.mjs",
+      "reason": "单项错误隔离、统一复核替代旧整批失败或直接写入；旧断言仍在冻结历史套件运行。"
+    },
+    {
+      "file": "tests/core.test.mjs",
+      "index": 36,
+      "title": "空闲触发以最新会话活动计算，不在活跃长回合中提前整理",
+      "disposition": "retain-current",
+      "target": "tests/core.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 0,
+      "title": "DSH 提炼固定使用插件选择，独立请求不带主聊天历史和工具",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 1,
+      "title": "DSH 提炼在 Qwen 未配置时仍能运行，证据由宿主读取原文",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 2,
+      "title": "DSH ${label}时保留队列，不消耗失败次数或自动切换",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 3,
+      "title": "已选提炼模型重启后持久化，缺少 usage 时不编造金额",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 4,
+      "title": "DSH 模型选择器返回多个已注册模型，只传递安全的 ID 和名称",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 5,
+      "title": "提炼选择必须完整，允许清空但不接受多余配置",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/dsh-extractor.test.mjs",
+      "index": 6,
+      "title": "提炼输入有 8000 上限并拒绝无效结构",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-adapter.test.mjs",
+      "index": 0,
+      "title": "真实 DSH SDK 回环检查区分 off 控件与 Qwen 关闭思考发包，不访问模型供应商",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 0,
+      "title": "v2 包含 160 个开发和 32 个独立验收案例，三模型各两遍，不泄露金标",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 1,
+      "title": "192 例金标控制通过真实宿主事务、候选保护、隔离及遗忘回放",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 2,
+      "title": "外部项目及遗忘内容不进入准备的旧记忆上下文",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 3,
+      "title": "看似正确的关键词和 JSON 没有人工复核不能认定提炼准确",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 4,
+      "title": "丢失条件、错类型、错作用域或错误证据不能用语义复核绕过",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 5,
+      "title": "分类错误与事实错误分开统计，不能把正确正文算成幻觉",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 6,
+      "title": "原子事实可拆可合，局部遗漏按原子事实计算",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 7,
+      "title": "助手自述允许不记录，不强制产生待确认记忆以获得召回分",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 8,
+      "title": "临时事实虽有来源，仍单独标出不值得记忆，不混同事实造假",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 9,
+      "title": "兼容空数组与规范结构分别计量，格式和字段错误也分开",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 10,
+      "title": "旧版本竞态和明确纠正均只生成候选，旧条目保持有效",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 11,
+      "title": "遗忘探针覆盖重启、旧来源、内容、旧向量和检索",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 12,
+      "title": "伪造来源使整批回滚，不推进检查点",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 13,
+      "title": "项目规则被模型提升全局时，宿主拦为待确认且评分保留范围错误",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 14,
+      "title": "空内容、截断、超时和非法 JSON 均保留首次失败且仅尝试一次",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 15,
+      "title": "缺少用量与缺少账单不伪造费用；缓存与思考不重复相加",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 16,
+      "title": "重复记忆不会增加正确条目数或降低每条有效记忆成本",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 17,
+      "title": "复核必须完整且绑定当前输出，未知事实与过期复核被拒绝",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 18,
+      "title": "无回答报告保持未运行，不输出准确率、费用或推荐",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 19,
+      "title": "不完整轮次不能达标，缺少参数及人工复核不会获得推荐",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 20,
+      "title": "导入拒绝重复任务、清单变更和错误指纹",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-evaluation.test.mjs",
+      "index": 21,
+      "title": "完整控制组必须完成参数核验和账单复核，不能用参考价格自动推荐",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 0,
+      "title": "并发预算先预留，缺失用量计满预留费用，不越过十元",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 1,
+      "title": "筛选覆盖八类各五种开发模式、三模型两遍，不消耗独立验收案例",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 2,
+      "title": "请求费用预留包含 UTF-8 字节上界、输出额度与双倍余量",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 3,
+      "title": "失败时 SDK 的零占位用量不冒充供应商零扣费，恢复重新计入预留",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-live.test.mjs",
+      "index": 4,
+      "title": "落盘日志识别中断请求，拒绝重复和错误清单，恢复不重试",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 0,
+      "title": "提炼空数组兼容，但坏 JSON、非空裸列表及多余字段不能自动猜修",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 1,
+      "title": "自动全局候选先待确认，项目新增记忆仍可自动使用",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 2,
+      "title": "自动纠正只生成有关联的候选，人工确认后才原子替代旧记录",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 3,
+      "title": "即使模型误报明确纠正，继续使用旧方案也不能自动停用旧记录",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 4,
+      "title": "确认前旧记录${change === \"edit\" ? \"已修改\" : \"已遗忘\"}，拒绝过期确认且不留下确认来源",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 5,
+      "title": "候选保存后修改自身版本，旧表单不能确认；Agent 也不能代为确认高影响候选",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 6,
+      "title": "提炼期间版本竞态也保存原快照版本，不能在确认时偷偷接受新版本",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 7,
+      "title": "候选关联在重启后保留，确认不能依赖内存状态",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 8,
+      "title": "已有相同有效内容时拒绝替代确认，不能绕过旧记录和候选状态检查",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 9,
+      "title": "后续无效候选回滚整个提炼批次，包括替代关联和来源检查点",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-safety.test.mjs",
+      "index": 10,
+      "title": "重复全局提议只保留一个待确认候选，替代候选按旧版本区分",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 0,
+      "title": "v3 实测预算同时计入历史、并发预留和未知结果，不接受错误零用量",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 1,
+      "title": "v3 实测拒绝模型、思考、工具、格式参数及对话数量漂移",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 2,
+      "title": "v3 中断日志不允许自动重发或重复阶段",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 3,
+      "title": "v3 案例与生产冻结证据可读取，候选授权及并发 gold 不混淆",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-live.test.mjs",
+      "index": 4,
+      "title": "v3 实测宿主确实执行提炼与独立复核并写入凭证，不调用旧协议",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 0,
+      "title": "v3 评分：格式及关键词均不能替代语义复核",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 1,
+      "title": "v3 评分：候选正文正确不代表获得激活授权",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v3-scoring.test.mjs",
+      "index": 2,
+      "title": "v3 评分：失败后不入库会保留遗漏，不能靠拦截一切获得满分",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v4-score.test.mjs",
+      "index": 0,
+      "title": "v4 评分按宿主原文编号核查范围，不接受模型自行填写偏移或遮蔽片段",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 0,
+      "title": "v5 预算包含既往花费和并发预留，未知请求保守扣除",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 1,
+      "title": "v5 实际发包拒绝路由、参数、思考与工具漂移",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v5-live.test.mjs",
+      "index": 2,
+      "title": "v5 冻结合成集均能由真实宿主准备，旧 96 例与新 16 例分开",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 0,
+      "title": "v6 预算包含既往花费和并发预留，未知请求保守扣除",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 1,
+      "title": "v6 实际发包拒绝路由、参数、思考与工具漂移",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v6-live.test.mjs",
+      "index": 2,
+      "title": "v6 冻结合成集均能由真实宿主准备，旧 112 例与新 8 例分开",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/extraction-v6-score.test.mjs",
+      "index": 0,
+      "title": "v6 容错后的有效入库不掩盖首次格式失败，也不因无效空项崩溃",
+      "disposition": "archive-executable",
+      "target": "tests/fixtures/kernel-v6-baseline.json.gz",
+      "reason": "历史评估、预算和评分绑定旧协议及历史回答；随完整旧依赖执行，不冒充新版本质量或新付费运行器。"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 0,
+      "title": "真实 DSH SDK 工具注册及首轮独立快照，不改写用户消息",
+      "disposition": "retain-current",
+      "target": "tests/integration.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 1,
+      "title": "成功压缩后重注入，失败压缩不增加代次",
+      "disposition": "retain-current",
+      "target": "tests/integration.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/integration.test.mjs",
+      "index": 2,
+      "title": "子代理不自动注入记忆",
+      "disposition": "retain-current",
+      "target": "tests/integration.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/logic-v3-sdk.test.mjs",
+      "index": 0,
+      "title": "真实 SDK：v3 提炼与独立复核同一路由、各一次、无历史工具，复核后自动生效",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-adapter.test.mjs; tests/kernel-sdk.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 0,
+      "title": "v3 回归：遗忘意图不能被提炼成继续使用，即使复核器错误批准",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 1,
+      "title": "v3 回归：一次查询不能成为持续规则",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 2,
+      "title": "v3 回归：明确过期的条目不参与正常召回，历史读取保留",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 3,
+      "title": "v3 回归：已注入快照在遗忘后失效，同一消息下一步不再注入",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 4,
+      "title": "v3 协议拒绝未知字段、伪造范围及非法操作，不接受旧回答充当新结果",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 5,
+      "title": "v3 普通项目新增不调用复核；来源检查与整批检查点原子提交",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 6,
+      "title": "v3 明确纠正经一次独立复核自动替代，旧向量退出，并可人工按版本回退",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 7,
+      "title": "v3 明确全局长期偏好复核后自动共享；复核不确定保留候选",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 8,
+      "title": "v3 否定、引文、局部项目要求和助手自述不能靠复核批准提升全局",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 9,
+      "title": "v3 目标模糊的遗忘生成澄清，复核拒绝不写入有效记忆",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 10,
+      "title": "v3 混合消息分别绑定范围，忘掉 A 仍保留 B；新墓碑不阻断同来源其他事实",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 11,
+      "title": "v3 遗忘后同主体属性的改写被阻断，明确新来源重新记住创建新条目",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 12,
+      "title": "v3 完全重复补充证据而不建第二条记忆或重复向量任务",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 13,
+      "title": "v3 近义合并必须复核，合并后保留原文与新增证据",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 14,
+      "title": "v3 复核期间旧目标变化只留下过期候选，不能覆盖新版本",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 15,
+      "title": "v3 已保存的提炼和复核在本地提交失败后复用，不重复模型调用",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 16,
+      "title": "v3 复核超时停为检查状态，不重发、不推进来源检查点",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 17,
+      "title": "v3 租约令牌、续租和过期调用阻止另一个执行者重复发送与提交",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 18,
+      "title": "v3 分片保留原消息、覆盖范围、截断与上下文来源，不重复处理上下文",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 19,
+      "title": "v3 核心层不吞掉相关项目记忆，总预算和整条内容受约束",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 20,
+      "title": "v3 历史搜索可见已替代条目，永不返回已遗忘内容；跨项目查询核对用户原话",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 21,
+      "title": "v3 数据升级保留旧内容，重复打开幂等；错误迁移回滚新增列",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 22,
+      "title": "v3 原文范围不能裁掉否定、条件或查询上下文",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 23,
+      "title": "v3 进展更新保留历史，不把过去阶段判成错误；新冲突不能作为普通新增生效",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 24,
+      "title": "v3 工具与后台共用策略，明确遗忘也要复核，不能推进整条用户消息检查点",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 25,
+      "title": "v3 提炼旧记忆可由主体通道找到无共同正文关键词的目标，辅助上下文不重复处理",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 26,
+      "title": "v3 回退在新条目已编辑或遗忘后拒绝，未来版本数据库拒绝旧插件打开",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 27,
+      "title": "v3 模型猜中 ID 也不能让模糊遗忘越过宿主唯一性检查",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 28,
+      "title": "v3 遗忘来源不再作为新模型输入或相邻上下文重发，其他事实照常处理",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 29,
+      "title": "v3 提炼期间发生遗忘时，旧批次不再进入复核或写回",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 30,
+      "title": "v3 Agent 读取工具拒绝已遗忘正文，管理界面仍可查看本地审计",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 31,
+      "title": "v3 复核缺项、重复编号或伪造批准证据立即停为检查状态",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 32,
+      "title": "v3 整批来源无效时不留下半批写入，已保存回答不再次调用模型",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 33,
+      "title": "v3 适用时间必须有明确日期，不会因记录较老而自动淘汰事实",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 34,
+      "title": "v3 插件产生的助手消息不重新捕获为新来源",
+      "disposition": "retain-current",
+      "target": "tests/kernel-retained.test.mjs",
+      "reason": "与提炼协议无关的原测试原样迁移，继续验证当前存储、检索、迁移及隔离。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 35,
+      "title": "v3 工具重复请求不能重放已遗忘条目的旧正文",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 36,
+      "title": "v3 日期有效期按香港自然日起止，不能凭日期捏造精确时间",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 37,
+      "title": "v3 关闭等待正在复核的工具请求退出，先记录中断再关闭数据库",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 38,
+      "title": "v3 提炼模型暂不可用时高影响工具请求保留队列，恢复后复用明确请求执行",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 39,
+      "title": "v3 暂停云端时普通工具新增仍可本地执行，高影响写入不绕过暂停",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v3.test.mjs",
+      "index": 40,
+      "title": "v3 SDK 提炼入口直接调用也不能绕过云端暂停",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 0,
+      "title": "v4 复现：即使复核批准，仅候选授权不能被激活",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 1,
+      "title": "v4 复现：原文引用由宿主锚点解析，不要求模型数 UTF-16 字符",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 2,
+      "title": "v4 复现：唯一遗忘与独立新事实通过真实事务，清除旧向量",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 3,
+      "title": "v4 候选限制读取完整用户消息，不能靠裁掉授权句绕过",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 4,
+      "title": "v4 候选中的引文、助手指令及否定不冒充用户限制",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 5,
+      "title": "v4 锚点不拆引文，不暴露凭据或已遮蔽范围，也不接受数值偏移",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 6,
+      "title": "v4 否定和引用中的遗忘不能凭复核错误批准删除",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 7,
+      "title": "v4 删除功能验收是事实，不能被泛化的遗忘词匹配丢弃",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v4.test.mjs",
+      "index": 8,
+      "title": "v4 简式 skip 不需要无关类型，遗忘仍要求真实目标与版本",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 0,
+      "title": "v5 复现：记忆操作和临时表达指令不单独成为长期事实",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 1,
+      "title": "v5 复现：跨消息访问限制必须复核，不允许半条事实直接入库",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 2,
+      "title": "v5 复现：遗漏关联来源不能靠复核批准绕过证据完整性",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 3,
+      "title": "v5 复现：尚未确定对象的计划即使复核批准也不能激活",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 4,
+      "title": "v5 复现：单纯保存候选不调用激活授权复核，避免被错误否决",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 5,
+      "title": "v5 有条件候选只审核内容，传递待确认状态且不得覆盖事实性拒绝",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 6,
+      "title": "v5 明确计划、具体保存期限与合并完整限定不被误伤",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 7,
+      "title": "v5 多项内容检查合并为一次复核，简单事实仍然直接入库",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v5.test.mjs",
+      "index": 8,
+      "title": "v5 内容复核批准不能提升宿主因冲突而限制的状态",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 0,
+      "title": "v6 未决二选一与具体对象均不能靠复核批准激活",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 1,
+      "title": "v6 不能将对象未决的要求改写成当前已执行",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 2,
+      "title": "v6 已确认当前状态与未来明确计划不能被未决事项误伤",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 3,
+      "title": "v6 未证明因果不能变成因果预设或擅自补充导致",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 4,
+      "title": "v6 保留明确原因和正确的因果未证实陈述",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 5,
+      "title": "v6 授权、计划、失败和助手自述不能证明完成",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 6,
+      "title": "v6 有直接成功来源的完成状态正常保存",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 7,
+      "title": "v6 单项格式错误隔离，合法项和原序号保留并写入拒绝凭证",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 8,
+      "title": "v6 严格解析保留，隔离不猜测字段也不接受坏信封",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-protocol.test.mjs; tests/kernel-policy.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 9,
+      "title": "v6 真实 SDK 回环保留有效项及原序号，独立复核和审计完成",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-policy.test.mjs; tests/kernel-contracts.test.mjs; tests/kernel-runtime.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/logic-v6.test.mjs",
+      "index": 10,
+      "title": "v6 部分有效结果在事务失败后本地重放，不重发模型或重复拒绝凭证",
+      "disposition": "replace-current-contract",
+      "target": "tests/kernel-runtime.test.mjs; tests/kernel-invariants.test.mjs",
+      "reason": "旧协议或语义句式断言在冻结依赖上保留；当前以同一硬约束或明确标注的模拟两阶段状态契约替代，不宣称自动识别自然语言。"
+    },
+    {
+      "file": "tests/package.test.mjs",
+      "index": 0,
+      "title": "改名后的包可由 DSH 读取中英文显示名称、图标及入口",
+      "disposition": "retain-current",
+      "target": "tests/package.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/package.test.mjs",
+      "index": 1,
+      "title": "改名后的浏览器构建与宿主使用同一包标识及远程协议，侧栏显示仓库名称",
+      "disposition": "retain-current",
+      "target": "tests/package.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/ui-recall.test.mjs",
+      "index": 0,
+      "title": "对话卡片只认领本插件的记忆快照，不影响其他上下文或用户消息",
+      "disposition": "retain-current",
+      "target": "tests/ui-recall.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    },
+    {
+      "file": "tests/ui-recall.test.mjs",
+      "index": 1,
+      "title": "记忆卡片保留位置、内容和稳定身份，可从持久会话记录重建",
+      "disposition": "retain-current",
+      "target": "tests/ui-recall.test.mjs",
+      "reason": "原断言继续针对当前实现运行。"
+    }
+  ]
+}

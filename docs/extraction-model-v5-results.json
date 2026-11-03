@@ -1,0 +1,2454 @@
+{
+  "date": "2026-11-03",
+  "phase": "v5-live-content-qualifiers-plans-candidates",
+  "manifestId": "5d7d855352ba3011aeefb9cbb7bffb1d450f76e963819afc2bfb85393e2acfbd",
+  "conclusion": "NO_CANDIDATE_QUALIFIED; KEEP_DAILY_MODEL",
+  "startedAt": "2026-11-02T20:58:38.088Z",
+  "finishedAt": "2026-11-02T21:10:29.228Z",
+  "cases": 112,
+  "regressionCases": 96,
+  "freshHoldoutCases": 16,
+  "passes": 2,
+  "tasks": 672,
+  "requests": 1007,
+  "extractionRequests": 672,
+  "verificationRequests": 335,
+  "allHttp200": false,
+  "allFinishStop": false,
+  "allOffPeak": true,
+  "allWireParametersVerified": true,
+  "operationReferences": {
+    "valid": 726,
+    "total": 726
+  },
+  "unknownUsageRequests": 2,
+  "interruptions": {
+    "unknownTransportRequests": 2,
+    "unsentCancelledVerification": 3,
+    "continuations": [
+      {
+        "file": "continuation-1.json",
+        "retiredTasks": 41,
+        "remainingNeverStartedTasks": 631,
+        "cumulativeUnknownReservedCny": 0.025678799999999998
+      },
+      {
+        "file": "continuation-2.json",
+        "retiredTasks": 471,
+        "remainingNeverStartedTasks": 201,
+        "cumulativeUnknownReservedCny": 0.050705999999999994
+      }
+    ],
+    "collectorAmendedWithAuditedContinuation": true
+  },
+  "retries": 0,
+  "modelFallbacks": 0,
+  "syntheticOnly": true,
+  "realConversationDataRead": false,
+  "dailyConfigurationUnchanged": true,
+  "dailyDatabaseMigrated": false,
+  "dailyModelSwitched": false,
+  "dailyInstallationChanged": false,
+  "committed": false,
+  "pushed": false,
+  "liveCloudRetrieval": false,
+  "paidEmbeddingOrRerankRequests": 0,
+  "productionAndPriorEvidenceUnchanged": true,
+  "thresholds": {
+    "precision": 0.98,
+    "memoryPrecision": 0.98,
+    "recall": 0.9,
+    "firstStructure": 0.99,
+    "criticalErrors": 0
+  },
+  "review": {
+    "distinctCaseContents": 299,
+    "exactOldAnnotationsReused": 116,
+    "newAnnotations": 183,
+    "method": "Codex source-and-gold manual semantic adjudication, model labels omitted; no candidate self-grading",
+    "externalHumanReview": false,
+    "goldAndProductionFrozenBeforeCalls": true,
+    "scorerWrittenDuringCollection": true,
+    "sampleLimit": "16 new cases, related synthetic patterns, two repeats are not independent; no real-chat quality estimate"
+  },
+  "tests": {
+    "fullOfflineBeforePaid": {
+      "passed": 162,
+      "failed": 0
+    },
+    "addedHarnessRegression": {
+      "passed": 3,
+      "failed": 0
+    },
+    "sourceCheckPassed": true,
+    "buildPassed": true,
+    "buildDependencyPath": "D:/AI/AI agents Project/dsh-mail/node_modules",
+    "actualSdkLoopbackCoveredByFullSuite": true,
+    "uiChangedThisRound": false
+  },
+  "budget": {
+    "priorConservativeCny": 4.485713600000001,
+    "roundConservativeCny": 2.4722256000000025,
+    "cumulativeConservativeCny": 6.957939200000004,
+    "ceilingCny": 10,
+    "remainingConservativeCny": 3.0420607999999962,
+    "knownUsageReferenceTotalCny": 0.62330324,
+    "unknownReserveCny": 0.050705999999999994,
+    "referencePlusUnknownReserveCny": 0.67400924,
+    "actualInvoiceVerified": false,
+    "reservationMethod": "UTF-8 request bytes plus allowance and full output cap at twice peak no-cache rates; settle known usage, reserve full amount for unknowns"
+  },
+  "byCandidate": {
+    "qwen-flash": {
+      "tasks": 224,
+      "planned": 224,
+      "json": 224,
+      "strict": 217,
+      "done": 216,
+      "proposed": 183,
+      "supported": 162,
+      "validRanges": 183,
+      "active": 127,
+      "correctActive": 121,
+      "written": 151,
+      "required": 188,
+      "covered": 172,
+      "precision": 0.8852459016393442,
+      "memoryPrecision": 0.952755905511811,
+      "recall": 0.9148936170212766,
+      "firstStructure": 0.96875,
+      "validRangeRate": 1,
+      "exactCases": 205,
+      "criticalCases": 1,
+      "critical": [
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 1,
+      "verificationCalls": 109,
+      "verificationValid": 109,
+      "httpFailures": 1,
+      "p50Ms": 2205,
+      "p95Ms": 4279,
+      "inputTokens": 194870,
+      "cachedInputTokens": 75520,
+      "cacheWriteTokens": 0,
+      "outputTokens": 49996,
+      "budgetAccountedCny": 0.18814960000000014,
+      "model": "qwen3.7-flash-2026-07-15",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.08199160000000001,
+      "unknownUsageRequests": 0,
+      "unknownReserveCny": 0,
+      "referencePlusUnknownReserveCny": 0.08199160000000001,
+      "referencePeakNoCacheCny": 0.0940748,
+      "costPerCorrectNewActiveRowCny": 0.0006776165289256199,
+      "costPerCoveredRequiredAtomCny": 0.00047669534883720935,
+      "splits": {
+        "regression": {
+          "tasks": 192,
+          "strict": 187,
+          "active": 110,
+          "correctActive": 106,
+          "proposed": 153,
+          "supported": 135,
+          "covered": 150,
+          "required": 164,
+          "criticalCases": 0,
+          "oldStateErrorCases": 1
+        },
+        "fresh-holdout": {
+          "tasks": 32,
+          "strict": 30,
+          "active": 17,
+          "correctActive": 15,
+          "proposed": 30,
+          "supported": 27,
+          "covered": 22,
+          "required": 24,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        }
+      },
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 24,
+          "correctActive": 23,
+          "proposed": 27,
+          "supported": 25,
+          "covered": 28,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 22,
+          "strict": 21,
+          "active": 21,
+          "correctActive": 20,
+          "proposed": 23,
+          "supported": 21,
+          "covered": 41,
+          "required": 44,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 8,
+          "correctActive": 6,
+          "proposed": 15,
+          "supported": 9,
+          "covered": 8,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 12,
+          "correctActive": 12,
+          "proposed": 20,
+          "supported": 18,
+          "covered": 18,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 17,
+          "active": 9,
+          "correctActive": 9,
+          "proposed": 18,
+          "supported": 14,
+          "covered": 11,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 1
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 19,
+          "active": 18,
+          "correctActive": 18,
+          "proposed": 23,
+          "supported": 22,
+          "covered": 22,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 28,
+          "active": 9,
+          "correctActive": 9,
+          "proposed": 12,
+          "supported": 11,
+          "covered": 9,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 4,
+          "correctActive": 4,
+          "proposed": 4,
+          "supported": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 16,
+          "active": 5,
+          "correctActive": 5,
+          "proposed": 11,
+          "supported": 11,
+          "covered": 9,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 7,
+          "active": 3,
+          "correctActive": 3,
+          "proposed": 5,
+          "supported": 4,
+          "covered": 3,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 8,
+          "correctActive": 8,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 8,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 6,
+          "correctActive": 4,
+          "proposed": 8,
+          "supported": 7,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 8,
+          "strict": 7,
+          "active": 0,
+          "correctActive": 0,
+          "proposed": 9,
+          "supported": 8,
+          "covered": 7,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 112,
+          "strict": 109,
+          "active": 64,
+          "correctActive": 62,
+          "proposed": 92,
+          "supported": 82,
+          "covered": 86,
+          "required": 94,
+          "criticalCases": 0,
+          "oldStateErrorCases": 1
+        },
+        {
+          "pass": 2,
+          "tasks": 112,
+          "strict": 108,
+          "active": 63,
+          "correctActive": 59,
+          "proposed": 91,
+          "supported": 80,
+          "covered": 86,
+          "required": 94,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        }
+      ],
+      "behaviorAgreement": 96,
+      "priorSame96": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 153,
+        "supported": 139,
+        "validRanges": 153,
+        "active": 122,
+        "correctActive": 113,
+        "written": 137,
+        "required": 164,
+        "covered": 145,
+        "precision": 0.9084967320261438,
+        "memoryPrecision": 0.9262295081967213,
+        "recall": 0.8841463414634146,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 172,
+        "criticalCases": 1,
+        "critical": [
+          "candidate-activated"
+        ],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 38,
+        "verificationValid": 38,
+        "httpFailures": 0,
+        "p50Ms": 1636,
+        "p95Ms": 3242,
+        "inputTokens": 155612,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 33429,
+        "budgetAccountedCny": 0.11573120000000003,
+        "model": "qwen3.7-flash-2026-07-15",
+        "provider": "evaluation-qwen-beijing",
+        "referenceCny": 0.0578656,
+        "referencePeakNoCacheCny": 0.0578656,
+        "costPerCorrectNewActiveRowCny": 0.0005120849557522124,
+        "costPerCoveredRequiredAtomCny": 0.0003990731034482759,
+        "splits": {
+          "regression": {
+            "tasks": 160,
+            "strict": 157,
+            "active": 104,
+            "correctActive": 97,
+            "proposed": 131,
+            "supported": 119,
+            "covered": 125,
+            "required": 144,
+            "criticalCases": 1,
+            "oldStateErrorCases": 0
+          },
+          "fresh-holdout": {
+            "tasks": 32,
+            "strict": 32,
+            "active": 18,
+            "correctActive": 16,
+            "proposed": 22,
+            "supported": 20,
+            "covered": 20,
+            "required": 20,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "categories": {
+          "negation": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 23,
+            "correctActive": 23,
+            "proposed": 23,
+            "supported": 23,
+            "covered": 27,
+            "required": 30,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "completion": {
+            "tasks": 22,
+            "strict": 20,
+            "active": 20,
+            "correctActive": 20,
+            "proposed": 24,
+            "supported": 22,
+            "covered": 38,
+            "required": 44,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "roles": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 10,
+            "correctActive": 7,
+            "proposed": 12,
+            "supported": 9,
+            "covered": 8,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "scope": {
+            "tasks": 22,
+            "strict": 21,
+            "active": 11,
+            "correctActive": 11,
+            "proposed": 20,
+            "supported": 20,
+            "covered": 17,
+            "required": 18,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "correction": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 10,
+            "correctActive": 10,
+            "proposed": 18,
+            "supported": 14,
+            "covered": 12,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "reference": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 25,
+            "correctActive": 22,
+            "proposed": 27,
+            "supported": 25,
+            "covered": 19,
+            "required": 24,
+            "criticalCases": 1,
+            "oldStateErrorCases": 0
+          },
+          "forgetting": {
+            "tasks": 28,
+            "strict": 28,
+            "active": 13,
+            "correctActive": 10,
+            "proposed": 13,
+            "supported": 10,
+            "covered": 10,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "noise": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 4,
+            "correctActive": 4,
+            "proposed": 4,
+            "supported": 4,
+            "covered": 4,
+            "required": 4,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "actions": {
+            "tasks": 16,
+            "strict": 16,
+            "active": 6,
+            "correctActive": 6,
+            "proposed": 12,
+            "supported": 12,
+            "covered": 10,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "passes": [
+          {
+            "pass": 1,
+            "tasks": 96,
+            "strict": 95,
+            "active": 61,
+            "correctActive": 57,
+            "proposed": 75,
+            "supported": 69,
+            "covered": 73,
+            "required": 82,
+            "criticalCases": 1,
+            "oldStateErrorCases": 0
+          },
+          {
+            "pass": 2,
+            "tasks": 96,
+            "strict": 94,
+            "active": 61,
+            "correctActive": 56,
+            "proposed": 78,
+            "supported": 70,
+            "covered": 72,
+            "required": 82,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        ],
+        "behaviorAgreement": 88,
+        "priorSame80": {
+          "tasks": 160,
+          "planned": 160,
+          "json": 160,
+          "strict": 109,
+          "done": 64,
+          "proposed": 127,
+          "supported": 112,
+          "validRanges": 78,
+          "active": 24,
+          "correctActive": 22,
+          "written": 30,
+          "required": 144,
+          "covered": 37,
+          "precision": 0.8818897637795275,
+          "memoryPrecision": 0.9166666666666666,
+          "recall": 0.2569444444444444,
+          "firstStructure": 0.68125,
+          "validRangeRate": 0.6141732283464567,
+          "exactCases": 43,
+          "criticalCases": 2,
+          "critical": [
+            "candidate-activated",
+            "candidate-activated"
+          ],
+          "oldStateErrorCases": 8,
+          "verificationCalls": 12,
+          "verificationValid": 12,
+          "httpFailures": 0,
+          "p50Ms": 1836,
+          "p95Ms": 3162,
+          "inputTokens": 70523,
+          "cachedInputTokens": 24320,
+          "cacheWriteTokens": 0,
+          "outputTokens": 34519,
+          "budgetAccountedCny": 0.09316760000000007,
+          "model": "qwen3.7-flash-2026-07-15",
+          "provider": "evaluation-qwen-beijing",
+          "referenceCny": 0.0426926,
+          "referenceNoCacheCny": 0.0465838,
+          "referencePeakCacheCny": 0.0426926,
+          "costPerCorrectNewActiveRowCny": 0.001940572727272727,
+          "costPerCoveredRequiredAtomCny": 0.001153854054054054,
+          "passes": [
+            {
+              "pass": 1,
+              "tasks": 80,
+              "strict": 57,
+              "active": 10,
+              "correctActive": 9,
+              "covered": 16,
+              "required": 72,
+              "criticalCases": 1
+            },
+            {
+              "pass": 2,
+              "tasks": 80,
+              "strict": 52,
+              "active": 14,
+              "correctActive": 13,
+              "covered": 21,
+              "required": 72,
+              "criticalCases": 1
+            }
+          ],
+          "behaviorAgreements": 54,
+          "behaviorPairs": 80,
+          "warnings": {
+            "v3 操作字段无效": 51,
+            "操作证据范围无效": 45
+          },
+          "outcomes": {
+            "applied": 24,
+            "rejected": 25,
+            "pending": 6,
+            "skipped": 3,
+            "clarification": 1
+          },
+          "splitResults": {
+            "development": {
+              "tasks": 80,
+              "covered": 23,
+              "required": 76,
+              "strict": 54,
+              "criticalCases": 0
+            },
+            "holdout": {
+              "tasks": 64,
+              "covered": 13,
+              "required": 58,
+              "strict": 44,
+              "criticalCases": 2
+            },
+            "v3-extension": {
+              "tasks": 16,
+              "covered": 1,
+              "required": 10,
+              "strict": 11,
+              "criticalCases": 0
+            }
+          },
+          "categoryResults": {
+            "negation": {
+              "covered": 13,
+              "required": 26,
+              "tasks": 18
+            },
+            "completion": {
+              "covered": 10,
+              "required": 40,
+              "tasks": 18
+            },
+            "roles": {
+              "covered": 0,
+              "required": 12,
+              "tasks": 18
+            },
+            "scope": {
+              "covered": 2,
+              "required": 14,
+              "tasks": 18
+            },
+            "correction": {
+              "covered": 6,
+              "required": 10,
+              "tasks": 18
+            },
+            "reference": {
+              "covered": 5,
+              "required": 22,
+              "tasks": 18
+            },
+            "forgetting": {
+              "covered": 0,
+              "required": 6,
+              "tasks": 18
+            },
+            "noise": {
+              "covered": 0,
+              "required": 4,
+              "tasks": 18
+            },
+            "actions": {
+              "covered": 1,
+              "required": 10,
+              "tasks": 16
+            }
+          },
+          "qualified": false
+        },
+        "qualified": false
+      },
+      "qualified": false
+    },
+    "qwen-27b": {
+      "tasks": 224,
+      "planned": 224,
+      "json": 223,
+      "strict": 221,
+      "done": 219,
+      "proposed": 191,
+      "supported": 179,
+      "validRanges": 191,
+      "active": 146,
+      "correctActive": 143,
+      "written": 170,
+      "required": 188,
+      "covered": 165,
+      "precision": 0.93717277486911,
+      "memoryPrecision": 0.9794520547945206,
+      "recall": 0.8776595744680851,
+      "firstStructure": 0.9866071428571429,
+      "validRangeRate": 1,
+      "exactCases": 208,
+      "criticalCases": 0,
+      "critical": [],
+      "oldStateErrorCases": 0,
+      "verificationCalls": 108,
+      "verificationValid": 107,
+      "httpFailures": 3,
+      "p50Ms": 2847,
+      "p95Ms": 8542,
+      "inputTokens": 268743,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 34049,
+      "budgetAccountedCny": 0.7000679999999995,
+      "model": "qwen3.5-27b",
+      "provider": "evaluation-qwen-beijing",
+      "referenceCny": 0.324681,
+      "unknownUsageRequests": 2,
+      "unknownReserveCny": 0.050705999999999994,
+      "referencePlusUnknownReserveCny": 0.37538699999999997,
+      "referencePeakNoCacheCny": 0.324681,
+      "costPerCorrectNewActiveRowCny": 0.002625083916083916,
+      "costPerCoveredRequiredAtomCny": 0.0022750727272727272,
+      "splits": {
+        "regression": {
+          "tasks": 192,
+          "strict": 189,
+          "active": 130,
+          "correctActive": 127,
+          "proposed": 161,
+          "supported": 149,
+          "covered": 145,
+          "required": 164,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "fresh-holdout": {
+          "tasks": 32,
+          "strict": 32,
+          "active": 16,
+          "correctActive": 16,
+          "proposed": 30,
+          "supported": 30,
+          "covered": 20,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 30,
+          "correctActive": 28,
+          "proposed": 32,
+          "supported": 30,
+          "covered": 26,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 22,
+          "strict": 21,
+          "active": 23,
+          "correctActive": 23,
+          "proposed": 27,
+          "supported": 25,
+          "covered": 35,
+          "required": 44,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 7,
+          "correctActive": 6,
+          "proposed": 14,
+          "supported": 8,
+          "covered": 8,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 16,
+          "correctActive": 16,
+          "proposed": 22,
+          "supported": 22,
+          "covered": 18,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 10,
+          "correctActive": 10,
+          "proposed": 14,
+          "supported": 14,
+          "covered": 12,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 24,
+          "correctActive": 24,
+          "proposed": 28,
+          "supported": 26,
+          "covered": 24,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 28,
+          "active": 10,
+          "correctActive": 10,
+          "proposed": 10,
+          "supported": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 4,
+          "correctActive": 4,
+          "proposed": 4,
+          "supported": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 14,
+          "active": 6,
+          "correctActive": 6,
+          "proposed": 10,
+          "supported": 10,
+          "covered": 8,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 4,
+          "correctActive": 4,
+          "proposed": 4,
+          "supported": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 8,
+          "correctActive": 8,
+          "proposed": 10,
+          "supported": 10,
+          "covered": 4,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 4,
+          "correctActive": 4,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 0,
+          "correctActive": 0,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 8,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 112,
+          "strict": 110,
+          "active": 73,
+          "correctActive": 72,
+          "proposed": 95,
+          "supported": 89,
+          "covered": 82,
+          "required": 94,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 112,
+          "strict": 111,
+          "active": 73,
+          "correctActive": 71,
+          "proposed": 96,
+          "supported": 90,
+          "covered": 83,
+          "required": 94,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      ],
+      "behaviorAgreement": 109,
+      "priorSame96": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 189,
+        "done": 189,
+        "proposed": 155,
+        "supported": 145,
+        "validRanges": 155,
+        "active": 135,
+        "correctActive": 127,
+        "written": 147,
+        "required": 164,
+        "covered": 144,
+        "precision": 0.9354838709677419,
+        "memoryPrecision": 0.9407407407407408,
+        "recall": 0.8780487804878049,
+        "firstStructure": 0.984375,
+        "validRangeRate": 1,
+        "exactCases": 174,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 1578,
+        "p95Ms": 5064,
+        "inputTokens": 155185,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 0,
+        "outputTokens": 19356,
+        "budgetAccountedCny": 0.37203960000000014,
+        "model": "qwen3.5-27b",
+        "provider": "evaluation-qwen-beijing",
+        "referenceCny": 0.18601979999999999,
+        "referencePeakNoCacheCny": 0.18601979999999999,
+        "costPerCorrectNewActiveRowCny": 0.001464722834645669,
+        "costPerCoveredRequiredAtomCny": 0.0012918041666666665,
+        "splits": {
+          "regression": {
+            "tasks": 160,
+            "strict": 157,
+            "active": 117,
+            "correctActive": 109,
+            "proposed": 133,
+            "supported": 123,
+            "covered": 124,
+            "required": 144,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "fresh-holdout": {
+            "tasks": 32,
+            "strict": 32,
+            "active": 18,
+            "correctActive": 18,
+            "proposed": 22,
+            "supported": 22,
+            "covered": 20,
+            "required": 20,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "categories": {
+          "negation": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 28,
+            "correctActive": 28,
+            "proposed": 28,
+            "supported": 28,
+            "covered": 26,
+            "required": 30,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "completion": {
+            "tasks": 22,
+            "strict": 20,
+            "active": 24,
+            "correctActive": 22,
+            "proposed": 28,
+            "supported": 26,
+            "covered": 38,
+            "required": 44,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "roles": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 10,
+            "correctActive": 8,
+            "proposed": 12,
+            "supported": 8,
+            "covered": 10,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "scope": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 14,
+            "correctActive": 14,
+            "proposed": 20,
+            "supported": 20,
+            "covered": 18,
+            "required": 18,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "correction": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 10,
+            "correctActive": 10,
+            "proposed": 14,
+            "supported": 14,
+            "covered": 12,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "reference": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 28,
+            "correctActive": 24,
+            "proposed": 28,
+            "supported": 24,
+            "covered": 18,
+            "required": 24,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "forgetting": {
+            "tasks": 28,
+            "strict": 28,
+            "active": 10,
+            "correctActive": 10,
+            "proposed": 10,
+            "supported": 10,
+            "covered": 10,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "noise": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 4,
+            "correctActive": 4,
+            "proposed": 4,
+            "supported": 4,
+            "covered": 4,
+            "required": 4,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "actions": {
+            "tasks": 16,
+            "strict": 15,
+            "active": 7,
+            "correctActive": 7,
+            "proposed": 11,
+            "supported": 11,
+            "covered": 8,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "passes": [
+          {
+            "pass": 1,
+            "tasks": 96,
+            "strict": 94,
+            "active": 67,
+            "correctActive": 63,
+            "proposed": 77,
+            "supported": 72,
+            "covered": 72,
+            "required": 82,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          {
+            "pass": 2,
+            "tasks": 96,
+            "strict": 95,
+            "active": 68,
+            "correctActive": 64,
+            "proposed": 78,
+            "supported": 73,
+            "covered": 72,
+            "required": 82,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        ],
+        "behaviorAgreement": 94,
+        "priorSame80": {
+          "tasks": 160,
+          "planned": 160,
+          "json": 160,
+          "strict": 117,
+          "done": 89,
+          "proposed": 125,
+          "supported": 118,
+          "validRanges": 93,
+          "active": 47,
+          "correctActive": 47,
+          "written": 50,
+          "required": 144,
+          "covered": 53,
+          "precision": 0.944,
+          "memoryPrecision": 1,
+          "recall": 0.3680555555555556,
+          "firstStructure": 0.73125,
+          "validRangeRate": 0.744,
+          "exactCases": 60,
+          "criticalCases": 0,
+          "critical": [],
+          "oldStateErrorCases": 5,
+          "verificationCalls": 16,
+          "verificationValid": 16,
+          "httpFailures": 0,
+          "p50Ms": 2040,
+          "p95Ms": 7656,
+          "inputTokens": 96440,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 21052,
+          "budgetAccountedCny": 0.3178271999999999,
+          "model": "qwen3.5-27b",
+          "provider": "evaluation-qwen-beijing",
+          "referenceCny": 0.1589136,
+          "referenceNoCacheCny": 0.1589136,
+          "referencePeakCacheCny": 0.1589136,
+          "costPerCorrectNewActiveRowCny": 0.0033811404255319148,
+          "costPerCoveredRequiredAtomCny": 0.0029983698113207544,
+          "passes": [
+            {
+              "pass": 1,
+              "tasks": 80,
+              "strict": 58,
+              "active": 23,
+              "correctActive": 23,
+              "covered": 26,
+              "required": 72,
+              "criticalCases": 0
+            },
+            {
+              "pass": 2,
+              "tasks": 80,
+              "strict": 59,
+              "active": 24,
+              "correctActive": 24,
+              "covered": 27,
+              "required": 72,
+              "criticalCases": 0
+            }
+          ],
+          "behaviorAgreements": 75,
+          "behaviorPairs": 80,
+          "warnings": {
+            "操作证据范围无效": 28,
+            "v3 操作字段无效": 43
+          },
+          "outcomes": {
+            "applied": 47,
+            "rejected": 32,
+            "skipped": 4,
+            "pending": 3,
+            "clarification": 3
+          },
+          "splitResults": {
+            "development": {
+              "tasks": 80,
+              "covered": 32,
+              "required": 76,
+              "strict": 62,
+              "criticalCases": 0
+            },
+            "holdout": {
+              "tasks": 64,
+              "covered": 19,
+              "required": 58,
+              "strict": 41,
+              "criticalCases": 0
+            },
+            "v3-extension": {
+              "tasks": 16,
+              "covered": 2,
+              "required": 10,
+              "strict": 14,
+              "criticalCases": 0
+            }
+          },
+          "categoryResults": {
+            "negation": {
+              "covered": 10,
+              "required": 26,
+              "tasks": 18
+            },
+            "completion": {
+              "covered": 12,
+              "required": 40,
+              "tasks": 18
+            },
+            "roles": {
+              "covered": 4,
+              "required": 12,
+              "tasks": 18
+            },
+            "scope": {
+              "covered": 8,
+              "required": 14,
+              "tasks": 18
+            },
+            "correction": {
+              "covered": 9,
+              "required": 10,
+              "tasks": 18
+            },
+            "reference": {
+              "covered": 6,
+              "required": 22,
+              "tasks": 18
+            },
+            "forgetting": {
+              "covered": 0,
+              "required": 6,
+              "tasks": 18
+            },
+            "noise": {
+              "covered": 2,
+              "required": 4,
+              "tasks": 18
+            },
+            "actions": {
+              "covered": 2,
+              "required": 10,
+              "tasks": 16
+            }
+          },
+          "qualified": false
+        },
+        "qualified": false
+      },
+      "qualified": false
+    },
+    "deepseek-baseline": {
+      "tasks": 224,
+      "planned": 224,
+      "json": 224,
+      "strict": 222,
+      "done": 221,
+      "proposed": 173,
+      "supported": 164,
+      "validRanges": 173,
+      "active": 138,
+      "correctActive": 131,
+      "written": 165,
+      "required": 188,
+      "covered": 177,
+      "precision": 0.9479768786127167,
+      "memoryPrecision": 0.9492753623188406,
+      "recall": 0.9414893617021277,
+      "firstStructure": 0.9910714285714286,
+      "validRangeRate": 1,
+      "exactCases": 212,
+      "criticalCases": 2,
+      "critical": [
+        "candidate-activated",
+        "candidate-activated"
+      ],
+      "oldStateErrorCases": 0,
+      "verificationCalls": 118,
+      "verificationValid": 118,
+      "httpFailures": 1,
+      "p50Ms": 1534,
+      "p95Ms": 2305,
+      "inputTokens": 97362,
+      "cachedInputTokens": 183032,
+      "cacheWriteTokens": 0,
+      "outputTokens": 28902,
+      "budgetAccountedCny": 1.5840079999999985,
+      "model": "deepseek-flash",
+      "provider": "deepseek-account",
+      "referenceCny": 0.21663064,
+      "unknownUsageRequests": 0,
+      "unknownReserveCny": 0,
+      "referencePlusUnknownReserveCny": 0.21663064,
+      "referencePeakNoCacheCny": 0.792004,
+      "costPerCorrectNewActiveRowCny": 0.001653669007633588,
+      "costPerCoveredRequiredAtomCny": 0.001223901920903955,
+      "splits": {
+        "regression": {
+          "tasks": 192,
+          "strict": 190,
+          "active": 122,
+          "correctActive": 117,
+          "proposed": 145,
+          "supported": 136,
+          "covered": 155,
+          "required": 164,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "fresh-holdout": {
+          "tasks": 32,
+          "strict": 32,
+          "active": 16,
+          "correctActive": 14,
+          "proposed": 28,
+          "supported": 28,
+          "covered": 22,
+          "required": 24,
+          "criticalCases": 2,
+          "oldStateErrorCases": 0
+        }
+      },
+      "categories": {
+        "negation": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 26,
+          "correctActive": 24,
+          "proposed": 26,
+          "supported": 24,
+          "covered": 28,
+          "required": 30,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "completion": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 21,
+          "correctActive": 21,
+          "proposed": 22,
+          "supported": 22,
+          "covered": 42,
+          "required": 44,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "roles": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 9,
+          "correctActive": 9,
+          "proposed": 9,
+          "supported": 9,
+          "covered": 12,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "scope": {
+          "tasks": 22,
+          "strict": 22,
+          "active": 12,
+          "correctActive": 12,
+          "proposed": 20,
+          "supported": 18,
+          "covered": 18,
+          "required": 18,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "correction": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 10,
+          "correctActive": 10,
+          "proposed": 14,
+          "supported": 14,
+          "covered": 12,
+          "required": 12,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "reference": {
+          "tasks": 20,
+          "strict": 18,
+          "active": 24,
+          "correctActive": 22,
+          "proposed": 28,
+          "supported": 26,
+          "covered": 20,
+          "required": 24,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "forgetting": {
+          "tasks": 28,
+          "strict": 28,
+          "active": 10,
+          "correctActive": 10,
+          "proposed": 12,
+          "supported": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "noise": {
+          "tasks": 20,
+          "strict": 20,
+          "active": 4,
+          "correctActive": 3,
+          "proposed": 4,
+          "supported": 3,
+          "covered": 3,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "actions": {
+          "tasks": 16,
+          "strict": 16,
+          "active": 6,
+          "correctActive": 6,
+          "proposed": 10,
+          "supported": 10,
+          "covered": 10,
+          "required": 10,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "instruction": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 4,
+          "correctActive": 4,
+          "proposed": 4,
+          "supported": 4,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "qualification": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 6,
+          "correctActive": 6,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 6,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        },
+        "ambiguous-plan": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 6,
+          "correctActive": 4,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 4,
+          "required": 4,
+          "criticalCases": 2,
+          "oldStateErrorCases": 0
+        },
+        "candidate": {
+          "tasks": 8,
+          "strict": 8,
+          "active": 0,
+          "correctActive": 0,
+          "proposed": 8,
+          "supported": 8,
+          "covered": 8,
+          "required": 8,
+          "criticalCases": 0,
+          "oldStateErrorCases": 0
+        }
+      },
+      "passes": [
+        {
+          "pass": 1,
+          "tasks": 112,
+          "strict": 111,
+          "active": 69,
+          "correctActive": 66,
+          "proposed": 86,
+          "supported": 82,
+          "covered": 90,
+          "required": 94,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        },
+        {
+          "pass": 2,
+          "tasks": 112,
+          "strict": 111,
+          "active": 69,
+          "correctActive": 65,
+          "proposed": 87,
+          "supported": 82,
+          "covered": 87,
+          "required": 94,
+          "criticalCases": 1,
+          "oldStateErrorCases": 0
+        }
+      ],
+      "behaviorAgreement": 109,
+      "priorSame96": {
+        "tasks": 192,
+        "planned": 192,
+        "json": 192,
+        "strict": 191,
+        "done": 191,
+        "proposed": 149,
+        "supported": 140,
+        "validRanges": 149,
+        "active": 128,
+        "correctActive": 124,
+        "written": 143,
+        "required": 164,
+        "covered": 161,
+        "precision": 0.9395973154362416,
+        "memoryPrecision": 0.96875,
+        "recall": 0.9817073170731707,
+        "firstStructure": 0.9947916666666666,
+        "validRangeRate": 1,
+        "exactCases": 186,
+        "criticalCases": 0,
+        "critical": [],
+        "oldStateErrorCases": 0,
+        "verificationCalls": 37,
+        "verificationValid": 37,
+        "httpFailures": 0,
+        "p50Ms": 875,
+        "p95Ms": 2018,
+        "inputTokens": 68305,
+        "cachedInputTokens": 89216,
+        "cacheWriteTokens": 0,
+        "outputTokens": 18287,
+        "budgetAccountedCny": 0.9226759999999999,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "referenceCny": 0.14323732,
+        "referencePeakNoCacheCny": 0.461338,
+        "costPerCorrectNewActiveRowCny": 0.0011551396774193549,
+        "costPerCoveredRequiredAtomCny": 0.000889672795031056,
+        "splits": {
+          "regression": {
+            "tasks": 160,
+            "strict": 160,
+            "active": 112,
+            "correctActive": 108,
+            "proposed": 127,
+            "supported": 118,
+            "covered": 142,
+            "required": 144,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "fresh-holdout": {
+            "tasks": 32,
+            "strict": 31,
+            "active": 16,
+            "correctActive": 16,
+            "proposed": 22,
+            "supported": 22,
+            "covered": 19,
+            "required": 20,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "categories": {
+          "negation": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 25,
+            "correctActive": 24,
+            "proposed": 25,
+            "supported": 24,
+            "covered": 29,
+            "required": 30,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "completion": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 24,
+            "correctActive": 23,
+            "proposed": 24,
+            "supported": 23,
+            "covered": 44,
+            "required": 44,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "roles": {
+            "tasks": 22,
+            "strict": 22,
+            "active": 8,
+            "correctActive": 8,
+            "proposed": 8,
+            "supported": 8,
+            "covered": 11,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "scope": {
+            "tasks": 22,
+            "strict": 21,
+            "active": 12,
+            "correctActive": 12,
+            "proposed": 21,
+            "supported": 20,
+            "covered": 17,
+            "required": 18,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "correction": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 10,
+            "correctActive": 10,
+            "proposed": 14,
+            "supported": 14,
+            "covered": 12,
+            "required": 12,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "reference": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 29,
+            "correctActive": 27,
+            "proposed": 29,
+            "supported": 27,
+            "covered": 24,
+            "required": 24,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "forgetting": {
+            "tasks": 28,
+            "strict": 28,
+            "active": 10,
+            "correctActive": 10,
+            "proposed": 13,
+            "supported": 10,
+            "covered": 10,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "noise": {
+            "tasks": 20,
+            "strict": 20,
+            "active": 4,
+            "correctActive": 4,
+            "proposed": 4,
+            "supported": 4,
+            "covered": 4,
+            "required": 4,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          "actions": {
+            "tasks": 16,
+            "strict": 16,
+            "active": 6,
+            "correctActive": 6,
+            "proposed": 11,
+            "supported": 10,
+            "covered": 10,
+            "required": 10,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        },
+        "passes": [
+          {
+            "pass": 1,
+            "tasks": 96,
+            "strict": 96,
+            "active": 64,
+            "correctActive": 62,
+            "proposed": 74,
+            "supported": 70,
+            "covered": 81,
+            "required": 82,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          },
+          {
+            "pass": 2,
+            "tasks": 96,
+            "strict": 95,
+            "active": 64,
+            "correctActive": 62,
+            "proposed": 75,
+            "supported": 70,
+            "covered": 80,
+            "required": 82,
+            "criticalCases": 0,
+            "oldStateErrorCases": 0
+          }
+        ],
+        "behaviorAgreement": 89,
+        "priorSame80": {
+          "tasks": 160,
+          "planned": 160,
+          "json": 160,
+          "strict": 159,
+          "done": 107,
+          "proposed": 126,
+          "supported": 116,
+          "validRanges": 76,
+          "active": 47,
+          "correctActive": 45,
+          "written": 53,
+          "required": 144,
+          "covered": 52,
+          "precision": 0.9206349206349206,
+          "memoryPrecision": 0.9574468085106383,
+          "recall": 0.3611111111111111,
+          "firstStructure": 0.99375,
+          "validRangeRate": 0.6031746031746031,
+          "exactCases": 93,
+          "criticalCases": 2,
+          "critical": [
+            "candidate-activated",
+            "candidate-activated"
+          ],
+          "oldStateErrorCases": 5,
+          "verificationCalls": 15,
+          "verificationValid": 15,
+          "httpFailures": 0,
+          "p50Ms": 925,
+          "p95Ms": 1763,
+          "inputTokens": 45541,
+          "cachedInputTokens": 51968,
+          "cacheWriteTokens": 0,
+          "outputTokens": 16159,
+          "budgetAccountedCny": 0.6485799999999997,
+          "model": "deepseek-flash",
+          "provider": "deepseek-account",
+          "referenceCny": 0.11121636,
+          "referenceNoCacheCny": 0.32429,
+          "referencePeakCacheCny": 0.22243272,
+          "costPerCorrectNewActiveRowCny": 0.0024714746666666667,
+          "costPerCoveredRequiredAtomCny": 0.002138776153846154,
+          "passes": [
+            {
+              "pass": 1,
+              "tasks": 80,
+              "strict": 80,
+              "active": 23,
+              "correctActive": 22,
+              "covered": 26,
+              "required": 72,
+              "criticalCases": 1
+            },
+            {
+              "pass": 2,
+              "tasks": 80,
+              "strict": 79,
+              "active": 24,
+              "correctActive": 23,
+              "covered": 26,
+              "required": 72,
+              "criticalCases": 1
+            }
+          ],
+          "behaviorAgreements": 70,
+          "behaviorPairs": 80,
+          "warnings": {
+            "操作证据范围无效": 52,
+            "v3 操作字段无效": 1
+          },
+          "outcomes": {
+            "applied": 47,
+            "rejected": 19,
+            "pending": 6
+          },
+          "splitResults": {
+            "development": {
+              "tasks": 80,
+              "covered": 32,
+              "required": 76,
+              "strict": 80,
+              "criticalCases": 0
+            },
+            "holdout": {
+              "tasks": 64,
+              "covered": 16,
+              "required": 58,
+              "strict": 64,
+              "criticalCases": 2
+            },
+            "v3-extension": {
+              "tasks": 16,
+              "covered": 4,
+              "required": 10,
+              "strict": 15,
+              "criticalCases": 0
+            }
+          },
+          "categoryResults": {
+            "negation": {
+              "covered": 11,
+              "required": 26,
+              "tasks": 18
+            },
+            "completion": {
+              "covered": 3,
+              "required": 40,
+              "tasks": 18
+            },
+            "roles": {
+              "covered": 3,
+              "required": 12,
+              "tasks": 18
+            },
+            "scope": {
+              "covered": 4,
+              "required": 14,
+              "tasks": 18
+            },
+            "correction": {
+              "covered": 9,
+              "required": 10,
+              "tasks": 18
+            },
+            "reference": {
+              "covered": 12,
+              "required": 22,
+              "tasks": 18
+            },
+            "forgetting": {
+              "covered": 4,
+              "required": 6,
+              "tasks": 18
+            },
+            "noise": {
+              "covered": 2,
+              "required": 4,
+              "tasks": 18
+            },
+            "actions": {
+              "covered": 4,
+              "required": 10,
+              "tasks": 16
+            }
+          },
+          "qualified": false
+        },
+        "qualified": false
+      },
+      "qualified": false
+    }
+  },
+  "diagnostics": {
+    "instruction": {
+      "tasks": 48,
+      "strict": 46,
+      "active": 28,
+      "correctActive": 28,
+      "proposed": 40,
+      "supported": 31,
+      "covered": 33,
+      "required": 36,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 0,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 28
+    },
+    "qualification": {
+      "tasks": 42,
+      "strict": 40,
+      "active": 43,
+      "correctActive": 38,
+      "proposed": 50,
+      "supported": 44,
+      "covered": 44,
+      "required": 60,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 1,
+      "clarificationTasks": 0,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 36
+    },
+    "ambiguousPlan": {
+      "tasks": 18,
+      "strict": 18,
+      "active": 8,
+      "correctActive": 4,
+      "proposed": 22,
+      "supported": 21,
+      "covered": 0,
+      "required": 0,
+      "criticalCases": 3,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 12,
+      "clarificationTasks": 0,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 8
+    },
+    "explicitCandidate": {
+      "tasks": 48,
+      "strict": 45,
+      "active": 0,
+      "correctActive": 0,
+      "proposed": 49,
+      "supported": 48,
+      "covered": 45,
+      "required": 48,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 45,
+      "clarificationTasks": 0,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 0
+    },
+    "uniqueForget": {
+      "tasks": 12,
+      "strict": 12,
+      "active": 0,
+      "correctActive": 0,
+      "proposed": 0,
+      "supported": 0,
+      "covered": 0,
+      "required": 0,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 0,
+      "forgottenTasks": 12,
+      "nonEmptyNewActiveTasks": 0
+    },
+    "mixedForgetAndAdd": {
+      "tasks": 12,
+      "strict": 12,
+      "active": 12,
+      "correctActive": 12,
+      "proposed": 12,
+      "supported": 12,
+      "covered": 12,
+      "required": 12,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 0,
+      "forgottenTasks": 12,
+      "nonEmptyNewActiveTasks": 12
+    },
+    "ambiguousForget": {
+      "tasks": 12,
+      "strict": 12,
+      "active": 0,
+      "correctActive": 0,
+      "proposed": 0,
+      "supported": 0,
+      "covered": 0,
+      "required": 0,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 12,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 0
+    },
+    "negativeOrQuotedForget": {
+      "tasks": 18,
+      "strict": 18,
+      "active": 1,
+      "correctActive": 0,
+      "proposed": 4,
+      "supported": 2,
+      "covered": 0,
+      "required": 0,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 2,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 1
+    },
+    "explicitRerecord": {
+      "tasks": 12,
+      "strict": 12,
+      "active": 10,
+      "correctActive": 10,
+      "proposed": 12,
+      "supported": 12,
+      "covered": 10,
+      "required": 12,
+      "criticalCases": 0,
+      "oldStateErrorCases": 0,
+      "pendingTasks": 0,
+      "clarificationTasks": 0,
+      "forgottenTasks": 0,
+      "nonEmptyNewActiveTasks": 10
+    }
+  },
+  "badActive": [
+    {
+      "taskId": "negation-1-3:deepseek-baseline:1",
+      "caseId": "negation-1-3",
+      "candidateId": "deepseek-baseline",
+      "content": "SQLite 导致故障的原因尚未查明，不能将“SQLite导致故障”记为事实。",
+      "reason": "把 SQLite 导致故障写成预设，来源明确说该因果不能当事实。"
+    },
+    {
+      "taskId": "negation-1-3:qwen-27b:1",
+      "caseId": "negation-1-3",
+      "candidateId": "qwen-27b",
+      "content": "SQLite导致故障的原因尚未查明，不能将其记为事实。",
+      "reason": "把SQLite导致故障作为前提，原文要求不认定该因果。"
+    },
+    {
+      "taskId": "reference-1-4:deepseek-baseline:1",
+      "caseId": "reference-1-4",
+      "candidateId": "deepseek-baseline",
+      "content": "用户表示要先修改刚提到的内容，但具体修改哪个对象尚未确认。",
+      "reason": "只提刚提到的内容，未解析具体对象，不能独立作为持久记忆。"
+    },
+    {
+      "taskId": "fresh-v4-6:qwen-flash:1",
+      "caseId": "fresh-v4-6",
+      "candidateId": "qwen-flash",
+      "content": "用户指出关于“视频归档目录为 vault-a”的指令来自别人的演示，并非用户本人的删除请求。",
+      "reason": "仅说明本次引用不是删除请求，不是新的长期项目事实或规则。"
+    },
+    {
+      "taskId": "fresh-v5-11:qwen-flash:1",
+      "caseId": "fresh-v5-11",
+      "candidateId": "qwen-flash",
+      "content": "用户尚未决定是关闭自动重试还是断点续传，目前先暂时关闭该功能。",
+      "reason": "来源仅提出对象不明的关闭要求，未确认已暂时关闭；不能将未决选择写成正在执行的状态。"
+    },
+    {
+      "taskId": "fresh-v5-11:deepseek-baseline:1",
+      "caseId": "fresh-v5-11",
+      "candidateId": "deepseek-baseline",
+      "content": "用户计划关闭某个功能，但尚未决定是关闭自动重试还是断点续传，具体选择仍待定。",
+      "reason": "对象尚未确定且保留两个候选，只能待确认。"
+    },
+    {
+      "taskId": "negation-1-3:qwen-flash:2",
+      "caseId": "negation-1-3",
+      "candidateId": "qwen-flash",
+      "content": "尚未查明“SQLite导致故障”的原因，因此不能将“SQLite导致故障”记为事实。",
+      "reason": "前半句把 SQLite 导致故障作为预设，后半句又否认其可确认为事实；没有忠实保持原因未明的表述。"
+    },
+    {
+      "taskId": "negation-1-3:deepseek-baseline:2",
+      "caseId": "negation-1-3",
+      "candidateId": "deepseek-baseline",
+      "content": "SQLite 导致故障的原因尚未查明，不能将“SQLite导致故障”记为事实。",
+      "reason": "把 SQLite 导致故障写成预设，来源明确说该因果不能当事实。"
+    },
+    {
+      "taskId": "negation-1-3:qwen-27b:2",
+      "caseId": "negation-1-3",
+      "candidateId": "qwen-27b",
+      "content": "SQLite导致故障的原因尚未查明，不能将其记为事实。",
+      "reason": "把SQLite导致故障作为前提，原文要求不认定该因果。"
+    },
+    {
+      "taskId": "roles-1-4:qwen-27b:2",
+      "caseId": "roles-1-4",
+      "candidateId": "qwen-27b",
+      "content": "邮件索引已检查，但部署尚未被允许执行。",
+      "reason": "仅授权检查不等于检查已完成，正文添加已检查结论。"
+    },
+    {
+      "taskId": "reference-1-4:deepseek-baseline:2",
+      "caseId": "reference-1-4",
+      "candidateId": "deepseek-baseline",
+      "content": "用户表示要先修改刚提到的事项，但具体修改哪个对象尚未确认。",
+      "reason": "刚提到的事项没有解析为独立具体对象，不能脱离对话长期使用。"
+    },
+    {
+      "taskId": "noise-1-5:deepseek-baseline:2",
+      "caseId": "noise-1-5",
+      "candidateId": "deepseek-baseline",
+      "content": "用户确认需要长期保留的配置文件为 mail-index.json。",
+      "reason": "用户要求长期保留的是配置文件名这一确认结果，提议改写为配置文件本身需要长期保留，增加了文件保留要求。"
+    },
+    {
+      "taskId": "holdout-roles-2:qwen-flash:2",
+      "caseId": "holdout-roles-2",
+      "candidateId": "qwen-flash",
+      "content": "供应商的默认语言是英语，这是对方的偏好，不是用户的偏好。",
+      "reason": "第三方邮件引文没有用户授权形成有效记忆；不属于用户偏好。"
+    },
+    {
+      "taskId": "fresh-v4-4:qwen-flash:2",
+      "caseId": "fresh-v4-4",
+      "candidateId": "qwen-flash",
+      "content": "回归检查已通过，但现场验收未通过，导致发布仍未获批准。",
+      "reason": "原文并列说明验收未通过与发布未获批准，没有明确授权将两者改写成因果关系。"
+    },
+    {
+      "taskId": "fresh-v5-11:deepseek-baseline:2",
+      "caseId": "fresh-v5-11",
+      "candidateId": "deepseek-baseline",
+      "content": "用户计划先关闭某个功能，但尚未决定是关闭自动重试还是断点续传。",
+      "reason": "关闭对象尚未决定，只能保存待确认计划。"
+    },
+    {
+      "taskId": "fresh-v5-11:qwen-flash:2",
+      "caseId": "fresh-v5-11",
+      "candidateId": "qwen-flash",
+      "content": "用户决定暂时关闭某个功能，但尚未确定是关闭自动重试还是断点续传。",
+      "reason": "保留未确定关闭哪个的限定，但不能激活为已确认计划。"
+    }
+  ],
+  "failures": [
+    {
+      "taskId": "completion-1-5:qwen-27b:1",
+      "warning": "DSH 记忆阶段未完成：error",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "roles-1-4:qwen-flash:1",
+      "warning": "DSH 记忆阶段未完成：error",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "roles-1-4:qwen-27b:1",
+      "warning": "DSH 记忆阶段未完成：error",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "correction-1-2:qwen-flash:1",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "reference-1-2:deepseek-baseline:1",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "v3-actions-6:qwen-27b:1",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v4-12:qwen-flash:1",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-13:qwen-flash:1",
+      "warning": "操作简式包含未知字段",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "correction-1-2:qwen-flash:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "reference-1-2:deepseek-baseline:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "reference-1-5:qwen-flash:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "holdout-negation-2:qwen-27b:2",
+      "warning": "DSH 记忆阶段未完成：error",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "holdout-completion-1:deepseek-baseline:2",
+      "warning": "DSH 记忆阶段未完成：error",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": null
+        },
+        {
+          "phase": "verification",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "holdout-completion-3:qwen-flash:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "v3-actions-6:qwen-27b:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    },
+    {
+      "taskId": "fresh-v5-1:qwen-flash:2",
+      "warning": "v3 操作字段无效",
+      "phases": [
+        {
+          "phase": "extraction",
+          "failure": {
+            "code": "Error",
+            "status": null
+          }
+        }
+      ]
+    }
+  ],
+  "evidenceSha256": {
+    "plan.json": "11d054cdc8ff46332369ab65131cb14c0ad9f25392564b88a1587ca0a094701e",
+    "live/journal.jsonl": "5ca0bc15d2f9a8f1800b27d3249a3be703ed12587db9a1dc6e18f979fe6d4d3e",
+    "live/responses.jsonl": "b364d5db9b14a9633ff035d0c84526676cce10b292e3900a94dbef765b0649f6",
+    "live/completion.json": "6d68bf51edda717502223b77ca17323184d6ff49e5ef69c4c1c39fb4594cb19a",
+    "reviews.json": "b1a5cd54e91e6051e31415f648a3d55fb3d673331c340cb91ef3667a97da9cd9",
+    "review-pack.json": "1cb813946c3c63d8f19b675b05ff5375ad60b55d2fbb59cf529bb937c71a7134",
+    "scored.json": "837909db995d3eb9dbe900c931761a87a49d12a5fdec27ab7d6295ba7051b1f4",
+    "scoring-protocol.json": "496edaf4ebfba51d46b6d2dbd1840bdba653323f836fdd418ce6ac08a2994840",
+    "live/continuation-1.json": "29396c2b68e25d80bec7acb9e4826ff257bfa9acd11964c0d1df3371c78e93d3",
+    "live/continuation-2.json": "77f66e1cf484645c28de2bd773748c10628631f93b4d81e5341e956436de0d98",
+    "live/interruption-1.json": "419cfb21cef78b8f447aabe1ce91170fdb3f100ecf7708026379e61c7ec89269",
+    "live/interruption-2.json": "3f9ceeb4a6eed661d9953506f94dc76a116d8c250c341de02f9983f1884fd386"
+  },
+  "implementationSha256": {
+    "scripts/score-extraction-v5.mjs": "a58d93c6d91e67c0a6c508f3ef7a57f40d41259b57a870261d420816c73c5024",
+    "scripts/report-extraction-v5.mjs": "8d966e845ce685611a00a7eeea262e0f6e5d5e3ae95000838d89692b6e6572cf",
+    "scripts/continue-extraction-v5.mjs": "2dedfba6abec482c35d4ab9ddcdce476d523784616d38029133c0f4672af917d",
+    "scripts/continue-extraction-v5-2.mjs": "cdc09921915d0aa1e34102b11143d11cdb03f29d9ea67778087fbf2d4a8ba035",
+    "tests/logic-v5.test.mjs": "aa862c948cd5c25e87cd248b7ee405955b4ba66f1eb790d2026d1af9abbb9c08",
+    "tests/extraction-v5-live.test.mjs": "c5ba65ceb79343b9cbd1dc11b222d8894358e7fad4709e9a581731b47516e634",
+    ".cache/logic-v5/baseline.json": "86fd2416cdacfebd6e8f7cdb1aacf57d82e3b7fab43dc0032b785c82ea6644df",
+    ".cache/logic-v5/regression.txt": "e31524bf988c5b747b0599bd471188e61769b44e14ee94eb514726c835889a0f"
+  }
+}

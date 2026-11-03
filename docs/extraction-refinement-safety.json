@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-03",
+  "phase": "source-fix-and-offline-verification",
+  "externalModelCalls": 0,
+  "liveDeploymentChanged": false,
+  "dailyConfigurationLoaded": false,
+  "schemaUnchanged": true,
+  "firstRoundEvidenceUnchanged": true,
+  "automaticRegression": {
+    "passed": 92,
+    "failed": 0,
+    "skipped": 0
+  },
+  "syntaxCheckPassed": true,
+  "buildPassed": true,
+  "ui": {
+    "replacementConfirmed": true,
+    "globalConfirmed": true,
+    "staleRejected": true,
+    "screenshots": 6,
+    "errors": [],
+    "syntheticOnly": true,
+    "externalModelCalls": 0,
+    "dailyProfileLoaded": false
+  },
+  "baselineReplay": {
+    "mode": "historical-answers-replay-not-new-model-evaluation",
+    "originalManifestId": "fd59240a612d52a9cadf5cc51d93da8592eb3da4c283ea192f879e64c1b4ccbe",
+    "records": 1280,
+    "externalModelCalls": 0,
+    "updatedPromptWasSent": false,
+    "semanticQualityRescored": false,
+    "candidates": [
+      {
+        "id": "qwen-flash",
+        "model": "qwen3.7-flash-2026-07-15",
+        "tasks": 320,
+        "parsedBefore": 181,
+        "parsedAfter": 314,
+        "before": {
+          "overwrites": 1,
+          "globalLeaks": 0,
+          "forgottenRevival": 0
+        },
+        "after": {
+          "overwrites": 0,
+          "globalLeaks": 0,
+          "forgottenRevival": 0
+        }
+      },
+      {
+        "id": "qwen-moe",
+        "model": "qwen3.5-35b-a3b",
+        "tasks": 320,
+        "parsedBefore": 206,
+        "parsedAfter": 311,
+        "before": {
+          "overwrites": 6,
+          "globalLeaks": 11,
+          "forgottenRevival": 0
+        },
+        "after": {
+          "overwrites": 0,
+          "globalLeaks": 0,
+          "forgottenRevival": 0
+        }
+      },
+      {
+        "id": "qwen-27b",
+        "model": "qwen3.5-27b",
+        "tasks": 320,
+        "parsedBefore": 246,
+        "parsedAfter": 316,
+        "before": {
+          "overwrites": 0,
+          "globalLeaks": 6,
+          "forgottenRevival": 0
+        },
+        "after": {
+          "overwrites": 0,
+          "globalLeaks": 0,
+          "forgottenRevival": 0
+        }
+      },
+      {
+        "id": "deepseek-baseline",
+        "model": "deepseek-flash",
+        "tasks": 320,
+        "parsedBefore": 316,
+        "parsedAfter": 316,
+        "before": {
+          "overwrites": 0,
+          "globalLeaks": 11,
+          "forgottenRevival": 0
+        },
+        "after": {
+          "overwrites": 0,
+          "globalLeaks": 0,
+          "forgottenRevival": 0
+        }
+      }
+    ]
+  },
+  "v2": {
+    "manifestId": "e89ac44e70147cbade4b2977952ea73337f5c859a7cdd451fa6bf94ea6b8258f",
+    "datasetVersion": "zh-extraction-2",
+    "developmentCases": 160,
+    "holdoutCases": 32,
+    "tasks": 1152,
+    "candidates": [
+      {
+        "model": "qwen3.7-flash-2026-07-15",
+        "status": "NOT_RUN"
+      },
+      {
+        "model": "qwen3.5-27b",
+        "status": "NOT_RUN"
+      },
+      {
+        "model": "deepseek-flash",
+        "status": "NOT_RUN"
+      }
+    ],
+    "modelQuality": "NOT_MEASURED",
+    "humanSecondReview": false
+  },
+  "artifactSha256": {
+    "src/extraction.mjs": "1cbda6722c620c67daec5b257fbf8f4d8b955de6092f406aaa2460c03bb9473d",
+    "src/service.mjs": "c60593f0386781d34b45a2f884e4f9ac21165d624a7f5f959467722d2490d2f0",
+    "src/store.mjs": "d497c3f5e81e341e200637089e64b714ce80d0e4e7dfbc7e0c85a77ec6aad6be",
+    "ui/plugin.jsx": "072a641970829c7c114b960d143903f35190cfeef60dc36a69980b642c45a024",
+    "dist/client.js": "bbcb608515779fa43645286b668286bfc195bbf8c779b014e7a8e13fff6932d0",
+    "tests/fixtures/extraction-cases-v2.mjs": "81118f71d96ccaa7bdf9a4d4d68724f47a6af6fbef07de9016101062e69e5339",
+    "scripts/extraction-evaluation.mjs": "448b808077bcd6d3c3e5e3885e230a6fba693f54028c2a9be8adce79bcb722fc",
+    ".cache/extraction-evaluation/v2/baseline-replay/report.json": "6ffc9427fa0511285501f254fd29f482f557332f2d244bb5be09b501871c32d2",
+    ".cache/extraction-evaluation/v2/prepare/suite.json": "1ae85ea14476958971b34f85048709bcdac104fd8bf8ac4692e0a7e059ccac48",
+    ".cache/candidates-ui/verification.json": "97fc065e3ab85e10fcc8555ad45a594c607b337e7ea9b0e0669747410bb82ff8"
+  }
+}

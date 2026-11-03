@@ -1,0 +1,615 @@
+{
+  "mode": "screening-only-not-full-acceptance",
+  "date": "2026-11-03",
+  "originalManifestId": "e89ac44e70147cbade4b2977952ea73337f5c859a7cdd451fa6bf94ea6b8258f",
+  "pilotId": "fe143e3f42acdd849f3265d0d13052e496cbd21ff306137c56aa3754fb78a361",
+  "planned": 240,
+  "received": 240,
+  "reviewed": 240,
+  "cases": 40,
+  "repeats": 2,
+  "candidateCount": 3,
+  "holdoutCalls": 0,
+  "fullSuitePlanned": 1152,
+  "fullSuiteReceived": 240,
+  "thresholds": {
+    "precision": 0.98,
+    "memoryPrecision": 0.98,
+    "recall": 0.9,
+    "firstStructure": 0.99
+  },
+  "reviewer": "Codex independent semantic review; no candidate self-grading and no human second review",
+  "decision": "STOP_AFTER_SCREENING_NO_CANDIDATE",
+  "passingModels": [],
+  "recommendation": null,
+  "actualCostCny": null,
+  "referenceCostCny": 0.1780744,
+  "budgetAccountedCny": 0.35614880000000015,
+  "budgetLimitCny": 3,
+  "cumulativeAccountedCny": 2.015691999999998,
+  "cumulativeCeilingCny": 10,
+  "dailyConfigurationUnchanged": true,
+  "started": "2026-11-02T19:13:20.240Z",
+  "finished": "2026-11-02T19:14:50.230Z",
+  "fullAcceptance": false,
+  "continuePaidCalls": false,
+  "liveDeploymentChanged": false,
+  "dailyModelChanged": false,
+  "realConversationsRead": false,
+  "syntheticOnly": true,
+  "humanSecondReview": false,
+  "exactOutputGroups": 121,
+  "candidates": [
+    {
+      "id": "qwen-flash",
+      "model": "qwen3.7-flash-2026-07-15",
+      "planned": 80,
+      "received": 80,
+      "reviewed": 80,
+      "status": "SCREEN_FAIL",
+      "precision": 0.873015873015873,
+      "recall": 0.9210526315789473,
+      "memoryPrecision": 0.5873015873015873,
+      "memoryRecall": 0.7105263157894737,
+      "omissions": 6,
+      "firstStructure": 1,
+      "canonicalStructure": 1,
+      "compatibleEmpty": 0,
+      "failures": {
+        "transport": 0,
+        "format": 0,
+        "fields": 0
+      },
+      "errors": {
+        "unsupported": 6,
+        "conditions": 8,
+        "retention": 5,
+        "kind": 8,
+        "scope": 0,
+        "status": 10,
+        "target": 1,
+        "evidence": 4
+      },
+      "critical": {
+        "incorrectOverwrites": 0,
+        "crossProjectLeaks": 0,
+        "forgottenRevival": 0
+      },
+      "proposalMisses": 0,
+      "parametersVerified": true,
+      "repeatComparison": {
+        "pairs": 40,
+        "differentText": 20,
+        "reviewedPairs": 40,
+        "differentQuality": 9
+      },
+      "latencyP50Ms": 1214,
+      "latencyP95Ms": 1927,
+      "usage": {
+        "missing": 0,
+        "inputTokens": 26916,
+        "outputTokens": 7273,
+        "cacheReadTokens": 15616,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": null
+      },
+      "referenceCostCny": 0.0143248,
+      "actualCostCny": null,
+      "actualCostPerCorrectMemoryCny": null,
+      "category": {
+        "negation": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 12,
+          "correct": 8,
+          "expected": 16,
+          "covered": 12,
+          "semanticCorrect": 12,
+          "semanticCovered": 16
+        },
+        "completion": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 9,
+          "correct": 8,
+          "expected": 24,
+          "covered": 21,
+          "semanticCorrect": 9,
+          "semanticCovered": 22
+        },
+        "roles": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 7,
+          "correct": 2,
+          "expected": 6,
+          "covered": 2,
+          "semanticCorrect": 5,
+          "semanticCovered": 4
+        },
+        "scope": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 9,
+          "correct": 5,
+          "expected": 8,
+          "covered": 5,
+          "semanticCorrect": 8,
+          "semanticCovered": 8
+        },
+        "correction": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 8,
+          "correct": 0,
+          "expected": 6,
+          "covered": 0,
+          "semanticCorrect": 7,
+          "semanticCovered": 6
+        },
+        "reference": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 12,
+          "correct": 10,
+          "expected": 12,
+          "covered": 10,
+          "semanticCorrect": 10,
+          "semanticCovered": 10
+        },
+        "forgetting": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 4,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 2,
+          "semanticCovered": 2
+        },
+        "noise": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 2,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 2,
+          "semanticCovered": 2
+        }
+      },
+      "splits": {
+        "development": {
+          "received": 80,
+          "reviewed": 80,
+          "predicted": 63,
+          "correct": 37,
+          "expected": 76,
+          "covered": 54,
+          "semanticCorrect": 55,
+          "semanticCovered": 70
+        },
+        "holdout": {
+          "received": 0,
+          "reviewed": 0,
+          "predicted": 0,
+          "correct": 0,
+          "expected": 0,
+          "covered": 0,
+          "semanticCorrect": 0,
+          "semanticCovered": 0
+        }
+      },
+      "fullAcceptance": false,
+      "sourceSupported": 57,
+      "predicted": 63,
+      "semanticCorrect": 55,
+      "forgettingIntentContradictions": 2,
+      "transportRequests": 80,
+      "totalInputTokens": 42532,
+      "conditionalOfficialRate": {
+        "input": 0.2,
+        "cacheRead": 0.04,
+        "output": 0.8,
+        "context": "Beijing standard online; observed implicit cache"
+      },
+      "conditionalReferenceCostCny": 0.011826240000000002,
+      "conditionalReferenceIsActualBill": false
+    },
+    {
+      "id": "qwen-27b",
+      "model": "qwen3.5-27b",
+      "planned": 80,
+      "received": 80,
+      "reviewed": 80,
+      "status": "SCREEN_FAIL",
+      "precision": 0.9310344827586207,
+      "recall": 0.9473684210526315,
+      "memoryPrecision": 0.7586206896551724,
+      "memoryRecall": 0.8157894736842105,
+      "omissions": 4,
+      "firstStructure": 1,
+      "canonicalStructure": 1,
+      "compatibleEmpty": 0,
+      "failures": {
+        "transport": 0,
+        "format": 0,
+        "fields": 0
+      },
+      "errors": {
+        "unsupported": 4,
+        "conditions": 4,
+        "retention": 2,
+        "kind": 2,
+        "scope": 0,
+        "status": 6,
+        "target": 0,
+        "evidence": 6
+      },
+      "critical": {
+        "incorrectOverwrites": 0,
+        "crossProjectLeaks": 0,
+        "forgottenRevival": 0
+      },
+      "proposalMisses": 0,
+      "parametersVerified": true,
+      "repeatComparison": {
+        "pairs": 40,
+        "differentText": 5,
+        "reviewedPairs": 40,
+        "differentQuality": 0
+      },
+      "latencyP50Ms": 1142,
+      "latencyP95Ms": 3366,
+      "usage": {
+        "missing": 0,
+        "inputTokens": 42532,
+        "outputTokens": 3703,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": null
+      },
+      "referenceCostCny": 0.04329359999999998,
+      "actualCostCny": null,
+      "actualCostPerCorrectMemoryCny": null,
+      "category": {
+        "negation": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 10,
+          "correct": 8,
+          "expected": 16,
+          "covered": 12,
+          "semanticCorrect": 10,
+          "semanticCovered": 14
+        },
+        "completion": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 10,
+          "correct": 8,
+          "expected": 24,
+          "covered": 22,
+          "semanticCorrect": 10,
+          "semanticCovered": 24
+        },
+        "roles": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 6,
+          "correct": 2,
+          "expected": 6,
+          "covered": 2,
+          "semanticCorrect": 4,
+          "semanticCovered": 4
+        },
+        "scope": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 8,
+          "correct": 8,
+          "expected": 8,
+          "covered": 8,
+          "semanticCorrect": 8,
+          "semanticCovered": 8
+        },
+        "correction": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 6,
+          "correct": 4,
+          "expected": 6,
+          "covered": 4,
+          "semanticCorrect": 6,
+          "semanticCovered": 6
+        },
+        "reference": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 12,
+          "correct": 10,
+          "expected": 12,
+          "covered": 10,
+          "semanticCorrect": 12,
+          "semanticCovered": 12
+        },
+        "forgetting": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 4,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 2,
+          "semanticCovered": 2
+        },
+        "noise": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 2,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 2,
+          "semanticCovered": 2
+        }
+      },
+      "splits": {
+        "development": {
+          "received": 80,
+          "reviewed": 80,
+          "predicted": 58,
+          "correct": 44,
+          "expected": 76,
+          "covered": 62,
+          "semanticCorrect": 54,
+          "semanticCovered": 72
+        },
+        "holdout": {
+          "received": 0,
+          "reviewed": 0,
+          "predicted": 0,
+          "correct": 0,
+          "expected": 0,
+          "covered": 0,
+          "semanticCorrect": 0,
+          "semanticCovered": 0
+        }
+      },
+      "fullAcceptance": false,
+      "sourceSupported": 54,
+      "predicted": 58,
+      "semanticCorrect": 54,
+      "forgettingIntentContradictions": 2,
+      "transportRequests": 80,
+      "totalInputTokens": 42532,
+      "conditionalOfficialRate": {
+        "input": 0.6,
+        "cacheRead": null,
+        "output": 4.8,
+        "context": "Beijing standard online; no cache hits reported"
+      },
+      "conditionalReferenceCostCny": 0.0432936,
+      "conditionalReferenceIsActualBill": false
+    },
+    {
+      "id": "deepseek-baseline",
+      "model": "deepseek-flash",
+      "planned": 80,
+      "received": 80,
+      "reviewed": 80,
+      "status": "SCREEN_FAIL",
+      "precision": 0.96875,
+      "recall": 1,
+      "memoryPrecision": 0.765625,
+      "memoryRecall": 0.8947368421052632,
+      "omissions": 0,
+      "firstStructure": 1,
+      "canonicalStructure": 1,
+      "compatibleEmpty": 0,
+      "failures": {
+        "transport": 0,
+        "format": 0,
+        "fields": 0
+      },
+      "errors": {
+        "unsupported": 2,
+        "conditions": 2,
+        "retention": 9,
+        "kind": 4,
+        "scope": 0,
+        "status": 0,
+        "target": 0,
+        "evidence": 2
+      },
+      "critical": {
+        "incorrectOverwrites": 0,
+        "crossProjectLeaks": 0,
+        "forgottenRevival": 0
+      },
+      "proposalMisses": 0,
+      "parametersVerified": true,
+      "repeatComparison": {
+        "pairs": 40,
+        "differentText": 11,
+        "reviewedPairs": 40,
+        "differentQuality": 2
+      },
+      "latencyP50Ms": 759,
+      "latencyP95Ms": 1174,
+      "usage": {
+        "missing": 0,
+        "inputTokens": 13864,
+        "outputTokens": 4461,
+        "cacheReadTokens": 28520,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": null
+      },
+      "referenceCostCny": 0.12045600000000001,
+      "actualCostCny": null,
+      "actualCostPerCorrectMemoryCny": null,
+      "category": {
+        "negation": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 11,
+          "correct": 11,
+          "expected": 16,
+          "covered": 16,
+          "semanticCorrect": 11,
+          "semanticCovered": 16
+        },
+        "completion": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 10,
+          "correct": 10,
+          "expected": 24,
+          "covered": 24,
+          "semanticCorrect": 10,
+          "semanticCovered": 24
+        },
+        "roles": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 4,
+          "correct": 2,
+          "expected": 6,
+          "covered": 2,
+          "semanticCorrect": 4,
+          "semanticCovered": 6
+        },
+        "scope": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 10,
+          "correct": 6,
+          "expected": 8,
+          "covered": 6,
+          "semanticCorrect": 10,
+          "semanticCovered": 8
+        },
+        "correction": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 6,
+          "correct": 6,
+          "expected": 6,
+          "covered": 6,
+          "semanticCorrect": 6,
+          "semanticCovered": 6
+        },
+        "reference": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 14,
+          "correct": 10,
+          "expected": 12,
+          "covered": 10,
+          "semanticCorrect": 14,
+          "semanticCovered": 12
+        },
+        "forgetting": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 7,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 5,
+          "semanticCovered": 2
+        },
+        "noise": {
+          "received": 10,
+          "reviewed": 10,
+          "predicted": 2,
+          "correct": 2,
+          "expected": 2,
+          "covered": 2,
+          "semanticCorrect": 2,
+          "semanticCovered": 2
+        }
+      },
+      "splits": {
+        "development": {
+          "received": 80,
+          "reviewed": 80,
+          "predicted": 64,
+          "correct": 49,
+          "expected": 76,
+          "covered": 68,
+          "semanticCorrect": 62,
+          "semanticCovered": 76
+        },
+        "holdout": {
+          "received": 0,
+          "reviewed": 0,
+          "predicted": 0,
+          "correct": 0,
+          "expected": 0,
+          "covered": 0,
+          "semanticCorrect": 0,
+          "semanticCovered": 0
+        }
+      },
+      "fullAcceptance": false,
+      "sourceSupported": 62,
+      "predicted": 64,
+      "semanticCorrect": 62,
+      "forgettingIntentContradictions": 2,
+      "transportRequests": 80,
+      "totalInputTokens": 42384,
+      "conditionalOfficialRate": {
+        "input": 1,
+        "cacheRead": 0.02,
+        "output": 4,
+        "context": "Official API reference only; valley window and observed cache; account invoice unknown"
+      },
+      "conditionalReferenceCostCny": 0.0322784,
+      "conditionalReferenceIsActualBill": false
+    }
+  ],
+  "conditionalReferenceTotalCny": 0.08739824,
+  "conditionalReferenceIsActualBill": false,
+  "sources": {
+    "pricingDate": "2026-11-03",
+    "qwen": "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "qwenCache": "https://help.aliyun.com/zh/model-studio/context-cache",
+    "deepseek": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+  },
+  "limitations": [
+    "40 development cases per model repeated twice, not independent random samples",
+    "No holdout model calls and no full-suite acceptance",
+    "Codex review without human second review",
+    "Frozen gold retention and split-evidence disputes retained separately",
+    "Original forgotten-row revival counter does not capture contradictory new paraphrases",
+    "Reference fees are not verified account charges"
+  ],
+  "verification": {
+    "regression": {
+      "passed": 93,
+      "failed": 0,
+      "skipped": 0
+    },
+    "syntaxCheckPassed": true,
+    "uniqueTaskIds": true,
+    "oneAttemptEach": true,
+    "frozenSuiteVerified": true,
+    "firstRoundEvidenceUnchanged": 5,
+    "sourcePhaseArtifactHashesUnchanged": 10
+  },
+  "artifactSha256": {
+    ".cache/extraction-evaluation/v2/prepare/suite.json": "1ae85ea14476958971b34f85048709bcdac104fd8bf8ac4692e0a7e059ccac48",
+    ".cache/extraction-evaluation/v2/live/pilot-plan.json": "ee16e1690a7094331e81678545dbcedf5bbb38613c8b897f69dc9486ba1f405d",
+    ".cache/extraction-evaluation/v2/live/journal.jsonl": "db0b61e7c5d626aa2dac218bdc28c5c036276db5225db318491f5b52ede6f331",
+    ".cache/extraction-evaluation/v2/live/responses.jsonl": "54e3f13ed42f28df37166fc44dc90e777034efd6ff06e1311da3350c41473a6c",
+    ".cache/extraction-evaluation/v2/pilot-review/reviews.jsonl": "a2c0debf4061b93ec3df4b3cff400377271e36ef5675faa021bc9051a8243487",
+    ".cache/extraction-evaluation/v2/pilot-review/decisions.json": "0eb5a479245d2fafb8046362b6149775ba9ce6aa143fcf673050aec838547fcf",
+    ".cache/extraction-evaluation/v2/pilot-review/groups.json": "a2fa207c7953d418548210ef1aa16a271939298b0b130bea0fef41b2f1295dd6",
+    ".cache/extraction-evaluation/v2/pilot-review/results.jsonl": "0528e37fefa8f3b81016f156e865581b14b60720e85d1508aa3ad04d4e0db6e4",
+    ".cache/extraction-evaluation/v2/pilot-review/screening-report.json": "6d18242c3882992ecb677ea7d0d47c078adcde53804b61fc3934cc242d153b70",
+    "scripts/run-extraction-evaluation.mjs": "222628f8540a2d06dc8dcaa0aade9b7f1f64f91f798531052e0b1e3b74845562",
+    "tests/extraction-live.test.mjs": "9a7e9854278ec7bd7bcfd9348cd01e9925be0d7cbaf7f2d2e17b8ce0bf19feaf",
+    "docs/extraction-model-pilot-results.md": "e77c0e5c2af2fdc0b3054d5baa845c5fae31f3cfc5484e42208a35f9a98af613"
+  }
+}

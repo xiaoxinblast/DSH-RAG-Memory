@@ -4,6 +4,17 @@ import { resolve, win32 } from "node:path";
 export const KINDS = ["preference", "rule", "decision", "fact", "progress"];
 export const hash = (text) => createHash("sha256").update(text).digest("hex");
 export const normalize = (text) => String(text).normalize("NFKC").toLowerCase().replace(/\s+/g, " ").trim();
+export function validityTime(value, endOfDay = false) {
+  if (value == null) return null;
+  if (typeof value === "number") return Number.isFinite(value) ? value : NaN;
+  if (typeof value !== "string") return NaN;
+  const date = value.slice(0, 10), day = new Date(`${date}T00:00:00Z`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(+day) || day.toISOString().slice(0, 10) !== date) return NaN;
+  if (value.length === 10) {
+    return Date.parse(`${value}T${endOfDay ? "23:59:59.999" : "00:00:00.000"}+08:00`);
+  }
+  return /T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) ? Date.parse(value) : NaN;
+}
 export function projectId(workspace) {
   if (typeof workspace !== "string" || !workspace.trim()) throw new Error("缺少工作区路径");
   const windows = /^[a-z]:[\\/]|^\\\\/i.test(workspace);
@@ -24,8 +35,11 @@ export function terms(text) {
   return [...new Set(words)].filter((x) => x.length > 1);
 }
 export function lexicalScore(query, content) {
-  const q = terms(query), text = normalize(content), hits = q.filter((t) => text.includes(t));
-  return q.length ? hits.length / q.length : 0;
+  return scoreTerms(terms(query), normalize(content));
+}
+export function scoreTerms(queryTerms, normalizedText) {
+  const hits = queryTerms.filter((t) => normalizedText.includes(t));
+  return queryTerms.length ? hits.length / queryTerms.length : 0;
 }
 export function cosine(a, b) {
   if (a.length !== b.length || !a.length) return 0;
