@@ -10,7 +10,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url))), out = join(root, 
 const read = file => readFileSync(join(root, file));
 const baseline = JSON.parse(read("docs/final-v7-baseline.json")), pkg = JSON.parse(read("package.json"));
 // Explicit feature changes; all other frozen sources and historical evidence remain checked.
-const maintenanceChanges = new Set(["src/extraction.mjs", "src/operations.mjs", "src/policy.mjs", "src/service.mjs", "src/store.mjs", "dsh/index.mjs", "dsh/integration.mjs", "tests/integration.test.mjs"]);
+const maintenanceChanges = new Set(["src/extraction.mjs", "src/operations.mjs", "src/policy.mjs", "src/service.mjs", "src/store.mjs", "dsh/index.mjs", "dsh/integration.mjs", "tests/integration.test.mjs", "tests/package.test.mjs"]);
 function unchanged() {
   for (const [file, digest] of Object.entries(baseline.preserved)) if (!maintenanceChanges.has(file)) assert.equal(hash(read(file)), digest, `未涉及本次功能的冻结源码或历史证据变化: ${file}`);
 }

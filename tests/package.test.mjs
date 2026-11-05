@@ -19,6 +19,12 @@ test("改名后的包可由 DSH 读取中英文显示名称、图标及入口", 
   assert.equal(require.resolve(`${manifest.name}/client`), require.resolve("./dist/client.js"));
 });
 
+test("安装元数据声明支持的 DSH 宿主与 SDK peer 版本一致", () => {
+  assert.equal(manifest.engines.dsh, "0.2.2-rc.1");
+  assert.equal(manifest.engines.node, ">=24.9");
+  for (const version of Object.values(manifest.peerDependencies)) assert.equal(version, manifest.engines.dsh);
+});
+
 test("改名后的浏览器构建与宿主使用同一包标识及远程协议，侧栏显示仓库名称", async () => {
   let client, moduleId, mounted; const slots = [];
   runInNewContext(readFileSync(new URL("../dist/client.js", import.meta.url), "utf8"), { window: { __ModuleLoader__: { load(entry) {

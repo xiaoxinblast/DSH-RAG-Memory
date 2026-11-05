@@ -41,7 +41,7 @@ export function App({ call, visible = true }) {
   return <div className="dsh-memory">
     <style>{css}</style>
     <header className="mm-header"><div className="mm-brand"><span className="mm-logo"><Icon size={26} /></span><div><h1>DSH-RAG-Memory</h1><p>让每一次对话，都接得上。</p></div></div><div className="mm-badges"><span>本地保存</span><span className={state?.cloudReady ? "on" : ""}>{state?.cloudReady ? "Qwen 已配置" : "本地模式"}</span></div></header>
-    <div className="mm-shell"><nav className="mm-nav" aria-label="记忆导航">{[["library", "记忆库", activeCount], ["queue", "处理队列", state?.jobs.length ?? 0], ["usage", "用量与费用"], ["settings", "连接设置"]].map(([id, label, count]) => <button key={id} aria-current={page === id ? "page" : undefined} onClick={() => setPage(id)}>{label}{count !== undefined && <small>{count}</small>}</button>)}<div className="mm-nav-foot"><Icon size={17} /><span>DSH-RAG-Memory <b>0.1.5</b></span><p>个人偏好共享<br />项目上下文各自保存</p></div></nav>
+    <div className="mm-shell"><nav className="mm-nav" aria-label="记忆导航">{[["library", "记忆库", activeCount], ["queue", "处理队列", state?.jobs.length ?? 0], ["usage", "用量与费用"], ["settings", "连接设置"]].map(([id, label, count]) => <button key={id} aria-current={page === id ? "page" : undefined} onClick={() => setPage(id)}>{label}{count !== undefined && <small>{count}</small>}</button>)}<div className="mm-nav-foot"><Icon size={17} /><span>DSH-RAG-Memory <b>0.1.6</b></span><p>个人偏好共享<br />项目上下文各自保存</p></div></nav>
     <main className="mm-main" aria-busy={busy || !!settingsBusy}>
       {error && !detailOpen && <div className="mm-alert error" role="alert">{error}<button aria-label="关闭错误" onClick={() => setError("")}>×</button></div>}
       {notice && !detailOpen && <div className="mm-alert" role="status">{notice}</div>}
