@@ -22,9 +22,10 @@ assert.ok(read("dsh/index.mjs").toString().includes(`DSH-RAG-Memory ${pkg.versio
 assert.equal(DEFAULTS.extractionRoute, null, "发布不能自动改写路由");
 mkdirSync(out, { recursive: true });
 const networkLog = join(out, "network.jsonl"); writeFileSync(networkLog, "");
+const sdkLoader = pathToFileURL(join(root, "scripts/use-dsh-sdk.mjs")).href;
 const guard = pathToFileURL(join(root, "tests/helpers/offline.mjs")).href;
 function run(name, args) {
-  const result = spawnSync(process.execPath, ["--import", guard, ...args], { cwd: root, encoding: "utf8", env: { ...process.env, DSH_KERNEL_NETWORK_LOG: networkLog }, maxBuffer: 16 * 1024 * 1024, timeout: 120000 });
+  const result = spawnSync(process.execPath, ["--import", sdkLoader, "--import", guard, ...args], { cwd: root, encoding: "utf8", env: { ...process.env, DSH_KERNEL_NETWORK_LOG: networkLog }, maxBuffer: 16 * 1024 * 1024, timeout: 120000 });
   const output = (result.stdout ?? "") + (result.stderr ?? "");
   writeFileSync(join(out, `${name}.log`), output);
   const value = key => Number(output.match(new RegExp(`^# ${key} (\\d+)`, "m"))?.[1] ?? 0);

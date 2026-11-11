@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { runInNewContext } from "node:vm";
-import { readPluginMeta } from "@deepseek-ai/dsh-app-boot";
+import { readPluginMeta, evaluatePluginCompatibility, getDshRuntimeVersion } from "@deepseek-ai/dsh-app-boot";
 import { TYPERT } from "../dsh/bridge.mjs";
 
 const manifestUrl = new URL("../package.json", import.meta.url), require = createRequire(manifestUrl);
@@ -20,9 +20,21 @@ test("改名后的包可由 DSH 读取中英文显示名称、图标及入口", 
 });
 
 test("安装元数据声明支持的 DSH 宿主与 SDK peer 版本一致", () => {
-  assert.equal(manifest.engines.dsh, "0.2.2-rc.1");
+  assert.equal(manifest.engines.dsh, "0.2.2-rc.2");
   assert.equal(manifest.engines.node, ">=24.9");
   for (const version of Object.values(manifest.peerDependencies)) assert.equal(version, manifest.engines.dsh);
+});
+
+test("真实 DSH SDK 与目标宿主一致，兼容检查接受新版且拒绝旧版声明", () => {
+  assert.equal(getDshRuntimeVersion(), manifest.engines.dsh, "必须用目标 DSH SDK 测试；可设置 DSH_SDK_MODULES 指向它的 node_modules");
+  for (const [name, version] of Object.entries(manifest.peerDependencies)) {
+    // Use the same ESM resolution as runtime imports; createRequire().resolve()
+    // can bypass registerHooks and inspect an unrelated local SDK junction.
+    assert.equal(JSON.parse(readFileSync(new URL(import.meta.resolve(name + "/package.json")), "utf8")).version, version, name);
+  }
+  assert.equal(evaluatePluginCompatibility(manifest), undefined);
+  const previous = { ...manifest, engines: { ...manifest.engines, dsh: "0.2.2-rc.1" } };
+  assert.ok(evaluatePluginCompatibility(previous), "不能绕过宿主版本检查");
 });
 
 test("改名后的浏览器构建与宿主使用同一包标识及远程协议，侧栏显示仓库名称", async () => {

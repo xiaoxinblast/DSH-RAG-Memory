@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-包版本 `0.1.6`，声明适配 DSH `0.2.2-rc.1`、Node.js `>=24.9`。选定路线为 **v7 写入内核＋DeepSeek Flash**，提炼与复核统一使用协议 `version=7`，一个纯裁决入口决定最终结果。当前源码在该基线上增加对话内自动维护；原文检索与轻量索引实验不接入。包版本、协议版本和历史评估轮次分别管理，不把历史 `kernel-v7` 标签当作协议版本。
+包版本 `0.1.7`，声明适配 DSH `0.2.2-rc.2`、Node.js `>=24.9`。选定路线为 **v7 写入内核＋DeepSeek Flash**，提炼与复核统一使用协议 `version=7`，一个纯裁决入口决定最终结果。当前源码在该基线上增加对话内自动维护；原文检索与轻量索引实验不接入。包版本、协议版本和历史评估轮次分别管理，不把历史 `kernel-v7` 标签当作协议版本。
 
 选定方案是综合取舍，不代表模型已通过全部质量门槛。两阶段仍可能同时误判限定条件、临时指令或未知跨语言重述；来源引用与格式正确不等于语义正确。0.1.4 冻结基线使用 176 项测试及真实 DSH SDK 本机合成回环，结果保存在 `.cache/final-v7/`；当前新增对话维护回归，报告写入独立目录，不覆盖历史报告。历史选型与回退边界见 [v7 选型、运行与回退说明](docs/release-v7.md)。本次不新增付费测试，不处理真实聊天或升级日用环境。
 
@@ -67,13 +67,15 @@ npm run check
 npm run evaluate
 ```
 
-开发环境需要同版本的 DSH peer 包。可使用 DSH 源码/SDK的 `node_modules`；不要复制旧插件数据到测试目录。若复用已有开发依赖，设置 `DSH_DEV_MODULES` 为包含 `esbuild`、`@playwright/test`、`react` 和 `react-dom` 的 `node_modules` 绝对路径。
+开发环境需要与目标宿主一致的完整 DSH SDK（`0.2.2-rc.2`）。`npm test` 会检查宿主兼容性及实际加载的 peer 包版本，旧 SDK 会使验证失败。可设置 `DSH_SDK_MODULES` 为目标 SDK 的 `node_modules` 绝对路径；测试加载器统一解析 `@deepseek-ai/*`，无需修改本地 SDK 链接或日用 profile。直接运行测试或验证脚本时加上 `node --import ./scripts/use-dsh-sdk.mjs`。不要复制旧插件数据到测试目录。
+
+若复用已有开发依赖，设置 `DSH_DEV_MODULES` 为包含 `esbuild`、`@playwright/test`、`react` 和 `react-dom` 的 `node_modules` 绝对路径。例如先在 PowerShell 中设置 `$env:DSH_SDK_MODULES = 'D:\path\to\dsh-sdk\node_modules'` 和 `$env:DSH_DEV_MODULES = 'D:\path\to\dev\node_modules'`，再运行上述命令。
 
 `npm run test:ui` 使用无界面 Edge 渲染实际设置组件和内存数据库，验证独立保存、凭据名称校验、未保存配置提示、测试进行中及成功/失败反馈，并生成明暗主题和不同宽度的截图至 `.cache/settings-ui/`。它只使用合成凭据和模拟响应，不访问真实模型服务。
 
 `npm run test:library-ui` 使用 40 条合成记忆验证底部点击、网格与滚动位置保持、详情独立滚动、连续切换、纠正保存、Escape 关闭及焦点返回，并将不同宽度和明暗主题的截图保存至 `.cache/library-ui/`。它不读取真实记忆或调用模型服务。
 
-`npm test` 执行构建、源码检查及当前完整离线套件，外网防护只允许本机回环；当前报告写入 `.cache/conversation-maintenance/verification/`。历史基线及报告保留，不用历史 `verify-kernel.mjs` 重新生成已冻结证据。
+`npm test` 执行构建、源码检查及当前完整离线套件，外网防护只允许本机回环；当前报告写入 `.cache/conversation-maintenance/verification/`。其中真实 rc.2 宿主通过官方 boot/Loader 在 `.cache/rc2-host-*` 下启动和重启，验证批量会话事件、工具注册、远程服务、召回及持久化，凭据服务和会话内容均为合成数据。历史基线及报告保留，不用历史 `verify-kernel.mjs` 重新生成已冻结证据。
 
 `node scripts/verify-maintenance-ui.mjs` 使用实际 React 组件、宿主事件和合成两阶段回答，验证聊天回答直接生效与已取消候选的展示。1180/390 像素、明暗主题截图及报告保存在 `.cache/conversation-maintenance/ui/`；不读取真实聊天、浏览器资料或调用外部模型。
 
