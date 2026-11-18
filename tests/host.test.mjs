@@ -3,7 +3,8 @@ import assert from "node:assert/strict";
 import { existsSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { boot, getDshRuntimeVersion } from "@deepseek-ai/dsh-app-boot";
+import { boot, getDshRuntimeVersion, prepareProfileEntries } from "@deepseek-ai/dsh-app-boot";
+import { Context } from "@deepseek-ai/cordis";
 import { SystemPrompt } from "@deepseek-ai/dsh-system-prompt";
 import { ToolsService } from "@deepseek-ai/dsh-tools";
 import { TypertRegistry } from "@deepseek-ai/dsh-typert-registry";
@@ -19,7 +20,7 @@ class TestCredentials extends CredentialProvider {
 test("真实 DSH 宿主隔离启动、批量会话捕获、工具与远程注册及重启持久化", async t => {
   const cache = fileURLToPath(new URL("../.cache/", import.meta.url));
   mkdirSync(cache, { recursive: true });
-  const home = mkdtempSync(join(cache, "rc2-host-")), config = join(home, "cordis.json");
+  const home = mkdtempSync(join(cache, "sdk-host-")), config = join(home, "cordis.json");
   const oldHome = process.env.DSH_HOME, errors = [];
   process.env.DSH_HOME = home;
   writeFileSync(config, JSON.stringify([{ id: "memory", name: new URL("../dsh/index.mjs", import.meta.url).href }]));
@@ -72,4 +73,28 @@ test("真实 DSH 宿主隔离启动、批量会话捕获、工具与远程注册
       else process.env.DSH_HOME = oldHome;
     }
   }
+});
+
+test("真实宿主预检禁用旧 rc.2 声明，并接受当前插件且不创建兼容豁免", async () => {
+  const cache = fileURLToPath(new URL("../.cache/", import.meta.url));
+  mkdirSync(cache, { recursive: true });
+  const profile = mkdtempSync(join(cache, "compatibility-")), previous = join(profile, "previous");
+  mkdirSync(previous);
+  writeFileSync(join(previous, "package.json"), JSON.stringify({
+    name: "dsh-rag-memory", version: "0.1.7", engines: { dsh: "0.2.2-rc.2" }
+  }));
+  writeFileSync(join(previous, "index.mjs"), "export function apply() {}\n");
+  const ctx = new Context();
+  ctx.provide("profileContext", { dir: profile });
+  try {
+    const rows = [
+      { id: "current", name: new URL("../dsh/index.mjs", import.meta.url).href },
+      { id: "previous", name: join(previous, "index.mjs") }
+    ];
+    const prepared = prepareProfileEntries(ctx, rows, import.meta.url);
+    assert.equal(prepared[0].disabled, undefined);
+    assert.equal(prepared[1].disabled, true);
+    assert.equal(rows[1].disabled, undefined, "预检不得改写原配置");
+    assert.equal(existsSync(join(profile, "compatibility.json")), false);
+  } finally { await ctx.fiber.dispose(); }
 });
