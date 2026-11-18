@@ -75,13 +75,13 @@ test("真实 DSH 宿主隔离启动、批量会话捕获、工具与远程注册
   }
 });
 
-test("真实宿主预检禁用旧 rc.2 声明，并接受当前插件且不创建兼容豁免", async () => {
+test("真实宿主预检禁用范围外声明，并接受当前插件且不创建兼容豁免", async () => {
   const cache = fileURLToPath(new URL("../.cache/", import.meta.url));
   mkdirSync(cache, { recursive: true });
   const profile = mkdtempSync(join(cache, "compatibility-")), previous = join(profile, "previous");
   mkdirSync(previous);
   writeFileSync(join(previous, "package.json"), JSON.stringify({
-    name: "dsh-rag-memory", version: "0.1.7", engines: { dsh: "0.2.2-rc.2" }
+    name: "dsh-rag-memory", version: "0.1.7", engines: { dsh: "0.2.1-rc.5" }
   }));
   writeFileSync(join(previous, "index.mjs"), "export function apply() {}\n");
   const ctx = new Context();

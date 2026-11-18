@@ -15,5 +15,5 @@ export function apply(ctx) {
   registerIntegration(ctx, service);
   service.start();
   ctx.effect(() => () => service.close());
-  ctx.logger.info("DSH-RAG-Memory 0.1.8 已启用；只记录启用后到达的新对话片段");
+  ctx.logger.info("DSH-RAG-Memory 0.1.9 已启用；只记录启用后到达的新对话片段");
 }

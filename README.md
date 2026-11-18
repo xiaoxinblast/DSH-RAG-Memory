@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-包版本 `0.1.8`，声明适配 DSH `0.2.2-rc.3`、Node.js `>=24.9`。选定路线为 **v7 写入内核＋DeepSeek Flash**，提炼与复核统一使用协议 `version=7`，一个纯裁决入口决定最终结果。当前源码在该基线上增加对话内自动维护；原文检索与轻量索引实验不接入。包版本、协议版本和历史评估轮次分别管理，不把历史 `kernel-v7` 标签当作协议版本。
+包版本 `0.1.9`，DSH 宿主与 peers 声明范围为 `>=0.2.2-rc.2 <0.2.3-0`、Node.js `>=24.9`。选定路线为 **v7 写入内核＋DeepSeek Flash**，提炼与复核统一使用协议 `version=7`，一个纯裁决入口决定最终结果。当前源码在该基线上增加对话内自动维护；原文检索与轻量索引实验不接入。包版本、协议版本和历史评估轮次分别管理，不把历史 `kernel-v7` 标签当作协议版本。
 
 选定方案是综合取舍，不代表模型已通过全部质量门槛。两阶段仍可能同时误判限定条件、临时指令或未知跨语言重述；来源引用与格式正确不等于语义正确。0.1.4 冻结基线使用 176 项测试及真实 DSH SDK 本机合成回环，结果保存在 `.cache/final-v7/`；当前新增对话维护回归，报告写入独立目录，不覆盖历史报告。历史选型与回退边界见 [v7 选型、运行与回退说明](docs/release-v7.md)。本次不新增付费测试，不处理真实聊天或升级日用环境。
 
@@ -67,7 +67,7 @@ npm run check
 npm run evaluate
 ```
 
-开发环境需要与目标宿主一致的完整 DSH SDK（`0.2.2-rc.3`）。`npm test` 会检查宿主兼容性及实际加载的 peer 包版本，旧 SDK 会使验证失败。可设置 `DSH_SDK_MODULES` 为目标 SDK 的 `node_modules` 绝对路径；测试加载器统一解析 `@deepseek-ai/*`，无需修改本地 SDK 链接或日用 profile。直接运行测试或验证脚本时加上 `node --import ./scripts/use-dsh-sdk.mjs`。不要复制旧插件数据到测试目录。
+开发环境需要与目标宿主一致、位于声明范围内的完整 DSH SDK。`npm test` 会检查宿主兼容性及实际加载的 peer 包版本，旧 SDK 会使验证失败。可设置 `DSH_SDK_MODULES` 为目标 SDK 的 `node_modules` 绝对路径；测试加载器统一解析 `@deepseek-ai/*`，无需修改本地 SDK 链接或日用 profile。直接运行测试或验证脚本时加上 `node --import ./scripts/use-dsh-sdk.mjs`。不要复制旧插件数据到测试目录。
 
 若复用已有开发依赖，设置 `DSH_DEV_MODULES` 为包含 `esbuild`、`@playwright/test`、`react` 和 `react-dom` 的 `node_modules` 绝对路径。例如先在 PowerShell 中设置 `$env:DSH_SDK_MODULES = 'D:\path\to\dsh-sdk\node_modules'` 和 `$env:DSH_DEV_MODULES = 'D:\path\to\dev\node_modules'`，再运行上述命令。
 
@@ -75,13 +75,17 @@ npm run evaluate
 
 `npm run test:library-ui` 使用 40 条合成记忆验证底部点击、网格与滚动位置保持、详情独立滚动、连续切换、纠正保存、Escape 关闭及焦点返回，并将不同宽度和明暗主题的截图保存至 `.cache/library-ui/`。它不读取真实记忆或调用模型服务。
 
-`npm test` 执行构建、源码检查及当前完整离线套件，外网防护只允许本机回环；当前报告写入 `.cache/conversation-maintenance/verification/`。其中真实 rc.3 宿主通过官方 boot/Loader 在 `.cache/sdk-host-*` 下启动和重启，验证批量会话事件、工具注册、远程服务、召回及持久化，凭据服务和会话内容均为合成数据。历史基线及报告保留，不用历史 `verify-kernel.mjs` 重新生成已冻结证据。
+`npm test` 执行构建、源码检查及当前完整离线套件，外网防护只允许本机回环；当前报告写入 `.cache/conversation-maintenance/verification/`。其中真实 DSH 宿主通过官方 boot/Loader 在 `.cache/sdk-host-*` 下启动和重启，验证批量会话事件、工具注册、远程服务、召回及持久化，凭据服务和会话内容均为合成数据。历史基线及报告保留，不用历史 `verify-kernel.mjs` 重新生成已冻结证据。
 
 `node scripts/verify-maintenance-ui.mjs` 使用实际 React 组件、宿主事件和合成两阶段回答，验证聊天回答直接生效与已取消候选的展示。1180/390 像素、明暗主题截图及报告保存在 `.cache/conversation-maintenance/ui/`；不读取真实聊天、浏览器资料或调用外部模型。
 
 `npm run evaluate` 只执行固定的 60 例本地关键词基线，不代表提炼语义质量。历史付费评估脚本和 `experiments/` 留作证据，不进入默认回归或发布包，不再扩展原文／索引方案。本轮不运行任何 `--live` 评估。
 
 隔离 Host 使用 `.cache/home`，仅在该隔离环境运行 `scripts/seed-demo.mjs`。启动后运行 `node scripts/verify-ui.mjs "<完整回环URL>"` 检查实际操作、明暗主题、1180/768/390 像素容器布局与截图。验收报告保存在 `.cache/`，不进入发布包。
+
+## 持续兼容检查
+
+已用同一包验证 rc.2 与 rc.3；范围包含后续同补丁 RC 和正式版，不代表所有未来版本都已实测。Windows Actions 每天检查官方 List releases，也支持手动指定版本，实际打包、安装并激活插件。相同上游版本和插件 SHA 的已完成任务不自动重复；范围外版本明确报告待验证，不创建豁免、不自动改范围或发布。详见[兼容测试与复用说明](https://github.com/xiaoxinblast/DSH-RAG-Memory/blob/main/docs/compatibility-ci.md)。
 
 ## 安装与日用切换
 
